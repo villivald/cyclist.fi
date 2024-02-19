@@ -11,6 +11,7 @@ export default function RootLayout({
   return (
     <html lang="fi">
       <body>
+        <aside></aside>
         <Header />
         {children}
         <Footer />

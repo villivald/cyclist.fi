@@ -1,0 +1,41 @@
+.newsContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  height: calc(100 / 12 * 11dvh);
+}
+
+.newsContainer h2 {
+  grid-column: 5 / 9;
+  grid-row: 2 / 3;
+  text-align: center;
+
+  /* placeholder values */
+  font-size: 3rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.newsContainer article {
+  grid-row: 3 / 11;
+
+  /* placehoder values */
+  border: 0.5rem solid white;
+}
+
+.newsContainer article:first-of-type {
+  grid-column: 2 / 7;
+  border-left: none;
+
+  /* placeholder values */
+  background-color: beige;
+}
+
+.newsContainer article:last-of-type {
+  grid-column: 7 / 12;
+  border-right: none;
+
+  /* placeholder values */
+  background-color: beige;
+}

@@ -5,12 +5,12 @@
   height: calc(100 / 12 * 18dvh);
 }
 
-.gridContainer nav:first-child {
+.gridContainer nav:first-of-type {
   grid-column: 7 / 13;
   grid-row: 4 / 10;
 }
 
-.gridContainer nav:last-child {
+.gridContainer nav:last-of-type {
   grid-column: 1 / 7;
   grid-row: 12 / 18;
 }
@@ -35,7 +35,80 @@
   /* placehoder values */
   border: 0.5rem solid white;
   background-color: aliceblue;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bold;
+}
+
+.gridContainer
+  nav:first-of-type
+  li:is(:nth-child(1), :nth-child(5), :nth-child(9)) {
+  background-color: var(--color-lightRed);
+}
+
+.gridContainer
+  nav:first-of-type
+  li:is(:nth-child(2), :nth-child(6), :nth-child(7)) {
+  background-color: var(--color-darkBlue);
+}
+
+.gridContainer
+  nav:first-of-type
+  li:is(:nth-child(3), :nth-child(4), :nth-child(8)) {
+  background-color: var(--color-darkRed);
+}
+
+.gridContainer
+  nav:last-of-type
+  li:is(:nth-child(2), :nth-child(4), :nth-child(8)) {
+  background-color: var(--color-lightRed);
+}
+
+.gridContainer
+  nav:last-of-type
+  li:is(:nth-child(1), :nth-child(6), :nth-child(7)) {
+  background-color: var(--color-darkBlue);
+}
+
+.gridContainer
+  nav:last-of-type
+  li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+  background-color: var(--color-darkRed);
+}
+
+.gridContainer nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+.gridContainer nav li a:hover {
+  text-decoration: underline;
+}
+
+.gridContainer
+  nav:first-of-type
+  li:is(
+    :nth-child(2),
+    :nth-child(3),
+    :nth-child(4),
+    :nth-child(6),
+    :nth-child(7),
+    :nth-child(8)
+  )
+  a {
+  color: white;
+}
+
+.gridContainer
+  nav:last-of-type
+  li:is(
+    :nth-child(1),
+    :nth-child(3),
+    :nth-child(5),
+    :nth-child(6),
+    :nth-child(7),
+    :nth-child(9)
+  )
+  a {
+  color: white;
 }

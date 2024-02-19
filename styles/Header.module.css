@@ -14,7 +14,7 @@
   height: 100%;
 
   /* placeholder values */
-  background: #d9d9d9;
+  background-color: #d9d9d9;
   box-shadow: 1.5rem 1.5rem 1.5rem 0.75rem hsla(0deg 0% 0% / 25%) inset;
 }
 
@@ -44,7 +44,13 @@
   background: transparent;
 
   /* placeholder values */
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Helvetica Neue", sans-serif;
   text-transform: uppercase;
+}
+
+@media (width > 1600px) {
+  .headerContainer > div:last-child {
+    grid-column: 10 / 13;
+  }
 }
