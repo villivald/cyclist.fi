@@ -1,8 +1,23 @@
+@font-face {
+  font-family: Satoshi-Variable;
+  src: url("../public/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Variable.woff") format("woff"),
+    url("../public/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
-  --color-lightRed: #f3c2c3;
-  --color-darkRed: #d98484;
-  --color-darkBlue: #3f4857;
+  --color-primary: hsl(218deg 16% 29%);
+  --color-secondary: hsl(0deg 53% 68%);
+  --color-tertiary: hsl(359deg 67% 86%);
+  --color-white: hsl(0deg 0% 100%);
+  --color-black: hsl(0deg 0% 0%);
+
+  /* Typography */
+  --font-sans: "Satoshi-Variable", "Helvetica Neue", sans-serif;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -69,5 +84,15 @@ aside {
   z-index: -1;
 
   /* placeholder values */
-  background-color: aquamarine;
+  background-image: url("/3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+aside::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(359deg 67% 86% / 30%);
 }

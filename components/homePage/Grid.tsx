@@ -1,10 +1,14 @@
-export default function Grid({ links }: { links: string[] }) {
+export default function Grid({
+  links,
+}: {
+  links: { title: string; link: string }[];
+}) {
   return (
     <nav>
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <a href="#">{link}</a>
+            <a href={link.link}>{link.title}</a>
           </li>
         ))}
       </ul>

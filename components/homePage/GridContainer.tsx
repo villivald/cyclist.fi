@@ -4,27 +4,27 @@ import styles from "@/styles/GridContainer.module.css";
 
 export default function GridContainer() {
   const upperLinks = [
-    "Brands",
-    "Youtube",
-    "Magazines",
-    "Discounts",
-    "Podcasts",
-    "TV",
-    "Indoor",
-    "Places",
-    "Tour",
+    { title: "Brands", link: "/brands" },
+    { title: "Youtube", link: "/youtube" },
+    { title: "Magazines", link: "/magazines" },
+    { title: "Discounts", link: "/discounts" },
+    { title: "Podcasts", link: "/podcasts" },
+    { title: "TV", link: "/tv" },
+    { title: "Indoor", link: "/indoor" },
+    { title: "Places", link: "/places" },
+    { title: "Tour", link: "/tour" },
   ];
 
   const lowerLinks = [
-    "Books",
-    "Sharing",
-    "Caring",
-    "Social",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    { title: "Books", link: "/books" },
+    { title: "Sharing", link: "/sharing" },
+    { title: "Caring", link: "/caring" },
+    { title: "Social", link: "/social" },
+    { title: "Test", link: "/test" },
+    { title: "Test", link: "/test" },
+    { title: "Test", link: "/test" },
+    { title: "Test", link: "/test" },
+    { title: "Test", link: "/test" },
   ];
 
   return (

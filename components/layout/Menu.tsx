@@ -1,6 +1,6 @@
 export default function Menu() {
   return (
-    <div>
+    <div id="top">
       <button>Theme</button>
       <button>Menu</button>
     </div>

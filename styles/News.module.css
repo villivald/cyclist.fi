@@ -12,8 +12,8 @@
 
   /* placeholder values */
   font-size: 3rem;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: bold;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
   text-transform: uppercase;
 }
 

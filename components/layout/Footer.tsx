@@ -2,12 +2,12 @@ import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
   const links = [
-    "Contact",
-    "Design elements",
-    "Buy a coffee",
-    "Newsletter",
-    "Instagram",
-    "Facebook",
+    { title: "Contact", link: "/contact" },
+    { title: "Design elements", link: "/design" },
+    { title: "Buy a coffee", link: "/coffee" },
+    { title: "Newsletter", link: "/newsletter" },
+    { title: "Instagram", link: "/instagram" },
+    { title: "Facebook", link: "/facebook" },
   ];
 
   return (
@@ -22,8 +22,8 @@ export default function Footer() {
       <section>
         <div>
           {links.map((link, index) => (
-            <a key={index} href="#">
-              {link}
+            <a key={index} href={link.link}>
+              {link.title}
             </a>
           ))}
         </div>

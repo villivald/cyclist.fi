@@ -1,3 +1,7 @@
 export default function Logo() {
-  return <div></div>;
+  return (
+    <div>
+      <a href="/">C</a>
+    </div>
+  );
 }
