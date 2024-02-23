@@ -15,7 +15,6 @@ export default function RootLayout({
     <html lang="fi">
       <ThemeProvider>
         <body>
-          <aside></aside>
           <Header />
           {children}
           <Footer />

@@ -23,14 +23,19 @@ export default function Menu() {
   };
 
   const menuItems = [
-    "about",
-    "blog",
-    "contact",
     "books",
-    "projects",
-    "study",
-    "uses",
-    "old",
+    "brands",
+    "caring",
+    "discounts",
+    "indoor",
+    "magazines",
+    "places",
+    "podcasts",
+    "sharing",
+    "social",
+    "tour",
+    "tv",
+    "youtube",
   ];
 
   return (

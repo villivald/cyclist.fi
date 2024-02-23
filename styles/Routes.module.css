@@ -1,0 +1,13 @@
+.layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  position: absolute;
+  top: 7rem;
+  font-size: 16rem;
+  color: hsla(0deg 8% 83% / 50%);
+  z-index: -1;
+}

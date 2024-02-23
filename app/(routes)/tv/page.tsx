@@ -1,6 +1,4 @@
-import React from "react";
-
-const books = () => {
+export default function tv() {
   return (
     <div
       style={{
@@ -10,9 +8,7 @@ const books = () => {
         height: "100vh",
       }}
     >
-      <h1>Books</h1>
+      <h1>Tv</h1>
     </div>
   );
-};
-
-export default books;
+}
