@@ -65,7 +65,7 @@
   text-transform: uppercase;
 }
 
-@media (width > 1875px) {
+@media (width > 2000px) {
   .headerContainer > div:last-child {
     grid-column: 10 / 13;
   }
@@ -74,5 +74,17 @@
 @media (width > 1500px) {
   .headerContainer > h1 {
     justify-self: unset;
+  }
+}
+
+@media (width < 1500px) {
+  .headerContainer > div:last-child {
+    grid-column: 8 / 13;
+  }
+}
+
+@media (width < 1200px) {
+  .headerContainer > div:last-child {
+    grid-column: 7 / 13;
   }
 }

@@ -13,7 +13,12 @@ export default function RootLayout({
 
   return (
     <div className={styles.layout}>
-      <h1 className={styles.title}>{title}</h1>
+      <h1
+        className={styles.title}
+        style={{ "--stringLength": title.length } as React.CSSProperties}
+      >
+        {title}
+      </h1>
       {children}
     </div>
   );
