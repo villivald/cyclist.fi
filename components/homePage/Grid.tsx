@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Grid({
   links,
 }: {
@@ -8,7 +10,7 @@ export default function Grid({
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.link}>{link.title}</a>
+            <Link href={link.link}>{link.title}</Link>
           </li>
         ))}
       </ul>

@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
+
+import styles from "@/styles/ScrollToTopButton.module.css";
 
 export default function ScrollToTopButton() {
   useEffect(() => {
@@ -22,26 +25,17 @@ export default function ScrollToTopButton() {
 
   return (
     <button
+      className={styles.button}
+      aria-label="Scroll to top"
       id="scrollToTop"
-      style={{
-        display: "none",
-        position: "fixed",
-        bottom: "20px",
-        right: "30px",
-        zIndex: 99,
-        border: "none",
-        outline: "none",
-        backgroundColor: "#00A86B",
-        color: "white",
-        cursor: "pointer",
-        padding: "15px",
-        borderRadius: "10px",
-      }}
-      onClick={() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      Scroll to top
+      <Image
+        src="/icons/arrow_up.svg"
+        alt="Scroll to top"
+        width={32}
+        height={32}
+      />
     </button>
   );
 }

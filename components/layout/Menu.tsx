@@ -1,8 +1,79 @@
+"use client";
+
+import Image from "next/image";
+import { useState, useContext } from "react";
+
+import { ThemeContext } from "app/providers";
+
+import styles from "@/styles/Menu.module.css";
+
 export default function Menu() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+    if (e.relatedTarget === null) {
+      setMenuOpen(false);
+    }
+  };
+
+  const handleChangeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const menuItems = [
+    "about",
+    "blog",
+    "contact",
+    "books",
+    "projects",
+    "study",
+    "uses",
+    "old",
+  ];
+
   return (
-    <div id="top">
-      <button>Theme</button>
-      <button>Menu</button>
+    <div>
+      <button onClick={handleChangeTheme}>
+        <Image
+          src={
+            theme === "light"
+              ? "./icons/sun_color.svg"
+              : "./icons/moon_color.svg"
+          }
+          alt="Theme toggle icon"
+          width={46}
+          height={46}
+        />
+        Theme
+      </button>
+      <div
+        className={styles.dropdown}
+        onClick={() => setMenuOpen(!menuOpen)}
+        onBlur={handleBlur}
+      >
+        <button
+          className={styles.dropdownButton}
+          aria-haspopup="true"
+          data-open={menuOpen}
+        >
+          <Image
+            src="./icons/burger.svg"
+            alt="Menu icon"
+            width={70}
+            height={70}
+          />
+          Menu
+        </button>
+        <ul className={styles.menu} data-open={menuOpen}>
+          {menuItems.map((item) => (
+            <li key={item}>
+              <a href={`/${item}`}>{item}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
