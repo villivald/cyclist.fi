@@ -12,8 +12,6 @@ export const ThemeContext = createContext(
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState("light");
 
-  // Global state object (combination of all global state variables) to be passed to all components via context
-  // Each of the state variables can be accessed across the app like so: const { state, action } = useContext(ThemeContext);
   const globalState = {
     theme,
     setTheme,

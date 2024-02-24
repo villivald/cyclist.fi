@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 import styles from "@/styles/Routes.module.css";
 
-export default function RootLayout({
+export default function PageLayout({
   children,
 }: {
   children: React.ReactNode;

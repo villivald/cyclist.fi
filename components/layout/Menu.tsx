@@ -53,22 +53,17 @@ export default function Menu() {
         />
         Theme
       </button>
-      <div
-        className={styles.dropdown}
-        onClick={() => setMenuOpen(!menuOpen)}
-        onBlur={handleBlur}
-      >
+      <div onClick={() => setMenuOpen(!menuOpen)} onBlur={handleBlur}>
         <button
           className={styles.dropdownButton}
           aria-haspopup="true"
           data-open={menuOpen}
         >
-          <Image
-            src="./icons/burger.svg"
-            alt="Menu icon"
-            width={70}
-            height={70}
-          />
+          <span className={styles.burger} data-open={menuOpen}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
           Menu
         </button>
         <ul className={styles.menu} data-open={menuOpen}>
