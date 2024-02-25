@@ -10,9 +10,18 @@
 
 :root {
   /* Colors */
-  --color-primary: hsl(218deg 16% 29%);
-  --color-secondary: hsl(0deg 53% 68%);
-  --color-tertiary: hsl(359deg 67% 86%);
+  --color-teal: #007f80;
+  --color-mint: #64b4a3;
+  --color-wheat: #f2eacf;
+  --color-dark: hsl(218deg 16% 29%);
+  --color-blue: hsl(205deg 97% 26%);
+  --color-shadow-blue: hsla(205deg 97% 26% / 75%);
+  --color-almost-white: hsl(22deg 67% 98%);
+  --color-green: #214f0a;
+  --color-orange: #e55c17;
+  --color-pink: #e8aa9c;
+  --color-peru: #daaa86;
+  --color-wine: hsl(348deg 48% 44%);
   --color-white: hsl(0deg 0% 100%);
   --color-black: hsl(0deg 0% 0%);
 
@@ -39,6 +48,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--color-almost-white);
 }
 
 /* 5. Improve media defaults */
@@ -84,7 +94,7 @@ aside {
   z-index: -1;
 
   /* placeholder values */
-  background-image: url("/3.jpg");
+  background-image: url("/images/3.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -94,5 +104,5 @@ aside::before {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsla(359deg 67% 86% / 30%);
+  background-color: hsl(from var(--color-wine) h s l / 15%);
 }

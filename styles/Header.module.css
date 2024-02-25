@@ -14,17 +14,17 @@
   height: 100%;
 
   /* placeholder values */
-  background-color: var(--color-secondary);
+  background-color: var(--color-wheat);
   font-size: 16rem;
 }
 
 .headerContainer > div:first-child a {
   display: grid;
   font-family: var(--font-sans);
-  color: white;
+  color: hsl(from var(--color-wine) h s l / 75%);
   font-variation-settings: "wght" 800;
   line-height: 13rem;
-  text-shadow: 1rem 0 0 hsla(205deg 97% 26% / 75%);
+  text-shadow: 1rem 0 0 hsl(from var(--color-teal) h s l / 75%);
   text-decoration: none;
 }
 
@@ -37,8 +37,8 @@
   /* placeholder values */
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
-  color: hsla(357deg 88% 39% / 51%);
-  text-shadow: 0.55rem 0 0 hsla(205deg 97% 26% / 75%);
+  color: hsl(from var(--color-wine) h s l / 75%);
+  text-shadow: 0.55rem 0 0 hsl(from var(--color-teal) h s l / 75%);
 }
 
 .headerContainer > div:last-child {

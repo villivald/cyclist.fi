@@ -21,7 +21,7 @@
   grid-row: 3 / 11;
 
   /* placehoder values */
-  border: 0.5rem solid white;
+  border: 0.5rem solid var(--color-almost-white);
 }
 
 .newsContainer article:first-of-type {
@@ -29,7 +29,8 @@
   border-left: none;
 
   /* placeholder values */
-  background-color: beige;
+  border: 1px solid var(--color-pink);
+  border-right-width: 0.5px;
 }
 
 .newsContainer article:last-of-type {
@@ -37,5 +38,6 @@
   border-right: none;
 
   /* placeholder values */
-  background-color: beige;
+  border: 1px solid var(--color-pink);
+  border-left-width: 0.5px;
 }

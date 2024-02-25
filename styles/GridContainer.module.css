@@ -33,7 +33,7 @@
   width: 100%;
 
   /* placehoder values */
-  border: 0.5rem solid white;
+  border: 0.5rem solid var(--color-almost-white);
   font-size: 2.25rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
@@ -41,43 +41,43 @@
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(1), :nth-child(5), :nth-child(9)) {
-  background-color: var(--color-tertiary);
+  li:is(:nth-child(1), :nth-child(6), :nth-child(7)) {
+  background-color: var(--color-wheat);
 }
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(2), :nth-child(6), :nth-child(7)) {
-  background-color: var(--color-primary);
+  li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+  background-color: var(--color-wine);
 }
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(3), :nth-child(4), :nth-child(8)) {
-  background-color: var(--color-secondary);
+  li:is(:nth-child(2), :nth-child(4), :nth-child(8)) {
+  background-color: var(--color-teal);
 }
 
 .gridContainer
   nav:last-of-type
   li:is(:nth-child(2), :nth-child(4), :nth-child(8)) {
-  background-color: var(--color-tertiary);
+  background-color: var(--color-wheat);
 }
 
 .gridContainer
   nav:last-of-type
   li:is(:nth-child(1), :nth-child(6), :nth-child(7)) {
-  background-color: var(--color-primary);
+  background-color: var(--color-wine);
 }
 
 .gridContainer
   nav:last-of-type
   li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
-  background-color: var(--color-secondary);
+  background-color: var(--color-teal);
 }
 
 .gridContainer nav li a {
   text-decoration: none;
-  color: black;
+  color: var(--color-black);
 }
 
 .gridContainer nav li a:hover {
@@ -90,12 +90,12 @@
     :nth-child(2),
     :nth-child(3),
     :nth-child(4),
-    :nth-child(6),
-    :nth-child(7),
-    :nth-child(8)
+    :nth-child(5),
+    :nth-child(8),
+    :nth-child(9)
   )
   a {
-  color: white;
+  color: var(--color-almost-white);
 }
 
 .gridContainer
@@ -109,5 +109,5 @@
     :nth-child(9)
   )
   a {
-  color: white;
+  color: var(--color-almost-white);
 }
