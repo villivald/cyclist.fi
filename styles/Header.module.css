@@ -12,33 +12,33 @@
   justify-self: center;
   width: 100%;
   height: 100%;
+  background-color: var(--color-almost-white);
 
   /* placeholder values */
-  background-color: var(--color-wheat);
   font-size: 16rem;
 }
 
 .headerContainer > div:first-child a {
   display: grid;
   font-family: var(--font-sans);
-  color: hsl(from var(--color-wine) h s l / 75%);
   font-variation-settings: "wght" 800;
-  line-height: 13rem;
+  color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 1rem 0 0 hsl(from var(--color-teal) h s l / 75%);
+  line-height: 13rem;
   text-decoration: none;
 }
 
 .headerContainer > h1 {
   grid-column: 4 / 10;
   grid-row: 4 / 6;
-  font-size: 9rem;
   justify-self: center;
-
-  /* placeholder values */
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
   color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 0.55rem 0 0 hsl(from var(--color-teal) h s l / 75%);
+
+  /* placeholder values */
+  font-size: 9rem;
 }
 
 .headerContainer > div:last-child {
@@ -57,12 +57,12 @@
   cursor: pointer;
   border: none;
   background: transparent;
-
-  /* placeholder values */
-  font-size: 3rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
   text-transform: uppercase;
+
+  /* placeholder values */
+  font-size: 3rem;
 }
 
 @media (width > 2000px) {

@@ -4,8 +4,8 @@
   bottom: 1.25rem;
   right: 1.75rem;
   padding: 1rem;
-  border: 0.125rem solid var(--color-black);
-  background-color: var(--color-white);
+  border: 0.125rem solid var(--color-dark);
+  background-color: var(--color-wheat);
   border-radius: 0;
   cursor: pointer;
   z-index: 99;

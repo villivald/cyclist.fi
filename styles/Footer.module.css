@@ -12,11 +12,12 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2rem;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
+  color: var(--color-black);
 
   /* placeholder values */
   font-size: 1.5rem;
-  font-family: var(--font-sans);
-  font-variation-settings: "wght" 800;
 }
 
 .footerContainer > section:first-child span {
@@ -33,18 +34,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
 
   /* placeholder values */
   font-size: 1rem;
-  font-family: var(--font-sans);
-  font-variation-settings: "wght" 800;
 }
 
 .footerContainer > section:last-child div a {
   text-decoration: none;
-
-  /* placeholder values */
-  color: black;
+  color: var(--color-black);
 }
 
 .footerContainer > section:last-child div a:hover {

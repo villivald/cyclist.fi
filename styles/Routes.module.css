@@ -14,12 +14,12 @@
     40vw,
     calc(10 / var(--stringLength) * 18rem)
   );
-  color: hsla(0deg 8% 83% / 50%);
+  color: hsl(from var(--pageColor) h s l / 15%);
   z-index: -1;
 }
 
 .mainContainer {
   grid-column: 2 / 12;
   grid-row: 4 / 14;
-  background-color: beige;
+  background-color: var(--color-almost-white);
 }

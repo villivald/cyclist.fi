@@ -6,8 +6,10 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: var(--color-black);
+
+  /* placeholder values */
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .dropdownButton:focus-visible {
@@ -23,9 +25,11 @@
   list-style: none;
   padding: 0;
   width: 10rem;
-  background-color: white;
-  border: 1px solid grey;
-  box-shadow: 4px 4px var(--color-black);
+  background-color: var(--color-almost-white);
+  border: 0.0625rem solid var(--color-dark);
+  box-shadow: 0.25rem 0.25rem var(--color-black);
+
+  /* placeholder values */
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
@@ -37,24 +41,24 @@
   display: flex;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 500;
+  color: var(--color-black);
 
   /* placeholder values */
   font-size: 1rem;
-  color: var(--color-black);
-  font-family: var(--font-sans);
-  font-variation-settings: "wght" 500;
 }
 
 .menu > li:hover {
-  background-color: grey;
+  background-color: var(--color-dark);
 }
 
 .menu > li:hover > a {
-  color: white;
+  color: var(--color-almost-white);
 }
 
 .menu > li:not(:last-child) {
-  border-bottom: 1px solid grey;
+  border-bottom: 0.0625rem solid var(--color-dark);
 }
 
 .burger {
@@ -66,6 +70,8 @@
   width: 2rem;
   height: 0.25rem;
   background-color: var(--color-black);
+
+  /* placeholder values */
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }

@@ -31,11 +31,11 @@
   place-content: center;
   height: 100%;
   width: 100%;
+  font-family: var(--font-sans);
+  border: 0.5rem solid var(--color-almost-white);
 
   /* placehoder values */
-  border: 0.5rem solid var(--color-almost-white);
   font-size: 2.25rem;
-  font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
 }
 
@@ -80,7 +80,8 @@
   color: var(--color-black);
 }
 
-.gridContainer nav li a:hover {
+.gridContainer nav li a:hover,
+.gridContainer nav li a:focus-visible {
   text-decoration: underline;
 }
 

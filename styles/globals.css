@@ -11,19 +11,21 @@
 :root {
   /* Colors */
   --color-teal: #007f80;
-  --color-mint: #64b4a3;
   --color-wheat: #f2eacf;
+  --color-wine: hsl(348deg 48% 44%);
+  --color-green: #214f0a;
   --color-dark: hsl(218deg 16% 29%);
+  --color-almost-white: hsl(22deg 67% 98%);
+  --color-black: hsl(0deg 0% 0%);
+
+  /* Currently unused - review and remove */
+  --color-mint: #64b4a3;
   --color-blue: hsl(205deg 97% 26%);
   --color-shadow-blue: hsla(205deg 97% 26% / 75%);
-  --color-almost-white: hsl(22deg 67% 98%);
-  --color-green: #214f0a;
+  --color-peru: #daaa86;
   --color-orange: #e55c17;
   --color-pink: #e8aa9c;
-  --color-peru: #daaa86;
-  --color-wine: hsl(348deg 48% 44%);
   --color-white: hsl(0deg 0% 100%);
-  --color-black: hsl(0deg 0% 0%);
 
   /* Typography */
   --font-sans: "Satoshi-Variable", "Helvetica Neue", sans-serif;
@@ -92,8 +94,6 @@ aside {
   height: 65.85%;
   top: 16.75%;
   z-index: -1;
-
-  /* placeholder values */
   background-image: url("/images/3.jpg");
   background-size: cover;
   background-position: center;
@@ -104,5 +104,5 @@ aside::before {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsl(from var(--color-wine) h s l / 15%);
+  background-color: hsl(from var(--color-green) h s l / 15%);
 }
