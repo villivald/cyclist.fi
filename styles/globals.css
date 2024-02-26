@@ -94,7 +94,7 @@ aside {
   height: 65.85%;
   top: 16.75%;
   z-index: -1;
-  background-image: url("/images/3.jpg");
+  background-image: url("/images/bg_xl.webp");
   background-size: cover;
   background-position: center;
 }
@@ -104,5 +104,29 @@ aside::before {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsl(from var(--color-green) h s l / 15%);
+  background-color: hsl(from var(--color-teal) h s l / 15%);
+}
+
+@media (width < 1400px) {
+  aside {
+    background-image: url("/images/bg_l.webp");
+  }
+}
+
+@media (width < 1000px) {
+  aside {
+    background-image: url("/images/bg_m.webp");
+  }
+}
+
+@media (width < 800px) {
+  aside {
+    background-image: url("/images/bg_s.webp");
+  }
+}
+
+@media (width < 600px) {
+  aside {
+    background-image: url("/images/bg_xs.webp");
+  }
 }

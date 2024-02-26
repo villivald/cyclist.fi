@@ -51,7 +51,7 @@ export default function Menu() {
           width={46}
           height={46}
         />
-        Theme
+        <p>Theme</p>
       </button>
       <div onClick={() => setMenuOpen(!menuOpen)} onBlur={handleBlur}>
         <button
@@ -64,7 +64,7 @@ export default function Menu() {
             <span></span>
             <span></span>
           </span>
-          Menu
+          <p>Menu</p>
         </button>
         <ul className={styles.menu} data-open={menuOpen}>
           {menuItems.map((item) => (
