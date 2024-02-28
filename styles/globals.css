@@ -10,21 +10,13 @@
 
 :root {
   /* Colors */
-  --color-teal: #007f80;
-  --color-wheat: #f2eacf;
+  --color-teal: hsl(180deg 100% 25%);
+  --color-wheat: hsl(46deg 57% 88%);
   --color-wine: hsl(348deg 48% 44%);
-  --color-green: #214f0a;
+  --color-green: hsl(100deg 78% 17%);
   --color-dark: hsl(218deg 16% 29%);
   --color-almost-white: hsl(22deg 67% 98%);
   --color-black: hsl(0deg 0% 0%);
-
-  /* Currently unused - review and remove */
-  --color-mint: #64b4a3;
-  --color-blue: hsl(205deg 97% 26%);
-  --color-shadow-blue: hsla(205deg 97% 26% / 75%);
-  --color-peru: #daaa86;
-  --color-orange: #e55c17;
-  --color-pink: #e8aa9c;
   --color-white: hsl(0deg 0% 100%);
 
   /* Typography */

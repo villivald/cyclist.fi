@@ -4,9 +4,16 @@
   bottom: 1.25rem;
   right: 1.75rem;
   padding: 1rem;
-  border: 0.125rem solid var(--color-dark);
-  background-color: var(--color-wheat);
+  border: 0.125rem solid
+    color-mix(in lch, var(--color-dark) 5%, var(--color-wheat));
+  background-color: var(--color-almost-white);
+  box-shadow: 0 0 0 0.75rem var(--color-wheat) inset;
   border-radius: 0;
   cursor: pointer;
   z-index: 99;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.button:hover {
+  border-color: var(--color-dark);
 }
