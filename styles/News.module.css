@@ -54,6 +54,8 @@
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
   padding-left: 1rem;
+  padding-block: 0.25rem;
+  text-wrap: balance;
 }
 
 .newsContainer article section:first-of-type {

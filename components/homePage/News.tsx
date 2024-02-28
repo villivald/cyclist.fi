@@ -9,29 +9,52 @@ export default function News() {
       <article>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit, justo eget tincidunt tincidunt, justo justo tincidunt
+            tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </section>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit, justo eget tincidunt tincidunt, justo justo tincidunt
+            tincidunt.
+          </p>
         </section>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit.
+          </p>
         </section>
       </article>
       <article>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit, justo eget tincidunt tincidunt, justo justo tincidunt
+            tincidunt.
+          </p>
         </section>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit, justo eget tincidunt tincidunt, justo.
+          </p>
         </section>
         <section>
           <p></p>
-          <p>News Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            suscipit, justo eget tincidunt tincidunt, justo justo tincidunt
+            tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Donec suscipit.
+          </p>
         </section>
       </article>
       <span>
