@@ -1,0 +1,40 @@
+.newsContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  height: calc(100 / 12 * 11dvh);
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 500;
+}
+
+.newsContainer h2 {
+  grid-column: 5 / 9;
+  grid-row: 2 / 3;
+  place-self: center;
+  text-transform: uppercase;
+
+  /* placeholder values */
+  font-size: 3rem;
+}
+
+.newsContainer article {
+  display: grid;
+  grid-row: 3 / 11;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  row-gap: 0.75rem;
+}
+
+.newsContainer article:first-of-type {
+  grid-column: 2 / 7;
+}
+
+.newsContainer article:last-of-type {
+  grid-column: 7 / 12;
+}
+
+.newsContainer span {
+  grid-column: 6 / 8;
+  grid-row: 10 / 13;
+  place-self: center;
+}
