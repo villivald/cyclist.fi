@@ -5,7 +5,7 @@
   right: 1.75rem;
   padding: 1rem;
   border: 0.125rem solid
-    color-mix(in lch, var(--color-dark) 5%, var(--color-wheat));
+    color-mix(in lch, var(--color-dark) 1%, var(--color-wheat));
   background-color: var(--color-almost-white);
   box-shadow: 0 0 0 0.75rem var(--color-wheat) inset;
   border-radius: 0;

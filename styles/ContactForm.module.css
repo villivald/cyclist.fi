@@ -1,0 +1,43 @@
+div:has(.form) {
+  display: grid;
+  place-items: center;
+  min-height: 50dvh;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: clamp(20rem, 50vw, 30rem);
+}
+
+.form > div > :is(input, textarea) {
+  padding: 0.75rem;
+  border: 1px solid var(--color-dark);
+}
+
+.form > button {
+  padding: 0.75rem;
+  border: none;
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form > button:hover {
+  background-color: color-mix(in lch, var(--color-dark) 25%, var(--color-teal));
+}
+
+.form > button:disabled {
+  background-color: hsl(from var(--color-dark) h s l / 50%);
+  cursor: not-allowed;
+}

@@ -1,0 +1,7 @@
+.designElements {
+  display: grid;
+  place-items: center;
+  min-height: 50dvh;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 500;
+}
