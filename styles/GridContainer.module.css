@@ -85,6 +85,11 @@
   text-decoration: underline;
 }
 
+.gridContainer nav li a:focus-visible {
+  outline: 0.25rem solid currentcolor;
+  outline-offset: 0.5rem;
+}
+
 .gridContainer
   nav:first-of-type
   li:is(

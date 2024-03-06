@@ -14,6 +14,7 @@
 .title {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
+  position: relative;
   padding-top: 1rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
@@ -21,4 +22,15 @@
   text-decoration: none;
   color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 1rem 0 0 hsl(from var(--color-teal) h s l / 75%);
+  transition: text-shadow 0.5s ease, padding-top 0.5s ease;
+}
+
+.title:hover,
+.title:focus-visible {
+  padding-top: 0.25rem;
+  text-shadow: 1.25rem 0.5rem 0 hsl(from var(--color-teal) h s l / 75%);
+}
+
+.title:focus-visible {
+  outline: 1rem solid var(--color-wine);
 }

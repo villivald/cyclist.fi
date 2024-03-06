@@ -44,6 +44,24 @@
   font-size: 3rem;
 }
 
+.headerContainer > div:last-child button:focus-visible {
+  outline: 0.25rem solid var(--color-wine);
+  outline-offset: 0.25rem;
+}
+
+.headerContainer > div:last-child > button img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.headerContainer > div:last-child > button:hover > img,
+.headerContainer > div:last-child > button:focus-visible > img {
+  transform: rotate(15deg);
+}
+
+.headerContainer > div:last-child div button:focus-visible {
+  outline-offset: -0.25rem;
+}
+
 @media (width > 2000px) {
   .headerContainer > div:last-child {
     grid-column: 10 / 13;

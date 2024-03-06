@@ -11,9 +11,15 @@
   border-radius: 0;
   cursor: pointer;
   z-index: 99;
-  transition: border-color 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 .button:hover {
-  border-color: var(--color-dark);
+  box-shadow: 0 0 0 0.75rem var(--color-wheat) inset,
+    0.25rem 0.25rem var(--color-dark);
+}
+
+.button:focus-visible {
+  outline: 0.25rem solid var(--color-wine);
+  outline-offset: 0.25rem;
 }

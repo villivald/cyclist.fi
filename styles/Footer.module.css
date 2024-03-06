@@ -49,3 +49,8 @@
 .footerContainer > section:last-child div a:hover {
   text-decoration: underline;
 }
+
+.footerContainer > section:last-child div a:focus-visible {
+  outline: 0.25rem solid var(--color-wine);
+  outline-offset: 0.25rem;
+}
