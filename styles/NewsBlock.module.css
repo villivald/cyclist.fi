@@ -44,9 +44,9 @@
 }
 
 .newsBlock:nth-of-type(2) {
-  grid-row: 4 / 6;
+  grid-row: 5 / 7;
 }
 
 .newsBlock:last-of-type {
-  grid-row: 6 / 8;
+  grid-row: 8 / 10;
 }

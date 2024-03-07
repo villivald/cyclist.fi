@@ -1,8 +1,8 @@
 .newsContainer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(11, 1fr);
-  height: calc(100 / 12 * 11dvh);
+  grid-template-rows: repeat(13, 1fr);
+  height: calc(100 / 12 * 13dvh);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
 }
@@ -19,10 +19,9 @@
 
 .newsContainer article {
   display: grid;
-  grid-row: 3 / 11;
+  grid-row: 3 / 13;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
-  row-gap: 0.75rem;
 }
 
 .newsContainer article:first-of-type {
@@ -35,7 +34,7 @@
 
 .newsContainer span {
   grid-column: 6 / 8;
-  grid-row: 10 / 13;
+  grid-row: 12 / 15;
   place-self: center;
 }
 
