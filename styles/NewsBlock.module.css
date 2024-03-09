@@ -37,6 +37,7 @@
   background-color: var(--color-teal);
   color: var(--color-white);
   padding: 0.25rem;
+  font-size: 0.75rem;
 }
 
 .newsBlock:first-of-type {
