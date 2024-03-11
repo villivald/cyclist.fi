@@ -34,3 +34,65 @@
 .title:focus-visible {
   outline: 1rem solid var(--color-wine);
 }
+
+@media (width > 1800px) {
+  .logoContainer {
+    grid-column: 1 / 4;
+  }
+}
+
+@media (width < 1100px) {
+  .logoContainer {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    box-shadow: 0 0 0 4rem var(--color-wheat) inset;
+  }
+
+  .title {
+    font-size: 12rem;
+  }
+}
+
+@media (width < 1000px) {
+  .logoContainer {
+    grid-column: 1 / 5;
+  }
+}
+
+@media (width < 900px) {
+  .title {
+    padding-top: 0.5rem;
+    font-size: 10rem;
+    text-shadow: 0.75rem 0 0 hsl(from var(--color-teal) h s l / 75%);
+  }
+
+  .title:hover,
+  .title:focus-visible {
+    padding-top: 0.25rem;
+    text-shadow: 1rem 0.25rem 0 hsl(from var(--color-teal) h s l / 75%);
+  }
+}
+
+@media (width < 750px) {
+  .logoContainer {
+    box-shadow: 0 0 0 3.5rem var(--color-wheat) inset;
+  }
+}
+
+@media (width < 700px) {
+  .logoContainer {
+    grid-column: 1 / 6;
+  }
+}
+
+@media (width < 550px) {
+  .logoContainer {
+    grid-column: 1 / 7;
+  }
+}
+
+@media (width < 500px) {
+  .logoContainer {
+    grid-column: 1 / 8;
+  }
+}

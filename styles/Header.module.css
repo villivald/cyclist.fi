@@ -14,9 +14,7 @@
   font-variation-settings: "wght" 800;
   color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 0.55rem 0 0 hsl(from var(--color-teal) h s l / 75%);
-
-  /* placeholder values */
-  font-size: 9rem;
+  font-size: clamp(7rem, 12vw, 14rem);
 }
 
 .headerContainer > div:last-child {
@@ -68,6 +66,12 @@
   }
 }
 
+@media (width > 1800px) {
+  .headerContainer > h1 {
+    grid-column: 3 / 10;
+  }
+}
+
 @media (width > 1500px) {
   .headerContainer > h1 {
     justify-self: unset;
@@ -86,9 +90,19 @@
   }
 }
 
+@media (width < 1100px) {
+  .headerContainer > h1 {
+    grid-row: 3 / 5;
+  }
+}
+
 @media (width < 900px) {
   .headerContainer > div:last-child button {
     font-size: 2rem;
+  }
+
+  .headerContainer > div:last-child > button img {
+    height: 2rem;
   }
 }
 

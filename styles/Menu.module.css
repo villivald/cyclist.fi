@@ -111,3 +111,21 @@
     transform: rotate(-45deg) translate(0.25rem, -0.5rem);
   }
 }
+
+@media (width < 700px) {
+  .menu {
+    right: 3rem;
+  }
+}
+
+@media (width < 550px) {
+  .menu {
+    right: 1rem;
+  }
+}
+
+@media (width < 450px) {
+  .menu {
+    right: 0.5rem;
+  }
+}
