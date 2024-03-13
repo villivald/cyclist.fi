@@ -86,13 +86,20 @@
 }
 
 @media (width < 550px) {
+  .title {
+    padding-top: 0.25rem;
+    font-size: 8rem;
+    text-shadow: 0.5rem 0 0 hsl(from var(--color-teal) h s l / 75%);
+  }
+
+  .title:hover,
+  .title:focus-visible {
+    padding-top: 0.125rem;
+    text-shadow: 0.5rem 0.25rem 0 hsl(from var(--color-teal) h s l / 75%);
+  }
+
   .logoContainer {
     grid-column: 1 / 7;
-  }
-}
-
-@media (width < 500px) {
-  .logoContainer {
-    grid-column: 1 / 8;
+    box-shadow: 0 0 0 3rem var(--color-wheat) inset;
   }
 }

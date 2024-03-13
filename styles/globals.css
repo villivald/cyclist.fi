@@ -105,6 +105,12 @@ aside::before {
   }
 }
 
+@media (width < 1100px) {
+  aside {
+    height: 45.85%;
+  }
+}
+
 @media (width < 1000px) {
   aside {
     background-image: url("/images/bg_m.webp");
@@ -114,6 +120,12 @@ aside::before {
 @media (width < 800px) {
   aside {
     background-image: url("/images/bg_s.webp");
+  }
+}
+
+@media (width < 750px) {
+  aside {
+    height: 30.85%;
   }
 }
 

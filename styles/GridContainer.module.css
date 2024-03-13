@@ -31,11 +31,9 @@
   place-content: center;
   height: 100%;
   width: 100%;
-  font-family: var(--font-sans);
   border: 0.5rem solid var(--color-almost-white);
-
-  /* placehoder values */
-  font-size: 2.25rem;
+  font-size: clamp(1rem, 0.3043rem + 2.5vi, 2.5rem);
+  font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
 }
 
@@ -116,4 +114,93 @@
   )
   a {
   color: var(--color-almost-white);
+}
+
+@media (width < 1100px) {
+  .gridContainer nav:first-of-type {
+    grid-column: 1 / 13;
+    grid-row: 2 / 10;
+  }
+
+  .gridContainer nav:last-of-type {
+    grid-column: 1 / 13;
+    grid-row: 11 / 19;
+  }
+}
+
+@media (width < 750px) {
+  .gridContainer nav:first-of-type {
+    grid-column: 1 / 13;
+    grid-row: 1 / 10;
+  }
+
+  .gridContainer nav:last-of-type {
+    grid-row: 10 / 19;
+  }
+
+  .gridContainer nav ul {
+    grid-template-areas: unset;
+  }
+
+  .gridContainer nav:first-of-type ul {
+    border-block-start: 0.125rem solid var(--color-almost-white);
+  }
+
+  .gridContainer nav ul li {
+    border-width: 0.125rem 0;
+  }
+
+  .gridContainer nav li a {
+    color: var(--color-almost-white);
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(2), :nth-child(4), :nth-child(7)) {
+    background-color: var(--color-wheat);
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(2), :nth-child(4), :nth-child(7))
+    a {
+    color: var(--color-black);
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(1), :nth-child(6), :nth-child(8)) {
+    background-color: var(--color-wine);
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+    background-color: var(--color-teal);
+  }
+
+  .gridContainer
+    nav:last-of-type
+    li:is(:nth-child(1), :nth-child(4), :nth-child(8)) {
+    background-color: var(--color-wheat);
+  }
+
+  .gridContainer
+    nav:last-of-type
+    li:is(:nth-child(1), :nth-child(4), :nth-child(8))
+    a {
+    color: var(--color-black);
+  }
+
+  .gridContainer
+    nav:last-of-type
+    li:is(:nth-child(2), :nth-child(5), :nth-child(7)) {
+    background-color: var(--color-wine);
+  }
+
+  .gridContainer
+    nav:last-of-type
+    li:is(:nth-child(3), :nth-child(6), :nth-child(9)) {
+    background-color: var(--color-teal);
+  }
 }
