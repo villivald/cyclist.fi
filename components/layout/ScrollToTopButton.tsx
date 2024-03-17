@@ -10,8 +10,9 @@ export default function ScrollToTopButton() {
     const scrollToTopButton = document.getElementById("scrollToTop");
     const scrollFunction = () => {
       if (
-        document.body.scrollTop > 1200 ||
-        document.documentElement.scrollTop > 1200
+        (document.body.scrollTop > 1200 ||
+          document.documentElement.scrollTop > 1200) &&
+        window.innerWidth > 1000
       ) {
         scrollToTopButton!.style.display = "block";
       } else {

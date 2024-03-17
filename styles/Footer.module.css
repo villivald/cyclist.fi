@@ -14,10 +14,8 @@
   margin-bottom: 2rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
+  font-size: clamp(1rem, 0.3043rem + 2.25vi, 1.5rem);
   color: var(--color-black);
-
-  /* placeholder values */
-  font-size: 1.5rem;
 }
 
 .footerContainer > section:first-child span {
@@ -36,9 +34,7 @@
   gap: 2rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
-
-  /* placeholder values */
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 0.3043rem + 2.25vi, 1rem);
 }
 
 .footerContainer > section:last-child div a {
@@ -53,4 +49,27 @@
 .footerContainer > section:last-child div a:focus-visible {
   outline: 0.25rem solid var(--color-wine);
   outline-offset: 0.25rem;
+}
+
+@media (width < 1300px) {
+  .footerContainer > section:first-child {
+    grid-column: 1 / 7;
+    padding-inline-start: 0.5rem;
+  }
+
+  .footerContainer > section:last-child {
+    grid-column: 8 / 13;
+  }
+}
+
+@media (width < 700px) {
+  .footerContainer > section:last-child div {
+    gap: 1rem;
+  }
+}
+
+@media (width < 500px) {
+  .footerContainer > section:last-child div {
+    gap: 0.5rem;
+  }
 }

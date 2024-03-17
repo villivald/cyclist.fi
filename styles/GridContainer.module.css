@@ -126,6 +126,10 @@
     grid-column: 1 / 13;
     grid-row: 11 / 19;
   }
+
+  .gridContainer nav ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (width < 750px) {
@@ -140,6 +144,7 @@
 
   .gridContainer nav ul {
     grid-template-areas: unset;
+    grid-template-columns: unset;
   }
 
   .gridContainer nav:first-of-type ul {
