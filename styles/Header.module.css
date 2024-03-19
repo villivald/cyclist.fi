@@ -138,3 +138,9 @@
     max-width: unset;
   }
 }
+
+@media (height < 500px) {
+  .headerContainer {
+    height: calc(100 / 12 * 8dvh);
+  }
+}

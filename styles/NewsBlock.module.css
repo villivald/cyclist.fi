@@ -101,3 +101,13 @@
     margin-block-end: 0.5rem;
   }
 }
+
+@media (height < 800px) {
+  .newsBlock {
+    padding-bottom: 0;
+  }
+
+  .newsBlock > :nth-child(2) {
+    font-size: 0.875rem;
+  }
+}

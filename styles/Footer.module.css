@@ -14,7 +14,7 @@
   margin-bottom: 2rem;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
-  font-size: clamp(1rem, 0.3043rem + 2.25vi, 1.5rem);
+  font-size: clamp(0.875rem, 0.3043rem + 2.25vi, 1.5rem);
   color: var(--color-black);
 }
 
@@ -71,5 +71,23 @@
 @media (width < 500px) {
   .footerContainer > section:last-child div {
     gap: 0.5rem;
+  }
+}
+
+@media (height < 850px) {
+  .footerContainer {
+    height: calc(100 / 12 * 4dvh);
+  }
+}
+
+@media (height < 650px) {
+  .footerContainer {
+    height: calc(100 / 12 * 5dvh);
+  }
+}
+
+@media (height < 550px) {
+  .footerContainer {
+    height: calc(100 / 12 * 6dvh);
   }
 }

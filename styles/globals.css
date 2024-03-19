@@ -134,3 +134,9 @@ aside::before {
     background-image: url("/images/bg_xs.webp");
   }
 }
+
+@media (height < 500px) {
+  aside {
+    height: 50.85%;
+  }
+}

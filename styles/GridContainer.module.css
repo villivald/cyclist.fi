@@ -209,3 +209,9 @@
     background-color: var(--color-teal);
   }
 }
+
+@media (height < 500px) {
+  .gridContainer {
+    height: calc(100 / 12 * 30dvh);
+  }
+}

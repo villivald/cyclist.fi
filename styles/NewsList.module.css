@@ -70,6 +70,7 @@
 
   .newsContainer h2 {
     grid-row: 1 / 2;
+    align-self: end;
   }
 
   .newsContainer article {
@@ -94,5 +95,24 @@
 @media (width < 550px) {
   .newsContainer h2 {
     grid-column: 4 / 10;
+  }
+}
+
+@media (height < 800px) {
+  .newsContainer {
+    row-gap: 0.5rem;
+    height: calc(100 / 12 * 16dvh);
+  }
+}
+
+@media (height < 600px) {
+  .newsContainer {
+    height: calc(100 / 12 * 18dvh);
+  }
+}
+
+@media (height < 500px) {
+  .newsContainer {
+    height: calc(100 / 12 * 20dvh);
   }
 }
