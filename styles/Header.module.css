@@ -121,6 +121,10 @@
 }
 
 @media (width < 550px) {
+  .headerContainer {
+    height: calc(100 / 12 * 5lvh);
+  }
+
   .headerContainer > h1 {
     font-size: 5rem;
     text-shadow: 0.275rem 0 0 hsl(from var(--color-teal) h s l / 75%);
@@ -129,9 +133,8 @@
   .headerContainer > div:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column: 8 / 13;
+    grid-column: 7 / 13;
     justify-items: end;
-    margin-inline-end: 0.25rem;
   }
 
   .headerContainer > div:last-child button img {

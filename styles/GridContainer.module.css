@@ -133,6 +133,10 @@
 }
 
 @media (width < 750px) {
+  .gridContainer {
+    height: calc(100 / 12 * 18lvh);
+  }
+
   .gridContainer nav:first-of-type {
     grid-column: 1 / 13;
     grid-row: 1 / 10;

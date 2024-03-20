@@ -71,6 +71,7 @@
   .newsContainer h2 {
     grid-row: 1 / 2;
     align-self: end;
+    padding-block-end: 0.25rem;
   }
 
   .newsContainer article {
@@ -101,18 +102,22 @@
 @media (height < 800px) {
   .newsContainer {
     row-gap: 0.5rem;
-    height: calc(100 / 12 * 16dvh);
+    height: calc(100 / 12 * 16lvh);
+  }
+
+  .newsContainer h2 {
+    padding-block-end: 0;
   }
 }
 
 @media (height < 600px) {
   .newsContainer {
-    height: calc(100 / 12 * 18dvh);
+    height: calc(100 / 12 * 18lvh);
   }
 }
 
 @media (height < 500px) {
   .newsContainer {
-    height: calc(100 / 12 * 20dvh);
+    height: calc(100 / 12 * 20lvh);
   }
 }
