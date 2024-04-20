@@ -1,6 +1,8 @@
 import NewsArchiveBlock from "@/components/NewsArchiveBlock";
 import { metadataElement } from "@/components/metadata";
 
+import newsData from "@/data/news.json";
+
 export const metadata = metadataElement({
   title: "Uutiset",
 });
@@ -8,11 +10,14 @@ export const metadata = metadataElement({
 export default function news() {
   return (
     <div>
-      <NewsArchiveBlock />
-      <NewsArchiveBlock />
-      <NewsArchiveBlock />
-      <NewsArchiveBlock />
-      <NewsArchiveBlock />
+      {newsData.map((newsItem) => (
+        <NewsArchiveBlock
+          key={newsItem.id}
+          image={newsItem.image}
+          text={newsItem.text}
+          date={newsItem.date}
+        />
+      ))}
     </div>
   );
 }

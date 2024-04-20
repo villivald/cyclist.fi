@@ -5,7 +5,7 @@ import NewsBlock from "./NewsBlock";
 
 import styles from "@/styles/NewsList.module.css";
 
-import newsData from "./newsData.json";
+import newsData from "@/data/news.json";
 
 export default function NewsList() {
   const firstNewsBlock = useMemo(() => newsData.slice(0, 3), []);
