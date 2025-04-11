@@ -19,8 +19,8 @@ export default function PageLayout({
 
   const pageColor = Object.keys(
     colors.filter((color) =>
-      Object.values(color)[0].includes(title.toLowerCase())
-    )[0]
+      Object.values(color)[0].includes(title.toLowerCase()),
+    )[0],
   )[0];
 
   return (

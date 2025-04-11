@@ -3,6 +3,7 @@
   "rules": {
     "selector-class-pattern": "(.*?)",
     "selector-id-pattern": "(.*?)",
-    "custom-property-pattern": "(.*?)"
+    "custom-property-pattern": "(.*?)",
+    "keyframes-name-pattern": "(.*?)"
   }
 }

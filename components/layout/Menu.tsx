@@ -43,9 +43,7 @@ export default function Menu() {
       <button onClick={handleChangeTheme}>
         <Image
           src={
-            theme === "light"
-              ? "./icons/sun_color.svg"
-              : "./icons/moon_color.svg"
+            theme === "light" ? "/icons/sun_color.svg" : "/icons/moon_color.svg"
           }
           alt="Theme toggle icon"
           width={46}

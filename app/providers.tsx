@@ -6,7 +6,7 @@ export const ThemeContext = createContext(
   {} as {
     theme: string;
     setTheme: React.Dispatch<React.SetStateAction<string>>;
-  }
+  },
 );
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
