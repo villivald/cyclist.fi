@@ -9,11 +9,18 @@ export const metadata = metadataElement({
   title: "Uutiset",
 });
 
+interface NewsItem {
+  id: string;
+  image: string;
+  text: string;
+  date: string;
+}
+
 export default function news() {
   return (
     <div>
       <h1 className={styles.title}>UUTISET</h1>
-      {newsData.map((newsItem) => (
+      {newsData.map((newsItem: NewsItem) => (
         <NewsArchiveBlock
           key={newsItem.id}
           image={newsItem.image}

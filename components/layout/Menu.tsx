@@ -1,42 +1,98 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useContext } from "react";
-
+import { useState, useContext, useRef, useEffect, useCallback } from "react";
 import { ThemeContext } from "app/providers";
 
 import styles from "@/styles/Menu.module.css";
 
-export default function Menu() {
-  const [menuOpen, setMenuOpen] = useState(false);
+const MENU_ITEMS = [
+  "books",
+  "brands",
+  "caring",
+  "discounts",
+  "indoor",
+  "magazines",
+  "places",
+  "podcasts",
+  "sharing",
+  "social",
+  "tour",
+  "tv",
+  "youtube",
+];
 
+export default function Menu() {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (e.relatedTarget === null) {
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleChangeTheme = useCallback(() => {
+    setTheme(theme === "light" ? "dark" : "light");
+  }, [theme, setTheme]);
+
+  const handleMenuToggle = useCallback(() => {
+    setMenuOpen((prev) => !prev);
+  }, []);
+
+  const handleMenuButtonKeyDown = (e: React.KeyboardEvent) => {
+    if (menuOpen && e.key === "Tab" && e.shiftKey) {
       setMenuOpen(false);
     }
   };
 
-  const handleChangeTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  useEffect(() => {
+    if (!menuOpen) return;
 
-  const menuItems = [
-    "books",
-    "brands",
-    "caring",
-    "discounts",
-    "indoor",
-    "magazines",
-    "places",
-    "podcasts",
-    "sharing",
-    "social",
-    "tour",
-    "tv",
-    "youtube",
-  ];
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        menuButtonRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+
+      if (event.key === "Tab") {
+        const menuLinks = Array.from(
+          menuRef.current?.querySelectorAll("a") || [],
+        );
+        if (!menuLinks.length) return;
+
+        const first = menuLinks[0];
+        const last = menuLinks[menuLinks.length - 1];
+        const active = document.activeElement;
+
+        if (!event.shiftKey && active === last) {
+          setMenuOpen(false);
+        } else if (
+          event.shiftKey &&
+          (active === first || active === menuButtonRef.current)
+        ) {
+          setMenuOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuOpen]);
 
   return (
     <div>
@@ -51,11 +107,16 @@ export default function Menu() {
         />
         <p>Theme</p>
       </button>
-      <div onClick={() => setMenuOpen(!menuOpen)} onBlur={handleBlur}>
+
+      <div>
         <button
+          ref={menuButtonRef}
           className={styles.dropdownButton}
+          aria-controls="main-menu"
           aria-haspopup="true"
-          data-open={menuOpen}
+          aria-expanded={menuOpen}
+          onClick={handleMenuToggle}
+          onKeyDown={handleMenuButtonKeyDown}
         >
           <span className={styles.burger} data-open={menuOpen}>
             <span></span>
@@ -64,13 +125,25 @@ export default function Menu() {
           </span>
           <p>Menu</p>
         </button>
-        <ul className={styles.menu} data-open={menuOpen}>
-          {menuItems.map((item) => (
-            <li key={item}>
-              <a href={`/${item}`}>{item}</a>
-            </li>
-          ))}
-        </ul>
+
+        {menuOpen && (
+          <div ref={menuRef}>
+            <ul
+              className={styles.menu}
+              data-open={menuOpen}
+              id="main-menu"
+              role="menu"
+            >
+              {MENU_ITEMS.map((item) => (
+                <li key={item} role="none">
+                  <a href={`/${item}`} role="menuitem">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

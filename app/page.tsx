@@ -9,7 +9,7 @@ export const metadata = metadataElement({
 export default function Home() {
   return (
     <main>
-      <aside></aside>
+      <aside />
       <GridContainer />
       <NewsList />
     </main>

@@ -27,6 +27,7 @@
   margin-inline-end: 1rem;
 }
 
+/* Theme & Menu buttons */
 .headerContainer > div:last-child button {
   display: flex;
   align-items: center;
@@ -43,8 +44,8 @@
 }
 
 .headerContainer > div:last-child button:focus-visible {
-  outline: 0.25rem solid var(--color-wine);
-  outline-offset: 0.25rem;
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
 }
 
 .headerContainer > div:last-child > button img {
@@ -57,7 +58,7 @@
 }
 
 .headerContainer > div:last-child div button:focus-visible {
-  outline-offset: -0.25rem;
+  outline-offset: calc(var(--outline-offset) * -1);
 }
 
 @media (width > 2000px) {

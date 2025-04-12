@@ -15,11 +15,12 @@
 }
 
 .button:hover {
-  box-shadow: 0 0 0 0.75rem var(--color-wheat) inset,
+  box-shadow:
+    0 0 0 0.75rem var(--color-wheat) inset,
     0.25rem 0.25rem var(--color-dark);
 }
 
 .button:focus-visible {
-  outline: 0.25rem solid var(--color-wine);
-  outline-offset: 0.25rem;
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
 }

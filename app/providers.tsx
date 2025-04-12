@@ -17,9 +17,5 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme,
   };
 
-  return (
-    <ThemeContext.Provider value={globalState}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext value={globalState}>{children}</ThemeContext>;
 }

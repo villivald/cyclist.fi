@@ -11,7 +11,9 @@ export default function ContactForm() {
 
   const id = useId();
 
-  const submitButtonDisabled = !email || !name || !message;
+  const emailPattern = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$";
+  const submitButtonDisabled =
+    !email || !name || !message || !email.match(emailPattern);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,6 +36,7 @@ export default function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           id={`email-${id}`}
           required
+          pattern={emailPattern}
         />
       </div>
       <div>
@@ -59,7 +62,13 @@ export default function ContactForm() {
           required
         ></textarea>
       </div>
-      <button disabled={submitButtonDisabled}>Send me a message</button>
+      <button
+        disabled={submitButtonDisabled}
+        type="submit"
+        className={styles.submitButton}
+      >
+        Send me a message
+      </button>
     </form>
   );
 }
