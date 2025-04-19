@@ -29,6 +29,9 @@
 
   /* Offset */
   --outline-offset: 0.25rem;
+
+  /* Animation */
+  --easing-normal: cubic-bezier(0.5, 0.1, 0.5, 1);
 }
 
 /* 1. Use a more-intuitive box-sizing model */

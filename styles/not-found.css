@@ -1,0 +1,71 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 4rem;
+}
+
+.not-found figure {
+  position: relative;
+  width: 65dvw;
+  aspect-ratio: 1.5 / 1;
+  margin-block-end: 2rem;
+}
+
+.not-found figure::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(from var(--color-teal) h s l / 15%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.not-found figure > img {
+  box-shadow:
+    0.5rem 0.5rem 0 0.25rem hsl(from var(--color-teal) h s l / 60%),
+    1rem 1rem 0 0.5rem hsl(from var(--color-green) h s l / 30%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.not-found figure:hover > img {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow:
+    1rem 1rem 0 0.25rem hsl(from var(--color-teal) h s l / 60%),
+    2rem 2rem 0 0.5rem hsl(from var(--color-green) h s l / 30%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.not-found figure:hover::after {
+  transform: translate(-0.25rem, -0.25rem);
+  background-color: hsl(from var(--color-teal) h s l / 5%);
+}
+
+.not-found a,
+.not-found p {
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
+  padding-inline-start: 0.5rem;
+}
+
+.not-found a {
+  text-decoration: none;
+  font-size: clamp(0.875rem, 0.3043rem + 2.25vi, 1.5rem);
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+}
+
+.not-found a:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+}
+
+.not-found p {
+  font-size: clamp(0.675rem, 0.3043rem + 2.25vi, 1.25rem);
+}
