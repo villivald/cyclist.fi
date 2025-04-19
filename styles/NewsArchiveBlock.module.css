@@ -23,7 +23,7 @@ div:has(.newsArchiveBlock) {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsl(from hsl(180deg 100% 25%) h s l / 15%);
+  background-color: hsl(180deg 100% 25% / 15%);
 }
 
 .newsArchiveBlock article {
