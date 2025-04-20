@@ -112,7 +112,7 @@ h6 {
 }
 
 aside {
-  --banner-image: url("/images/bg_xl.webp");
+  --banner-image: url("/images/bg_xl.avif");
 
   position: absolute;
   width: 100%;
@@ -134,7 +134,7 @@ aside::before {
 
 @media (width < 1400px) {
   aside {
-    --banner-image: url("/images/bg_l.webp");
+    --banner-image: url("/images/bg_l.avif");
   }
 }
 
@@ -146,13 +146,13 @@ aside::before {
 
 @media (width < 1000px) {
   aside {
-    --banner-image: url("/images/bg_m.webp");
+    --banner-image: url("/images/bg_m.avif");
   }
 }
 
 @media (width < 800px) {
   aside {
-    --banner-image: url("/images/bg_s.webp");
+    --banner-image: url("/images/bg_s.avif");
   }
 }
 
@@ -164,7 +164,7 @@ aside::before {
 
 @media (width < 600px) {
   aside {
-    --banner-image: url("/images/bg_xs.webp");
+    --banner-image: url("/images/bg_xs.avif");
   }
 }
 

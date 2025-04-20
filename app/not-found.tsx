@@ -17,6 +17,7 @@ export default function NotFound() {
       <figure>
         <Image
           fill
+          priority
           src={`/images/404_${randomImage}.avif`}
           alt={altText[randomImage - 1]}
           aria-describedby="not-found-image"
