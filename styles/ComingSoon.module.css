@@ -1,0 +1,93 @@
+.comingSoon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 4rem;
+}
+
+.comingSoon figure {
+  position: relative;
+  width: clamp(18.75rem, 35dvw + 2.5rem, 45rem);
+  aspect-ratio: 1.15 / 1;
+  margin-block-end: 2rem;
+}
+
+.comingSoon figure::after {
+  position: relative;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(from var(--color-teal) h s l / 15%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.comingSoon figure > img {
+  box-shadow:
+    0.5rem 0.5rem 0 0.25rem hsl(from var(--color-dark) h s l / 60%),
+    1rem 1rem 0 0.5rem hsl(from var(--color-wine) h s l / 20%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.comingSoon figure:hover > img {
+  transform: translate(-0.25rem, -0.25rem);
+  box-shadow:
+    1rem 1rem 0 0.25rem hsl(from var(--color-dark) h s l / 60%),
+    2rem 2rem 0 0.5rem hsl(from var(--color-wine) h s l / 20%);
+  transition: all 0.5s var(--easing-normal);
+}
+
+.comingSoon figure:hover::after {
+  transform: translate(-0.25rem, -0.25rem);
+  background-color: hsl(from var(--color-teal) h s l / 5%);
+}
+
+.comingSoon a,
+.comingSoon p {
+  color: var(--color-black);
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
+  padding-inline-start: 0.5rem;
+}
+
+.comingSoon a {
+  text-decoration: none;
+  font-size: clamp(0.875rem, 0.3043rem + 2.25vi, 1.5rem);
+}
+
+.comingSoon a:hover {
+  text-decoration: underline;
+}
+
+.comingSoon a:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+}
+
+.comingSoon p {
+  font-size: clamp(0.675rem, 0.3043rem + 2.25vi, 1.25rem);
+}
+
+@media (width < 1100px) {
+  .comingSoon {
+    margin-block: initial;
+  }
+}
+
+@media (width < 550px) {
+  .comingSoon figure > img {
+    box-shadow:
+      0.25rem 0.25rem 0 0.125rem hsl(from var(--color-dark) h s l / 60%),
+      0.5rem 0.5rem 0 0.25rem hsl(from var(--color-wine) h s l / 20%);
+  }
+
+  .comingSoon figure:hover > img {
+    transform: translate(-0.125rem, -0.125rem);
+    box-shadow:
+      0.5rem 0.5rem 0 0.125rem hsl(from var(--color-dark) h s l / 60%),
+      1rem 1rem 0 0.25rem hsl(from var(--color-wine) h s l / 20%);
+    transition: all 0.5s var(--easing-normal);
+  }
+}

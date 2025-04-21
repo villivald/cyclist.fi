@@ -1,4 +1,4 @@
-.not-found {
+.notFound {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,14 +7,14 @@
   margin-block: 4rem;
 }
 
-.not-found figure {
+.notFound figure {
   position: relative;
-  width: 65dvw;
+  width: clamp(18.75rem, 65dvw + 2.5rem, 60rem);
   aspect-ratio: 1.5 / 1;
   margin-block-end: 2rem;
 }
 
-.not-found figure::after {
+.notFound figure::after {
   position: relative;
   content: "";
   display: block;
@@ -24,14 +24,14 @@
   transition: all 0.5s var(--easing-normal);
 }
 
-.not-found figure > img {
+.notFound figure > img {
   box-shadow:
     0.5rem 0.5rem 0 0.25rem hsl(from var(--color-teal) h s l / 60%),
     1rem 1rem 0 0.5rem hsl(from var(--color-green) h s l / 30%);
   transition: all 0.5s var(--easing-normal);
 }
 
-.not-found figure:hover > img {
+.notFound figure:hover > img {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow:
     1rem 1rem 0 0.25rem hsl(from var(--color-teal) h s l / 60%),
@@ -39,33 +39,55 @@
   transition: all 0.5s var(--easing-normal);
 }
 
-.not-found figure:hover::after {
+.notFound figure:hover::after {
   transform: translate(-0.25rem, -0.25rem);
   background-color: hsl(from var(--color-teal) h s l / 5%);
 }
 
-.not-found a,
-.not-found p {
+.notFound a,
+.notFound p {
   color: var(--color-black);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
   padding-inline-start: 0.5rem;
 }
 
-.not-found a {
+.notFound a {
   text-decoration: none;
   font-size: clamp(0.875rem, 0.3043rem + 2.25vi, 1.5rem);
 }
 
-.not-found a:hover {
+.notFound a:hover {
   text-decoration: underline;
 }
 
-.not-found a:focus-visible {
+.notFound a:focus-visible {
   outline: var(--focus-visible-wine);
   outline-offset: var(--outline-offset);
 }
 
-.not-found p {
+.notFound p {
   font-size: clamp(0.675rem, 0.3043rem + 2.25vi, 1.25rem);
+}
+
+@media (width < 1100px) {
+  .notFound {
+    margin-block: initial;
+  }
+}
+
+@media (width < 550px) {
+  .notFound figure > img {
+    box-shadow:
+      0.25rem 0.25rem 0 0.125rem hsl(from var(--color-teal) h s l / 60%),
+      0.5rem 0.5rem 0 0.25rem hsl(from var(--color-green) h s l / 30%);
+  }
+
+  .notFound figure:hover > img {
+    transform: translate(-0.125rem, -0.125rem);
+    box-shadow:
+      0.5rem 0.5rem 0 0.125rem hsl(from var(--color-teal) h s l / 60%),
+      1rem 1rem 0 0.25rem hsl(from var(--color-green) h s l / 30%);
+    transition: all 0.5s var(--easing-normal);
+  }
 }

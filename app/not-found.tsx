@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import "@/styles/not-found.css";
+import styles from "@/styles/NotFound.module.css";
 
 export default function NotFound() {
   const randomImage = Math.floor(Math.random() * 3) + 1;
@@ -13,7 +13,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="not-found">
+    <div className={styles.notFound}>
       <figure>
         <Image
           fill
