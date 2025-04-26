@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
@@ -21,6 +23,7 @@ export default function RootLayout({
           <ScrollToTopButton />
         </body>
       </ThemeProvider>
+      <Analytics />
     </html>
   );
 }
