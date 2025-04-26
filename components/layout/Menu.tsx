@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useContext, useRef, useEffect, useCallback } from "react";
 import { ThemeContext } from "app/providers";
+import Image from "next/image";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
 

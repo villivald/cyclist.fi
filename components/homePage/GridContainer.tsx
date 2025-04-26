@@ -1,6 +1,6 @@
-import Grid from "./Grid";
-
 import styles from "@/styles/GridContainer.module.css";
+
+import Grid from "./Grid";
 
 export default function GridContainer() {
   const upperLinks = [

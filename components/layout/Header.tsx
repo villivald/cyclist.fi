@@ -1,7 +1,7 @@
+import styles from "@/styles/Header.module.css";
+
 import Logo from "./Logo";
 import Menu from "./Menu";
-
-import styles from "@/styles/Header.module.css";
 
 export default function Header() {
   return (

@@ -1,6 +1,6 @@
-import ComingSoon from "./ComingSoon";
-
 import styles from "@/styles/Design.module.css";
+
+import ComingSoon from "./ComingSoon";
 
 export default function Design() {
   return (

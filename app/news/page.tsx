@@ -1,8 +1,6 @@
-import NewsArchiveBlock from "@/components/NewsArchiveBlock";
 import { metadataElement } from "@/components/metadata";
-
+import NewsArchiveBlock from "@/components/NewsArchiveBlock";
 import newsData from "@/data/news.json";
-
 import styles from "@/styles/NewsArchiveBlock.module.css";
 
 export const metadata = metadataElement({

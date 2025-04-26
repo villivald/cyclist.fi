@@ -1,10 +1,10 @@
-import Header from "@/components/layout/Header";
+import "@/styles/globals.css";
+
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 
 import { ThemeProvider } from "./providers";
-
-import "@/styles/globals.css";
 
 export default function RootLayout({
   children,

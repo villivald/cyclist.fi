@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { useMemo } from "react";
 
-import NewsBlock from "./NewsBlock";
-
+import newsData from "@/data/news.json";
 import styles from "@/styles/NewsList.module.css";
 
-import newsData from "@/data/news.json";
+import NewsBlock from "./NewsBlock";
 
 export default function NewsList() {
   const firstNewsBlock = useMemo(() => newsData.slice(0, 3), []);
