@@ -17,7 +17,7 @@ export default function Footer() {
           The cycling resource you always needed but never had a link to
           CYCLIST.FI
         </span>
-        <span>© 2024</span>
+        <span>© 2025</span>
       </section>
       <section>
         <div>
