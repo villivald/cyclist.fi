@@ -3,7 +3,7 @@
   position: fixed;
   bottom: 1.25rem;
   right: 1.75rem;
-  padding: 1rem;
+  padding: var(--offset-xl);
   border: 0.125rem solid
     color-mix(in lch, var(--color-dark) 1%, var(--color-wheat));
   background-color: var(--color-almost-white);

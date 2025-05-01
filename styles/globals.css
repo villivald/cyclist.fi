@@ -47,6 +47,7 @@
   */
   --step--2: clamp(0.7407rem, 0.7265rem + 0.0609vw, 0.7813rem);
   --step--1: clamp(0.8333rem, 0.7967rem + 0.1565vw, 0.9375rem);
+  --step--05: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
   --step-0: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
   --step-1: clamp(1.0547rem, 0.9507rem + 0.4437vw, 1.35rem);
   --step-2: clamp(1.1865rem, 1.0339rem + 0.6512vw, 1.62rem);
@@ -58,6 +59,11 @@
   --step-8: clamp(2.4054rem, 1.5491rem + 3.6535vw, 4.8373rem);
   --step-9: clamp(2.7061rem, 1.615rem + 4.6553vw, 5.8048rem);
   --step-10: clamp(3.0444rem, 1.6636rem + 5.8912vw, 6.9657rem);
+  --hero-font-size: clamp(7rem, 12vw, 14rem);
+  --grid-link-font-size: clamp(1rem, 0.3043rem + 2.5vw, 2.5rem);
+
+  /* Text line max-width */
+  --text-line-max-width: 60ch;
 
   /*
   Spacing

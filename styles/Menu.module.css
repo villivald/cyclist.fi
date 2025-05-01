@@ -1,5 +1,5 @@
 .dropdownButton {
-  padding: 0.5rem 1rem;
+  padding: var(--offset-m) var(--offset-xl);
   color: var(--color-black);
 }
 
@@ -23,13 +23,11 @@
 .menu > li > a {
   display: flex;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: var(--offset-m) var(--offset-xl);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
+  font-size: var(--step-0);
   color: var(--color-black);
-
-  /* placeholder values */
-  font-size: 1rem;
 }
 
 .menu > li:hover {
@@ -51,7 +49,7 @@
 
 .burger {
   display: grid;
-  gap: 0.5rem;
+  gap: var(--space-2xs);
 }
 
 .burger > span {

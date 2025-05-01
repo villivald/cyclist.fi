@@ -5,6 +5,7 @@
   height: calc(100 / 12 * 13dvh);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
+  font-size: var(--step-0);
 }
 
 .newsContainer h2 {
@@ -12,7 +13,7 @@
   grid-row: 2 / 3;
   place-self: center;
   text-transform: uppercase;
-  font-size: clamp(1.5rem, 0.3043rem + 3vi, 3rem);
+  font-size: var(--step-5);
 }
 
 .newsContainer article {
@@ -37,11 +38,10 @@
 }
 
 .newsContainer span a {
-  font-size: clamp(1.25rem, 0.3043rem + 3vi, 1.75rem);
+  font-size: var(--step-2);
 }
 
 .newsContainer span a:hover {
-  /* placeholder values */
   color: var(--color-dark);
 }
 
@@ -53,12 +53,12 @@
 @media (width < 1300px) {
   .newsContainer article:first-of-type {
     grid-column: 1 / 6;
-    padding-inline-start: 0.5rem;
+    padding-inline-start: var(--offset-m);
   }
 
   .newsContainer article:last-of-type {
     grid-column: 8 / 13;
-    padding-inline-end: 0.5rem;
+    padding-inline-end: var(--offset-m);
   }
 }
 
@@ -71,11 +71,11 @@
   .newsContainer h2 {
     grid-row: 1 / 2;
     align-self: end;
-    padding-block-end: 0.25rem;
+    padding-block-end: var(--offset-s);
   }
 
   .newsContainer article {
-    padding-inline: 0.5rem;
+    padding-inline: var(--offset-m);
   }
 
   .newsContainer article:first-of-type {
@@ -101,7 +101,7 @@
 
 @media (height < 800px) {
   .newsContainer {
-    row-gap: 0.5rem;
+    row-gap: var(--space-2xs);
     height: calc(100 / 12 * 16lvh);
   }
 

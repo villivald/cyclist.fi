@@ -1,26 +1,27 @@
 div:has(.form) {
   display: grid;
   place-items: center;
-  min-height: 50dvh;
+  min-height: 60dvh;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
+  font-size: var(--step-0);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-s-m);
 }
 
 .form > div {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-3xs-2xs);
   width: clamp(20rem, 50vw, 30rem);
 }
 
 .form > div > :is(input, textarea) {
-  padding: 0.75rem;
+  padding: var(--offset-l);
   border: 1px solid var(--color-dark);
   max-width: 100%;
 
@@ -39,7 +40,7 @@ div:has(.form) {
 }
 
 .form > button {
-  padding: 0.75rem;
+  padding: var(--offset-l);
   border: none;
   background-color: var(--color-teal);
   color: var(--color-white);
@@ -59,4 +60,10 @@ div:has(.form) {
 .form > button:disabled {
   background-color: hsl(from var(--color-dark) h s l / 50%);
   cursor: not-allowed;
+}
+
+@media (width < 1200px) {
+  div:has(.form) {
+    min-height: unset;
+  }
 }

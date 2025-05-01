@@ -32,7 +32,7 @@
   height: 100%;
   width: 100%;
   border: 0.5rem solid var(--color-almost-white);
-  font-size: clamp(1rem, 0.3043rem + 2.5vi, 2.5rem);
+  font-size: var(--grid-link-font-size);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
 }

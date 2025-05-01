@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-s-m);
   margin-block: 4rem;
 }
 
@@ -11,7 +11,7 @@
   position: relative;
   width: clamp(18.75rem, 65dvw + 2.5rem, 60rem);
   aspect-ratio: 1.5 / 1;
-  margin-block-end: 2rem;
+  margin-block-end: var(--offset-2xl);
 }
 
 .notFound figure::after {
@@ -49,12 +49,12 @@
   color: var(--color-black);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
-  padding-inline-start: 0.5rem;
+  padding-inline-start: var(--offset-m);
 }
 
 .notFound a {
+  font-size: var(--step-2);
   text-decoration: none;
-  font-size: clamp(0.875rem, 0.3043rem + 2.25vi, 1.5rem);
 }
 
 .notFound a:hover {
@@ -67,7 +67,8 @@
 }
 
 .notFound p {
-  font-size: clamp(0.675rem, 0.3043rem + 2.25vi, 1.25rem);
+  font-size: var(--step-1);
+  max-width: var(--text-line-max-width);
 }
 
 @media (width < 1100px) {

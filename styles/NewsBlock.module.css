@@ -19,15 +19,14 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: hsl(180deg 100% 25% / 15%);
+  background-color: hsl(from var(--color-teal) h s l / 15%);
 }
 
 .newsBlock > :nth-child(2) {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
-  padding-left: 1rem;
-  padding-block: 0.25rem;
-  text-wrap: balance;
+  padding-left: var(--offset-l);
+  padding-block: var(--offset-s);
 }
 
 .newsBlock > :last-child {
@@ -36,8 +35,8 @@
   place-self: end;
   background-color: var(--color-teal);
   color: var(--color-white);
-  padding: 0.25rem;
-  font-size: 0.75rem;
+  padding: var(--offset-s);
+  font-size: var(--step--2);
 }
 
 .newsBlock:first-of-type {
@@ -73,7 +72,7 @@
 @media (width< 900px) {
   .newsBlock {
     grid-column: 1 / 13;
-    padding-bottom: 1rem;
+    padding-bottom: var(--offset-xl);
   }
 
   .newsBlock:first-of-type {
@@ -98,7 +97,7 @@
 
   .newsBlock > :last-child {
     grid-column: 9 / 13;
-    margin-block-end: 0.5rem;
+    margin-block-end: var(--offset-m);
   }
 }
 

@@ -12,9 +12,9 @@
   justify-self: center;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
+  font-size: var(--hero-font-size);
   color: hsl(from var(--color-wine) h s l / 75%);
   text-shadow: 0.55rem 0 0 hsl(from var(--color-teal) h s l / 75%);
-  font-size: clamp(7rem, 12vw, 14rem);
 }
 
 .headerContainer > div:last-child {
@@ -24,23 +24,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline-end: 1rem;
+  margin-inline-end: var(--offset-xl);
 }
 
 /* Theme & Menu buttons */
 .headerContainer > div:last-child button {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2xs);
   cursor: pointer;
   border: none;
   background: transparent;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
+  font-size: var(--step-6);
   text-transform: uppercase;
-
-  /* placeholder values */
-  font-size: 3rem;
 }
 
 .headerContainer > div:last-child button:focus-visible {
@@ -98,22 +96,16 @@
 }
 
 @media (width < 900px) {
-  .headerContainer > div:last-child button {
-    font-size: 2rem;
-  }
-
   .headerContainer > div:last-child > button img {
     height: 2rem;
-  }
-}
-
-@media (width < 700px) {
-  .headerContainer > div:last-child {
-    grid-column: 10 / 13;
   }
 
   .headerContainer > div:last-child button p {
     display: none;
+  }
+
+  .headerContainer > div:last-child {
+    grid-column: 10 / 13;
   }
 
   .headerContainer > div:last-child button img {
@@ -134,7 +126,7 @@
   .headerContainer > div:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column: 7 / 13;
+    grid-column: 8 / 13;
     justify-items: end;
   }
 
