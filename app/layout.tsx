@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
 
-import { ThemeProvider } from "./providers";
+import ThemeProvider from "./providers";
 
 export default function RootLayout({
   children,
@@ -14,15 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fi">
-      <ThemeProvider>
-        <body>
+    <html lang="fi" suppressHydrationWarning>
+      <body>
+        <ThemeProvider>
           <Header />
           {children}
           <Footer />
           <ScrollToTopButton />
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
       <Analytics />
     </html>
   );

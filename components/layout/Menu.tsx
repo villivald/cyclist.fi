@@ -1,8 +1,8 @@
 "use client";
 
-import { ThemeContext } from "app/providers";
 import Image from "next/image";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useTheme } from "next-themes";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
 
@@ -23,7 +23,10 @@ const MENU_ITEMS = [
 ];
 
 export default function Menu() {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme, setTheme } = useTheme();
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -93,6 +96,8 @@ export default function Menu() {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [menuOpen]);
+
+  if (!mounted) return null;
 
   return (
     <div>

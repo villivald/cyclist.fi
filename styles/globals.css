@@ -93,6 +93,10 @@
   --space-s-l: clamp(0.9375rem, 0.4754rem + 1.9718vw, 2.25rem);
 }
 
+.dark {
+  /* TODO: Add colors for dark mode */
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
