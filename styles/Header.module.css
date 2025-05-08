@@ -18,7 +18,7 @@
 }
 
 .headerContainer > div:last-child {
-  grid-column: 9 / 13;
+  grid-column: 7 / 13;
   grid-row: 1 / 2;
   height: 100%;
   display: flex;
@@ -61,7 +61,7 @@
 
 @media (width > 2000px) {
   .headerContainer > div:last-child {
-    grid-column: 10 / 13;
+    grid-column: 8 / 13;
   }
 }
 
@@ -79,13 +79,13 @@
 
 @media (width < 1500px) {
   .headerContainer > div:last-child {
-    grid-column: 8 / 13;
+    grid-column: 6 / 13;
   }
 }
 
 @media (width < 1200px) {
   .headerContainer > div:last-child {
-    grid-column: 7 / 13;
+    grid-column: 5 / 13;
   }
 }
 
@@ -105,7 +105,7 @@
   }
 
   .headerContainer > div:last-child {
-    grid-column: 10 / 13;
+    grid-column: 9 / 13;
   }
 
   .headerContainer > div:last-child button img {

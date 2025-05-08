@@ -1,25 +1,29 @@
+import { useTranslations } from "next-intl";
+
 import styles from "@/styles/GridContainer.module.css";
 
 import Grid from "./Grid";
 
 export default function GridContainer() {
+  const t = useTranslations("GridLinks");
+
   const upperLinks = [
-    { title: "Brands", link: "/brands" },
-    { title: "Youtube", link: "/youtube" },
-    { title: "Magazines", link: "/magazines" },
-    { title: "Discounts", link: "/discounts" },
-    { title: "Podcasts", link: "/podcasts" },
-    { title: "TV", link: "/tv" },
-    { title: "Indoor", link: "/indoor" },
-    { title: "Places", link: "/places" },
-    { title: "Tour", link: "/tour" },
+    { title: t("brands"), link: "/brands" },
+    { title: t("youtube"), link: "/youtube" },
+    { title: t("magazines"), link: "/magazines" },
+    { title: t("discounts"), link: "/discounts" },
+    { title: t("podcasts"), link: "/podcasts" },
+    { title: t("tv"), link: "/tv" },
+    { title: t("indoor"), link: "/indoor" },
+    { title: t("places"), link: "/places" },
+    { title: t("tour"), link: "/tour" },
   ];
 
   const lowerLinks = [
-    { title: "Books", link: "/books" },
-    { title: "Sharing", link: "/sharing" },
-    { title: "Caring", link: "/caring" },
-    { title: "Social", link: "/social" },
+    { title: t("books"), link: "/books" },
+    { title: t("sharing"), link: "/sharing" },
+    { title: t("caring"), link: "/caring" },
+    { title: t("social"), link: "/social" },
     { title: "Test", link: "/test" },
     { title: "Test", link: "/test" },
     { title: "Test", link: "/test" },

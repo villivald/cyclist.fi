@@ -6,6 +6,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
 
+import LanguageSwitcher from "./LanguageSwitcher";
+
 const MENU_ITEMS = [
   "books",
   "brands",
@@ -112,6 +114,8 @@ export default function Menu() {
         />
         <p>Theme</p>
       </button>
+
+      <LanguageSwitcher />
 
       <div>
         <button
