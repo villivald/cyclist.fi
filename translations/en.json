@@ -13,5 +13,11 @@
     "sharing": "Sharing",
     "caring": "Caring",
     "social": "Social"
+  },
+  "LanguageSwitcher": {
+    "en": "English",
+    "fi": "Finnish",
+    "switchLanguage": "Switch language to",
+    "currentLanguage": "Currently selected language is "
   }
 }

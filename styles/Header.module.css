@@ -125,7 +125,7 @@
 
   .headerContainer > div:last-child {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column: 8 / 13;
     justify-items: end;
   }

@@ -1,17 +1,19 @@
 "use client";
 
 import { Locale } from "i18n/config";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { setUserLocale } from "services/locale";
 
 import styles from "@/styles/LanguageSwitcher.module.css";
 
 const LanguageSwitcher = () => {
+  const t = useTranslations("LanguageSwitcher");
+
   const locale = useLocale() as Locale;
 
   const languages = {
-    en: "English",
-    fi: "Finnish",
+    en: t("en"),
+    fi: t("fi"),
   };
 
   const handleToggleLanguage = () => {
@@ -26,27 +28,48 @@ const LanguageSwitcher = () => {
     }
   };
 
+  const getTextStyle = () => {
+    return {
+      background: `url(/icons/${locale}.svg)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundClip: "text",
+    };
+  };
+
+  const optionIsActive = (option: string) => {
+    return locale === option;
+  };
+
   return (
-    <div className={styles.languageSwitcherContainer}>
+    <>
       <button
         onClick={handleToggleLanguage}
         onKeyDown={handleKeyDown}
-        aria-label={`Switch language to ${locale === "en" ? "Finnish" : "English"}`}
+        aria-label={`${t("switchLanguage")} ${optionIsActive("en") ? t("fi") : t("en")}`}
         className={styles.languageToggleButton}
       >
-        <span className={styles.toggleOption} data-active={locale === "en"}>
+        <span
+          className={styles.toggleOption}
+          data-active={optionIsActive("en")}
+          style={optionIsActive("en") ? getTextStyle() : undefined}
+        >
           EN
         </span>
         <span className={styles.toggleDivider}>/</span>
-        <span className={styles.toggleOption} data-active={locale === "fi"}>
+        <span
+          className={styles.toggleOption}
+          data-active={optionIsActive("fi")}
+          style={optionIsActive("fi") ? getTextStyle() : undefined}
+        >
           FI
         </span>
       </button>
 
       <span className={styles.srOnly}>
-        Currently selected language: {languages[locale]}
+        {`${t("currentLanguage")} ${languages[locale]}`}
       </span>
-    </div>
+    </>
   );
 };
 
