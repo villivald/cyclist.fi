@@ -1,3 +1,4 @@
+/* stylelint-disable number-max-precision */
 .languageToggleButton {
   padding: var(--offset-m) var(--offset-xl);
 }
@@ -17,6 +18,19 @@
     drop-shadow(-0.5px -0.5px 0 var(--color-black))
     drop-shadow(0.5px -0.5px 0 var(--color-black))
     drop-shadow(-0.5px 0.5px 0 var(--color-black));
+}
+
+@supports (-webkit-hyphens: none) and (not (-moz-appearance: none)) {
+  .toggleOption[data-active="true"] {
+    filter: drop-shadow(0.06125rem 0 0 var(--color-black))
+      drop-shadow(-0.06125rem 0 0 var(--color-black))
+      drop-shadow(0 0.06125rem 0 var(--color-black))
+      drop-shadow(0 -0.06125rem 0 var(--color-black))
+      drop-shadow(0.06125rem 0.06125rem 0 var(--color-black))
+      drop-shadow(-0.0625rem -0.0625rem 0 var(--color-black))
+      drop-shadow(0.0625rem -0.06125rem 0 var(--color-black))
+      drop-shadow(-0.06125rem 0.0625rem 0 var(--color-black));
+  }
 }
 
 .toggleDivider {
