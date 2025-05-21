@@ -14,6 +14,7 @@
   place-self: center;
   text-transform: uppercase;
   font-size: var(--step-5);
+  color: var(--color-text);
 }
 
 .newsContainer article {
@@ -42,7 +43,7 @@
 }
 
 .newsContainer span a:hover {
-  color: var(--color-dark);
+  color: var(--color-text);
 }
 
 .newsContainer span a:focus-visible {

@@ -31,7 +31,7 @@
   place-content: center;
   height: 100%;
   width: 100%;
-  border: 0.5rem solid var(--color-almost-white);
+  border: 0.5rem solid var(--color-background);
   font-size: var(--grid-link-font-size);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
@@ -152,7 +152,7 @@
   }
 
   .gridContainer nav:first-of-type ul {
-    border-block-start: 0.125rem solid var(--color-almost-white);
+    border-block-start: 0.125rem solid var(--color-background);
   }
 
   .gridContainer nav ul li {

@@ -5,6 +5,7 @@
   grid-template-rows: subgrid;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
+  color: var(--color-text);
 }
 
 .newsBlock > :first-child {
@@ -34,7 +35,7 @@
   grid-row: 2 / 3;
   place-self: end;
   background-color: var(--color-teal);
-  color: var(--color-white);
+  color: var(--color-almost-white);
   padding: var(--offset-s);
   font-size: var(--step--2);
 }

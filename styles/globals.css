@@ -18,7 +18,12 @@
   --color-dark: hsl(218deg 16% 29%);
   --color-almost-white: hsl(22deg 67% 98%);
   --color-black: hsl(0deg 0% 0%);
-  --color-white: hsl(0deg 0% 100%);
+
+  /* Utility colors */
+  --color-background: var(--color-almost-white);
+  --color-text: var(--color-black);
+  --color-shadow: var(--color-dark);
+  --route-color-opacity: 15%;
 
   /* Typography */
   --font-sans: "Satoshi-Variable", "Helvetica Neue", sans-serif;
@@ -94,7 +99,15 @@
 }
 
 .dark {
-  /* TODO: Add colors for dark mode */
+  --color-background: var(--color-dark);
+  --color-text: var(--color-almost-white);
+  --color-shadow: var(--color-almost-white);
+
+  /* reduce lightness */
+  --color-wheat: hsl(46deg 57% 70%);
+
+  /* increase opacity */
+  --route-color-opacity: 45%;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -122,7 +135,7 @@ body {
 
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  background-color: var(--color-almost-white);
+  background-color: var(--color-background);
 }
 
 /* 6. Improve media defaults */

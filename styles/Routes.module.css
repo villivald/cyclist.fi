@@ -17,14 +17,14 @@
     16vw,
     calc(10 / var(--stringLength) * 18rem)
   );
-  color: hsl(from var(--pageColor) h s l / 15%);
+  color: hsl(from var(--pageColor) h s l / var(--route-color-opacity));
   z-index: -1;
 }
 
 .mainContainer {
   grid-column: 2 / 12;
   grid-row: 4 / 14;
-  background-color: var(--color-almost-white);
+  background-color: var(--color-background);
 }
 
 @media (width < 1100px) {

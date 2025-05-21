@@ -22,7 +22,7 @@ div:has(.form) {
 
 .form > div > :is(input, textarea) {
   padding: var(--offset-l);
-  border: 1px solid var(--color-dark);
+  border: 1px solid var(--color-text);
   max-width: 100%;
 
   &:valid {
@@ -43,7 +43,7 @@ div:has(.form) {
   padding: var(--offset-l);
   border: none;
   background-color: var(--color-teal);
-  color: var(--color-white);
+  color: var(--color-almost-white);
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -58,7 +58,7 @@ div:has(.form) {
 }
 
 .form > button:disabled {
-  background-color: hsl(from var(--color-dark) h s l / 50%);
+  background-color: hsl(from var(--color-text) h s l / 50%);
   cursor: not-allowed;
 }
 

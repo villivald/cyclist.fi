@@ -6,7 +6,7 @@
   padding: var(--offset-xl);
   border: 0.125rem solid
     color-mix(in lch, var(--color-dark) 1%, var(--color-wheat));
-  background-color: var(--color-almost-white);
+  background-color: var(--color-background);
   box-shadow: 0 0 0 0.75rem var(--color-wheat) inset;
   border-radius: 0;
   cursor: pointer;
@@ -17,10 +17,14 @@
 .button:hover {
   box-shadow:
     0 0 0 0.75rem var(--color-wheat) inset,
-    0.25rem 0.25rem var(--color-dark);
+    0.25rem 0.25rem var(--color-shadow);
 }
 
 .button:focus-visible {
   outline: var(--focus-visible-wine);
   outline-offset: var(--outline-offset);
+}
+
+.button[data-theme="dark"] > img {
+  filter: invert(1);
 }

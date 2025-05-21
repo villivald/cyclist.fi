@@ -103,7 +103,7 @@ export default function Menu() {
 
   return (
     <div>
-      <button onClick={handleChangeTheme}>
+      <button className={styles.themeButton} onClick={handleChangeTheme}>
         <Image
           src={
             theme === "light" ? "/icons/sun_color.svg" : "/icons/moon_color.svg"

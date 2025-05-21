@@ -1,6 +1,10 @@
 .dropdownButton {
   padding: var(--offset-m) var(--offset-xl);
-  color: var(--color-black);
+  color: var(--color-text);
+}
+
+.themeButton {
+  color: var(--color-text);
 }
 
 .menu {
@@ -11,9 +15,9 @@
   list-style: none;
   padding: 0;
   width: 10rem;
-  background-color: var(--color-almost-white);
-  border: 0.0625rem solid var(--color-dark);
-  box-shadow: 0.25rem 0.25rem var(--color-black);
+  background-color: var(--color-background);
+  border: 0.0625rem solid var(--color-text);
+  box-shadow: 0.25rem 0.25rem var(--color-text);
 }
 
 .menu[data-open="true"] {
@@ -27,15 +31,15 @@
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
   font-size: var(--step-0);
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .menu > li:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-shadow);
 }
 
 .menu > li:hover > a {
-  color: var(--color-almost-white);
+  color: var(--color-background);
 }
 
 .menu > li > a:focus-visible {
@@ -44,7 +48,7 @@
 }
 
 .menu > li:not(:last-child) {
-  border-bottom: 0.0625rem solid var(--color-dark);
+  border-bottom: 0.0625rem solid var(--color-text);
 }
 
 .burger {
@@ -55,7 +59,7 @@
 .burger > span {
   width: 2rem;
   height: 0.25rem;
-  background-color: var(--color-black);
+  background-color: var(--color-text);
 
   /* placeholder values */
   transition:

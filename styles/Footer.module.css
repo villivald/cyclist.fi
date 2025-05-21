@@ -15,7 +15,7 @@
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
   font-size: var(--step-2);
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .footerContainer > section:first-child span {
@@ -39,7 +39,7 @@
 
 .footerContainer > section:last-child div a {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 
 .footerContainer > section:last-child div a:hover {

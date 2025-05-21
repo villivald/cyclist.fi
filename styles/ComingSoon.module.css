@@ -46,7 +46,7 @@
 
 .comingSoon a,
 .comingSoon p {
-  color: var(--color-black);
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
   padding-inline-start: var(--offset-m);
