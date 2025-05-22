@@ -24,6 +24,7 @@
     "a b c"
     "d e f"
     "g h i";
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .gridContainer nav ul li {
@@ -125,10 +126,6 @@
   .gridContainer nav:last-of-type {
     grid-column: 1 / 13;
     grid-row: 11 / 19;
-  }
-
-  .gridContainer nav ul {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
