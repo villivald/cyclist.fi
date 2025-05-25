@@ -33,6 +33,16 @@
   }
 }
 
+.languageToggleButton[data-theme="dark"] .toggleOption[data-active="true"] {
+  --color-black: hsl(from var(--color-almost-white) h s 75%);
+}
+
+@supports (-webkit-hyphens: none) and (not (-moz-appearance: none)) {
+  .languageToggleButton[data-theme="dark"] .toggleOption[data-active="true"] {
+    --color-black: hsl(from var(--color-almost-white) h s 75%);
+  }
+}
+
 .toggleDivider {
   color: hsl(from var(--color-text) h s l / 25%);
   margin-inline: var(--offset-xs);

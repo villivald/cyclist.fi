@@ -31,6 +31,8 @@
 }
 
 .newsBlock > :last-child {
+  --color-almost-white: hsl(30deg 5% 98%);
+
   grid-column: 3 / 4;
   grid-row: 2 / 3;
   place-self: end;

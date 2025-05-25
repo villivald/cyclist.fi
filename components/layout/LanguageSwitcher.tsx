@@ -2,12 +2,21 @@
 
 import { Locale } from "i18n/config";
 import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { setUserLocale } from "services/locale";
 
 import styles from "@/styles/LanguageSwitcher.module.css";
 
 const LanguageSwitcher = () => {
   const t = useTranslations("LanguageSwitcher");
+  const { theme } = useTheme();
+
+  const [appTheme, setAppTheme] = useState<string>();
+
+  useEffect(() => {
+    setAppTheme(theme);
+  }, [theme]);
 
   const locale = useLocale() as Locale;
 
@@ -44,6 +53,7 @@ const LanguageSwitcher = () => {
   return (
     <>
       <button
+        data-theme={appTheme}
         onClick={handleToggleLanguage}
         onKeyDown={handleKeyDown}
         aria-label={`${t("switchLanguage")} ${optionIsActive("en") ? t("fi") : t("en")}`}

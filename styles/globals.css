@@ -12,16 +12,16 @@
 :root {
   /* Colors */
   --color-teal: hsl(180deg 100% 25%);
-  --color-wheat: hsl(46deg 57% 88%);
+  --color-wheat: hsl(42deg 50% 86%);
   --color-wine: hsl(348deg 48% 44%);
   --color-green: hsl(100deg 78% 17%);
-  --color-dark: hsl(218deg 16% 29%);
-  --color-almost-white: hsl(22deg 67% 98%);
+  --color-dark: hsl(210deg 12% 20%);
+  --color-almost-white: hsl(30deg 5% 98%);
   --color-black: hsl(0deg 0% 0%);
 
   /* Utility colors */
   --color-background: var(--color-almost-white);
-  --color-text: var(--color-black);
+  --color-text: var(--color-dark);
   --color-shadow: var(--color-dark);
   --route-color-opacity: 15%;
 
@@ -103,8 +103,11 @@
   --color-text: var(--color-almost-white);
   --color-shadow: var(--color-almost-white);
 
-  /* reduce lightness */
-  --color-wheat: hsl(46deg 57% 70%);
+  /* warmer tones */
+  --color-wheat: hsl(42deg 45% 72%);
+  --color-wine: hsl(348deg 65% 55%);
+  --color-green: hsl(100deg 65% 25%);
+  --color-almost-white: hsl(30deg 15% 92%);
 
   /* increase opacity */
   --route-color-opacity: 45%;
@@ -223,6 +226,12 @@ aside::before {
 @media (width < 1000px) {
   aside {
     --banner-image: url("/images/bg_m.avif");
+  }
+}
+
+@media (width < 900px) {
+  :root {
+    --color-almost-white: hsl(30deg 5% 98%);
   }
 }
 
