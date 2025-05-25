@@ -55,4 +55,8 @@
   .toggleOption[data-active="false"] {
     display: none;
   }
+
+  .toggleOption {
+    font-size: var(--step-4);
+  }
 }

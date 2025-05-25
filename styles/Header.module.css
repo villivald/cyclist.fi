@@ -7,8 +7,13 @@
 }
 
 .headerContainer > h1 {
-  grid-column: 4 / 10;
-  grid-row: 4 / 6;
+  --title-column-start: 4;
+  --title-column-end: 10;
+  --title-row-start: 4;
+  --title-row-end: 6;
+
+  grid-column: var(--title-column-start) / var(--title-column-end);
+  grid-row: var(--title-row-start) / var(--title-row-end);
   justify-self: center;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
@@ -18,13 +23,18 @@
 }
 
 .headerContainer > div:last-child {
-  grid-column: 7 / 13;
-  grid-row: 1 / 2;
+  --top-buttons-column-start: 7;
+  --top-buttons-column-end: 13;
+  --top-buttons-row-start: 1;
+  --top-buttons-row-end: 2;
+
+  grid-column: var(--top-buttons-column-start) / var(--top-buttons-column-end);
+  grid-row: var(--top-buttons-row-start) / var(--top-buttons-row-end);
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline-end: var(--offset-xl);
+  margin-inline: var(--offset-xl);
 }
 
 /* Theme & Menu buttons */
@@ -61,13 +71,13 @@
 
 @media (width > 2000px) {
   .headerContainer > div:last-child {
-    grid-column: 8 / 13;
+    --top-buttons-column-start: 8;
   }
 }
 
 @media (width > 1800px) {
   .headerContainer > h1 {
-    grid-column: 3 / 10;
+    --title-column-start: 3;
   }
 }
 
@@ -79,19 +89,26 @@
 
 @media (width < 1500px) {
   .headerContainer > div:last-child {
-    grid-column: 6 / 13;
+    --top-buttons-column-start: 6;
+  }
+}
+
+@media (width < 1400px) {
+  .headerContainer > div:last-child button {
+    font-size: var(--step-5);
   }
 }
 
 @media (width < 1200px) {
   .headerContainer > div:last-child {
-    grid-column: 5 / 13;
+    --top-buttons-column-start: 5;
   }
 }
 
 @media (width < 1100px) {
   .headerContainer > h1 {
-    grid-row: 3 / 5;
+    --title-row-start: 3;
+    --title-row-end: 5;
   }
 }
 
@@ -105,11 +122,7 @@
   }
 
   .headerContainer > div:last-child {
-    grid-column: 9 / 13;
-  }
-
-  .headerContainer > div:last-child button img {
-    max-width: 80%;
+    --top-buttons-column-start: 9;
   }
 }
 
@@ -124,10 +137,12 @@
   }
 
   .headerContainer > div:last-child {
+    --top-buttons-column-start: 7;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 8 / 13;
     justify-items: end;
+    margin-inline: unset;
   }
 
   .headerContainer > div:last-child button img {

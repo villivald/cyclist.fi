@@ -6,13 +6,23 @@
 }
 
 .gridContainer nav:first-of-type {
-  grid-column: 7 / 13;
-  grid-row: 4 / 10;
+  --first-nav-column-start: 7;
+  --first-nav-column-end: 13;
+  --first-nav-row-start: 4;
+  --first-nav-row-end: 10;
+
+  grid-column: var(--first-nav-column-start) / var(--first-nav-column-end);
+  grid-row: var(--first-nav-row-start) / var(--first-nav-row-end);
 }
 
 .gridContainer nav:last-of-type {
-  grid-column: 1 / 7;
-  grid-row: 12 / 18;
+  --second-nav-column-start: 1;
+  --second-nav-column-end: 7;
+  --second-nav-row-start: 12;
+  --second-nav-row-end: 18;
+
+  grid-column: var(--second-nav-column-start) / var(--second-nav-column-end);
+  grid-row: var(--second-nav-row-start) / var(--second-nav-row-end);
 }
 
 .gridContainer nav ul {
@@ -119,13 +129,20 @@
 
 @media (width < 1100px) {
   .gridContainer nav:first-of-type {
-    grid-column: 1 / 13;
-    grid-row: 2 / 10;
+    --first-nav-column-start: 1;
+    --first-nav-row-start: 2;
   }
 
   .gridContainer nav:last-of-type {
-    grid-column: 1 / 13;
-    grid-row: 11 / 19;
+    --second-nav-column-end: 13;
+    --second-nav-row-start: 11;
+    --second-nav-row-end: 19;
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    outline: calc(var(--outline-offset) * 2) solid var(--color-background);
   }
 }
 
@@ -135,12 +152,11 @@
   }
 
   .gridContainer nav:first-of-type {
-    grid-column: 1 / 13;
-    grid-row: 1 / 10;
+    --first-nav-row-start: 1;
   }
 
   .gridContainer nav:last-of-type {
-    grid-row: 10 / 19;
+    --second-nav-row-start: 10;
   }
 
   .gridContainer nav ul {
@@ -158,6 +174,12 @@
 
   .gridContainer nav li a {
     color: var(--color-almost-white);
+  }
+
+  .gridContainer
+    nav:first-of-type
+    li:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    outline: unset;
   }
 
   .gridContainer
