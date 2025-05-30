@@ -1,6 +1,7 @@
 div:has(.newsArchiveBlock) {
   display: grid;
   grid-template-rows: 0.7fr auto;
+  margin-block-start: 2rem;
 }
 
 .newsArchiveBlock {
@@ -64,7 +65,7 @@ div:has(.newsArchiveBlock) {
 
 @media (width < 1100px) {
   div:has(.newsArchiveBlock) {
-    margin-block-start: -6rem;
+    margin-block-start: -4.5rem;
   }
 }
 
@@ -85,6 +86,10 @@ div:has(.newsArchiveBlock) {
 }
 
 @media (width < 700px) {
+  div:has(.newsArchiveBlock) {
+    margin-block-start: -2rem;
+  }
+
   .title {
     font-size: clamp(calc(10 / 7 * 3rem), 16vw, calc(10 / 7 * 7rem));
   }
