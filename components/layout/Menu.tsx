@@ -109,8 +109,8 @@ export default function Menu() {
             theme === "light" ? "/icons/sun_color.svg" : "/icons/moon_color.svg"
           }
           alt="Theme toggle icon"
-          width={46}
-          height={46}
+          width={44}
+          height={44}
         />
         <p>Theme</p>
       </button>

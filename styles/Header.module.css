@@ -115,6 +115,7 @@
 @media (width < 900px) {
   .headerContainer > div:last-child > button img {
     height: 2rem;
+    max-width: unset;
   }
 
   .headerContainer > div:last-child button p {
@@ -146,7 +147,7 @@
   }
 
   .headerContainer > div:last-child button img {
-    max-width: unset;
+    height: 1.875rem;
   }
 }
 
