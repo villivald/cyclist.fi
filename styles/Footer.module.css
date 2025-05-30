@@ -66,12 +66,12 @@
   .footerContainer {
     display: flex;
     flex-direction: column-reverse;
-    gap: var(--space-m-l);
+    gap: var(--space-xl);
+    margin-block-start: var(--offset-l);
   }
 
   .footerContainer > section:first-child {
-    margin-block-end: var(--offset-xl);
-    gap: var(--space-s);
+    gap: var(--space-xl);
   }
 
   .footerContainer > section:last-child {
