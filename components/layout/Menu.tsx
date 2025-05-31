@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
 
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const MENU_ITEMS = [
   "books",
@@ -25,7 +25,8 @@ const MENU_ITEMS = [
 ];
 
 export default function Menu() {
-  const { theme, setTheme } = useTheme();
+  const t = useTranslations("Pages");
+  const tMenu = useTranslations("Menu");
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -34,10 +35,6 @@ export default function Menu() {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleChangeTheme = useCallback(() => {
-    setTheme(theme === "light" ? "dark" : "light");
-  }, [theme, setTheme]);
 
   const handleMenuToggle = useCallback(() => {
     setMenuOpen((prev) => !prev);
@@ -103,18 +100,7 @@ export default function Menu() {
 
   return (
     <div>
-      <button className={styles.themeButton} onClick={handleChangeTheme}>
-        <Image
-          src={
-            theme === "light" ? "/icons/sun_color.svg" : "/icons/moon_color.svg"
-          }
-          alt="Theme toggle icon"
-          width={44}
-          height={44}
-        />
-        <p>Theme</p>
-      </button>
-
+      <ThemeSwitcher />
       <LanguageSwitcher />
 
       <div>
@@ -132,7 +118,7 @@ export default function Menu() {
             <span></span>
             <span></span>
           </span>
-          <p>Menu</p>
+          <p>{tMenu("dropdown")}</p>
         </button>
 
         {menuOpen && (
@@ -146,7 +132,7 @@ export default function Menu() {
               {MENU_ITEMS.map((item) => (
                 <li key={item} role="none">
                   <a href={`/${item}`} role="menuitem">
-                    {item}
+                    {t(item).toLowerCase()}
                   </a>
                 </li>
               ))}

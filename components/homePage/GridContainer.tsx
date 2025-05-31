@@ -5,7 +5,7 @@ import styles from "@/styles/GridContainer.module.css";
 import Grid from "./Grid";
 
 export default function GridContainer() {
-  const t = useTranslations("GridLinks");
+  const t = useTranslations("Pages");
 
   const upperLinks = [
     { title: t("brands"), link: "/brands" },

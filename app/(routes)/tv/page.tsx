@@ -1,9 +1,8 @@
-import { metadataElement } from "@/components/metadata";
+import { createTranslatedMetadata } from "utils/generateMetadata";
+
 import styles from "@/styles/Routes.module.css";
 
-export const metadata = metadataElement({
-  title: "Ohjelmat ja elokuvat",
-});
+export const metadata = () => createTranslatedMetadata("Pages", "tv");
 
 export default function tv() {
   return <div className={styles.mainContainer}></div>;

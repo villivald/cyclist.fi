@@ -1,22 +1,23 @@
+import { useTranslations } from "next-intl";
+
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   const links = [
-    { title: "Contact", link: "/contact" },
-    { title: "Design elements", link: "/design" },
-    { title: "Buy a coffee", link: "/coffee" },
-    { title: "Newsletter", link: "/newsletter" },
-    { title: "Instagram", link: "/instagram" },
-    { title: "Facebook", link: "/facebook" },
+    { title: t("contact"), link: "/contact" },
+    { title: t("design"), link: "/design" },
+    { title: t("coffee"), link: "/coffee" },
+    { title: t("newsletter"), link: "/newsletter" },
+    { title: t("instagram"), link: "/instagram" },
+    { title: t("facebook"), link: "/facebook" },
   ];
 
   return (
     <footer className={styles.footerContainer}>
       <section>
-        <span>
-          The cycling resource you always needed but never had a link to
-          CYCLIST.FI
-        </span>
+        <span>{t("description")}</span>
         <span>© 2025</span>
       </section>
       <section>

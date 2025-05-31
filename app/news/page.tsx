@@ -1,11 +1,11 @@
-import { metadataElement } from "@/components/metadata";
+import { useTranslations } from "next-intl";
+import { createTranslatedMetadata } from "utils/generateMetadata";
+
 import NewsArchiveBlock from "@/components/NewsArchiveBlock";
 import newsData from "@/data/news.json";
 import styles from "@/styles/NewsArchiveBlock.module.css";
 
-export const metadata = metadataElement({
-  title: "Uutiset",
-});
+export const metadata = () => createTranslatedMetadata("Pages", "news");
 
 interface NewsItem {
   id: string;
@@ -14,10 +14,11 @@ interface NewsItem {
   date: string;
 }
 
-export default function news() {
+export default function News() {
+  const t = useTranslations("Pages");
   return (
     <div>
-      <h1 className={styles.title}>UUTISET</h1>
+      <h1 className={styles.title}>{t("news")}</h1>
       {newsData.map((newsItem: NewsItem) => (
         <NewsArchiveBlock
           key={newsItem.id}

@@ -112,7 +112,7 @@
   }
 }
 
-@media (width < 900px) {
+@media (width < 1000px) {
   .headerContainer > div:last-child > button img {
     height: 2rem;
     max-width: unset;

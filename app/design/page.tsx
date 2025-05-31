@@ -1,9 +1,8 @@
-import Design from "@/components/Design";
-import { metadataElement } from "@/components/metadata";
+import { createTranslatedMetadata } from "utils/generateMetadata";
 
-export const metadata = metadataElement({
-  title: "Design",
-});
+import Design from "@/components/Design";
+
+export const metadata = () => createTranslatedMetadata("Pages", "design");
 
 export default function design() {
   return (

@@ -1,5 +1,8 @@
 {
-  "GridLinks": {
+  "Common": {
+    "goHome": "Siirry etusivulle"
+  },
+  "Pages": {
     "brands": "Brändit",
     "youtube": "YouTube",
     "magazines": "Lehdet",
@@ -12,12 +15,32 @@
     "books": "Kirjat",
     "sharing": "Sharing",
     "caring": "Caring",
-    "social": "Some"
+    "social": "Some",
+    "contact": "Ota yhteyttä",
+    "design": "Design",
+    "news": "Uutiset"
   },
   "LanguageSwitcher": {
     "en": "englanniksi",
     "fi": "suomi",
     "switchLanguage": "Vaihda kieli",
     "currentLanguage": "Valittu kieli on "
+  },
+  "News": {
+    "title": "Uutiset",
+    "archive": "Uutisarkisto"
+  },
+  "Footer": {
+    "contact": "Ota yhteyttä",
+    "design": "Visuaalinen ilme",
+    "coffee": "Buy me a coffee",
+    "newsletter": "Uutiskirje",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "description": "The cycling resource you always needed but never had a link to CYCLIST.FI"
+  },
+  "Menu": {
+    "dropdown": "Valikko",
+    "theme": "Ulkoasu"
   }
 }

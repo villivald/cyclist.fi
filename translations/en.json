@@ -1,5 +1,8 @@
 {
-  "GridLinks": {
+  "Common": {
+    "goHome": "Go to the homepage"
+  },
+  "Pages": {
     "brands": "Brands",
     "youtube": "YouTube",
     "magazines": "Magazines",
@@ -12,12 +15,32 @@
     "books": "Books",
     "sharing": "Sharing",
     "caring": "Caring",
-    "social": "Social"
+    "social": "Social",
+    "contact": "Contact",
+    "design": "Design",
+    "news": "News"
   },
   "LanguageSwitcher": {
     "en": "English",
     "fi": "Finnish",
     "switchLanguage": "Switch language to",
     "currentLanguage": "Currently selected language is "
+  },
+  "News": {
+    "title": "News",
+    "archive": "News Archive"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "design": "Design elements",
+    "coffee": "Buy me a coffee",
+    "newsletter": "Newsletter",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "description": "The cycling resource you always needed but never had a link to CYCLIST.FI"
+  },
+  "Menu": {
+    "dropdown": "Menu",
+    "theme": "Theme"
   }
 }

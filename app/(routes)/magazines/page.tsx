@@ -1,9 +1,8 @@
-import { metadataElement } from "@/components/metadata";
+import { createTranslatedMetadata } from "utils/generateMetadata";
+
 import styles from "@/styles/Routes.module.css";
 
-export const metadata = metadataElement({
-  title: "Lehdet",
-});
+export const metadata = () => createTranslatedMetadata("Pages", "magazines");
 
 export default function magazines() {
   return <div className={styles.mainContainer}></div>;

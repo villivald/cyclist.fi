@@ -1,9 +1,8 @@
-import ContactForm from "@/components/ContactForm";
-import { metadataElement } from "@/components/metadata";
+import { createTranslatedMetadata } from "utils/generateMetadata";
 
-export const metadata = metadataElement({
-  title: "Ota yhteyttä",
-});
+import ContactForm from "@/components/ContactForm";
+
+export const metadata = () => createTranslatedMetadata("Pages", "contact");
 
 export default function contact() {
   return (

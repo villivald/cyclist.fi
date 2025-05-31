@@ -22,6 +22,7 @@
 
 .menu[data-open="true"] {
   display: block;
+  z-index: 1;
 }
 
 .menu > li > a {

@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import styles from "@/styles/ComingSoon.module.css";
 
 export default function ComingSoon() {
+  const t = useTranslations("Common");
+
   return (
     <div className={styles.comingSoon}>
       <figure>
@@ -19,7 +22,7 @@ export default function ComingSoon() {
         The page you are looking for is not available yet. We are working hard
         to bring you new content and features, so please check back soon!
       </p>
-      <Link href="/">Go to the homepage</Link>
+      <Link href="/">{t("goHome")}</Link>
     </div>
   );
 }
