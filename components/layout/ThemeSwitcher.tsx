@@ -19,11 +19,11 @@ const ThemeSwitcher = () => {
         src={
           theme === "light" ? "/icons/sun_color.svg" : "/icons/moon_color.svg"
         }
-        alt="Theme toggle icon"
+        alt={t("themeToggle")}
         width={44}
         height={44}
       />
-      <p>{t("dropdown")}</p>
+      <p>{t("theme")}</p>
     </button>
   );
 };

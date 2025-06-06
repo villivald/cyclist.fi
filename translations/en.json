@@ -1,6 +1,14 @@
 {
   "Common": {
-    "goHome": "Go to the homepage"
+    "homePage": "Homepage",
+    "goHome": "Go to the homepage",
+    "notFound": "This page could not be found. It may have been removed or never existed.",
+    "notFound_alt_1": "A man in a cycling outfit fixes his road bike on the side of the road",
+    "notFound_alt_2": "A presumably a broken bicycle on the side of the forest road",
+    "notFound_alt_3": "A lonely bike tire on the side of the road - is all that remains of the bike",
+    "comingSoon": "The page you are looking for is not available yet. We are working hard to bring you new content and features, so please check back soon!",
+    "comingSoon_alt": "A purple bike frame on a concrete background",
+    "scrollToTop": "Scroll to top"
   },
   "Pages": {
     "brands": "Brands",
@@ -41,6 +49,16 @@
   },
   "Menu": {
     "dropdown": "Menu",
-    "theme": "Theme"
+    "theme": "Theme",
+    "themeToggle": "Toggle theme"
+  },
+  "ContactForm": {
+    "name_field_label": "Your name (required)",
+    "name_field_placeholder": "John Doe",
+    "email_field_label": "Your email (required)",
+    "email_field_placeholder": "mail@example.com",
+    "message_field_label": "Your message (required)",
+    "message_field_placeholder": "Hello, I would like to talk about...",
+    "submit_button": "Send message"
   }
 }

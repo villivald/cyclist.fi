@@ -1,10 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useId, useState } from "react";
 
 import styles from "@/styles/ContactForm.module.css";
 
 export default function ContactForm() {
+  const t = useTranslations("ContactForm");
+
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -27,12 +30,12 @@ export default function ContactForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div>
-        <label htmlFor={`email-${id}`}>Your email (required)</label>
+        <label htmlFor={`email-${id}`}>{t("email_field_label")}</label>
         <input
           type="email"
           autoComplete="email"
           value={email}
-          placeholder="mail@example.com"
+          placeholder={t("email_field_placeholder")}
           onChange={(e) => setEmail(e.target.value)}
           id={`email-${id}`}
           required
@@ -40,34 +43,34 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label htmlFor={`name-${id}`}>Your name (required)</label>
+        <label htmlFor={`name-${id}`}>{t("name_field_label")}</label>
         <input
           type="text"
           autoComplete="name"
           value={name}
-          placeholder="John Doe"
+          placeholder={t("name_field_placeholder")}
           onChange={(e) => setName(e.target.value)}
           id={`name-${id}`}
           required
         />
       </div>
       <div>
-        <label htmlFor={`message-${id}`}>Your message (required)</label>
+        <label htmlFor={`message-${id}`}>{t("message_field_label")}</label>
         <textarea
           value={message}
-          placeholder="Hello, I would like to talk about..."
+          placeholder={t("message_field_placeholder")}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
           id={`message-${id}`}
           required
-        ></textarea>
+        />
       </div>
       <button
         disabled={submitButtonDisabled}
         type="submit"
         className={styles.submitButton}
       >
-        Send me a message
+        {t("submit_button")}
       </button>
     </form>
   );

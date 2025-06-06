@@ -14,14 +14,11 @@ export default function ComingSoon() {
           fill
           priority
           src="/images/coming_soon.avif"
-          alt="A purple bike frame on a concrete background"
+          alt={t("comingSoon_alt")}
           aria-describedby="coming-soon-image"
         />
       </figure>
-      <p id="coming-soon-image">
-        The page you are looking for is not available yet. We are working hard
-        to bring you new content and features, so please check back soon!
-      </p>
+      <p id="coming-soon-image">{t("comingSoon")}</p>
       <Link href="/">{t("goHome")}</Link>
     </div>
   );

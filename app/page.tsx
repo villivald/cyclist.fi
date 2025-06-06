@@ -1,10 +1,9 @@
+import { createTranslatedMetadata } from "utils/generateMetadata";
+
 import GridContainer from "@/components/homePage/GridContainer";
 import NewsList from "@/components/homePage/NewsList";
-import { metadataElement } from "@/components/metadata";
 
-export const metadata = metadataElement({
-  title: "Etusivu",
-});
+export const metadata = () => createTranslatedMetadata("Common", "homePage");
 
 export default function Home() {
   return (

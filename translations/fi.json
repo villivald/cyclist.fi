@@ -1,6 +1,14 @@
 {
   "Common": {
-    "goHome": "Siirry etusivulle"
+    "homePage": "Etusivu",
+    "goHome": "Siirry etusivulle",
+    "notFound": "Sivua ei löytynyt. Se on ehkä poistettu tai sitä ei ole koskaan ollut olemassa.",
+    "notFound_alt_1": "Mies maantiepyöräilyasussa korjaa maantiepyöräänsä tien reunalla",
+    "notFound_alt_2": "Oletettavasti rikki mennyt polkupyörä metsätien reunassa",
+    "notFound_alt_3": "Yksinäinen pyörän rengas tien reunalla - tämä on kaikki, mitä pyörästä on jäljellä",
+    "comingSoon": "Sivua ei ole vielä saatavilla. Työskentelemme ahkerasti tuodaksemme sinulle uutta sisältöä ja ominaisuuksia, joten palaa pian takaisin!",
+    "comingSoon_alt": "Violetti pyörän runko betonitaustalla",
+    "scrollToTop": "Siirry sivun alkuun"
   },
   "Pages": {
     "brands": "Brändit",
@@ -41,6 +49,16 @@
   },
   "Menu": {
     "dropdown": "Valikko",
-    "theme": "Ulkoasu"
+    "theme": "Ulkoasu",
+    "themeToggle": "Vaihda ulkoasu"
+  },
+  "ContactForm": {
+    "name_field_label": "Nimi (pakollinen)",
+    "name_field_placeholder": "Matti Meikäläinen",
+    "email_field_label": "Sähköpostisi (pakollinen)",
+    "email_field_placeholder": "matti.meikalainen@esimerkki.fi",
+    "message_field_label": "Viesti (pakollinen)",
+    "message_field_placeholder": "Hei, haluaisin kysyä...",
+    "submit_button": "Lähetä viesti"
   }
 }
