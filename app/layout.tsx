@@ -4,9 +4,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import ScrollToTopButton from "@/components/layout/ScrollToTopButton";
+import Footer from "@/components/footer";
+import ScrollToTopButton from "@/components/scroll-to-top-button";
+import Header from "@/components/top-menu/header";
 
 import ThemeProvider from "./providers";
 

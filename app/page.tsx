@@ -1,7 +1,6 @@
-import { createTranslatedMetadata } from "utils/generateMetadata";
-
-import GridContainer from "@/components/homePage/GridContainer";
-import NewsList from "@/components/homePage/NewsList";
+import GridContainer from "@/components/grid/grid-container";
+import NewsList from "@/components/news/news-list";
+import { createTranslatedMetadata } from "@/utils/generate-metadata";
 
 export const metadata = () => createTranslatedMetadata("Common", "homePage");
 
