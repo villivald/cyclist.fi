@@ -3,8 +3,16 @@
   color: var(--color-text);
 }
 
-.themeButton {
+.themeButton,
+.dropdownMenu {
   color: var(--color-text);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.themeButton.mounted,
+.dropdownMenu.mounted {
+  opacity: 1;
 }
 
 .menu {

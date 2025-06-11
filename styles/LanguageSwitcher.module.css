@@ -60,6 +60,15 @@
   border: 0;
 }
 
+.languageSwitcher {
+  opacity: 0;
+  transition: opacity 0.3s var(--easing-normal);
+}
+
+.languageSwitcher.mounted {
+  opacity: 1;
+}
+
 @media (width < 900px) {
   .toggleDivider,
   .toggleOption[data-active="false"] {

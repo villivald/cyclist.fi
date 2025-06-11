@@ -1,12 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
-
-import LanguageSwitcher from "./language-switcher";
-import ThemeSwitcher from "./theme-switcher";
 
 const MENU_ITEMS = [
   "books",
@@ -24,7 +22,7 @@ const MENU_ITEMS = [
   "youtube",
 ];
 
-export default function Menu() {
+export default function DropdownMenu() {
   const t = useTranslations("Pages");
   const tMenu = useTranslations("Menu");
 
@@ -96,50 +94,62 @@ export default function Menu() {
     };
   }, [menuOpen]);
 
-  if (!mounted) return null;
-
-  return (
-    <div>
-      <ThemeSwitcher />
-      <LanguageSwitcher />
-
-      <div>
-        <button
-          ref={menuButtonRef}
-          className={styles.dropdownButton}
-          aria-controls="main-menu"
-          aria-haspopup="true"
-          aria-expanded={menuOpen}
-          onClick={handleMenuToggle}
-          onKeyDown={handleMenuButtonKeyDown}
-        >
-          <span className={styles.burger} data-open={menuOpen}>
+  if (!mounted) {
+    return (
+      <div className={styles.dropdownMenu}>
+        <button className={styles.dropdownButton}>
+          <span className={styles.burger}>
             <span></span>
             <span></span>
             <span></span>
           </span>
           <p>{tMenu("dropdown")}</p>
         </button>
-
-        {menuOpen && (
-          <div ref={menuRef}>
-            <ul
-              className={styles.menu}
-              data-open={menuOpen}
-              id="main-menu"
-              role="menu"
-            >
-              {MENU_ITEMS.map((item: string) => (
-                <li key={item} role="none">
-                  <a href={`/${item}`} role="menuitem">
-                    {t(item).toLowerCase()}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
+    );
+  }
+
+  return (
+    <div className={`${styles.dropdownMenu} ${mounted ? styles.mounted : ""}`}>
+      <button
+        ref={menuButtonRef}
+        className={styles.dropdownButton}
+        aria-controls="main-menu"
+        aria-haspopup="true"
+        aria-expanded={menuOpen}
+        onClick={handleMenuToggle}
+        onKeyDown={handleMenuButtonKeyDown}
+      >
+        <span className={styles.burger} data-open={menuOpen}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <p>{tMenu("dropdown")}</p>
+      </button>
+
+      {menuOpen && (
+        <div ref={menuRef}>
+          <ul
+            className={styles.menu}
+            data-open={menuOpen}
+            id="main-menu"
+            role="menu"
+          >
+            {MENU_ITEMS.map((item: string) => (
+              <li key={item} role="none">
+                <Link
+                  href={`/${item}`}
+                  role="menuitem"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t(item).toLowerCase()}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

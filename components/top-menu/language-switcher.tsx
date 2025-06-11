@@ -14,6 +14,9 @@ const LanguageSwitcher = () => {
 
   const [appTheme, setAppTheme] = useState<string>();
 
+  const [mounted, setMounted] = useState<boolean>(false);
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     setAppTheme(theme);
   }, [theme]);
@@ -51,7 +54,9 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <>
+    <div
+      className={`${styles.languageSwitcher} ${mounted ? styles.mounted : ""}`}
+    >
       <button
         data-theme={appTheme}
         onClick={handleToggleLanguage}
@@ -79,7 +84,7 @@ const LanguageSwitcher = () => {
       <span className={styles.srOnly}>
         {`${t("currentLanguage")} ${languages[locale]}`}
       </span>
-    </>
+    </div>
   );
 };
 
