@@ -1,0 +1,14 @@
+.mainContainer {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: 300px auto;
+  gap: var(--space-s);
+}
+
+.dataRow:first-of-type {
+  margin-top: var(--space-m);
+}
