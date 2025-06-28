@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import styles from "@/styles/Routes.module.css";
+import { getRouteColor } from "@/utils/get-route-color";
 
 export default function RouteTitle() {
   const t = useTranslations("Pages");
@@ -11,15 +12,7 @@ export default function RouteTitle() {
   const title = usePathname().substring(1);
   const translatedTitle = t(usePathname().substring(1)).toUpperCase();
 
-  const colors = [
-    { green: ["brands", "tv", "indoor", "sharing", "social"] },
-    { teal: ["youtube", "discounts", "places", "caring", "design"] },
-    { wine: ["magazines", "podcasts", "tour", "books"] },
-  ];
-
-  const pageColor = Object.keys(
-    colors.filter((color) => Object.values(color)[0].includes(title))[0],
-  )[0];
+  const pageColor = getRouteColor(title);
 
   const titleStyles = {
     "--stringLength": title.length,

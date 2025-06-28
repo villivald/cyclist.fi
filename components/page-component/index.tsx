@@ -1,13 +1,28 @@
 import styles from "@/styles/PageComponent.module.css";
 
 import DataRow from "./data-row";
-import { PageComponentData } from "./types";
+import { PageComponentProps } from "./types";
 
-export default function PageComponent({ data }: { data: PageComponentData[] }) {
+export default function PageComponent({
+  data,
+  routeStyles,
+  layout = "list",
+  showTags = false,
+  showNew = false,
+}: PageComponentProps) {
+  const containerClass = `${styles.mainContainer} ${styles[`layout-${layout}`]}`;
+
   return (
-    <div className={styles.mainContainer}>
+    <div className={containerClass}>
       {data.map((item, index) => (
-        <DataRow item={item} key={index} />
+        <DataRow
+          key={item.id || index}
+          routeStyles={routeStyles}
+          item={item}
+          layout={layout}
+          showTags={showTags}
+          showNew={showNew}
+        />
       ))}
     </div>
   );
