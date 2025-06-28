@@ -1,12 +1,5 @@
 import { PageComponentData } from "./types";
 
-export const filterByCategory = (
-  data: PageComponentData[],
-  category: string,
-): PageComponentData[] => {
-  return data.filter((item) => item.category === category);
-};
-
 export const filterByTags = (
   data: PageComponentData[],
   tags: string[],

@@ -17,7 +17,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://pasnormalstudios.com/",
       alt: "Pas Normal Studios cycling apparel",
-      category: "Apparel",
       tags: ["Danish", "Minimalist", "Performance"],
       new: true,
     },
@@ -29,7 +28,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://www.rapha.cc/",
       alt: "Rapha cycling brand",
-      category: "Apparel",
       tags: ["British", "Premium", "Community"],
       new: true,
     },
@@ -41,7 +39,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://www.assos.com/",
       alt: "Assos cycling apparel",
-      category: "Apparel",
       tags: ["Swiss", "Technical", "Innovation"],
     },
     {
@@ -52,7 +49,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://www.castelli-cycling.com/",
       alt: "Castelli cycling apparel",
-      category: "Apparel",
       tags: ["Italian", "Aero", "Heritage"],
     },
     {
@@ -63,7 +59,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://maap.cc/",
       alt: "MAAP cycling apparel",
-      category: "Apparel",
       tags: ["Australian", "Bold", "Technical"],
     },
     {
@@ -74,7 +69,6 @@ export default function brands() {
       image: "/images/404_1.avif",
       link: "https://pedaled.com/",
       alt: "Pedaled cycling apparel",
-      category: "Apparel",
       tags: ["British", "Sustainable", "Ethical"],
     },
   ];

@@ -17,7 +17,6 @@ export default function youtube() {
       image: "/images/404_1.avif",
       link: "https://www.youtube.com/@GCN",
       alt: "Global Cycling Network YouTube channel",
-      category: "Cycling Media",
       tags: ["Training", "Racing", "Reviews", "Global"],
       new: true,
     },
@@ -29,7 +28,6 @@ export default function youtube() {
       image: "/images/404_1.avif",
       link: "https://www.youtube.com/@GCNTech",
       alt: "GCN Tech YouTube channel",
-      category: "Cycling Media",
       tags: ["Technology", "Reviews", "Gear", "Bikes"],
       new: true,
     },
@@ -41,7 +39,6 @@ export default function youtube() {
       image: "/images/404_1.avif",
       link: "https://www.youtube.com/@dylanjohnson",
       alt: "Dylan Johnson YouTube channel",
-      category: "Training",
       tags: ["Professional", "Training", "Racing", "Coaching"],
     },
     {
@@ -51,7 +48,6 @@ export default function youtube() {
       image: "/images/404_1.avif",
       link: "https://www.youtube.com/@norcalcycling",
       alt: "NorCal Cycling YouTube channel",
-      category: "Racing",
       tags: ["Amateur", "Racing", "Grassroots", "Commentary"],
     },
     {
@@ -61,7 +57,6 @@ export default function youtube() {
       image: "/images/404_1.avif",
       link: "https://www.youtube.com/@lanterne_rouge",
       alt: "Lanterne Rouge YouTube channel",
-      category: "Analysis",
       tags: ["Professional", "Analysis", "Tactics", "Racing"],
     },
   ];
