@@ -15,7 +15,7 @@ export default function RouteTitle() {
   const pageColor = getRouteColor(title);
 
   const titleStyles = {
-    "--stringLength": title.length,
+    "--stringLength": translatedTitle.length,
     "--pageColor": `var(--color-${pageColor})`,
   } as React.CSSProperties;
 

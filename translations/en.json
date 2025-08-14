@@ -11,7 +11,7 @@
     "scrollToTop": "Scroll to top"
   },
   "Pages": {
-    "brands": "Brands",
+    "apparel": "Apparel",
     "youtube": "YouTube",
     "magazines": "Magazines",
     "discounts": "Discounts",
@@ -21,9 +21,14 @@
     "places": "Places",
     "tour": "Tour",
     "books": "Books",
-    "sharing": "Sharing",
-    "caring": "Caring",
+    "community": "Community",
+    "maintenance": "Maintenance",
     "social": "Social",
+    "bikes": "Bikes",
+    "events": "Events",
+    "nutrition": "Nutrition",
+    "training": "Training",
+    "technology": "Technology",
     "contact": "Contact",
     "design": "Design",
     "news": "News"

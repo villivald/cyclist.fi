@@ -3,11 +3,11 @@ import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
 import { getRouteColor } from "@/utils/get-route-color";
 
-const ROUTE_NAME = "brands";
+const ROUTE_NAME = "apparel";
 
 export const metadata = () => createTranslatedMetadata("Pages", ROUTE_NAME);
 
-export default function brands() {
+export default function apparel() {
   const data = [
     {
       id: "pas-normal-studios",

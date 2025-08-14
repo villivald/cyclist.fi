@@ -11,7 +11,7 @@
     "scrollToTop": "Siirry sivun alkuun"
   },
   "Pages": {
-    "brands": "Brändit",
+    "apparel": "Vaatteet",
     "youtube": "YouTube",
     "magazines": "Lehdet",
     "discounts": "Alennukset",
@@ -21,9 +21,14 @@
     "places": "Paikat",
     "tour": "Tour",
     "books": "Kirjat",
-    "sharing": "Sharing",
-    "caring": "Caring",
+    "community": "Yhteisö",
+    "maintenance": "Huolto",
     "social": "Some",
+    "bikes": "Pyörät",
+    "events": "Tapahtumat",
+    "nutrition": "Ravitsemus",
+    "training": "Harjoittelu",
+    "technology": "Teknologia",
     "contact": "Ota yhteyttä",
     "design": "Design",
     "news": "Uutiset"

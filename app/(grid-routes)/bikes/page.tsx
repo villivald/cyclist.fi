@@ -1,0 +1,93 @@
+import PageComponent from "@/components/page-component";
+import styles from "@/styles/Routes.module.css";
+import { createTranslatedMetadata } from "@/utils/generate-metadata";
+import { getRouteColor } from "@/utils/get-route-color";
+
+const ROUTE_NAME = "bikes";
+
+export const metadata = () => createTranslatedMetadata("Pages", ROUTE_NAME);
+
+export default function bikes() {
+  const data = [
+    {
+      id: "trek",
+      title: "Trek",
+      description:
+        "American bicycle manufacturer known for innovative designs and high-quality bikes. From entry-level to professional racing bikes, Trek offers a wide range of options for all types of cyclists.",
+      image: "/images/404_1.avif",
+      link: "https://www.trekbikes.com/",
+      alt: "Trek bicycles",
+      tags: ["American", "Innovation", "Quality"],
+      new: true,
+    },
+    {
+      id: "specialized",
+      title: "Specialized",
+      description:
+        "Leading bicycle brand specializing in road, mountain, and electric bikes. Known for cutting-edge technology and aerodynamic designs that have dominated professional cycling for decades.",
+      image: "/images/404_1.avif",
+      link: "https://www.specialized.com/",
+      alt: "Specialized bicycles",
+      tags: ["American", "Technology", "Aero"],
+      new: true,
+    },
+    {
+      id: "canyon",
+      title: "Canyon",
+      description:
+        "German direct-to-consumer bicycle brand offering premium bikes at competitive prices. Their aerodynamic road bikes and innovative designs have made them a favorite among professional cyclists.",
+      image: "/images/404_1.avif",
+      link: "https://www.canyon.com/",
+      alt: "Canyon bicycles",
+      tags: ["German", "Direct", "Premium"],
+    },
+    {
+      id: "cervelo",
+      title: "Cervelo",
+      description:
+        "Canadian brand specializing in aerodynamic road bikes and time trial machines. Their focus on wind tunnel testing and engineering has produced some of the fastest bikes in professional cycling.",
+      image: "/images/404_1.avif",
+      link: "https://www.cervelo.com/",
+      alt: "Cervelo bicycles",
+      tags: ["Canadian", "Aero", "Engineering"],
+    },
+    {
+      id: "pinarello",
+      title: "Pinarello",
+      description:
+        "Italian bicycle manufacturer with a rich heritage in professional cycling. Known for their distinctive curved designs and association with Team Sky/Ineos, producing bikes that combine tradition with innovation.",
+      image: "/images/404_1.avif",
+      link: "https://pinarello.com/",
+      alt: "Pinarello bicycles",
+      tags: ["Italian", "Heritage", "Professional"],
+    },
+    {
+      id: "giant",
+      title: "Giant",
+      description:
+        "World's largest bicycle manufacturer, producing bikes for many other brands. Known for quality at various price points and innovative manufacturing processes that make cycling accessible to everyone.",
+      image: "/images/404_1.avif",
+      link: "https://www.giant-bicycles.com/",
+      alt: "Giant bicycles",
+      tags: ["Taiwanese", "Manufacturing", "Accessible"],
+    },
+  ];
+
+  const routeColor = getRouteColor(ROUTE_NAME);
+
+  const routeStyles = {
+    "--routeColor": `var(--color-${routeColor})`,
+  } as React.CSSProperties;
+
+  return (
+    <div className={styles.mainContainer}>
+      <PageComponent
+        data={data}
+        routeStyles={routeStyles}
+        layout="grid"
+        showTags={true}
+        showNew={true}
+      />
+    </div>
+  );
+}

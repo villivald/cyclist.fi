@@ -8,7 +8,7 @@ export default function GridContainer() {
   const t = useTranslations("Pages");
 
   const upperLinks = [
-    { title: t("brands"), link: "/brands" },
+    { title: t("apparel"), link: "/apparel" },
     { title: t("youtube"), link: "/youtube" },
     { title: t("magazines"), link: "/magazines" },
     { title: t("discounts"), link: "/discounts" },
@@ -21,14 +21,14 @@ export default function GridContainer() {
 
   const lowerLinks = [
     { title: t("books"), link: "/books" },
-    { title: t("sharing"), link: "/sharing" },
-    { title: t("caring"), link: "/caring" },
+    { title: t("community"), link: "/community" },
+    { title: t("maintenance"), link: "/maintenance" },
     { title: t("social"), link: "/social" },
-    { title: "Test", link: "/test" },
-    { title: "Test", link: "/test" },
-    { title: "Test", link: "/test" },
-    { title: "Test", link: "/test" },
-    { title: "Test", link: "/test" },
+    { title: t("bikes"), link: "/bikes" },
+    { title: t("events"), link: "/events" },
+    { title: t("nutrition"), link: "/nutrition" },
+    { title: t("training"), link: "/training" },
+    { title: t("technology"), link: "/technology" },
   ];
 
   return (
