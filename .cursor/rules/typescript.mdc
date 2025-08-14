@@ -1,0 +1,40 @@
+---
+globs: *.tsx,*.ts
+alwaysApply: false
+---
+
+Code Style and Basic Rules
+
+- Write clear, modular TypeScript code with proper type definitions
+- Document complex types with JSDoc comments
+- Organize types in dedicated files (`types.ts`) or alongside implementations
+- Create a central `types.ts` file or a `src/types` directory for shared types
+- Do not use `any` unless explicitly allowed.
+- Follow functional programming patterns; avoid classes
+- Use descriptive variable names (e.g., isLoading, hasPermission)
+
+UI & UX
+
+- Implement proper error handling and logging
+- Provide clear user feedback
+- Ensure proper loading states
+
+Accessibility
+
+- Ensure sufficient color contrast
+- Support screen readers
+
+Testing and Debugging
+
+- Use Chrome DevTools effectively
+- Monitor performance metrics
+- Handle error scenarios
+- Test cross-browser compatibility
+
+Output Expectations
+
+- Provide clear, working code examples
+- Include necessary error handling
+- Follow security best practices
+- Ensure cross-browser compatibility
+- Write maintainable and scalable code
