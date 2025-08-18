@@ -1,8 +1,83 @@
+import PageComponent from "@/components/page-component";
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
+import { getRouteColor } from "@/utils/get-route-color";
 
-export const metadata = () => createTranslatedMetadata("Pages", "indoor");
+const ROUTE_NAME = "indoor";
+
+export const metadata = () => createTranslatedMetadata("Pages", ROUTE_NAME);
 
 export default function indoor() {
-  return <div className={styles.mainContainer}></div>;
+  const data = [
+    {
+      id: "zwift",
+      title: "Zwift",
+      description:
+        "Virtual cycling platform with structured workouts, group rides, and races across immersive worlds.",
+      image: "/images/404_1.avif",
+      link: "https://www.zwift.com/",
+      alt: "Zwift indoor cycling platform",
+      tags: ["Virtual", "Workouts", "Racing"],
+      new: true,
+    },
+    {
+      id: "trainerroad",
+      title: "TrainerRoad",
+      description:
+        "Science-based indoor training with plan builder, adaptive training, and deep analytics.",
+      image: "/images/404_1.avif",
+      link: "https://www.trainerroad.com/",
+      alt: "TrainerRoad training platform",
+      tags: ["Plans", "Adaptive", "Analytics"],
+      new: true,
+    },
+    {
+      id: "rgt",
+      title: "Wahoo RGT",
+      description:
+        "Realistic road simulations and events with physics-driven drafting and group dynamics.",
+      image: "/images/404_1.avif",
+      link: "https://www.wahoofitness.com/devices/training-apps/wahoo-systm",
+      alt: "Wahoo RGT platform",
+      tags: ["Simulation", "Events", "Drafting"],
+    },
+    {
+      id: "rollers",
+      title: "Rollers & Trainers",
+      description:
+        "Hardware options from basic rollers to smart trainers; learn setups, calibration, and maintenance.",
+      image: "/images/404_1.avif",
+      link: "https://www.dcrainmaker.com/",
+      alt: "Indoor trainers and rollers",
+      tags: ["Hardware", "Calibration", "Maintenance"],
+    },
+    {
+      id: "fan-setup",
+      title: "Pain Cave Setup",
+      description:
+        "Optimize airflow, ergonomics, sweat management, and entertainment for better indoor sessions.",
+      image: "/images/404_1.avif",
+      link: "https://www.slowtwitch.com/",
+      alt: "Indoor cycling setup",
+      tags: ["Setup", "Cooling", "Ergonomics"],
+    },
+  ];
+
+  const routeColor = getRouteColor(ROUTE_NAME);
+
+  const routeStyles = {
+    "--routeColor": `var(--color-${routeColor})`,
+  } as React.CSSProperties;
+
+  return (
+    <div className={styles.mainContainer}>
+      <PageComponent
+        data={data}
+        routeStyles={routeStyles}
+        layout="list"
+        showTags={true}
+        showNew={true}
+      />
+    </div>
+  );
 }
