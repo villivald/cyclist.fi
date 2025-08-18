@@ -1,0 +1,49 @@
+[
+  {
+    "id": "global-cycling-network",
+    "title": "Global Cycling Network",
+    "description": "The world's leading cycling channel with daily videos covering everything from training",
+    "image": "/images/404_1.avif",
+    "link": "https://www.youtube.com/@GCN",
+    "alt": "Global Cycling Network YouTube channel",
+    "tags": ["Training", "Racing", "Reviews", "Global"],
+    "new": true
+  },
+  {
+    "id": "gcn-tech",
+    "title": "GCN Tech",
+    "description": "Dedicated to the latest cycling technology, bike reviews, and gear testing. From pro bikes to budget options, they cover it all.",
+    "image": "/images/404_1.avif",
+    "link": "https://www.youtube.com/@GCNTech",
+    "alt": "GCN Tech YouTube channel",
+    "tags": ["Technology", "Reviews", "Gear", "Bikes"],
+    "new": true
+  },
+  {
+    "id": "dylan-johnson",
+    "title": "Dylan Johnson",
+    "description": "Professional cyclist and coach sharing insights into training, racing, and the life of a pro cyclist. Great for serious cyclists looking to improve.",
+    "image": "/images/404_1.avif",
+    "link": "https://www.youtube.com/@dylanjohnson",
+    "alt": "Dylan Johnson YouTube channel",
+    "tags": ["Professional", "Training", "Racing", "Coaching"]
+  },
+  {
+    "id": "norcal-cycling",
+    "title": "NorCal Cycling",
+    "description": "Amateur racing content with",
+    "image": "/images/404_1.avif",
+    "link": "https://www.youtube.com/@norcalcycling",
+    "alt": "NorCal Cycling YouTube channel",
+    "tags": ["Amateur", "Racing", "Grassroots", "Commentary"]
+  },
+  {
+    "id": "lanterne-rouge",
+    "title": "Lanterne Rouge",
+    "description": "In-depth analysis of professional",
+    "image": "/images/404_1.avif",
+    "link": "https://www.youtube.com/@lanterne_rouge",
+    "alt": "Lanterne Rouge YouTube channel",
+    "tags": ["Professional", "Analysis", "Tactics", "Racing"]
+  }
+]
