@@ -112,6 +112,7 @@ export default function DropdownMenu() {
   return (
     <div className={`${styles.dropdownMenu} ${mounted ? styles.mounted : ""}`}>
       <button
+        type="button"
         ref={menuButtonRef}
         className={styles.dropdownButton}
         aria-controls="main-menu"

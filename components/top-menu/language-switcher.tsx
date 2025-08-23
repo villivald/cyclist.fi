@@ -58,6 +58,7 @@ const LanguageSwitcher = () => {
       className={`${styles.languageSwitcher} ${mounted ? styles.mounted : ""}`}
     >
       <button
+        type="button"
         data-theme={appTheme}
         onClick={handleToggleLanguage}
         onKeyDown={handleKeyDown}

@@ -1,5 +1,6 @@
 import styles from "@/styles/Header.module.css";
 
+import SearchComponent from "../search/search-component";
 import Logo from "./logo";
 import Menu from "./menu-container";
 
@@ -8,6 +9,7 @@ export default function Header() {
     <header className={styles.headerContainer}>
       <Logo />
       <h1>CYCLIST</h1>
+      <SearchComponent />
       <Menu />
     </header>
   );

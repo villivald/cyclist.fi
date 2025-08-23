@@ -88,13 +88,19 @@
   transform: rotate(-45deg) translate(0.55rem, calc(-1 * var(--space-2xs)));
 }
 
+@media (width < 1200px) {
+  .burger {
+    gap: 0.4rem;
+  }
+
+  .burger > span {
+    height: 0.175rem;
+  }
+}
+
 @media (width < 900px) {
   .menu {
     right: 3rem;
-  }
-
-  .burger {
-    gap: 0.4rem;
   }
 
   .burger > span {

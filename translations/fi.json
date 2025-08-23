@@ -65,5 +65,16 @@
     "message_field_label": "Viesti (pakollinen)",
     "message_field_placeholder": "Hei, haluaisin kysyä...",
     "submit_button": "Lähetä viesti"
+  },
+  "Search": {
+    "search": "Hae",
+    "searchPlaceholder": "Pas Normal Studios...",
+    "noResults": "Ei hakutuloksia. Kokeile toista hakusanaa.",
+    "resultsFound": "tulos löytyi",
+    "resultsFound_plural": "tulosta löytyi",
+    "pressToSearch": "Voit myös painaa Ctrl+K hakeaksesi",
+    "closeSearch": "Sulje haku",
+    "loading": "Ladataan...",
+    "searchFor": "Hae brändejä, reittejä, uutisia ja muuta"
   }
 }

@@ -65,5 +65,16 @@
     "message_field_label": "Your message (required)",
     "message_field_placeholder": "Hello, I would like to talk about...",
     "submit_button": "Send message"
+  },
+  "Search": {
+    "search": "Search",
+    "searchPlaceholder": "Pas Normal Studios...",
+    "noResults": "No results found. Try a different search term.",
+    "resultsFound": "result found",
+    "resultsFound_plural": "results found",
+    "pressToSearch": "You can also press Ctrl+K to search",
+    "closeSearch": "Close search",
+    "loading": "Loading...",
+    "searchFor": "Search for brands, routes, news and more"
   }
 }

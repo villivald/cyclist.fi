@@ -1,0 +1,13 @@
+.searchButton {
+  color: var(--color-text);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.searchButton.mounted {
+  opacity: 1;
+}
+
+.searchButton[data-theme="dark"] img {
+  filter: invert(1) hue-rotate(180deg);
+}

@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
 
   if (!mounted) {
     return (
-      <button className={styles.themeButton}>
+      <button type="button" className={styles.themeButton}>
         <Image
           src="/icons/sun_color.svg"
           alt={t("themeToggle")}
@@ -34,6 +34,7 @@ const ThemeSwitcher = () => {
 
   return (
     <button
+      type="button"
       className={`${styles.themeButton} ${mounted ? styles.mounted : ""}`}
       onClick={handleChangeTheme}
     >
