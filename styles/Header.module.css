@@ -149,7 +149,7 @@
     --top-buttons-column-start: 7;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 3rem);
     justify-items: end;
     margin-inline: unset;
   }
