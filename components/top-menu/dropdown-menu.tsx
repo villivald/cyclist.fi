@@ -7,17 +7,22 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "@/styles/Menu.module.css";
 
 const MENU_ITEMS = [
+  "apparel",
+  "bikes",
   "books",
-  "brands",
-  "caring",
+  "community",
   "discounts",
+  "events",
   "indoor",
   "magazines",
+  "maintenance",
+  "nutrition",
   "places",
   "podcasts",
-  "sharing",
   "social",
+  "technology",
   "tour",
+  "training",
   "tv",
   "youtube",
 ];
@@ -137,17 +142,19 @@ export default function DropdownMenu() {
             id="main-menu"
             role="menu"
           >
-            {MENU_ITEMS.map((item: string) => (
-              <li key={item} role="none">
-                <Link
-                  href={`/${item}`}
-                  role="menuitem"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {t(item).toLowerCase()}
-                </Link>
-              </li>
-            ))}
+            {MENU_ITEMS.map((item: string) => t(item).toLowerCase())
+              .sort((a, b) => a.localeCompare(b))
+              .map((item: string) => (
+                <li key={item} role="none">
+                  <Link
+                    href={`/${item}`}
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       )}
