@@ -4,7 +4,7 @@
 }
 
 .toggleOption {
-  color: hsl(from var(--color-text) h s l / 50%);
+  color: hsl(from var(--color-text) h s l / 55%);
   transition: color 0.2s var(--easing-normal);
 }
 
