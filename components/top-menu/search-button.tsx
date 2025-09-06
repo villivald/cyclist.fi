@@ -32,12 +32,7 @@ const SearchButton = () => {
         className={styles.searchButton}
         onClick={() => {}}
       >
-        <Image
-          src="/icons/search.svg"
-          alt={t("search")}
-          width={44}
-          height={44}
-        />
+        <Image src="/icons/search.svg" alt="" width={44} height={44} />
         <p>{t("search")}</p>
       </button>
     );

@@ -1,8 +1,10 @@
 .footerContainer {
+  --height-multiplier: 3lvh;
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: calc(100 / 12 * 3dvh);
+  height: calc(100 / 12 * var(--height-multiplier));
 }
 
 .footerContainer > section:first-child {
@@ -85,18 +87,18 @@
 
 @media (height < 850px) {
   .footerContainer {
-    height: calc(100 / 12 * 4.5dvh);
+    --height-multiplier: 4.5lvh;
   }
 }
 
 @media (height < 650px) {
   .footerContainer {
-    height: calc(100 / 12 * 5dvh);
+    --height-multiplier: 5lvh;
   }
 }
 
 @media (height < 550px) {
   .footerContainer {
-    height: calc(100 / 12 * 6dvh);
+    --height-multiplier: 6lvh;
   }
 }

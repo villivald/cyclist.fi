@@ -141,6 +141,12 @@
   text-decoration: underline;
 }
 
+@media (width < 875px) {
+  .layout-grid {
+    grid-template-columns: unset;
+  }
+}
+
 @media (width < 800px) {
   .dataRow.layout-list {
     grid-template-columns: unset;
