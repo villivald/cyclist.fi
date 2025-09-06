@@ -47,7 +47,6 @@
 
 .dataRow.layout-grid {
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1.125fr;
   text-align: center;
 }
 
@@ -140,4 +139,10 @@
 .link:hover {
   color: var(--color-teal);
   text-decoration: underline;
+}
+
+@media (width < 800px) {
+  .dataRow.layout-list {
+    grid-template-columns: unset;
+  }
 }
