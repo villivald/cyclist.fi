@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -116,143 +117,154 @@ export default function SearchComponent() {
     <dialog
       ref={dialogRef}
       className={styles.searchModal}
+      data-visible={isOpen}
       onClose={() => setIsOpen(false)}
     >
-      <button
-        className={styles.closeButton}
-        type="button"
-        onClick={resetModalState}
-        aria-label={t("closeSearch")}
-      >
-        <Image
-          src="/icons/close_color.svg"
-          alt={t("closeSearch")}
-          aria-hidden="true"
-          width={20}
-          height={20}
-          className={styles.searchIcon}
-        />
-      </button>
-
-      <form
-        role="search"
-        className={styles.searchInputContainer}
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <div className={styles.searchField}>
+      <div>
+        <button
+          className={styles.closeButton}
+          type="button"
+          onClick={resetModalState}
+          aria-label={t("closeSearch")}
+        >
           <Image
-            src="/icons/search.svg"
-            alt=""
+            src="/icons/close_color.svg"
+            alt={t("closeSearch")}
             aria-hidden="true"
             width={20}
             height={20}
             className={styles.searchIcon}
           />
-          <input
-            id="site-search"
-            name="search"
-            ref={inputRef}
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Escape") {
-                resetModalState();
-              }
-            }}
-            placeholder={t("searchPlaceholder")}
-            className={styles.searchInput}
-            autoComplete="off"
-            aria-controls="search-results"
-            aria-describedby="search-results-summary"
-            aria-autocomplete="list"
-            aria-label={t("search")}
-          />
-          {isLoading && (
-            <div
-              className={styles.spinner}
-              role="status"
-              aria-live="polite"
-              aria-label={t("loading")}
-            />
-          )}
-        </div>
-      </form>
+        </button>
 
-      <p id="search-results-summary" className={styles.resultsHeader}>
-        {results.length}{" "}
-        {results.length === 1 ? t("resultsFound") : t("resultsFound_plural")}
-      </p>
-
-      {isLoading && !results.length && (
-        <div className={styles.noResults} role="status" aria-live="polite">
-          <div className={styles.spinner} aria-hidden="true"></div>
-        </div>
-      )}
-
-      {results.length === 0 && !isLoading && (
-        <div className={styles.noResults} role="status" aria-live="polite">
-          {query.length > 2 ? <p>{t("noResults")}</p> : <p>{t("searchFor")}</p>}
-        </div>
-      )}
-
-      {results.length > 0 && (
-        <section
-          className={styles.resultsList}
-          aria-live="polite"
-          aria-busy={isLoading || undefined}
+        <form
+          role="search"
+          className={styles.searchInputContainer}
+          onSubmit={(e) => e.preventDefault()}
         >
-          <ul id="search-results">
-            {results.map((result) => (
-              <li key={`${result.type}-${result.id}`}>
-                <a
-                  href={
-                    result.type === "route" && result.routePath
-                      ? `/${result.routePath}`
-                      : "/news"
-                  }
-                  className={styles.resultItem}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleResultClick(result);
-                  }}
-                >
-                  <div className={styles.resultContent}>
-                    <div className={styles.resultHeader}>
-                      <h3 className={styles.resultTitle}>
-                        {highlightSearchTerm(result.title, query)}
-                      </h3>
+          <div className={styles.searchField}>
+            <Image
+              src="/icons/search.svg"
+              alt=""
+              aria-hidden="true"
+              width={20}
+              height={20}
+              className={styles.searchIcon}
+            />
+            <input
+              id="site-search"
+              name="search"
+              ref={inputRef}
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") {
+                  resetModalState();
+                }
+              }}
+              placeholder={t("searchPlaceholder")}
+              className={styles.searchInput}
+              autoComplete="off"
+              aria-controls="search-results"
+              aria-describedby="search-results-summary"
+              aria-autocomplete="list"
+              aria-label={t("search")}
+            />
+          </div>
+        </form>
 
-                      <span aria-hidden="true">
-                        {result.type === "route" ? "🔗" : "📰"}
-                      </span>
-                    </div>
+        <p id="search-results-summary" className={styles.resultsHeader}>
+          {results.length}{" "}
+          {results.length === 1 ? t("resultsFound") : t("resultsFound_plural")}
+        </p>
+      </div>
 
-                    <p className={styles.resultDescription}>
-                      {highlightSearchTerm(
-                        result.description.length > 150
-                          ? result.description.substring(0, 150) + "..."
-                          : result.description,
-                        query,
+      <div className={styles.resultsArea}>
+        {isLoading && !results.length && (
+          <div className={styles.noResults} role="status" aria-live="polite">
+            <div className={styles.spinner} aria-hidden="true"></div>
+          </div>
+        )}
+
+        {results.length === 0 && !isLoading && (
+          <div className={styles.noResults} role="status" aria-live="polite">
+            {query.length > 2 ? (
+              <p>{t("noResults")}</p>
+            ) : (
+              <p>{t("searchFor")}</p>
+            )}
+          </div>
+        )}
+
+        {results.length > 0 && (
+          <section
+            className={styles.resultsList}
+            aria-live="polite"
+            aria-busy={isLoading || undefined}
+          >
+            <ul id="search-results">
+              {results.map((result) => (
+                <li key={`${result.type}-${result.id}`}>
+                  <Link
+                    href={
+                      result.type === "route" && result.routePath
+                        ? `/${result.routePath}`
+                        : "/news"
+                    }
+                    className={styles.resultItem}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleResultClick(result);
+                    }}
+                  >
+                    <div className={styles.resultContent}>
+                      <div className={styles.resultHeader}>
+                        <h3 className={styles.resultTitle}>
+                          {highlightSearchTerm(result.title, query)}
+                        </h3>
+
+                        <span aria-hidden="true">
+                          <Image
+                            src={
+                              result.type === "route"
+                                ? "/icons/link.svg"
+                                : "/icons/news.svg"
+                            }
+                            alt=""
+                            aria-hidden="true"
+                            width={20}
+                            height={20}
+                          />
+                        </span>
+                      </div>
+
+                      <p className={styles.resultDescription}>
+                        {highlightSearchTerm(
+                          result.description.length > 150
+                            ? result.description.substring(0, 150) + "..."
+                            : result.description,
+                          query,
+                        )}
+                      </p>
+
+                      {result.tags && result.tags.length > 0 && (
+                        <ul className={styles.resultTags}>
+                          {result.tags.slice(0, 3).map((tag) => (
+                            <li key={tag} className={styles.tag}>
+                              {tag}
+                            </li>
+                          ))}
+                        </ul>
                       )}
-                    </p>
-
-                    {result.tags && result.tags.length > 0 && (
-                      <ul className={styles.resultTags}>
-                        {result.tags.slice(0, 3).map((tag) => (
-                          <li key={tag} className={styles.tag}>
-                            {tag}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
     </dialog>
   );
 }
