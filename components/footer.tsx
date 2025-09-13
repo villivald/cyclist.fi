@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import styles from "@/styles/Footer.module.css";
@@ -19,21 +20,23 @@ export default function Footer() {
     { title: t("facebook"), link: "/facebook" },
   ] as LinkItem[];
 
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footerContainer}>
       <section>
         <span>{t("description")}</span>
-        <span>© 2025</span>
+        <span>© {year}</span>
       </section>
-      <section>
-        <div>
-          {links.map((link: LinkItem, index: number) => (
-            <a key={index} href={link.link}>
-              {link.title}
-            </a>
+      <nav className={styles.footerNav}>
+        <ul>
+          {links.map((link: LinkItem) => (
+            <li key={link.link}>
+              <Link href={link.link}>{link.title}</Link>
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
+      </nav>
     </footer>
   );
 }
