@@ -79,6 +79,7 @@
   background: transparent;
   color: var(--color-text);
   outline: none;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
 }
 
 .searchInput::placeholder {
@@ -229,9 +230,5 @@
   .searchModal {
     width: 80vw;
     max-height: 70vh;
-  }
-
-  .searchInput {
-    font-size: var(--step--05);
   }
 }
