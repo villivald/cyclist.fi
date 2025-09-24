@@ -62,7 +62,7 @@
   --step-9: clamp(2.7061rem, 1.615rem + 4.6553vw, 5.8048rem);
   --step-10: clamp(3.0444rem, 1.6636rem + 5.8912vw, 6.9657rem);
   --hero-font-size: clamp(7rem, 12vw, 14rem);
-  --grid-link-font-size: clamp(1rem, 0.3043rem + 2.25vw, 2.25rem);
+  --grid-link-font-size: clamp(1rem, 0.3043rem + 2vw, 2rem);
 
   /* Text line max-width */
   --text-line-max-width: 60ch;

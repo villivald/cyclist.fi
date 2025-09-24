@@ -40,10 +40,12 @@
 
 .newsContainer span a {
   font-size: var(--step-2);
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .newsContainer span a:hover {
-  color: var(--color-text);
+  text-decoration: underline;
 }
 
 .newsContainer span a:focus-visible {
@@ -66,7 +68,7 @@
 @media (width < 900px) {
   .newsContainer {
     grid-template-rows: repeat(14, 1fr);
-    height: calc(100 / 12 * 14dvh);
+    height: calc(100 / 12 * 15dvh);
   }
 
   .newsContainer h2 {
