@@ -142,16 +142,20 @@ export default function DropdownMenu() {
             id="main-menu"
             role="menu"
           >
-            {MENU_ITEMS.map((item: string) => t(item).toLowerCase())
-              .sort((a, b) => a.localeCompare(b))
-              .map((item: string) => (
+            {[...MENU_ITEMS]
+              .map((item: string) => ({
+                item,
+                translatedItem: t(item).toLowerCase(),
+              }))
+              .sort((a, b) => a.translatedItem.localeCompare(b.translatedItem))
+              .map(({ item, translatedItem }) => (
                 <li key={item} role="none">
                   <Link
                     href={`/${item}`}
                     role="menuitem"
                     onClick={() => setMenuOpen(false)}
                   >
-                    {item}
+                    {translatedItem}
                   </Link>
                 </li>
               ))}
