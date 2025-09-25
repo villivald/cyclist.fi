@@ -88,16 +88,12 @@
 }
 
 @media (width < 550px) {
-  .title {
+  .title,
+  .title:hover,
+  .title:focus-visible {
     padding-top: var(--offset-s);
     font-size: 8rem;
     text-shadow: 0.5rem 0 0 hsl(from var(--color-teal) h s l / 75%);
-  }
-
-  .title:hover,
-  .title:focus-visible {
-    padding-top: var(--offset-xs);
-    text-shadow: 0.5rem 0.25rem 0 hsl(from var(--color-teal) h s l / 75%);
   }
 
   .logoContainer {
