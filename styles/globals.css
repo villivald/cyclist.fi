@@ -256,3 +256,9 @@ aside::before {
     height: 50.85%;
   }
 }
+
+/* Lock scrolling when any dialog is open (native open attr or data-visible) */
+html:has(dialog[open]),
+html:has(dialog[data-visible="true"]) {
+  overflow: hidden;
+}

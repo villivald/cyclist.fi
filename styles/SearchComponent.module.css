@@ -27,6 +27,17 @@
   backdrop-filter: blur(2px);
 }
 
+.searchModalTitle {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 .searchInputContainer {
   padding: var(--offset-xl);
   border-bottom: 1px solid hsl(from var(--color-text) h s l / 25%);

@@ -7,7 +7,7 @@ export const metadata = () => createTranslatedMetadata("Common", "homePage");
 export default function Home() {
   return (
     <main>
-      <aside />
+      <aside aria-hidden="true" />
       <GridContainer />
       <NewsList />
     </main>

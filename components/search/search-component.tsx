@@ -119,7 +119,13 @@ export default function SearchComponent() {
       className={styles.searchModal}
       data-visible={isOpen}
       onClose={() => setIsOpen(false)}
+      aria-modal="true"
+      aria-labelledby="search-modal-title"
     >
+      <h2 id="search-modal-title" className={styles.searchModalTitle}>
+        {t("search")}
+      </h2>
+
       <div>
         <button
           className={styles.closeButton}

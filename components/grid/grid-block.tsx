@@ -13,8 +13,8 @@ export default function GridBlock({ links }: GridBlockProps) {
   return (
     <nav>
       <ul>
-        {links.map((link: LinkItem, index: number) => (
-          <li key={index}>
+        {links.map((link: LinkItem) => (
+          <li key={link.title}>
             <Link href={link.link}>{link.title}</Link>
           </li>
         ))}

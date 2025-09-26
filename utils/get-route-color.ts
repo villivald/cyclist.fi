@@ -14,9 +14,11 @@ export const getRouteColor = (route: string): string => {
     { wine: ["magazines", "podcasts", "tour", "books", "events", "nutrition"] },
   ];
 
-  const colorEntry = Object.keys(
-    colors.filter((color) => Object.values(color)[0].includes(route))[0],
-  )[0];
+  const colorMatch = colors.find((color) =>
+    Object.values(color)[0].includes(route),
+  );
 
-  return colorEntry;
+  if (!colorMatch) return "teal";
+
+  return Object.keys(colorMatch)[0];
 };
