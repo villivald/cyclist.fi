@@ -129,7 +129,7 @@
   .headerContainer > div:last-child button p {
     position: absolute;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip-path: rect(0 0 0 0);
     height: 1px;
     width: 1px;
     margin: -1px;
