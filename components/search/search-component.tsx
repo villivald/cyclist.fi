@@ -135,7 +135,7 @@ export default function SearchComponent() {
         >
           <Image
             src="/icons/close_color.svg"
-            alt={t("closeSearch")}
+            alt=""
             aria-hidden="true"
             width={20}
             height={20}

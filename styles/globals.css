@@ -125,6 +125,11 @@
 
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
+  * {
+    animation: none;
+    transition: none;
+  }
+
   html {
     interpolate-size: allow-keywords;
   }

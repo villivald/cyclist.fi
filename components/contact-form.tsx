@@ -13,10 +13,10 @@ export default function ContactForm() {
   const [message, setMessage] = useState<string>("");
 
   const id = useId();
+  const emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
+  const emailRegex = new RegExp(`^${emailPattern}$`);
 
-  const emailPattern = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$";
-  const submitButtonDisabled =
-    !email || !name || !message || !email.match(emailPattern);
+  const submitButtonDisabled = !emailRegex.test(email) || !name || !message;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,6 +35,7 @@ export default function ContactForm() {
           <label htmlFor={`email-${id}`}>{t("email_field_label")}</label>
           <input
             type="email"
+            inputMode="email"
             autoComplete="email"
             value={email}
             placeholder={t("email_field_placeholder")}
@@ -42,6 +43,7 @@ export default function ContactForm() {
             id={`email-${id}`}
             required
             pattern={emailPattern}
+            aria-invalid={email.length > 0 && !emailRegex.test(email)}
           />
         </div>
         <div>
