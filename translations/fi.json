@@ -10,7 +10,10 @@
     "comingSoon_title": "Tulossa pian",
     "comingSoon_alt": "Violetti pyörän runko betonitaustalla",
     "scrollToTop": "Siirry sivun alkuun",
-    "pageNotFound": "Sivua ei löytynyt"
+    "pageNotFound": "Sivua ei löytynyt",
+    "skipLinks_label": "Linkit: pääsisältö ja yhteystiedot",
+    "skipLinks_mainContent": "Siirry pääsisältöön",
+    "skipLinks_contacts": "Siirry yhteystietoihin"
   },
   "Pages": {
     "apparel": "Vaatteet",

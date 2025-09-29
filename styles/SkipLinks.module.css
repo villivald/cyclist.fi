@@ -1,0 +1,36 @@
+.skipLinksContainer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skipLinksContainer:focus-within {
+  position: static;
+  height: 9rem;
+  width: auto;
+  overflow: visible;
+  background: var(--color-background);
+  padding: var(--offset-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-l);
+}
+
+.skipLinksContainer:focus-within a {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  background-color: var(--color-teal);
+  padding: var(--offset-l);
+  text-decoration: none;
+  color: var(--color-almost-white);
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 500;
+  font-size: var(--step-2);
+}
+
+.skipLinksContainer:focus-within a:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+}

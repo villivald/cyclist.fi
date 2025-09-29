@@ -10,7 +10,10 @@
     "comingSoon_title": "Coming Soon",
     "comingSoon_alt": "A purple bike frame on a concrete background",
     "scrollToTop": "Scroll to top",
-    "pageNotFound": "Page not found"
+    "pageNotFound": "Page not found",
+    "skipLinks_label": "Links to main content and contacts",
+    "skipLinks_mainContent": "Skip to main content",
+    "skipLinks_contacts": "Skip to contact links"
   },
   "Pages": {
     "apparel": "Apparel",

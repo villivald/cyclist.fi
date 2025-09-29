@@ -7,6 +7,7 @@ import { getLocale } from "next-intl/server";
 
 import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
+import SkipLinks from "@/components/skip-links";
 import Header from "@/components/top-menu/header";
 
 import ThemeProvider from "./providers";
@@ -64,6 +65,7 @@ export default async function RootLayout({
       <body>
         <ThemeProvider>
           <NextIntlClientProvider>
+            <SkipLinks />
             <Header />
             {children}
             <Footer />
