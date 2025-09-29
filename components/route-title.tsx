@@ -20,8 +20,8 @@ export default function RouteTitle() {
   } as React.CSSProperties;
 
   return (
-    <h1 className={styles.title} style={titleStyles}>
+    <h2 className={styles.title} style={titleStyles}>
       {translatedTitle}
-    </h1>
+    </h2>
   );
 }

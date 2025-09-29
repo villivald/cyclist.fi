@@ -7,11 +7,12 @@ interface LinkItem {
 
 interface GridBlockProps {
   links: LinkItem[];
+  label: string;
 }
 
-export default function GridBlock({ links }: GridBlockProps) {
+export default function GridBlock({ links, label }: GridBlockProps) {
   return (
-    <nav>
+    <nav aria-label={label}>
       <ul>
         {links.map((link: LinkItem) => (
           <li key={link.title}>

@@ -7,9 +7,9 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={styles.layout}>
+    <main className={styles.layout}>
       <RouteTitle />
       {children}
-    </div>
+    </main>
   );
 }

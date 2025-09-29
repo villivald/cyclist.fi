@@ -186,7 +186,7 @@ export default function SearchComponent() {
         </p>
       </div>
 
-      <div className={styles.resultsArea}>
+      <div className={styles.resultsArea} id="search-results">
         {isLoading && !results.length && (
           <div className={styles.noResults} role="status" aria-live="polite">
             <div className={styles.spinner} aria-hidden="true"></div>

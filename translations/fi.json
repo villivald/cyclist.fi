@@ -7,8 +7,10 @@
     "notFound_alt_2": "Oletettavasti rikki mennyt polkupyörä metsätien reunassa",
     "notFound_alt_3": "Yksinäinen pyörän rengas tien reunalla - tämä on kaikki, mitä pyörästä on jäljellä",
     "comingSoon": "Sivua ei ole vielä saatavilla. Työskentelemme ahkerasti tuodaksemme sinulle uutta sisältöä ja ominaisuuksia, joten palaa pian takaisin!",
+    "comingSoon_title": "Tulossa pian",
     "comingSoon_alt": "Violetti pyörän runko betonitaustalla",
-    "scrollToTop": "Siirry sivun alkuun"
+    "scrollToTop": "Siirry sivun alkuun",
+    "pageNotFound": "Sivua ei löytynyt"
   },
   "Pages": {
     "apparel": "Vaatteet",
@@ -31,7 +33,9 @@
     "technology": "Teknologia",
     "contact": "Ota yhteyttä",
     "design": "Design",
-    "news": "Uutiset"
+    "news": "Uutiset",
+    "upperGrid": "Pääsisällön navigointi - osa 1",
+    "lowerGrid": "Pääsisällön navigointi - osa 2"
   },
   "LanguageSwitcher": {
     "en": "englanniksi",
@@ -64,7 +68,8 @@
     "email_field_placeholder": "matti.meikalainen@esimerkki.fi",
     "message_field_label": "Viesti (pakollinen)",
     "message_field_placeholder": "Hei, haluaisin kysyä...",
-    "submit_button": "Lähetä viesti"
+    "submit_button": "Lähetä viesti",
+    "title": "Ota yhteyttä"
   },
   "Search": {
     "search": "Hae",

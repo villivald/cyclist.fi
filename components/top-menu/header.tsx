@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <Logo />
-      <p>CYCLIST</p>
+      <h1>CYCLIST</h1>
       <SearchComponent />
       <Menu />
     </header>

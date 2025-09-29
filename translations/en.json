@@ -7,8 +7,10 @@
     "notFound_alt_2": "A presumably a broken bicycle on the side of the forest road",
     "notFound_alt_3": "A lonely bike tire on the side of the road - is all that remains of the bike",
     "comingSoon": "The page you are looking for is not available yet. We are working hard to bring you new content and features, so please check back soon!",
+    "comingSoon_title": "Coming Soon",
     "comingSoon_alt": "A purple bike frame on a concrete background",
-    "scrollToTop": "Scroll to top"
+    "scrollToTop": "Scroll to top",
+    "pageNotFound": "Page not found"
   },
   "Pages": {
     "apparel": "Apparel",
@@ -31,7 +33,9 @@
     "technology": "Technology",
     "contact": "Contact",
     "design": "Design",
-    "news": "News"
+    "news": "News",
+    "upperGrid": "Main content navigation - part 1",
+    "lowerGrid": "Main content navigation - part 2"
   },
   "LanguageSwitcher": {
     "en": "English",
@@ -64,7 +68,8 @@
     "email_field_placeholder": "mail@example.com",
     "message_field_label": "Your message (required)",
     "message_field_placeholder": "Hello, I would like to talk about...",
-    "submit_button": "Send message"
+    "submit_button": "Send message",
+    "title": "Contact us"
   },
   "Search": {
     "search": "Search",

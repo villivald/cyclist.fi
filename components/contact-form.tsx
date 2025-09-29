@@ -28,50 +28,53 @@ export default function ContactForm() {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor={`email-${id}`}>{t("email_field_label")}</label>
-        <input
-          type="email"
-          autoComplete="email"
-          value={email}
-          placeholder={t("email_field_placeholder")}
-          onChange={(e) => setEmail(e.target.value)}
-          id={`email-${id}`}
-          required
-          pattern={emailPattern}
-        />
-      </div>
-      <div>
-        <label htmlFor={`name-${id}`}>{t("name_field_label")}</label>
-        <input
-          type="text"
-          autoComplete="name"
-          value={name}
-          placeholder={t("name_field_placeholder")}
-          onChange={(e) => setName(e.target.value)}
-          id={`name-${id}`}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor={`message-${id}`}>{t("message_field_label")}</label>
-        <textarea
-          value={message}
-          placeholder={t("message_field_placeholder")}
-          onChange={(e) => setMessage(e.target.value)}
-          rows={5}
-          id={`message-${id}`}
-          required
-        />
-      </div>
-      <button
-        disabled={submitButtonDisabled}
-        type="submit"
-        className={styles.submitButton}
-      >
-        {t("submit_button")}
-      </button>
-    </form>
+    <main>
+      <h1>{t("title")}</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor={`email-${id}`}>{t("email_field_label")}</label>
+          <input
+            type="email"
+            autoComplete="email"
+            value={email}
+            placeholder={t("email_field_placeholder")}
+            onChange={(e) => setEmail(e.target.value)}
+            id={`email-${id}`}
+            required
+            pattern={emailPattern}
+          />
+        </div>
+        <div>
+          <label htmlFor={`name-${id}`}>{t("name_field_label")}</label>
+          <input
+            type="text"
+            autoComplete="name"
+            value={name}
+            placeholder={t("name_field_placeholder")}
+            onChange={(e) => setName(e.target.value)}
+            id={`name-${id}`}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor={`message-${id}`}>{t("message_field_label")}</label>
+          <textarea
+            value={message}
+            placeholder={t("message_field_placeholder")}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={5}
+            id={`message-${id}`}
+            required
+          />
+        </div>
+        <button
+          disabled={submitButtonDisabled}
+          type="submit"
+          className={styles.submitButton}
+        >
+          {t("submit_button")}
+        </button>
+      </form>
+    </main>
   );
 }

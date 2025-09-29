@@ -8,7 +8,8 @@ export default function ComingSoon() {
   const t = useTranslations("Common");
 
   return (
-    <div className={styles.comingSoon}>
+    <main className={styles.comingSoon}>
+      <h1>{t("comingSoon_title")}</h1>
       <figure>
         <Image
           fill
@@ -20,6 +21,6 @@ export default function ComingSoon() {
       </figure>
       <p id="coming-soon-image">{t("comingSoon")}</p>
       <Link href="/">{t("goHome")}</Link>
-    </div>
+    </main>
   );
 }

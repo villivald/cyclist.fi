@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   container-type: inline-size;
+  margin-block-end: var(--offset-2xl);
 }
 
 .title {

@@ -33,8 +33,8 @@ export default function GridContainer() {
 
   return (
     <section className={styles.gridContainer}>
-      <GridBlock links={upperLinks} />
-      <GridBlock links={lowerLinks} />
+      <GridBlock links={upperLinks} label={t("upperGrid")} />
+      <GridBlock links={lowerLinks} label={t("lowerGrid")} />
     </section>
   );
 }
