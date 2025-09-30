@@ -23,7 +23,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className={styles.footerContainer} id="contact-links" tabIndex={-1}>
+    <footer className={styles.footerContainer} id="contact-links">
       <section>
         <span>{t("description")}</span>
         <span>© {year}</span>

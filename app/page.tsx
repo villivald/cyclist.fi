@@ -6,7 +6,7 @@ export const metadata = () => createTranslatedMetadata("Common", "homePage");
 
 export default function Home() {
   return (
-    <main id="main-content" tabIndex={-1}>
+    <main id="main-content">
       <aside aria-hidden="true" />
       <GridContainer />
       <NewsList />
