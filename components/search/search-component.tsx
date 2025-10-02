@@ -50,8 +50,12 @@ export default function SearchComponent() {
       setSearchData(data);
     };
 
-    loadData();
-  }, []);
+    if (isOpen) {
+      loadData();
+    } else {
+      setSearchData({ routesData: {}, newsData: [] });
+    }
+  }, [isOpen]);
 
   // Keyboard shortcut hook
   const { updateOpenState } = useSearchShortcut(() => setIsOpen(true));
