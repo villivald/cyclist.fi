@@ -13,7 +13,9 @@
     "pageNotFound": "Sivua ei löytynyt",
     "skipLinks_label": "Linkit: pääsisältö ja yhteystiedot",
     "skipLinks_mainContent": "Siirry pääsisältöön",
-    "skipLinks_contacts": "Siirry yhteystietoihin"
+    "skipLinks_contacts": "Siirry yhteystietoihin",
+    "new": "Uusi",
+    "website": "Verkkosivu"
   },
   "Pages": {
     "apparel": "Vaatteet",

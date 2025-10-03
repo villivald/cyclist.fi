@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import styles from "@/styles/PageComponent.module.css";
 
@@ -12,6 +13,8 @@ export default function DataRow({
   showTags = false,
   showNew = false,
 }: DataRowProps) {
+  const t = useTranslations("Common");
+
   const rowClass = `${styles.dataRow} ${styles[`layout-${layout}`]}`;
   const imageSizes =
     layout === "list"
@@ -31,7 +34,9 @@ export default function DataRow({
           className={styles.image}
           sizes={imageSizes}
         />
-        {showNew && item.new && <span className={styles.newBadge}>New</span>}
+        {showNew && item.new && (
+          <span className={styles.newBadge}>{t("new")}</span>
+        )}
       </div>
 
       <div className={styles.content}>
@@ -53,7 +58,8 @@ export default function DataRow({
           rel="noopener noreferrer"
           className={styles.link}
         >
-          Learn more <span aria-hidden="true">↗</span>
+          {t("website")}
+          <span aria-hidden="true">↗</span>
         </Link>
       </div>
     </div>
