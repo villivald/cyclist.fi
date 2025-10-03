@@ -11,15 +11,18 @@
 .newsBlock > :first-child {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  & img {
+    object-fit: cover;
+  }
 }
 
 .newsBlock > :first-child::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   background-color: hsl(from var(--color-teal) h s l / 15%);
 }
 

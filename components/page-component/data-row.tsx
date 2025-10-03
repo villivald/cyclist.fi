@@ -13,6 +13,12 @@ export default function DataRow({
   showNew = false,
 }: DataRowProps) {
   const rowClass = `${styles.dataRow} ${styles[`layout-${layout}`]}`;
+  const imageSizes =
+    layout === "list"
+      ? "(max-width: 800px) 100vw, 300px"
+      : layout === "grid"
+        ? "(max-width: 875px) 100vw, (max-width: 1050px) 50vw, 33vw"
+        : "100vw";
 
   return (
     <div className={rowClass} style={routeStyles}>
@@ -23,6 +29,7 @@ export default function DataRow({
           src={item.image}
           alt={item.alt}
           className={styles.image}
+          sizes={imageSizes}
         />
         {showNew && item.new && <span className={styles.newBadge}>New</span>}
       </div>

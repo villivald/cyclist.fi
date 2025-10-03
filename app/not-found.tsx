@@ -23,6 +23,7 @@ export default function NotFound() {
           src={`/images/404_${randomImage}.avif`}
           alt={t(`notFound_alt_${[randomImage]}`)}
           aria-describedby="not-found-image"
+          sizes="(max-width: 400px) 300px, (max-width: 1415px) calc(65vw + 40px), 960px"
         />
       </figure>
       <p id="not-found-image">{t("notFound")}</p>

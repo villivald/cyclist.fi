@@ -17,6 +17,7 @@ export default function ComingSoon() {
           src="/images/coming_soon.avif"
           alt={t("comingSoon_alt")}
           aria-describedby="coming-soon-image"
+          sizes="(max-width: 743px) 300px, (max-width: 1943px) calc(35vw + 40px), 720px"
         />
       </figure>
       <p id="coming-soon-image">{t("comingSoon")}</p>
