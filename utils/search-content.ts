@@ -13,6 +13,7 @@ export interface RouteData {
   id: string;
   title: string;
   description: string;
+  image: string;
   link: string;
   alt: string;
   tags: string[];
@@ -23,6 +24,7 @@ export interface NewsData {
   id: string;
   text: string;
   date: string;
+  image: string;
 }
 
 export function searchContent(

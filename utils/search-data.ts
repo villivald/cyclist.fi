@@ -5,6 +5,27 @@ let cachedData: {
   newsData: NewsData[];
 } | null = null;
 
+export const routeFiles = [
+  "apparel",
+  "bikes",
+  "books",
+  "community",
+  "discounts",
+  "events",
+  "indoor",
+  "magazines",
+  "maintenance",
+  "nutrition",
+  "places",
+  "podcasts",
+  "social",
+  "technology",
+  "tour",
+  "training",
+  "tv",
+  "youtube",
+];
+
 export async function loadSearchData(): Promise<{
   routesData: Record<string, RouteData[]>;
   newsData: NewsData[];
@@ -14,27 +35,6 @@ export async function loadSearchData(): Promise<{
 
     // Import all route data
     const routesData: Record<string, RouteData[]> = {};
-
-    const routeFiles = [
-      "apparel",
-      "bikes",
-      "books",
-      "community",
-      "discounts",
-      "events",
-      "indoor",
-      "magazines",
-      "maintenance",
-      "nutrition",
-      "places",
-      "podcasts",
-      "social",
-      "technology",
-      "tour",
-      "training",
-      "tv",
-      "youtube",
-    ];
 
     const routeImports = routeFiles.map(async (route) => {
       try {
