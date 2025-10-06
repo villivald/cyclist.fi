@@ -1,12 +1,10 @@
-import { routeFiles } from "../search-data";
-
 describe("loadSearchData", () => {
   beforeEach(() => {
-    jest.resetModules();
+    vi.resetModules();
   });
 
   it("loads routes and news data successfully", async () => {
-    const { loadSearchData } = await import("../search-data");
+    const { loadSearchData, routeFiles } = await import("../search-data");
 
     const { routesData, newsData } = await loadSearchData();
 

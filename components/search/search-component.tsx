@@ -122,6 +122,7 @@ export default function SearchComponent() {
       ref={dialogRef}
       className={styles.searchModal}
       data-visible={isOpen}
+      data-testid="search-dialog"
       onClose={() => setIsOpen(false)}
       aria-modal="true"
       aria-labelledby="search-modal-title"
@@ -180,11 +181,16 @@ export default function SearchComponent() {
               aria-describedby="search-results-summary"
               aria-autocomplete="list"
               aria-label={t("search")}
+              data-testid="search-input"
             />
           </div>
         </form>
 
-        <p id="search-results-summary" className={styles.resultsHeader}>
+        <p
+          id="search-results-summary"
+          className={styles.resultsHeader}
+          data-testid="search-results-summary"
+        >
           {results.length}{" "}
           {results.length === 1 ? t("resultsFound") : t("resultsFound_plural")}
         </p>
@@ -212,6 +218,7 @@ export default function SearchComponent() {
             className={styles.resultsList}
             aria-live="polite"
             aria-busy={isLoading || undefined}
+            data-testid="search-results-section"
           >
             <ul id="search-results">
               {results.map((result) => (
@@ -227,6 +234,7 @@ export default function SearchComponent() {
                       e.preventDefault();
                       handleResultClick(result);
                     }}
+                    data-testid={`search-result-link-${result.type}-${result.id}`}
                   >
                     <div className={styles.resultContent}>
                       <div className={styles.resultHeader}>

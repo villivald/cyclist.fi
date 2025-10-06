@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
 
-jest.mock("next-intl/server", () => ({
-  getTranslations: jest.fn(async () => (k: string) => `TR_${k}`),
+vi.mock("next-intl/server", () => ({
+  getTranslations: vi.fn(async () => (k: string) => `TR_${k}`),
 }));
 
 describe("createTranslatedMetadata", () => {

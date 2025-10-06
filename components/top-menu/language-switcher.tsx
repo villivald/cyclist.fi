@@ -64,6 +64,7 @@ const LanguageSwitcher = () => {
         onKeyDown={handleKeyDown}
         aria-label={`${t("switchLanguage")} ${optionIsActive("en") ? t("fi") : t("en")}`}
         className={styles.languageToggleButton}
+        data-testid="language-toggle-button"
       >
         <span
           className={styles.toggleOption}

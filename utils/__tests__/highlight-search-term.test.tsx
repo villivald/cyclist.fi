@@ -1,19 +1,18 @@
 import { render } from "@testing-library/react";
-import React from "react";
 
 import { highlightSearchTerm } from "../highlight-search-term";
 
 describe("highlightSearchTerm", () => {
   const renderNodes = (nodes: React.ReactNode[]) => {
-    return render(<div>{nodes}</div>);
+    return render(<>{nodes}</>);
   };
 
   it("returns original text when query is empty or whitespace", () => {
     const text = "Hello World";
-    const { container: container1 } = renderNodes(
-      highlightSearchTerm(text, " "),
-    );
-    expect(container1.textContent).toBe(text);
+    const { container } = renderNodes(highlightSearchTerm(text, " "));
+    const marks = container.querySelectorAll("mark");
+    expect(container.textContent).toBe(text);
+    expect(marks.length).toBe(0);
   });
 
   it("wraps matching segments in <mark> (case-insensitive)", () => {
