@@ -37,6 +37,7 @@ const ThemeSwitcher = () => {
       type="button"
       className={`${styles.themeButton} ${mounted ? styles.mounted : ""}`}
       onClick={handleChangeTheme}
+      data-testid="theme-toggle-button"
     >
       <Image
         src={

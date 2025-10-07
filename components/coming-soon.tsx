@@ -9,7 +9,7 @@ export default function ComingSoon() {
 
   return (
     <main className={styles.comingSoon}>
-      <h1>{t("comingSoon_title")}</h1>
+      <h1 data-testid="coming-soon-title">{t("comingSoon_title")}</h1>
       <figure>
         <Image
           fill

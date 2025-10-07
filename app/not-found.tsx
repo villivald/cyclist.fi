@@ -14,8 +14,8 @@ export default function NotFound() {
   const randomImage = Math.floor(Math.random() * 3) + 1;
 
   return (
-    <main id="main-content" className={styles.notFound}>
-      <h1>{t("pageNotFound")}</h1>
+    <main id="main-content" className={styles.notFound} tabIndex={-1}>
+      <h1 data-testid="page-not-found-title">{t("pageNotFound")}</h1>
       <figure>
         <Image
           fill

@@ -16,7 +16,7 @@ export default function NewsList() {
 
   return (
     <section className={styles.newsContainer}>
-      <h2>{t("title")}</h2>
+      <h2 data-testid="route-title">{t("title")}</h2>
       <article>
         {firstNewsBlock.map((newsItem: NewsItem) => (
           <NewsBlock

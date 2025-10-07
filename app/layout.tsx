@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 
 import Footer from "@/components/footer";
 import ScrollToTopButton from "@/components/scroll-to-top-button";
@@ -60,12 +60,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <NextIntlClientProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
             <SkipLinks />
             <Header />
             {children}

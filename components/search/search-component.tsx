@@ -137,6 +137,7 @@ export default function SearchComponent() {
           type="button"
           onClick={resetModalState}
           aria-label={t("closeSearch")}
+          data-testid="search-close-button"
         >
           <Image
             src="/icons/close_color.svg"
@@ -208,7 +209,7 @@ export default function SearchComponent() {
             {query.length > 2 ? (
               <p>{t("noResults")}</p>
             ) : (
-              <p>{t("searchFor")}</p>
+              <p data-testid="search-for-guidance">{t("searchFor")}</p>
             )}
           </div>
         )}
@@ -220,9 +221,12 @@ export default function SearchComponent() {
             aria-busy={isLoading || undefined}
             data-testid="search-results-section"
           >
-            <ul id="search-results">
+            <ul id="search-results" data-testid="search-results">
               {results.map((result) => (
-                <li key={`${result.type}-${result.id}`}>
+                <li
+                  key={`${result.type}-${result.id}`}
+                  data-testid="search-result-row"
+                >
                   <Link
                     href={
                       result.type === "route" && result.routePath

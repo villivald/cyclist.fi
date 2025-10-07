@@ -29,7 +29,7 @@ export default function ContactForm() {
 
   return (
     <main>
-      <h1>{t("title")}</h1>
+      <h1 data-testid="route-title">{t("title")}</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div>
           <label htmlFor={`email-${id}`}>{t("email_field_label")}</label>

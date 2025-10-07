@@ -31,9 +31,10 @@ const SearchButton = () => {
         data-theme={appTheme}
         className={styles.searchButton}
         onClick={() => {}}
+        data-testid="search-button"
       >
         <Image src="/icons/search.svg" alt="" width={44} height={44} />
-        <p>{t("search")}</p>
+        <p data-testid="search-button-title">{t("search")}</p>
       </button>
     );
   }
@@ -44,9 +45,10 @@ const SearchButton = () => {
       data-theme={appTheme}
       className={`${styles.searchButton} ${mounted ? styles.mounted : ""}`}
       onClick={handleOpenSearch}
+      data-testid="search-button"
     >
       <Image src="/icons/search.svg" alt="" width={44} height={44} />
-      <p>{t("search")}</p>
+      <p data-testid="search-button-title">{t("search")}</p>
     </button>
   );
 };

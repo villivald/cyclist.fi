@@ -20,7 +20,7 @@ export default function RouteTitle() {
   } as React.CSSProperties;
 
   return (
-    <h2 className={styles.title} style={titleStyles}>
+    <h2 className={styles.title} style={titleStyles} data-testid="route-title">
       {translatedTitle}
     </h2>
   );

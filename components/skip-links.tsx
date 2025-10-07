@@ -46,8 +46,13 @@ export default function SkipLinks() {
       className={styles.skipLinksContainer}
       aria-label={t("skipLinks_label")}
       tabIndex={-1}
+      data-testid="skip-links"
     >
-      <Link href="#main-content" onClick={createSkipHandler("main-content")}>
+      <Link
+        href="#main-content"
+        onClick={createSkipHandler("main-content")}
+        data-testid="skip-links-main-content"
+      >
         {t("skipLinks_mainContent")}
       </Link>
       <Link href="#contact-links" onClick={createSkipHandler("contact-links")}>

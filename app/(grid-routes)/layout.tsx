@@ -7,7 +7,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main id="main-content" className={styles.layout}>
+    <main id="main-content" className={styles.layout} tabIndex={-1}>
       <RouteTitle />
       {children}
     </main>
