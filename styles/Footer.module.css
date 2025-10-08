@@ -1,10 +1,7 @@
 .footerContainer {
-  --height-multiplier: 3lvh;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  height: calc(100 / 12 * var(--height-multiplier));
   background:
     radial-gradient(
       100% 100% at 100% 0,
@@ -79,13 +76,12 @@
   }
 }
 
-@media (width < 700px) {
+@media (width < 800px) {
   .footerContainer {
     display: flex;
     flex-direction: column-reverse;
     gap: var(--space-xl);
     margin-block-start: var(--offset-xl);
-    height: auto;
   }
 
   .footerContainer > section:first-child {
@@ -98,23 +94,5 @@
 
   .footerNav > ul {
     gap: var(--space-l);
-  }
-}
-
-@media (height < 850px) {
-  .footerContainer {
-    --height-multiplier: 4.5lvh;
-  }
-}
-
-@media (height < 650px) {
-  .footerContainer {
-    --height-multiplier: 5lvh;
-  }
-}
-
-@media (height < 550px) {
-  .footerContainer {
-    --height-multiplier: 6lvh;
   }
 }
