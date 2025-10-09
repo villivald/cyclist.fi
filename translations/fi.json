@@ -74,7 +74,10 @@
     "message_field_label": "Viesti (pakollinen)",
     "message_field_placeholder": "Hei, haluaisin kysyä...",
     "submit_button": "Lähetä viesti",
-    "title": "Ota yhteyttä"
+    "title": "Ota yhteyttä",
+    "submit_success": "Viestisi on lähetetty onnistuneesti.",
+    "submit_error": "Jotain meni pieleen. Yritä myöhemmin uudelleen.",
+    "submitting_button": "Lähetetään..."
   },
   "Search": {
     "search": "Hae",

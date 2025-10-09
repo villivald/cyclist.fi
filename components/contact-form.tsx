@@ -1,16 +1,25 @@
 "use client";
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 import styles from "@/styles/ContactForm.module.css";
 
 export default function ContactForm() {
   const t = useTranslations("ContactForm");
+  const router = useRouter();
 
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  } | null>(null);
+  const [countdownSeconds, setCountdownSeconds] = useState<number | null>(null);
 
   const id = useId();
   const emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
@@ -18,14 +27,54 @@ export default function ContactForm() {
 
   const submitButtonDisabled = !emailRegex.test(email) || !name || !message;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.table({ email, name, message });
 
-    setEmail("");
-    setName("");
-    setMessage("");
+    if (submitButtonDisabled || isSubmitting) return;
+
+    setIsSubmitting(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message, fromEmail: email, name }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error ?? "Request failed");
+      }
+
+      setStatus({ type: "success", message: t("submit_success") });
+      setCountdownSeconds(5);
+
+      setEmail("");
+      setName("");
+      setMessage("");
+    } catch (err) {
+      console.error(err);
+      setStatus({ type: "error", message: t("submit_error") });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  useEffect(() => {
+    if (status?.type !== "success" || countdownSeconds == null) return;
+
+    if (countdownSeconds <= 0) {
+      router.push("/");
+      return;
+    }
+
+    const timerId = setTimeout(() => {
+      setCountdownSeconds((prev) => (prev == null ? prev : prev - 1));
+    }, 1000);
+
+    return () => clearTimeout(timerId);
+  }, [status?.type, countdownSeconds, router]);
 
   return (
     <main>
@@ -42,7 +91,6 @@ export default function ContactForm() {
             onChange={(e) => setEmail(e.target.value)}
             id={`email-${id}`}
             required
-            pattern={emailPattern}
             aria-invalid={email.length > 0 && !emailRegex.test(email)}
           />
         </div>
@@ -69,12 +117,31 @@ export default function ContactForm() {
             required
           />
         </div>
+        {status?.message ? (
+          <p role={status.type === "error" ? "alert" : undefined}>
+            <Image
+              src={
+                status.type === "error"
+                  ? "/icons/error.svg"
+                  : "/icons/success.svg"
+              }
+              alt=""
+              width={44}
+              height={44}
+            />
+
+            {status.message}
+            {status.type === "success" && countdownSeconds != null ? (
+              <span aria-live="polite"> {`(${countdownSeconds})`}</span>
+            ) : null}
+          </p>
+        ) : null}
         <button
-          disabled={submitButtonDisabled}
+          disabled={submitButtonDisabled || isSubmitting}
           type="submit"
           className={styles.submitButton}
         >
-          {t("submit_button")}
+          {isSubmitting ? t("submitting_button") : t("submit_button")}
         </button>
       </form>
     </main>
