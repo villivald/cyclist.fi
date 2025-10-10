@@ -77,7 +77,8 @@
     "title": "Ota yhteyttä",
     "submit_success": "Viestisi on lähetetty onnistuneesti.",
     "submit_error": "Jotain meni pieleen. Yritä myöhemmin uudelleen.",
-    "submitting_button": "Lähetetään..."
+    "submitting_button": "Lähetetään...",
+    "redirecting_in": " Uudelleenohjataan"
   },
   "Search": {
     "search": "Hae",

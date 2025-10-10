@@ -14,7 +14,7 @@ div:has(.form) {
   margin-block: var(--offset-2xl);
 }
 
-.form > div {
+.form > * {
   display: flex;
   flex-direction: column;
   gap: var(--space-3xs-2xs);
@@ -64,9 +64,25 @@ div:has(.form) {
 }
 
 .form > p {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3xs);
+  align-items: flex-start;
+
+  & span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xs);
+  }
+
+  & span:last-of-type {
+    font-variation-settings: "wght" 400;
+    font-size: var(--step--1);
+    margin-inline-start: 2.8125rem;
+  }
+}
+
+@media (width > 1100px) {
+  main:has(.form) {
+    margin-block: var(--offset-2xl);
+  }
 }
 
 @media (width < 1100px) {

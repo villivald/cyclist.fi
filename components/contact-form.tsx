@@ -119,20 +119,25 @@ export default function ContactForm() {
         </div>
         {status?.message ? (
           <p role={status.type === "error" ? "alert" : undefined}>
-            <Image
-              src={
-                status.type === "error"
-                  ? "/icons/error.svg"
-                  : "/icons/success.svg"
-              }
-              alt=""
-              width={44}
-              height={44}
-            />
+            <span>
+              <Image
+                src={
+                  status.type === "error"
+                    ? "/icons/error.svg"
+                    : "/icons/success.svg"
+                }
+                alt=""
+                width={40}
+                height={40}
+              />
 
-            {status.message}
+              {status.message}
+            </span>
             {status.type === "success" && countdownSeconds != null ? (
-              <span aria-live="polite"> {`(${countdownSeconds})`}</span>
+              <span aria-live="polite">
+                {t("redirecting_in")}
+                {`(${countdownSeconds}s)`}
+              </span>
             ) : null}
           </p>
         ) : null}
