@@ -23,6 +23,11 @@ export default function DataRow({
         ? "(max-width: 875px) 100vw, (max-width: 1050px) 50vw, 33vw"
         : "100vw";
 
+  const linkToDisplay = item.link
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .split("/")[0];
+
   return (
     <div className={rowClass} style={routeStyles}>
       <div className={styles.imageContainer}>
@@ -58,7 +63,7 @@ export default function DataRow({
           rel="noopener noreferrer"
           className={styles.link}
         >
-          {t("website")}
+          <span>{linkToDisplay}</span>
           <span aria-hidden="true">↗</span>
         </Link>
       </div>
