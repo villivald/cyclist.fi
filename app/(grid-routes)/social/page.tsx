@@ -1,4 +1,4 @@
-import PageComponent from "@/components/page-component";
+import FilterablePageComponent from "@/components/page-component/filterable-page-component";
 import socialData from "@/data/routes/social.json" with { type: "json" };
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
@@ -19,7 +19,7 @@ export default function social() {
 
   return (
     <div className={styles.mainContainer}>
-      <PageComponent
+      <FilterablePageComponent
         data={data}
         routeStyles={routeStyles}
         layout="list"
