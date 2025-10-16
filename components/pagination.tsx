@@ -19,10 +19,9 @@ export default function Pagination({
 }: PaginationProps) {
   const t = useTranslations("Common");
   const searchParams = useSearchParams();
-  const entries = searchParams?.entries();
 
   const buildHref = (page: number) => {
-    const params = new URLSearchParams(entries ?? undefined);
+    const params = new URLSearchParams(searchParams?.toString() ?? undefined);
     if (page === 1) {
       params.delete("page");
     } else {
