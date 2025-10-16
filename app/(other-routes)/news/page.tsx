@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
 import Pagination from "@/components/pagination";
@@ -6,14 +7,11 @@ import NewsArchiveBlock from "@/components/news/news-archive-block";
 import type { NewsItem } from "@/components/news/types";
 import newsData from "@/data/news.json";
 import styles from "@/styles/NewsArchiveBlock.module.css";
-import { createTranslatedMetadata } from "@/utils/generate-metadata";
 import { DEFAULT_PAGE_SIZE, paginateArray } from "@/utils/pagination";
 
-export const metadata = () => createTranslatedMetadata("Pages", "news");
-
-export function generateMetadata({
+export async function generateMetadata({
   searchParams,
-}: NewsPageProps): Metadata | Promise<Metadata> {
+}: NewsPageProps): Promise<Metadata> {
   const page = Number.parseInt(
     Array.isArray(searchParams?.page) ? searchParams?.page[0] ?? "1" : searchParams?.page ?? "1",
     10,
@@ -21,8 +19,10 @@ export function generateMetadata({
   const total = Math.max(1, Math.ceil((newsData as unknown as NewsItem[]).length / DEFAULT_PAGE_SIZE));
   const current = Number.isFinite(page) && page >= 1 ? Math.min(page, total) : 1;
   const base = "/news";
+  const t = await getTranslations("Pages");
+  const baseTitle = t("news");
   return {
-    title: `Cyclist.fi | News${current > 1 ? ` – Page ${current}` : ""}`,
+    title: `Cyclist.fi | ${baseTitle}${current > 1 ? ` – Page ${current}` : ""}`,
     alternates: {
       canonical: current === 1 ? base : `${base}?page=${current}`,
     },
