@@ -2,48 +2,81 @@
   {
     "id": "strava",
     "title": "Strava",
-    "description": "The largest social network for athletes. Track activities, analyze performance, and join clubs and challenges.",
-    "image": "/images/404_1.avif",
+    "description": "Platform for tracking rides, analyzing performance, and joining clubs. Features segments, routes, and social sharing for athletes.",
     "link": "https://www.strava.com/",
     "alt": "Strava social network for athletes",
-    "tags": ["Tracking", "Clubs", "Segments"],
-    "new": true
+    "tags": ["Tracking", "Clubs", "Segments"]
   },
   {
-    "id": "komoot",
-    "title": "Komoot",
-    "description": "Plan routes, discover highlights, and share adventures with the community across road, gravel, and MTB.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.komoot.com/",
-    "alt": "Komoot route planning and community",
-    "tags": ["Routing", "Community", "Discovery"],
-    "new": true
+    "id": "mitch-docker",
+    "title": "Mitch Docker",
+    "description": "Retired pro cyclist sharing podcast updates and cycling life. Posts from Life in the Peloton and rides.",
+    "image": "/images/social/docker.avif",
+    "link": "https://www.instagram.com/mitchdocker/",
+    "alt": "Mitch Docker Instagram",
+    "tags": ["Pro", "Podcast", "Cycling"]
   },
   {
-    "id": "instagram-cycling",
-    "title": "Instagram Cycling",
-    "description": "Follow cycling photographers, teams, and creators for daily inspiration and racing updates.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.instagram.com/explore/tags/cycling/",
-    "alt": "Cycling on Instagram",
-    "tags": ["Photos", "Teams", "Creators"]
+    "id": "demi-vollering",
+    "title": "Demi Vollering",
+    "description": "Dutch WorldTour rider sharing racing and training highlights. Includes posts from stage races and classics.",
+    "image": "/images/social/demi.avif",
+    "link": "https://www.instagram.com/demivollering/",
+    "alt": "Demi Vollering Instagram",
+    "tags": ["Pro", "Racing", "WorldTour"]
   },
   {
-    "id": "reddit-cycling",
-    "title": "Reddit r/cycling",
-    "description": "Community discussions, advice, reviews, and news across all cycling disciplines.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.reddit.com/r/cycling/",
-    "alt": "Reddit cycling community",
-    "tags": ["Community", "Advice", "Reviews"]
+    "id": "tadej-pogacar",
+    "title": "Tadej Pogačar",
+    "description": "Tour de France winner posting insights from training and races. Features behind-the-scenes race content and team updates.",
+    "image": "/images/social/tadej.avif",
+    "link": "https://www.instagram.com/tadejpogacar/",
+    "alt": "Tadej Pogačar Instagram",
+    "tags": ["Pro", "Grand Tours", "Racing"]
   },
   {
-    "id": "facebook-groups",
-    "title": "Facebook Cycling Groups",
-    "description": "Local and global groups for group rides, buy/sell, and event coordination.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.facebook.com/search/groups/?q=cycling",
-    "alt": "Facebook cycling groups",
-    "tags": ["Local", "Groups", "Events"]
+    "id": "juliet-elliott",
+    "title": "Juliet Elliott",
+    "description": "UK creator covering gravel, fixed gear, and adventure cycling. Shares rides, gear, and event coverage across platforms.",
+    "image": "/images/social/elliott.avif",
+    "link": "https://www.instagram.com/julietelliott/",
+    "alt": "Juliet Elliott Instagram",
+    "tags": ["Gravel", "Fixed", "Adventure"]
+  },
+  {
+    "id": "velovelovelo",
+    "title": "velovelovelo_",
+    "description": "Instagram account focused on cycling culture and visuals, featuring bikes and scenes. Curates design-forward imagery from the community.",
+    "image": "/images/social/velo.avif",
+    "link": "https://www.instagram.com/velovelovelo_/",
+    "alt": "velovelovelo_ Instagram",
+    "tags": ["Culture", "Photos", "Design"]
+  },
+  {
+    "id": "pervelo",
+    "title": "pervelo.cc",
+    "description": "Instagram account by Johanna Reif featuring rides, travel, and cycling culture. Personal cycling visuals and stories.",
+    "image": "/images/social/pervelo.avif",
+    "link": "https://www.instagram.com/pervelo.cc/",
+    "alt": "pervelo.cc Instagram",
+    "tags": ["Instagram", "Cycling", "Stories"]
+  },
+  {
+    "id": "marion-rousse",
+    "title": "Marion Rousse",
+    "description": "Director of the Tour de France Femmes sharing race updates and events. Posts include organizer perspectives and women’s cycling highlights.",
+    "image": "/images/social/marion.avif",
+    "link": "https://www.instagram.com/roussemarion/",
+    "alt": "Marion Rousse Instagram",
+    "tags": ["TdFF", "Racing", "Organization"]
+  },
+  {
+    "id": "maghroch",
+    "title": "Maghalie Rochette",
+    "description": "Canadian cyclocross pro sharing training, racing, and cycling life. Includes behind-the-scenes race content and skills sessions.",
+    "image": "/images/social/maghroch.avif",
+    "link": "https://www.instagram.com/maghroch/",
+    "alt": "maghroch Instagram",
+    "tags": ["Urban", "Photos", "Rides"]
   }
 ]

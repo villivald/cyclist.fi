@@ -10,7 +10,7 @@ export const routeFiles = [
   "bikes",
   "books",
   "community",
-  "discounts",
+  "retailers",
   "events",
   "indoor",
   "magazines",
@@ -39,7 +39,14 @@ export async function loadSearchData(): Promise<{
     const routeImports = routeFiles.map(async (route) => {
       try {
         const data = await import(`../data/routes/${route}.json`);
-        routesData[route] = data.default as RouteData[];
+        const defaultImage = "/images/coming_soon.avif";
+        const normalized = (data.default as RouteData[]).map((item) => ({
+          ...item,
+          image: item.image ?? defaultImage,
+          alt: item.alt ?? item.title,
+          new: item.new ?? false,
+        }));
+        routesData[route] = normalized;
       } catch (error) {
         console.warn(`Failed to load route data for ${route}:`, error);
         routesData[route] = [] as RouteData[];

@@ -1,48 +1,38 @@
 [
   {
-    "id": "basic-maintenance",
-    "title": "Basic Maintenance",
-    "description": "Learn cleaning, lubrication, and safety checks to keep your bike running smoothly and prolong component lifespan.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.parktool.com/blog/repair-help",
-    "alt": "Basic bike maintenance",
-    "tags": ["Cleaning", "Lubrication", "Safety"],
-    "new": true
+    "id": "chain-waxing",
+    "title": "Chain Waxing",
+    "description": "Guide to hot-waxing a bicycle chain for cleaner operation and improved efficiency. Covers preparation, application, and ongoing maintenance.",
+    "image": "/images/maintenance/chain_waxing.avif",
+    "link": "https://road.cc/content/feature/complete-guide-waxing-chain-save-watts-keep-clean-307625",
+    "alt": "Chain waxing guide",
+    "tags": ["Drivetrain", "Waxing", "Efficiency"]
   },
   {
-    "id": "wheel-truing",
-    "title": "Wheel Truing",
-    "description": "Understand spoke tension and lateral/radial truing techniques for durable, straight wheels.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.parktool.com/blog/repair-help/wheel-and-rim-service",
-    "alt": "Wheel truing guide",
-    "tags": ["Wheels", "Spokes", "Tension"]
+    "id": "tubeless-guide",
+    "title": "Tubeless Guide",
+    "description": "Road tubeless setup guidance covering rim and tire fit, sealant, pressures, and troubleshooting. Aimed at achieving reliable, safe performance.",
+    "image": "/images/maintenance/tubeless_guide.avif",
+    "link": "https://velo.outsideonline.com/road/road-gear/tubeless-tire-setup-for-road-tips-and-tricks-you-might-not-know/",
+    "alt": "Tubeless setup guide",
+    "tags": ["Tubeless", "Setup", "Sealant"]
   },
   {
-    "id": "drivetrain-care",
-    "title": "Drivetrain Care",
-    "description": "Chain wear, cassette replacement, and indexing shifting for crisp performance.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.sheldonbrown.com/chain-wear.html",
-    "alt": "Drivetrain maintenance",
-    "tags": ["Chain", "Cassette", "Indexing"]
+    "id": "chain-wear-guide",
+    "title": "Chain Wear Guide",
+    "description": "Explains how to measure bicycle chain wear and when to replace it for optimal shifting and drivetrain life. Uses common measurement tools and thresholds.",
+    "image": "/images/maintenance/chain_wear_guide.avif",
+    "link": "https://www.parktool.com/en-int/blog/repair-help/when-to-replace-a-chain-on-a-bicycle",
+    "alt": "Chain wear guide",
+    "tags": ["Chain", "Wear", "Replacement"]
   },
   {
-    "id": "hydraulic-brakes",
-    "title": "Hydraulic Brakes",
-    "description": "Bleeding procedures, pad replacement, and rotor alignment for consistent stopping power.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.youtube.com/results?search_query=hydraulic+brake+bleed+bike",
-    "alt": "Hydraulic brake service",
-    "tags": ["Brakes", "Bleed", "Rotors"]
-  },
-  {
-    "id": "suspension-service",
-    "title": "Suspension Service",
-    "description": "Fork and shock lower service intervals, seals, and air spring maintenance for MTB and gravel.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.foxracingshox.com/",
-    "alt": "Suspension maintenance",
-    "tags": ["MTB", "Fork", "Shock"]
+    "id": "tire-pressure-calculator",
+    "title": "Tire Pressure Calculator",
+    "description": "SRAM AXS tire pressure guide and calculator to balance comfort, grip, and rolling speed. Recommends pressures based on rider, bike, and tire data.",
+    "image": "/images/maintenance/tire_pressure.avif",
+    "link": "https://axs.sram.com/guides/tire/pressure",
+    "alt": "Tire pressure calculator",
+    "tags": ["Pressure", "SRAM", "Calculator"]
   }
 ]

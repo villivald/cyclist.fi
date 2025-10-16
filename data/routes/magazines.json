@@ -2,48 +2,58 @@
   {
     "id": "rouleur",
     "title": "Rouleur",
-    "description": "Premium cycling magazine featuring in-depth stories, photography, and culture from the world of professional cycling.",
-    "image": "/images/404_1.avif",
+    "description": "Magazine exploring professional cycling culture through long-form storytelling and photography. Features in-depth profiles, history, and behind-the-scenes perspectives.",
+    "image": "/images/magazines/rouleur.avif",
     "link": "https://www.rouleur.cc/",
     "alt": "Rouleur magazine",
-    "tags": ["Pro Cycling", "Culture", "Photography"],
-    "new": true
+    "tags": ["Pro Cycling", "Culture", "Photography"]
   },
   {
-    "id": "cyclistmag",
+    "id": "cycling-plus",
+    "title": "Cycling Plus",
+    "description": "Magazine covering road cycling with bike reviews, training advice, and practical tips. Geared toward enthusiast road riders.",
+    "link": "https://www.cyclingplus.com/",
+    "alt": "Cycling Plus magazine",
+    "tags": ["Road", "Reviews", "Training"]
+  },
+  {
+    "id": "fillari",
+    "title": "Fillari",
+    "description": "Finnish magazine covering road, MTB, and everyday cycling with tests, tips, and local stories. Published in Finnish.",
+    "link": "https://www.fillari-lehti.fi/",
+    "alt": "Fillari magazine",
+    "tags": ["Finnish", "Road", "MTB", "Commuting"]
+  },
+  {
+    "id": "cycling-weekly",
+    "title": "Cycling Weekly",
+    "description": "Publication covering cycling news, race reports, tech, and fitness. Serves everyday riders and the competitive scene.",
+    "link": "https://www.cyclingweekly.com/",
+    "alt": "Cycling Weekly magazine",
+    "tags": ["News", "Tech", "Fitness"]
+  },
+  {
+    "id": "cyclist",
     "title": "Cyclist",
-    "description": "Road cycling magazine with bike reviews, travel features, and performance tips for enthusiastic riders.",
-    "image": "/images/404_1.avif",
+    "description": "Road cycling magazine with long-form features, iconic climbs, and detailed bike reviews. Known for high-quality photography and in-depth tests.",
     "link": "https://www.cyclist.co.uk/",
     "alt": "Cyclist magazine",
-    "tags": ["Road", "Reviews", "Travel"],
-    "new": true
+    "tags": ["Road", "Reviews", "Features"]
   },
   {
-    "id": "cyclingnews",
-    "title": "CyclingNews",
-    "description": "Daily news, race coverage, tech reviews, and features from all corners of the cycling world.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.cyclingnews.com/",
-    "alt": "CyclingNews website",
-    "tags": ["News", "Racing", "Tech"]
+    "id": "bicycling",
+    "title": "Bicycling",
+    "description": "US magazine featuring training guidance, bike and gear reviews, and health topics for cyclists. Covers road, mountain, gravel, and commuting.",
+    "link": "https://www.bicycling.com/",
+    "alt": "Bicycling magazine",
+    "tags": ["US", "Training", "Reviews"]
   },
   {
-    "id": "velonews",
-    "title": "Velo",
-    "description": "In-depth features, analysis, and gear coverage for road, gravel, and MTB disciplines.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.velonews.com/",
-    "alt": "Velo News",
-    "tags": ["Analysis", "Gear", "Gravel"]
-  },
-  {
-    "id": "peloton",
-    "title": "Peloton Magazine",
-    "description": "Beautifully produced features on cycling culture, travel, and photography with a global perspective.",
-    "image": "/images/404_1.avif",
-    "link": "https://pelotonmagazine.com/",
-    "alt": "Peloton magazine",
-    "tags": ["Culture", "Travel", "Photography"]
+    "id": "mbuk",
+    "title": "Mountain Biking UK (MBUK)",
+    "description": "Mountain biking magazine with trail guides, bike tests, and skills instruction. Focused on MTB across the UK and beyond.",
+    "link": "https://www.mbuk.com/",
+    "alt": "MBUK magazine",
+    "tags": ["MTB", "Trails", "Reviews"]
   }
 ]

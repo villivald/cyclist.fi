@@ -1,15 +1,15 @@
 import PageComponent from "@/components/page-component";
-import discountsData from "@/data/routes/discounts.json" with { type: "json" };
+import retailersData from "@/data/routes/retailers.json" with { type: "json" };
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
 import { getRouteColor } from "@/utils/get-route-color";
 
-const ROUTE_NAME = "discounts";
+const ROUTE_NAME = "retailers";
 
 export const metadata = () => createTranslatedMetadata("Pages", ROUTE_NAME);
 
-export default function discounts() {
-  const data = discountsData;
+export default function Retailers() {
+  const data = retailersData;
 
   const routeColor = getRouteColor(ROUTE_NAME);
 

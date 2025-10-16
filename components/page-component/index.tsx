@@ -20,6 +20,7 @@ export default function PageComponent({
           routeStyles={routeStyles}
           item={item}
           layout={layout}
+          localImage={item.image}
           showTags={showTags}
           showNew={showNew}
         />

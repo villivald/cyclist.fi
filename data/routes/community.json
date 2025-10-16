@@ -1,49 +1,34 @@
 [
   {
-    "id": "local-clubs",
-    "title": "Local Cycling Clubs",
-    "description": "Find clubs near you for group rides, skills sessions, and a supportive cycling community.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.britishcycling.org.uk/clubfinder",
-    "alt": "Local cycling clubs",
-    "tags": ["Group Rides", "Community", "Skills"],
-    "new": true
+    "id": "zwift-insider",
+    "title": "Zwift Insider",
+    "description": "Independent site covering Zwift with news, route details, tips, and equipment testing. Includes community resources and platform updates.",
+    "link": "https://zwiftinsider.com/",
+    "alt": "Zwift Insider",
+    "tags": ["Zwift", "Routes", "Tips"]
   },
   {
-    "id": "women-cycling",
-    "title": "Women's Cycling",
-    "description": "Resources, groups, and initiatives supporting women in cycling across all disciplines.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.cyclinguk.org/",
-    "alt": "Women's cycling community",
-    "tags": ["Inclusion", "Road", "Gravel"],
-    "new": true
+    "id": "escape-collective",
+    "title": "Escape Collective",
+    "description": "Member-supported cycling journalism covering racing, tech, and culture with reader discussion. Publishes newsletters, podcasts, and features.",
+    "link": "https://escapecollective.com/",
+    "alt": "Escape Collective",
+    "tags": ["Journalism", "Racing", "Tech"]
   },
   {
-    "id": "youth-programs",
-    "title": "Youth Programs",
-    "description": "Programs and academies developing the next generation of cyclists with coaching and events.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.usacycling.org/",
-    "alt": "Youth cycling programs",
-    "tags": ["Youth", "Coaching", "Events"]
+    "id": "bikeland",
+    "title": "Bikeland",
+    "description": "Finnish national cycling portal offering route information, services, and event listings. Maintained by Pyöräliitto and partners.",
+    "link": "https://www.bikeland.fi/",
+    "alt": "Bikeland community",
+    "tags": ["Finnish", "Routes", "Services"]
   },
   {
-    "id": "gravel-communities",
-    "title": "Gravel Communities",
-    "description": "Discover gravel groups and events fostering adventure cycling off the beaten path.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.ridinggravel.com/",
-    "alt": "Gravel cycling community",
-    "tags": ["Gravel", "Adventure", "Events"]
-  },
-  {
-    "id": "hand-cycling",
-    "title": "Para & Handcycling",
-    "description": "Inclusive cycling resources, clubs, and events for para athletes and handcyclists.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.uci.org/para-cycling/",
-    "alt": "Para and handcycling community",
-    "tags": ["Para", "Inclusion", "Racing"]
+    "id": "road-cc",
+    "title": "road.cc",
+    "description": "UK site featuring everyday cycling news, reviews, and active reader comments. Covers commuting, sport, and advocacy topics.",
+    "link": "https://road.cc/",
+    "alt": "road.cc community",
+    "tags": ["UK", "News", "Reviews"]
   }
 ]

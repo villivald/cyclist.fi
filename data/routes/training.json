@@ -1,58 +1,42 @@
 [
   {
-    "id": "training-plans",
-    "title": "Training Plans",
-    "description": "Structured cycling training programs designed for different goals and experience levels. From beginner-friendly plans to advanced racing preparation, these comprehensive programs help cyclists improve performance systematically.",
-    "image": "/images/404_1.avif",
+    "id": "trainerroad",
+    "title": "TrainerRoad",
+    "description": "Science-based training plans, Adaptive Training and analytics for performance gains.",
+    "link": "https://www.trainerroad.com/",
+    "alt": "TrainerRoad",
+    "tags": ["Plans", "Adaptive", "Analytics"]
+  },
+  {
+    "id": "dynamic-cyclist",
+    "title": "Dynamic Cyclist",
+    "description": "Mobility, strength and injury-prevention programs built specifically for cyclists.",
+    "link": "https://dynamiccyclist.com/",
+    "alt": "Dynamic Cyclist",
+    "tags": ["Mobility", "Strength", "Injury Prevention"]
+  },
+  {
+    "id": "vekta",
+    "title": "Vekta",
+    "description": "Training and coaching platform for cyclists and endurance athletes.",
+    "link": "https://joinvekta.com/",
+    "alt": "Vekta training",
+    "tags": ["Plans", "Coaching", "Personalized"]
+  },
+  {
+    "id": "trainingpeaks",
+    "title": "TrainingPeaks",
+    "description": "Plan, track and analyze training with structured plans and powerful metrics.",
     "link": "https://www.trainingpeaks.com/",
-    "alt": "Cycling training plans",
-    "tags": ["Structured", "Progressive", "Goal-Oriented"],
-    "new": true
+    "alt": "TrainingPeaks",
+    "tags": ["Plans", "Metrics", "Analysis"]
   },
   {
-    "id": "workout-library",
-    "title": "Workout Library",
-    "description": "Extensive collection of cycling workouts and training sessions. Includes interval training, endurance rides, strength workouts, and recovery sessions that can be customized to individual training needs and schedules.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.zwift.com/",
-    "alt": "Cycling workout library",
-    "tags": ["Variety", "Customizable", "Progressive"],
-    "new": true
-  },
-  {
-    "id": "coaching-resources",
-    "title": "Coaching Resources",
-    "description": "Professional cycling coaching services and educational materials. Connect with certified cycling coaches, access training methodologies, and learn advanced techniques to maximize your cycling potential and performance.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.usacycling.org/",
-    "alt": "Cycling coaching resources",
-    "tags": ["Professional", "Certified", "Educational"]
-  },
-  {
-    "id": "performance-metrics",
-    "title": "Performance Metrics",
-    "description": "Comprehensive guides on tracking and analyzing cycling performance data. Learn about power metrics, heart rate zones, training stress scores, and other key indicators that help optimize training and racing performance.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.wko5.com/",
-    "alt": "Cycling performance metrics",
-    "tags": ["Data Analysis", "Power", "Heart Rate"]
-  },
-  {
-    "id": "training-apps",
-    "title": "Training Apps & Tools",
-    "description": "Essential mobile applications and software for cyclists. Discover apps for route planning, training tracking, performance analysis, and social training that enhance the cycling experience and training effectiveness.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.strava.com/",
-    "alt": "Cycling training apps",
-    "tags": ["Mobile", "Tracking", "Social"]
-  },
-  {
-    "id": "strength-training",
-    "title": "Strength Training for Cyclists",
-    "description": "Off-bike strength training programs specifically designed for cyclists. Learn exercises that improve cycling performance, prevent injuries, and build the muscular foundation needed for long rides and racing.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.cyclingweekly.com/",
-    "alt": "Strength training for cyclists",
-    "tags": ["Off-Bike", "Injury Prevention", "Performance"]
+    "id": "join",
+    "title": "Join",
+    "description": "Join is a platform providing structured and smart training plans for cyclists.",
+    "link": "https://join.cc/",
+    "alt": "Join",
+    "tags": ["Plans", "Structured", "Smart"]
   }
 ]

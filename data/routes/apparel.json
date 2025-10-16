@@ -2,57 +2,142 @@
   {
     "id": "pas-normal-studios",
     "title": "Pas Normal Studios",
-    "description": "Danish cycling apparel brand known for its stylish and functional designs, blending performance with contemporary aesthetics. Their minimalist approach and attention to detail make them a favorite among style-conscious cyclists.",
-    "image": "/images/404_1.avif",
+    "description": "Copenhagen-based brand creating technical cycling clothing with a contemporary aesthetic. Combining performance materials with refined design across road and gravel collections.",
     "link": "https://pasnormalstudios.com/",
     "alt": "Pas Normal Studios cycling apparel",
-    "tags": ["Danish", "Minimalist", "Performance"],
-    "new": true
-  },
-  {
-    "id": "rapha",
-    "title": "Rapha",
-    "description": "British cycling brand offering high-quality apparel and accessories. Known for performance-driven designs and classic aesthetics, Rapha has become synonymous with premium cycling culture and community.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.rapha.cc/",
-    "alt": "Rapha cycling brand",
-    "tags": ["British", "Premium", "Community"],
-    "new": true
-  },
-  {
-    "id": "assos",
-    "title": "Assos",
-    "description": "Swiss cycling apparel brand renowned for premium quality and innovative designs. Their focus on performance and comfort has made them a leader in technical cycling clothing with cutting-edge materials.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.assos.com/",
-    "alt": "Assos cycling apparel",
-    "tags": ["Swiss", "Technical", "Innovation"]
-  },
-  {
-    "id": "castelli",
-    "title": "Castelli",
-    "description": "Italian cycling brand with a rich heritage in cycling apparel. Known for their aerodynamic designs and innovative fabrics, Castelli continues to push the boundaries of cycling performance wear.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.castelli-cycling.com/",
-    "alt": "Castelli cycling apparel",
-    "tags": ["Italian", "Aero", "Heritage"]
+    "tags": [
+      "Danish",
+      "Copenhagen",
+      "Technical",
+      "Contemporary",
+      "Road",
+      "Gravel"
+    ]
   },
   {
     "id": "maap",
     "title": "MAAP",
-    "description": "Australian cycling brand that combines technical performance with bold design. Their innovative approach to cycling apparel has gained them a global following among performance-focused cyclists.",
-    "image": "/images/404_1.avif",
+    "description": "Melbourne-born performance cycling brand pairing advanced fabrics with bold design. Products are developed with athletes and engineered for training and racing.",
     "link": "https://maap.cc/",
     "alt": "MAAP cycling apparel",
-    "tags": ["Australian", "Bold", "Technical"]
+    "tags": [
+      "Australian",
+      "Melbourne",
+      "Performance",
+      "Technical",
+      "Bold",
+      "Racing"
+    ]
+  },
+  {
+    "id": "rapha",
+    "title": "Rapha",
+    "description": "Global cycling brand making high-quality apparel and accessories for every ride. Builds community through stories, events and the Rapha Cycling Club (RCC).",
+    "link": "https://www.rapha.cc/",
+    "alt": "Rapha cycling brand",
+    "tags": ["British", "Premium", "Community", "RCC", "Performance"]
+  },
+  {
+    "id": "assos",
+    "title": "Assos",
+    "description": "ASSOS of Switzerland has engineered cycling equipment since 1976. Known for pioneering textiles and performance-focused bib shorts, jerseys and outerwear.",
+    "image": "/images/apparel/assos.avif",
+    "link": "https://www.assos.com/",
+    "alt": "Assos cycling apparel",
+    "tags": ["Swiss", "Since 1976", "Technical", "Innovation", "Bib Shorts"]
   },
   {
     "id": "pedaled",
     "title": "Pedaled",
-    "description": "British cycling brand focused on sustainable and ethical production. Their commitment to environmental responsibility while maintaining high performance standards sets them apart in the cycling industry.",
-    "image": "/images/404_1.avif",
+    "description": "Japanese brand founded in Tokyo creating functional apparel for adventure and endurance riding. Designed for ultra-distance racing, bikepacking and everyday exploration.",
     "link": "https://pedaled.com/",
     "alt": "Pedaled cycling apparel",
-    "tags": ["British", "Sustainable", "Ethical"]
+    "tags": ["Japanese", "Tokyo", "Adventure", "Endurance", "Bikepacking"]
+  },
+  {
+    "id": "lecol",
+    "title": "Le Col",
+    "description": "British performance brand producing race-bred road apparel with an emphasis on speed and comfort. Kits are developed and tested with professional riders.",
+    "link": "https://www.lecol.cc/",
+    "alt": "Le Col cycling apparel",
+    "tags": ["British", "Performance", "Racing", "Aerodynamics", "Pro-tested"]
+  },
+  {
+    "id": "cafe-de-cycliste",
+    "title": "Café de Cycliste",
+    "description": "French brand from Nice crafting technical apparel for road, gravel and adventure. Distinctive designs inspired by the Côte d’Azur, blending performance with refined style.",
+    "link": "https://www.cafeducycliste.com/",
+    "alt": "Café de Cycliste cycling apparel",
+    "tags": ["French", "Nice", "Road", "Gravel", "Technical", "Style"]
+  },
+  {
+    "id": "velocio",
+    "title": "Velocio",
+    "description": "US brand focused on performance, fit and responsible manufacturing. Minimalist designs with technical fabrics and a commitment to sustainability.",
+    "link": "https://intl.velocio.cc/",
+    "alt": "Velocio cycling apparel",
+    "tags": ["American", "Performance", "Fit", "Sustainable", "Minimal"]
+  },
+  {
+    "id": "attaquer",
+    "title": "Attaquer",
+    "description": "Sydney-based brand known for bold graphics and race-ready performance. Limited drops and collaborations paired with high-spec kits for training and racing.",
+    "link": "https://www.attaquercycling.com/",
+    "alt": "Attaquer cycling apparel",
+    "tags": [
+      "Australian",
+      "Sydney",
+      "Bold",
+      "Graphics",
+      "Performance",
+      "Racing"
+    ]
+  },
+  {
+    "id": "isadore",
+    "title": "Isadore",
+    "description": "Slovakian brand founded by former pros creating merino-rich, responsibly made apparel. Designed for comfort on long rides across road and gravel.",
+    "link": "https://www.isadore.com/",
+    "alt": "Isadore cycling apparel",
+    "tags": ["Slovakian", "Merino", "Sustainable", "Comfort", "Road", "Gravel"]
+  },
+  {
+    "id": "universal-colours",
+    "title": "Universal Colours",
+    "description": "London-based brand producing progressive cycling apparel with responsible materials and transparent sourcing. Modern palettes and inclusive design approach.",
+    "link": "https://www.universalcolours.com/",
+    "alt": "Universal Colours cycling apparel",
+    "tags": [
+      "British",
+      "London",
+      "Sustainable",
+      "Recycled",
+      "Progressive",
+      "Modern"
+    ]
+  },
+  {
+    "id": "ostroy",
+    "title": "Ostroy",
+    "description": "New York-based brand blending art, culture and cycling with distinctive graphic jerseys. Performance apparel with playful, design-led prints.",
+    "link": "https://www.ostroy.com/",
+    "alt": "Ostroy cycling apparel",
+    "tags": ["American", "New York", "Graphic", "Art", "Design"]
+  },
+  {
+    "id": "heavy-pedal",
+    "title": "Heavy Pedal",
+    "description": "US brand born from fixed-gear culture, offering cycling kits and streetwear-inspired designs. Urban aesthetics meet practical pieces for riding and everyday wear.",
+    "link": "theheavypedal.com",
+    "alt": "Heavy Pedals cycling apparel",
+    "tags": ["American", "Fixed Gear", "Streetwear", "Urban", "Cycling"]
+  },
+  {
+    "id": "trikoterie",
+    "title": "Trikoterie",
+    "description": "Vienna-based Austrian brand making colorful cycling apparel with responsible European production. Small-run designs that celebrate creativity on and off the bike.",
+    "link": "https://trikoterie.at/",
+    "alt": "Trikoterie cycling apparel",
+    "tags": ["Austrian", "Vienna", "Colorful", "European-made", "Responsible"]
   }
 ]

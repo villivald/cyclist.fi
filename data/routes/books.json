@@ -1,58 +1,101 @@
 [
   {
-    "id": "cyclists-training-bible",
-    "title": "The Cyclist's Training Bible",
-    "description": "Comprehensive guide to structured training for cyclists of all levels, covering periodization, workouts, and performance metrics.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.trainingbible.com/",
-    "alt": "The Cyclist's Training Bible book",
-    "tags": ["Training", "Performance", "Guide"],
-    "new": true
+    "id": "pyorailyn-lumo",
+    "title": "Pyöräilyn lumo ja sen historia",
+    "description": "Finnish-language book celebrating the joy of cycling with tips and inspiration.",
+    "image": "/images/books/lumo.avif",
+    "link": "https://aulakustannus.fi/kirjat/pyorailyn-lumo-ja-sen-historia",
+    "alt": "Pyöräilyn lumo ja sen historia book",
+    "tags": ["Finnish", "Inspiration", "Guide"]
   },
   {
-    "id": "draft-animals",
-    "title": "Draft Animals",
-    "description": "A candid behind-the-scenes look at life in the professional peloton, exploring ambition, sacrifice, and the realities of racing.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.harpercollins.com/",
-    "alt": "Draft Animals cycling book",
-    "tags": ["Pro Cycling", "Memoir", "Peloton"],
-    "new": true
+    "id": "the-road-book",
+    "title": "The Road Book",
+    "description": "Annual almanack of professional road cycling packed with results, essays and data.",
+    "image": "/images/books/road_book.avif",
+    "link": "https://theroadbook.co.uk/",
+    "alt": "The Road Book",
+    "tags": ["Almanack", "Pro Cycling", "Results"]
   },
   {
-    "id": "secret-race",
-    "title": "The Secret Race",
-    "description": "Investigative memoir revealing the inner workings of doping culture in pro cycling during a controversial era.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.penguinrandomhouse.com/",
-    "alt": "The Secret Race cycling book",
-    "tags": ["History", "Doping", "Pro Cycling"]
+    "id": "velosaurus",
+    "title": "Velosaurus",
+    "description": "A whimsical lexicon of cycling terms and culture illustrated with humor.",
+    "image": "/images/books/velosaurus.avif",
+    "link": "https://road.cc/content/review/211603-boultings-velosaurus-ned-boulting",
+    "alt": "Velosaurus book",
+    "tags": ["Humor", "Culture", "Lexicon"]
   },
   {
-    "id": "marginal-gains-book",
-    "title": "Marginal Gains",
-    "description": "Explores the small improvements that compound into major performance benefits across training, nutrition, and technology.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.velopress.com/",
-    "alt": "Marginal Gains book",
-    "tags": ["Optimization", "Science", "Performance"]
+    "id": "mystery-lot-212",
+    "title": "1923: The Mystery of Lot 212",
+    "description": "Cycling-themed mystery set around a historic auction lot and hidden stories.",
+    "image": "/images/books/1923.avif",
+    "link": "https://www.goodreads.com/book/show/62039181-1923",
+    "alt": "1923 The Mystery of Lot 212 book",
+    "tags": ["Fiction", "Mystery", "Cycling"]
+  },
+  {
+    "id": "cyclopedia",
+    "title": "Cyclopedia",
+    "description": "A to Z compendium of cycling facts, figures and anecdotes perfect for fans.",
+    "image": "/images/books/cyclopedia.avif",
+    "link": "https://www.goodreads.com/book/show/6989011-cyclopedia",
+    "alt": "Cyclopedia book",
+    "tags": ["Reference", "Facts", "History"]
+  },
+  {
+    "id": "riding-with-the-rocketmen",
+    "title": "Riding with the Rocketmen",
+    "description": "Behind-the-scenes stories and insights from grand tours and team buses.",
+    "image": "/images/books/rocketmen.avif",
+    "link": "https://road.cc/content/review/riding-rocketmen-301771",
+    "alt": "Riding with the Rocketmen book",
+    "tags": ["Grand Tours", "Stories", "Teams"]
+  },
+  {
+    "id": "french-revolutions",
+    "title": "French Revolutions",
+    "description": "Tim Moore's humorous account of attempting to ride the Tour de France route.",
+    "image": "/images/books/french.avif",
+    "link": "https://www.goodreads.com/book/show/72455.French_Revolutions",
+    "alt": "French Revolutions book",
+    "tags": ["Humor", "Tour de France", "Travel"]
+  },
+  {
+    "id": "vuelta-skelter",
+    "title": "Vuelta Skelter",
+    "description": "Sharp, funny dispatches from Spain's Grand Tour blending race and travel writing.",
+    "image": "/images/books/vuelta.avif",
+    "link": "https://road.cc/content/review/vuelta-skelter-tim-moore-286399",
+    "alt": "Vuelta Skelter book",
+    "tags": ["Vuelta", "Humor", "Dispatches"]
   },
   {
     "id": "gironimo",
     "title": "Gironimo!",
-    "description": "A humorous and historical journey recreating the 1914 Giro d'Italia on a period-correct bike—equal parts adventure and cycling history.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.yellowjerseypress.com/",
-    "alt": "Gironimo cycling book",
-    "tags": ["Adventure", "History", "Giro"]
+    "description": "Recreating the 1914 Giro on period equipment; equal parts history and adventure.",
+    "image": "/images/books/gironimo.avif",
+    "link": "https://www.goodreads.com/book/show/25069840-gironimo-riding-the-very-terrible-1914-tour-of-italy",
+    "alt": "Gironimo book",
+    "tags": ["Giro", "History", "Adventure"]
   },
   {
-    "id": "how-to-bike",
-    "title": "Zinn & the Art of Road Bike Maintenance",
-    "description": "A trusted reference for at-home bike mechanics with clear explanations, diagrams, and step-by-step procedures.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.velopress.com/",
-    "alt": "Zinn and the Art of Road Bike Maintenance book",
-    "tags": ["Maintenance", "How-To", "Workshop"]
+    "id": "cyclists-training-bible",
+    "title": "The Cyclist’s Training Bible",
+    "description": "Joe Friel’s foundational guide to periodization, workouts and performance metrics.",
+    "image": "/images/books/bible.avif",
+    "link": "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/",
+    "alt": "The Cyclist’s Training Bible",
+    "tags": ["Training", "Periodization", "Performance"]
+  },
+  {
+    "id": "midlife-cyclist",
+    "title": "The Midlife Cyclist",
+    "description": "Evidence-based training, health and longevity guidance for riders over 40.",
+    "image": "/images/books/midlife.avif",
+    "link": "https://www.goodreads.com/book/show/58441499-the-midlife-cyclist",
+    "alt": "The Midlife Cyclist book",
+    "tags": ["Health", "Masters", "Training"]
   }
 ]
