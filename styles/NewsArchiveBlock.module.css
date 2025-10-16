@@ -66,6 +66,11 @@ div:has(.newsArchiveBlock) {
   z-index: -1;
 }
 
+nav[aria-label="Pagination"] a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @media (width < 1100px) {
   div:has(.newsArchiveBlock) {
     margin-block-start: -4.5rem;

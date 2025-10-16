@@ -14,7 +14,10 @@
     "skipLinks_label": "Links to main content and contacts",
     "skipLinks_mainContent": "Skip to main content",
     "skipLinks_contacts": "Skip to contact links",
-    "new": "New"
+    "new": "New",
+    "pagination": "Pagination",
+    "prev": "Prev",
+    "next": "Next"
   },
   "Pages": {
     "apparel": "Apparel",

@@ -6,7 +6,7 @@ import { NewsItem } from "./types";
 
 export default function NewsArchiveBlock({ image, text, date }: NewsItem) {
   return (
-    <section className={styles.newsArchiveBlock}>
+    <section className={styles.newsArchiveBlock} aria-label={date}>
       <div aria-hidden="true">
         <Image
           fill
