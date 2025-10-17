@@ -1,49 +1,38 @@
 [
   {
-    "id": "alps",
-    "title": "Alpine Passes",
-    "description": "Iconic climbs such as Alpe d'Huez, Stelvio, and Galibier—bucket-list roads for mountain lovers.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.strava.com/segments/explore",
-    "alt": "Alpine cycling passes",
-    "tags": ["Climbs", "Road", "Scenic"],
-    "new": true
+    "id": "peloton-helsinki",
+    "title": "Peloton Helsinki",
+    "description": "Cycling-friendly cafe and community hub in Helsinki with group rides and events.",
+    "image": "/images/places/peloton.avif",
+    "link": "https://www.pelotonhelsinki.fi/",
+    "alt": "Peloton Helsinki",
+    "tags": ["Helsinki", "Cafe", "Community"]
   },
   {
-    "id": "tuscany-gravel",
-    "title": "Tuscany Gravel",
-    "description": "Strade Bianche's white roads and rolling hills—perfect for gravel and adventure rides.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.turismo.intoscana.it/",
-    "alt": "Tuscany gravel routes",
-    "tags": ["Gravel", "Italy", "Routes"],
-    "new": true
+    "id": "velodromi",
+    "title": "Helsinki Velodrome",
+    "description": "Historic outdoor velodrome hosting track sessions, races and cycling events.",
+    "image": "/images/places/velodromi.avif",
+    "link": "https://fi.wikipedia.org/wiki/Helsingin_velodromi",
+    "alt": "Helsinki Velodrome",
+    "tags": ["Track", "Helsinki", "Events"]
   },
   {
-    "id": "mallorca",
-    "title": "Mallorca Training",
-    "description": "Year-round riding paradise with smooth roads, climbs like Sa Calobra, and cycling-friendly cafes.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.seemallorca.com/cycling",
-    "alt": "Mallorca cycling routes",
-    "tags": ["Training", "Climbs", "Sun"]
+    "id": "pelago-bicycles",
+    "title": "Pelago Bicycles",
+    "description": "Helsinki-based brand and store making durable city and touring bikes and accessories.",
+    "image": "/images/places/pelago.avif",
+    "link": "https://pelagobicycles.com/",
+    "alt": "Pelago Bicycles",
+    "tags": ["Helsinki", "City Bikes", "Touring"]
   },
   {
-    "id": "finland-trails",
-    "title": "Finland Trails",
-    "description": "Quiet gravel and forest roads, lakeside loops, and national parks ideal for long adventure days.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.outdooractive.com/",
-    "alt": "Finland gravel and forest trails",
-    "tags": ["Finland", "Gravel", "Nature"]
-  },
-  {
-    "id": "city-commute",
-    "title": "City Commute Classics",
-    "description": "Safe urban routes, bike lanes, and commuting tips for major cities around the world.",
-    "image": "/images/404_1.avif",
-    "link": "https://citymapper.com/",
-    "alt": "City cycling commute routes",
-    "tags": ["Urban", "Commute", "Bike Lanes"]
+    "id": "nuuksio",
+    "title": "Nuuksio National Park",
+    "description": "Forest trails, lakes and gravel roads just outside Helsinki for adventure rides.",
+    "image": "/images/places/nuuksio.avif",
+    "link": "https://www.luontoon.fi/fi/kohteet/nuuksion-kansallispuisto",
+    "alt": "Nuuksio National Park",
+    "tags": ["Gravel", "Nature", "Helsinki"]
   }
 ]

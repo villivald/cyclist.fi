@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bike24",
+    "title": "BIKE24",
+    "description": "European online retailer for bikes, components, and accessories with wide brand coverage. Offers international shipping and detailed product filters.",
+    "link": "https://www.bike24.com/",
+    "alt": "BIKE24 retailer",
+    "tags": ["Retailer", "Components", "Accessories"]
+  },
+  {
+    "id": "alltricks",
+    "title": "Alltricks",
+    "description": "French retailer for bikes, components, and running/outdoor gear. Known for frequent stock of European brands and fast delivery in the EU.",
+    "link": "https://www.alltricks.com/",
+    "alt": "Alltricks retailer",
+    "tags": ["Retailer", "Components", "EU"]
+  },
+  {
+    "id": "bike-discount",
+    "title": "Bike-Discount",
+    "description": "German retailer known for competitive pricing on parts, tools, and accessories. Stocks major component and apparel brands.",
+    "link": "https://www.bike-discount.de/en",
+    "alt": "Bike-Discount retailer",
+    "tags": ["Retailer", "Parts", "Tools"]
+  },
+  {
+    "id": "bikester",
+    "title": "Bikester",
+    "description": "Online bike shop covering road, MTB, gravel, and urban with apparel and parts. Operates localized stores in multiple European markets.",
+    "link": "https://www.bikester.fi/",
+    "alt": "Bikester retailer",
+    "tags": ["Retailer", "Bikes", "Apparel"]
+  },
+  {
+    "id": "sigma-sports",
+    "title": "Sigma Sports",
+    "description": "UK-based retailer with road, triathlon, and performance cycling focus. Offers bike fitting, workshops, and extensive online catalog.",
+    "link": "https://www.sigmasports.com/",
+    "alt": "Sigma Sports retailer",
+    "tags": ["Retailer", "Road", "Triathlon"]
+  },
+  {
+    "id": "rose-bikes",
+    "title": "ROSE Bikes",
+    "description": "German brand and retailer selling own bikes plus parts and gear. Known for direct-sales bikes and customization options.",
+    "link": "https://www.rosebikes.com/",
+    "alt": "ROSE Bikes retailer",
+    "tags": ["Retailer", "Brand", "Bikes"]
+  },
+  {
+    "id": "bikeinn",
+    "title": "Bikeinn",
+    "description": "Cycling-focused shop within the Tradeinn group offering broad gear selection. Ships internationally with multiple warehouse locations.",
+    "link": "https://www.bikeinn.com/",
+    "alt": "Bikeinn retailer",
+    "tags": ["Retailer", "Gear", "International"]
+  }
+]

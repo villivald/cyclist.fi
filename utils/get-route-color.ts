@@ -3,7 +3,7 @@ export const colors = [
   {
     teal: [
       "youtube",
-      "discounts",
+      "retailers",
       "places",
       "maintenance",
       "bikes",

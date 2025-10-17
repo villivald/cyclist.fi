@@ -11,7 +11,7 @@ export default function GridContainer() {
     { title: t("apparel"), link: "/apparel" },
     { title: t("youtube"), link: "/youtube" },
     { title: t("magazines"), link: "/magazines" },
-    { title: t("discounts"), link: "/discounts" },
+    { title: t("retailers"), link: "/retailers" },
     { title: t("podcasts"), link: "/podcasts" },
     { title: t("tv"), link: "/tv" },
     { title: t("indoor"), link: "/indoor" },

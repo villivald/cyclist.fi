@@ -22,7 +22,7 @@ export default function tv() {
       <FilterablePageComponent
         data={data}
         routeStyles={routeStyles}
-        layout="list"
+        layout="grid"
         showTags={true}
         showNew={true}
       />

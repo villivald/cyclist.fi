@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 test.describe("Scroll to top button", () => {
   test("appears after scrolling on wide screens and scrolls to top on click", async ({

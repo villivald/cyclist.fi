@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -12,6 +14,7 @@ export default function DataRow({
   layout = "list",
   showTags = false,
   showNew = false,
+  localImage,
 }: DataRowProps) {
   const t = useTranslations("Common");
 
@@ -28,13 +31,36 @@ export default function DataRow({
     .replace(/^www\./, "")
     .split("/")[0];
 
+  // Use a custom loader so Next.js <Image> generates Brandfetch URLs directly
+  // and bypasses the Next Image Optimization route (avoids 400s).
+  const brandfetchLoader = ({
+    src,
+    width,
+    quality,
+  }: {
+    src: string;
+    width: number;
+    quality?: number;
+  }) => {
+    // Special cases where the image is not found on Brandfetch.
+    if (localImage) return localImage;
+
+    const clientId = process.env.NEXT_PUBLIC_LOGO_API_KEY ?? "";
+    const base = "https://cdn.brandfetch.io";
+    const q = typeof quality === "number" ? quality : 75;
+    const tokenParam = clientId ? `?c=${clientId}&q=${q}` : `?q=${q}`;
+
+    return `${base}/${src}/w/${width}${tokenParam}`;
+  };
+
   return (
     <div className={rowClass} style={routeStyles}>
       <div className={styles.imageContainer}>
         <Image
+          loader={brandfetchLoader}
           width={300}
           height={200}
-          src={item.image}
+          src={linkToDisplay}
           alt={item.alt}
           className={styles.image}
           sizes={imageSizes}
@@ -62,6 +88,7 @@ export default function DataRow({
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
+          data-testid="content-link"
         >
           <span>{linkToDisplay}</span>
           <span aria-hidden="true">↗</span>

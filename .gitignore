@@ -16,6 +16,7 @@
 
 # production
 /build
+build-archive.log
 
 # misc
 .DS_Store

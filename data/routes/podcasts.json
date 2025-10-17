@@ -1,49 +1,58 @@
 [
   {
-    "id": "cycling-podcast",
-    "title": "The Cycling Podcast",
-    "description": "News, race analysis, and stories from the pro peloton with engaging hosts and regular series.",
-    "image": "/images/404_1.avif",
-    "link": "https://thecyclingpodcast.com/",
-    "alt": "The Cycling Podcast",
-    "tags": ["Pro Cycling", "Analysis", "Stories"],
-    "new": true
+    "id": "life-in-the-peloton",
+    "title": "Life in the Peloton",
+    "description": "Podcast hosted by former pro Mitch Docker featuring conversations with riders and people around the sport. Focuses on life in the peloton, careers, and the culture of cycling.",
+    "link": "https://lifeinthepeloton.com/",
+    "alt": "Life in the Peloton podcast",
+    "tags": ["Pro Cycling", "Interviews", "Stories"]
   },
   {
-    "id": "nerd-alert",
-    "title": "Nerd Alert",
-    "description": "Deep dives into cycling tech, gear, and engineering with approachable explanations and debates.",
-    "image": "/images/404_1.avif",
-    "link": "https://escapecollective.com/category/nerd-alert/",
-    "alt": "Nerd Alert podcast",
-    "tags": ["Tech", "Gear", "Engineering"],
-    "new": true
+    "id": "the-move",
+    "title": "THE MOVE",
+    "description": "Show from WEDŪ that analyzes major races and stages, hosted by Lance Armstrong with recurring co-hosts. Offers stage recaps, tactics, and commentary during Grand Tours and key events.",
+    "link": "https://wedu.team/blogs/the-move",
+    "alt": "THE MOVE podcast",
+    "tags": ["Analysis", "Grand Tours", "Commentary"]
   },
   {
-    "id": "fast-talk",
-    "title": "Fast Talk Labs",
-    "description": "Evidence-based training, physiology, and coaching insights for performance-focused cyclists.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.fasttalklabs.com/fast-talk/",
-    "alt": "Fast Talk Labs podcast",
-    "tags": ["Training", "Science", "Coaching"]
+    "id": "spin-cycle",
+    "title": "Spin Cycle",
+    "description": "Weekly show from Escape Collective covering cycling news, racing, and culture. Mixes reporting, analysis, and discussion.",
+    "link": "https://escapecollective.com/podcasts/",
+    "alt": "Spin Cycle podcast",
+    "tags": ["News", "Culture", "Weekly"]
   },
   {
-    "id": "successful-athlete",
-    "title": "Successful Athletes",
-    "description": "Real-world stories from everyday athletes overcoming challenges and achieving personal bests.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.trainerroad.com/successful-athletes-podcast/",
-    "alt": "Successful Athletes podcast",
-    "tags": ["Stories", "Motivation", "Training"]
+    "id": "cyclist-mag-podcast",
+    "title": "Cyclist Magazine Podcast",
+    "description": "Interviews and features from Cyclist covering tech, travel, and the professional scene. Episodes include conversations with riders and industry figures.",
+    "link": "https://www.cyclist.co.uk/cyclist-magazine-podcast",
+    "alt": "Cyclist podcast",
+    "tags": ["Interviews", "Tech", "Pro Cycling"]
   },
   {
-    "id": "gcn-podcast",
-    "title": "GCN Podcast",
-    "description": "Entertaining chats about racing, tech, and cycling culture from the Global Cycling Network team.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.globalcyclingnetwork.com/",
-    "alt": "GCN podcast",
-    "tags": ["Racing", "Tech", "Culture"]
+    "id": "rouleur-podcast",
+    "title": "Rouleur Podcast",
+    "description": "Podcast from Rouleur featuring stories and interviews on racing and cycling culture. Often ties to features and contributors from the magazine.",
+    "link": "https://pod.link/445620088",
+    "alt": "Rouleur podcast",
+    "tags": ["Stories", "Culture", "Pro Cycling"]
+  },
+  {
+    "id": "gcn-show",
+    "title": "The GCN Show",
+    "description": "Weekly Global Cycling Network show covering racing, tech, and community topics. Available as video and audio on major platforms.",
+    "link": "https://open.spotify.com/show/6e87Mp2unbuWbYY1ubfDpD",
+    "alt": "The GCN Show",
+    "tags": ["Weekly", "Racing", "Tech"]
+  },
+  {
+    "id": "beyond-the-peloton",
+    "title": "Beyond the Peloton",
+    "description": "Spencer Martin breaks down pro races with strategy and performance analysis. Focus on Grand Tours, Monuments, and trends across the WorldTour.",
+    "link": "https://beyondthepeloton.substack.com/podcast",
+    "alt": "Beyond the Peloton podcast",
+    "tags": ["Analysis", "Strategy", "Pro Cycling"]
   }
 ]

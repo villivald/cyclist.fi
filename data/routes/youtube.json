@@ -1,49 +1,56 @@
 [
   {
-    "id": "global-cycling-network",
-    "title": "Global Cycling Network",
-    "description": "The world's leading cycling channel with daily videos covering everything from training",
-    "image": "/images/404_1.avif",
+    "id": "gcn",
+    "title": "GCN",
+    "description": "The main Global Cycling Network channel, where the weekly GCN show can be found. Daily videos on training, maintenance, tech and racing coverage.",
+    "image": "/images/youtube/gcn.avif",
     "link": "https://www.youtube.com/@GCN",
-    "alt": "Global Cycling Network YouTube channel",
-    "tags": ["Training", "Racing", "Reviews", "Global"],
-    "new": true
+    "alt": "GCN YouTube channel",
+    "tags": ["Training", "Racing", "Tech", "Maintenance"]
   },
   {
     "id": "gcn-tech",
     "title": "GCN Tech",
-    "description": "Dedicated to the latest cycling technology, bike reviews, and gear testing. From pro bikes to budget options, they cover it all.",
-    "image": "/images/404_1.avif",
+    "description": "Bike tech, reviews and how-tos from budget builds to pro-level machines. GCN Tech goes deeper into the details of cycling technology.",
+    "image": "/images/youtube/tech.avif",
     "link": "https://www.youtube.com/@GCNTech",
     "alt": "GCN Tech YouTube channel",
-    "tags": ["Technology", "Reviews", "Gear", "Bikes"],
-    "new": true
+    "tags": ["Tech", "Reviews", "How-To", "Bikes"]
   },
   {
-    "id": "dylan-johnson",
-    "title": "Dylan Johnson",
-    "description": "Professional cyclist and coach sharing insights into training, racing, and the life of a pro cyclist. Great for serious cyclists looking to improve.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.youtube.com/@dylanjohnson",
-    "alt": "Dylan Johnson YouTube channel",
-    "tags": ["Professional", "Training", "Racing", "Coaching"]
+    "id": "gcn-racing",
+    "title": "GCN Racing",
+    "description": "Highlights, analysis and commentary from the world of professional road cycling, biggest races and more.",
+    "image": "/images/youtube/racing.avif",
+    "link": "https://www.youtube.com/@GCNRacing",
+    "alt": "GCN Racing YouTube channel",
+    "tags": ["Racing", "Highlights", "Analysis"]
   },
   {
-    "id": "norcal-cycling",
-    "title": "NorCal Cycling",
-    "description": "Amateur racing content with",
-    "image": "/images/404_1.avif",
-    "link": "https://www.youtube.com/@norcalcycling",
-    "alt": "NorCal Cycling YouTube channel",
-    "tags": ["Amateur", "Racing", "Grassroots", "Commentary"]
+    "id": "velogi",
+    "title": "Velogi",
+    "description": "Finnish-language cycling channel, with a focus on bike maintenance, tech and tips. Also features bikepacking and touring content, as well as product reviews.",
+    "image": "/images/youtube/velogi.avif",
+    "link": "https://www.youtube.com/@Velogi",
+    "alt": "Velogi YouTube channel",
+    "tags": ["Finnish", "Tech", "Maintenance"]
   },
   {
-    "id": "lanterne-rouge",
-    "title": "Lanterne Rouge",
-    "description": "In-depth analysis of professional",
-    "image": "/images/404_1.avif",
-    "link": "https://www.youtube.com/@lanterne_rouge",
-    "alt": "Lanterne Rouge YouTube channel",
-    "tags": ["Professional", "Analysis", "Tactics", "Racing"]
+    "id": "trainerroad",
+    "title": "TrainerRoad",
+    "description": "Channel from the makers of AI-powered cycling training software TrainerRoad. Features training tips, workouts, and nutrition advice for cyclists of all levels.",
+    "image": "/images/youtube/trainer.avif",
+    "link": "https://www.youtube.com/@trainerroad",
+    "alt": "TrainerRoad YouTube channel",
+    "tags": ["Training", "Coaching", "Tips"]
+  },
+  {
+    "id": "terryb-alleycat",
+    "title": "TerryB (alleycat races)",
+    "description": "POV alleycat race videos and urban riding content. Very addictive viewing.",
+    "image": "/images/youtube/terry.avif",
+    "link": "https://www.youtube.com/@TerryB/videos",
+    "alt": "TerryB YouTube channel",
+    "tags": ["Alleycat", "Urban", "POV"]
   }
 ]

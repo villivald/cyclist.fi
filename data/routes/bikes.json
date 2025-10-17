@@ -1,58 +1,154 @@
 [
   {
-    "id": "trek",
-    "title": "Trek",
-    "description": "American bicycle manufacturer known for innovative designs and high-quality bikes. From entry-level to professional racing bikes, Trek offers a wide range of options for all types of cyclists.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.trekbikes.com/",
-    "alt": "Trek bicycles",
-    "tags": ["American", "Innovation", "Quality"],
-    "new": true
+    "id": "canyon",
+    "title": "Canyon",
+    "description": "German direct-to-consumer brand delivering performance road, gravel and MTB bikes online worldwide.",
+    "link": "https://www.canyon.com/",
+    "alt": "Canyon bicycles",
+    "tags": ["German", "Direct", "Road", "Gravel", "MTB"]
   },
   {
     "id": "specialized",
     "title": "Specialized",
-    "description": "Leading bicycle brand specializing in road, mountain, and electric bikes. Known for cutting-edge technology and aerodynamic designs that have dominated professional cycling for decades.",
-    "image": "/images/404_1.avif",
+    "description": "US brand building road, mountain and e-bikes, known for race-winning performance and in-house R&D.",
     "link": "https://www.specialized.com/",
     "alt": "Specialized bicycles",
-    "tags": ["American", "Technology", "Aero"],
-    "new": true
+    "tags": ["American", "Road", "MTB", "Performance", "Innovation"]
   },
   {
-    "id": "canyon",
-    "title": "Canyon",
-    "description": "German direct-to-consumer bicycle brand offering premium bikes at competitive prices. Their aerodynamic road bikes and innovative designs have made them a favorite among professional cyclists.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.canyon.com/",
-    "alt": "Canyon bicycles",
-    "tags": ["German", "Direct", "Premium"]
+    "id": "trek",
+    "title": "Trek",
+    "description": "American brand offering a full range from entry-level to WorldTour, with a focus on quality and innovation.",
+    "link": "https://www.trekbikes.com/",
+    "alt": "Trek bicycles",
+    "tags": ["American", "Road", "MTB", "E-Bike"]
   },
   {
-    "id": "cervelo",
-    "title": "Cervelo",
-    "description": "Canadian brand specializing in aerodynamic road bikes and time trial machines. Their focus on wind tunnel testing and engineering has produced some of the fastest bikes in professional cycling.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.cervelo.com/",
-    "alt": "Cervelo bicycles",
-    "tags": ["Canadian", "Aero", "Engineering"]
+    "id": "bmc",
+    "title": "BMC",
+    "description": "Swiss brand engineering high-performance road and time-trial bikes, backed by research from the Impec Lab.",
+    "link": "https://www.bmc-switzerland.com/",
+    "alt": "BMC bicycles",
+    "tags": ["Swiss", "Racing", "Aero", "Carbon"]
   },
   {
     "id": "pinarello",
     "title": "Pinarello",
-    "description": "Italian bicycle manufacturer with a rich heritage in professional cycling. Known for their distinctive curved designs and association with Team Sky/Ineos, producing bikes that combine tradition with innovation.",
-    "image": "/images/404_1.avif",
+    "description": "Italian marque with Grand Tour pedigree, producing aerodynamic road frames like the Dogma.",
     "link": "https://pinarello.com/",
     "alt": "Pinarello bicycles",
-    "tags": ["Italian", "Heritage", "Professional"]
+    "tags": ["Italian", "Heritage", "WorldTour", "Aero"]
   },
   {
     "id": "giant",
     "title": "Giant",
-    "description": "World's largest bicycle manufacturer, producing bikes for many other brands. Known for quality at various price points and innovative manufacturing processes that make cycling accessible to everyone.",
-    "image": "/images/404_1.avif",
+    "description": "Taiwanese company and the world's largest bicycle maker, known for value and innovation across categories.",
     "link": "https://www.giant-bicycles.com/",
     "alt": "Giant bicycles",
-    "tags": ["Taiwanese", "Manufacturing", "Accessible"]
+    "tags": ["Taiwanese", "Global", "Road", "MTB"]
+  },
+  {
+    "id": "cannondale",
+    "title": "Cannondale",
+    "description": "American brand recognized for innovative aluminum and carbon designs across road, gravel and MTB.",
+    "link": "https://www.cannondale.com/",
+    "alt": "Cannondale bicycles",
+    "tags": ["American", "Innovation", "Road", "MTB"]
+  },
+  {
+    "id": "rondo",
+    "title": "Rondo",
+    "description": "Polish brand focused on gravel and all-road performance with distinctive design.",
+    "link": "https://rondo.cc/",
+    "alt": "Rondo bicycles",
+    "tags": ["Polish", "Gravel", "All-Road"]
+  },
+  {
+    "id": "focus",
+    "title": "Focus",
+    "description": "German brand producing performance road and mountain bikes with a racing heritage.",
+    "link": "https://www.focus-bikes.com/",
+    "alt": "Focus bicycles",
+    "tags": ["German", "Road", "MTB", "Performance"]
+  },
+  {
+    "id": "lapierre",
+    "title": "Lapierre",
+    "description": "French brand with decades of racing history across road and MTB disciplines.",
+    "link": "https://www.lapierrebikes.com/",
+    "alt": "Lapierre bicycles",
+    "tags": ["French", "Road", "MTB", "Racing"]
+  },
+  {
+    "id": "bianchi",
+    "title": "Bianchi",
+    "description": "Founded in 1885, the Italian icon known for its celeste color and heritage road bikes.",
+    "link": "https://www.bianchi.com/",
+    "alt": "Bianchi bicycles",
+    "tags": ["Italian", "Heritage", "Road"]
+  },
+  {
+    "id": "cervelo",
+    "title": "Cervélo",
+    "description": "Canadian brand specializing in aerodynamic road, triathlon and time-trial bikes.",
+    "link": "https://www.cervelo.com/",
+    "alt": "Cervélo bicycles",
+    "tags": ["Canadian", "Aero", "TT", "Road"]
+  },
+  {
+    "id": "colnago",
+    "title": "Colnago",
+    "description": "Italian legend with a storied racing legacy and premium road frames.",
+    "link": "https://www.colnago.com/",
+    "alt": "Colnago bicycles",
+    "tags": ["Italian", "Heritage", "Racing", "Road"]
+  },
+  {
+    "id": "cube",
+    "title": "CUBE",
+    "description": "German brand offering a broad range of road, MTB and e-bikes with strong value.",
+    "link": "https://www.cube.eu/",
+    "alt": "CUBE bicycles",
+    "tags": ["German", "Road", "MTB", "E-Bike"]
+  },
+  {
+    "id": "enve",
+    "title": "ENVE",
+    "description": "US company renowned for premium carbon wheels and components, plus performance road frames.",
+    "link": "https://www.enve.com/",
+    "alt": "ENVE Composites",
+    "tags": ["American", "Carbon", "Wheels", "Components"]
+  },
+  {
+    "id": "factor",
+    "title": "Factor",
+    "description": "High-end racing brand producing aerodynamic and lightweight road bikes ridden at WorldTour level.",
+    "link": "https://factorbikes.com/",
+    "alt": "Factor bicycles",
+    "tags": ["Performance", "Racing", "Aero", "Carbon"]
+  },
+  {
+    "id": "look",
+    "title": "LOOK",
+    "description": "French pioneer of clipless pedals and carbon frames, producing road bikes and components.",
+    "link": "https://www.lookcycle.com/",
+    "alt": "LOOK Cycle",
+    "tags": ["French", "Carbon", "Pedals", "Innovation"]
+  },
+  {
+    "id": "orbea",
+    "title": "Orbea",
+    "description": "Spanish cooperative from the Basque Country building road, gravel and mountain bikes.",
+    "link": "https://www.orbea.com/",
+    "alt": "Orbea bicycles",
+    "tags": ["Spanish", "Basque", "Road", "MTB"]
+  },
+  {
+    "id": "wilier",
+    "title": "Wilier",
+    "description": "Italian brand dating to 1906, known for elegant, race-focused road bikes.",
+    "link": "https://www.wilier.com/",
+    "alt": "Wilier Triestina bicycles",
+    "tags": ["Italian", "Heritage", "Road", "Racing"]
   }
 ]

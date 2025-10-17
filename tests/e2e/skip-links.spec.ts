@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 // Validate skip links work by focusing main content
 

@@ -1,49 +1,65 @@
 [
   {
-    "id": "gcn-plus",
-    "title": "GCN+ (archive)",
-    "description": "Historical races and documentaries; platform content has moved but archives and references remain useful.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.globalcyclingnetwork.com/",
-    "alt": "GCN Plus platform",
-    "tags": ["Racing", "Documentary", "Archive"],
-    "new": true
+    "id": "icarus",
+    "title": "Icarus (2017)",
+    "description": "A must-see Academy Award-winning documentary that uncovers a major sports doping scandal.",
+    "image": "/images/tv/icarus.avif",
+    "link": "https://en.wikipedia.org/wiki/Icarus_(2017_film)",
+    "alt": "Icarus documentary",
+    "tags": ["Documentary", "Doping", "Award"]
   },
   {
-    "id": "eurosport",
-    "title": "Eurosport / Discovery",
-    "description": "Live coverage and replays for Grand Tours, Monuments, and classics across Europe.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.eurosport.com/",
-    "alt": "Eurosport cycling coverage",
-    "tags": ["Live", "Grand Tours", "Classics"],
-    "new": true
+    "id": "tdf-netflix",
+    "title": "Tour de France: Unchained",
+    "description": "Netflix docuseries following teams through the Tour with behind-the-scenes drama.",
+    "image": "/images/tv/tour.avif",
+    "link": "https://en.wikipedia.org/wiki/Tour_de_France:_Unchained",
+    "alt": "Tour de France Unchained",
+    "tags": ["Docuseries", "Tour de France", "Teams"]
   },
   {
-    "id": "peacock",
-    "title": "Peacock (US)",
-    "description": "Broadcast partner for select WorldTour races and classics in the United States.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.peacocktv.com/",
-    "alt": "Peacock cycling streaming",
-    "tags": ["US", "WorldTour", "Streaming"]
+    "id": "armstrong-lie",
+    "title": "The Armstrong Lie",
+    "description": "Alex Gibney’s film tracing Lance Armstrong’s comeback and doping revelations.",
+    "image": "/images/tv/lie.avif",
+    "link": "https://en.wikipedia.org/wiki/The_Armstrong_Lie",
+    "alt": "The Armstrong Lie film",
+    "tags": ["Documentary", "Armstrong", "Doping"]
   },
   {
-    "id": "flo-bikes",
-    "title": "FloBikes",
-    "description": "Regional streaming rights for North America with race coverage and analysis.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.flobikes.com/",
-    "alt": "FloBikes streaming",
-    "tags": ["North America", "Racing", "Streaming"]
+    "id": "palzer-breaking-the-cycle",
+    "title": "Anton Palzer: Breaking the Cycle",
+    "description": "Red Bull documentary about a ski mountaineer’s transition to pro cycling.",
+    "image": "/images/tv/palzer.avif",
+    "link": "https://www.redbull.com/int-en/films/anton-palzer-breaking-the-cycle",
+    "alt": "Anton Palzer documentary",
+    "tags": ["Documentary", "Transition", "Red Bull"]
   },
   {
-    "id": "national-broadcasters",
-    "title": "National Broadcasters",
-    "description": "Check your country's public broadcasters (e.g., Yle, BBC, RAI) for free-to-air coverage and highlights.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.uci.org/",
-    "alt": "National broadcasters cycling",
-    "tags": ["Highlights", "Public", "Regional"]
+    "id": "tour-de-pharmacy",
+    "title": "Tour de Pharmacy",
+    "description": "Satirical mockumentary parodying cycling’s doping scandals with an all-star cast.",
+    "image": "/images/tv/pharma.avif",
+    "link": "https://www.hbo.com/movies/tour-de-pharmacy",
+    "alt": "Tour de Pharmacy",
+    "tags": ["Satire", "Mockumentary", "Comedy"]
+  },
+  {
+    "id": "wonderful-losers",
+    "title": "Wonderful Losers: A Different World",
+    "description": "A human look at domestiques—the unsung helpers—in professional cycling.",
+    "image": "/images/tv/wonderful.avif",
+    "link": "https://www.imdb.com/title/tt6490398/",
+    "alt": "Wonderful Losers documentary",
+    "tags": ["Documentary", "Domestiques", "Pro Cycling"]
+  },
+  {
+    "id": "eurosport-on-hbo",
+    "title": "Eurosport on HBO",
+    "description": "Watch Eurosport on HBO Max. Pro Cycling news, documentaries and more.",
+    "image": "/images/tv/hbo.avif",
+    "link": "https://www.hbomax.com/fi/en/sports",
+    "alt": "Eurosport on HBO",
+    "tags": ["Documentary", "Pro Cycling", "HBO"]
   }
 ]

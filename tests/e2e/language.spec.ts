@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 // Toggle language, verify cookie, and ensure html lang changes on reload
 

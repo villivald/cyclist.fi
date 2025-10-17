@@ -1,58 +1,58 @@
 [
   {
-    "id": "bike-computers",
-    "title": "Bike Computers",
-    "description": "Advanced cycling computers and GPS devices that track performance metrics, navigation, and training data. From basic speedometers to sophisticated power meters, these devices are essential for modern cycling training and racing.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.garmin.com/",
-    "alt": "Cycling bike computers",
-    "tags": ["GPS", "Performance", "Navigation"],
-    "new": true
+    "id": "whoop",
+    "title": "WHOOP",
+    "description": "Wearable that tracks strain, sleep and recovery to guide training readiness.",
+    "link": "https://www.whoop.com/",
+    "alt": "WHOOP wearable",
+    "tags": ["Wearable", "Recovery", "Sleep"]
   },
   {
-    "id": "smart-trainers",
-    "title": "Smart Trainers",
-    "description": "Interactive indoor cycling trainers that connect to training apps and virtual worlds. These devices provide realistic resistance simulation, power measurement, and immersive training experiences for year-round cycling improvement.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.wahoofitness.com/",
-    "alt": "Smart cycling trainers",
-    "tags": ["Indoor", "Interactive", "Virtual"],
-    "new": true
+    "id": "polar-h10",
+    "title": "Polar H10",
+    "description": "Highly accurate chest-strap heart rate sensor favored for training and testing.",
+    "link": "https://www.polar.com/",
+    "alt": "Polar H10 heart rate sensor",
+    "tags": ["Heart Rate", "Accuracy", "Sensor"]
   },
   {
-    "id": "cycling-apps",
-    "title": "Cycling Apps & Software",
-    "description": "Essential mobile applications and desktop software for cyclists. Discover apps for route planning, training analysis, social sharing, and performance tracking that enhance every aspect of the cycling experience.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.strava.com/",
-    "alt": "Cycling apps and software",
-    "tags": ["Mobile", "Analysis", "Social"]
+    "id": "oura-ring",
+    "title": "Oura Ring",
+    "description": "Wearable tracking device measuring sleep, activity and stress levels for personalized insights.",
+    "link": "https://ouraring.com",
+    "alt": "Oura Ring",
+    "tags": ["Sleep", "Activity", "Stress"]
   },
   {
     "id": "power-meters",
     "title": "Power Meters",
-    "description": "Precision power measurement devices that provide real-time cycling power data. These tools are essential for serious training and racing, offering accurate feedback on effort and performance that heart rate alone cannot provide.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.stagescycling.com/",
+    "description": "Crank, pedal or hub-based sensors measuring cycling power for structured training.",
+    "link": "https://www.garmin.com/en-US/c/sports-fitness/cycling-bike-computers-bike-radar-power-meter-headlights/?series=20780#shopallcycling",
     "alt": "Cycling power meters",
-    "tags": ["Power", "Precision", "Training"]
+    "tags": ["Power", "Training", "Data"]
   },
   {
-    "id": "cycling-tech-reviews",
-    "title": "Cycling Tech Reviews",
-    "description": "Comprehensive reviews and analysis of the latest cycling technology and equipment. Stay informed about new products, innovations, and technological advances that can improve your cycling performance and experience.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.dcrainmaker.com/",
-    "alt": "Cycling technology reviews",
-    "tags": ["Reviews", "Innovation", "Analysis"]
+    "id": "knog",
+    "title": "Knog",
+    "description": "Australian brand designing bike lights, locks and accessories with bold aesthetics.",
+    "link": "https://knog.com/",
+    "alt": "Knog lights and accessories",
+    "tags": ["Lights", "Design", "Australian"]
   },
   {
-    "id": "wearable-tech",
-    "title": "Wearable Technology",
-    "description": "Smartwatches, fitness trackers, and other wearable devices designed for cyclists. Monitor heart rate, track sleep, analyze recovery, and stay connected while cycling with these advanced wearable technologies.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.polar.com/",
-    "alt": "Cycling wearable technology",
-    "tags": ["Wearable", "Monitoring", "Recovery"]
+    "id": "inflatable-helmets",
+    "title": "Inflatable Helmets",
+    "description": "Airbag-style head protection systems designed to deploy on impact for safety.",
+    "link": "https://ventete.com/",
+    "alt": "Inflatable bicycle helmets",
+    "tags": ["Safety", "Airbag", "Urban"]
+  },
+  {
+    "id": "wahoo",
+    "title": "Wahoo",
+    "description": "Cycling trainers, computers and sensors including KICKR, ELEMNT and TICKR ranges.",
+    "link": "https://www.wahoofitness.com/",
+    "alt": "Wahoo Fitness",
+    "tags": ["Trainers", "Computers", "Sensors"]
   }
 ]

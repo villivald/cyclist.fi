@@ -2,75 +2,89 @@
   {
     "id": "tour-de-france",
     "title": "Tour de France",
-    "description": "The world's most prestigious cycling race, held annually in July. This three-week Grand Tour covers over 3,500 kilometers through France and neighboring countries, featuring the world's best cyclists.",
-    "image": "/images/404_1.avif",
+    "description": "The sport’s biggest Grand Tour, three weeks in July across France and beyond.",
     "link": "https://www.letour.fr/",
-    "alt": "Tour de France cycling race",
-    "tags": ["Grand Tour", "France", "July"],
-    "new": true
+    "alt": "Tour de France",
+    "tags": ["Grand Tour", "France", "July"]
   },
   {
     "id": "giro-ditalia",
     "title": "Giro d'Italia",
-    "description": "One of cycling's three Grand Tours, the Giro d'Italia takes place in May across Italy. Known for its challenging mountain stages and passionate Italian cycling culture, it's a true test of endurance.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.giroditalia.it/",
-    "alt": "Giro d'Italia cycling race",
-    "tags": ["Grand Tour", "Italy", "May"],
-    "new": true
+    "description": "Italy’s Grand Tour held in May, famed for steep climbs and tifosi passion.",
+    "link": "https://www.giroditalia.it/en",
+    "alt": "Giro d'Italia",
+    "tags": ["Grand Tour", "Italy", "May"]
   },
   {
     "id": "vuelta-espana",
     "title": "Vuelta a España",
-    "description": "The third Grand Tour of the cycling season, held in August-September across Spain. Known for its challenging mountain stages and late-season drama, it often decides the final rankings of the cycling year.",
-    "image": "/images/404_1.avif",
+    "description": "Late-season Grand Tour across Spain with brutal climbs and decisive stages.",
     "link": "https://www.lavuelta.es/",
-    "alt": "Vuelta a España cycling race",
-    "tags": ["Grand Tour", "Spain", "August-September"]
+    "alt": "Vuelta a España",
+    "tags": ["Grand Tour", "Spain", "Aug–Sep"]
   },
   {
     "id": "paris-roubaix",
-    "title": "Paris-Roubaix",
-    "description": "Known as 'The Hell of the North', this one-day classic features treacherous cobblestone sections that test both skill and courage. Held in early April, it's one of cycling's most prestigious monuments.",
-    "image": "/images/404_1.avif",
+    "title": "Paris–Roubaix",
+    "description": "Monument classic over infamous cobbles, finishing in the Roubaix Velodrome.",
     "link": "https://www.paris-roubaix.fr/",
-    "alt": "Paris-Roubaix cycling race",
-    "tags": ["Classic", "Cobblestones", "April"]
+    "alt": "Paris–Roubaix",
+    "tags": ["Monument", "Cobbles", "April"]
   },
   {
-    "id": "milan-san-remo",
-    "title": "Milan-San Remo",
-    "description": "Known as 'La Primavera' (The Spring), this is the first Monument of the season. The longest one-day race at nearly 300km, it's a sprinter's classic that often comes down to a thrilling finish on the Via Roma.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.milanosanremo.it/",
-    "alt": "Milan-San Remo cycling race",
-    "tags": ["Monument", "Sprint", "March"]
+    "id": "criterium-dauphine",
+    "title": "Critérium du Dauphiné",
+    "description": "Week-long stage race in June, key Tour de France warm-up in the Alps.",
+    "link": "https://www.criterium-du-dauphine.fr/",
+    "alt": "Critérium du Dauphiné",
+    "tags": ["Stage Race", "June", "Alps"]
+  },
+  {
+    "id": "il-lombardia",
+    "title": "Il Lombardia",
+    "description": "The ‘Race of the Falling Leaves’, autumn Monument with punchy climbs in Lombardy.",
+    "link": "https://www.ilombardia.it/en",
+    "alt": "Il Lombardia",
+    "tags": ["Monument", "Autumn", "Climbs"]
+  },
+  {
+    "id": "fleche-wallonne",
+    "title": "La Flèche Wallonne",
+    "description": "Ardennes Classic decided on repeated ascents of the Mur de Huy.",
+    "link": "https://www.la-fleche-wallonne.be/",
+    "alt": "La Flèche Wallonne",
+    "tags": ["Classic", "Ardennes", "April"]
   },
   {
     "id": "liege-bastogne-liege",
-    "title": "Liège-Bastogne-Liège",
-    "description": "The oldest of the five Monuments, this Ardennes Classic is known as 'La Doyenne'. Held in late April, it features challenging climbs and often harsh weather conditions, making it a true test of strength.",
-    "image": "/images/404_1.avif",
+    "title": "Liège–Bastogne–Liège",
+    "description": "Oldest Monument, challenging Ardennes course with relentless climbs.",
     "link": "https://www.liege-bastogne-liege.be/",
-    "alt": "Liège-Bastogne-Liège cycling race",
+    "alt": "Liège–Bastogne–Liège",
     "tags": ["Monument", "Ardennes", "April"]
   },
   {
-    "id": "world-championships",
-    "title": "UCI World Championships",
-    "description": "Annual world championships for road cycling, time trial, and team time trial. The iconic rainbow jersey is awarded to the winners, making this one of the most prestigious events in cycling.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.uci.org/",
-    "alt": "UCI World Championships",
-    "tags": ["World Championship", "Rainbow Jersey", "September"]
+    "id": "tour-of-flanders",
+    "title": "Tour of Flanders",
+    "description": "Belgian Monument featuring cobbled bergs and passionate crowds.",
+    "link": "https://www.rondevanvlaanderen.be/",
+    "alt": "Tour of Flanders",
+    "tags": ["Monument", "Cobbles", "Belgium"]
   },
   {
-    "id": "cyclocross-worlds",
-    "title": "Cyclocross World Championships",
-    "description": "Annual world championships for cyclocross, a winter cycling discipline that combines road and mountain biking techniques. Held on challenging off-road courses with obstacles and varying weather conditions.",
-    "image": "/images/404_1.avif",
+    "id": "world-championships",
+    "title": "UCI Road World Championships",
+    "description": "Annual worlds awarding the rainbow jersey in road race and time trial.",
     "link": "https://www.uci.org/",
-    "alt": "Cyclocross World Championships",
-    "tags": ["World Championship", "Winter", "Off-road"]
+    "alt": "UCI Road World Championships",
+    "tags": ["Worlds", "Rainbow", "Annual"]
+  },
+  {
+    "id": "olympics",
+    "title": "Olympic Games (Cycling)",
+    "description": "Quadrennial road, track, MTB and BMX competitions under the Olympic banner.",
+    "link": "https://www.olympics.com/en/sports/cycling-road/",
+    "alt": "Olympic Games Cycling",
+    "tags": ["Olympics", "Road", "Track"]
   }
 ]

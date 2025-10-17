@@ -1,58 +1,90 @@
 [
   {
-    "id": "energy-gels",
-    "title": "Energy Gels",
-    "description": "Concentrated carbohydrate sources designed for quick energy during cycling. These portable nutrition options help maintain blood glucose levels and delay fatigue during long rides and intense training sessions.",
-    "image": "/images/404_1.avif",
+    "id": "nosht",
+    "title": "Nosht",
+    "description": "Finnish-made sports nutrition with natural flavors for gels, drinks and chews.",
+    "link": "https://nosht.com/",
+    "alt": "Nosht sports nutrition",
+    "tags": ["Finnish", "Gels", "Drinks", "Natural"]
+  },
+  {
+    "id": "maurten",
+    "title": "Maurten",
+    "description": "Hydrogel-based fueling used by elite endurance athletes for high-carb intake with low GI distress.",
+    "link": "https://www.maurten.com/",
+    "alt": "Maurten hydrogel nutrition",
+    "tags": ["Hydrogel", "Carbs", "Elite"]
+  },
+  {
+    "id": "sis",
+    "title": "Science in Sport (SiS)",
+    "description": "Performance nutrition across gels, drinks and recovery products, backed by lab testing.",
     "link": "https://www.scienceinsport.com/",
-    "alt": "Cycling energy gels",
-    "tags": ["Quick Energy", "Portable", "Carbohydrates"],
-    "new": true
+    "alt": "Science in Sport",
+    "tags": ["Gels", "Electrolytes", "Recovery"]
   },
   {
-    "id": "energy-bars",
-    "title": "Energy Bars",
-    "description": "Balanced nutrition bars providing sustained energy for cyclists. Combining carbohydrates, protein, and healthy fats, these bars are perfect for pre-ride fueling and mid-ride snacking during longer sessions.",
-    "image": "/images/404_1.avif",
+    "id": "high5",
+    "title": "HIGH5",
+    "description": "UK sports nutrition brand with drinks, gels and chews for training and racing.",
+    "link": "https://highfive.co.uk/",
+    "alt": "HIGH5 nutrition",
+    "tags": ["UK", "Drinks", "Gels"]
+  },
+  {
+    "id": "powerbar",
+    "title": "PowerBar",
+    "description": "Pioneering endurance nutrition brand offering bars, gels and hydration.",
+    "link": "https://www.powerbar.eu/",
+    "alt": "PowerBar nutrition",
+    "tags": ["Bars", "Gels", "Hydration"]
+  },
+  {
+    "id": "skratch",
+    "title": "Skratch Labs",
+    "description": "Real-food approach to hydration mixes and fueling for endurance athletes.",
+    "link": "https://www.skratchlabs.com/",
+    "alt": "Skratch Labs",
+    "tags": ["Hydration", "Real Food", "Endurance"]
+  },
+  {
+    "id": "clif",
+    "title": "CLIF",
+    "description": "Energy bars, chews and gels for training and adventure, made with organic ingredients.",
     "link": "https://www.clifbar.com/",
-    "alt": "Cycling energy bars",
-    "tags": ["Sustained Energy", "Balanced", "Convenient"],
-    "new": true
+    "alt": "CLIF Bar",
+    "tags": ["Bars", "Chews", "Organic"]
   },
   {
-    "id": "hydration-strategies",
-    "title": "Hydration Strategies",
-    "description": "Comprehensive guides on maintaining proper hydration during cycling. Learn about fluid intake timing, electrolyte replacement, and how to prevent dehydration that can significantly impact performance and recovery.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.cyclingweekly.com/",
-    "alt": "Cycling hydration strategies",
-    "tags": ["Hydration", "Electrolytes", "Performance"]
+    "id": "hart-sport",
+    "title": "HART Sport",
+    "description": "Finnish sports drinks and electrolytes formulated for endurance.",
+    "link": "https://hartsport.fi/",
+    "alt": "HART Sport",
+    "tags": ["Finnish", "Drinks", "Electrolytes"]
   },
   {
-    "id": "pre-ride-nutrition",
-    "title": "Pre-Ride Nutrition",
-    "description": "Essential nutrition guidelines for fueling before cycling sessions. Discover optimal meal timing, carbohydrate loading strategies, and foods that provide sustained energy without causing digestive discomfort.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.velonews.com/",
-    "alt": "Pre-ride cycling nutrition",
-    "tags": ["Pre-Fueling", "Timing", "Digestion"]
+    "id": "maxim",
+    "title": "Maxim",
+    "description": "Endurance nutrition range of drinks, gels and bars popular in the Nordics.",
+    "link": "https://maximsportsnutrition.eu/",
+    "alt": "Maxim nutrition",
+    "tags": ["Nordic", "Drinks", "Gels"]
   },
   {
-    "id": "recovery-nutrition",
-    "title": "Recovery Nutrition",
-    "description": "Post-ride nutrition strategies to optimize recovery and adaptation. Learn about the importance of protein timing, glycogen replenishment, and anti-inflammatory foods that support muscle repair and growth.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.bicycling.com/",
-    "alt": "Post-ride recovery nutrition",
-    "tags": ["Recovery", "Protein", "Adaptation"]
+    "id": "dexal",
+    "title": "Dexal",
+    "description": "Finnish hydration and energy products for sports and outdoor activities.",
+    "link": "https://www.dexal.fi/",
+    "alt": "Dexal sports nutrition",
+    "tags": ["Finnish", "Hydration", "Energy"]
   },
   {
-    "id": "supplements",
-    "title": "Cycling Supplements",
-    "description": "Evidence-based supplement recommendations for cyclists. From creatine and beta-alanine to omega-3s and vitamin D, discover which supplements can enhance performance, recovery, and overall cycling health.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.examine.com/",
-    "alt": "Cycling supplements",
-    "tags": ["Evidence-Based", "Performance", "Health"]
+    "id": "puls",
+    "title": "PULS Nutrition",
+    "description": "Protein and energy products including bars and powders for active lifestyles.",
+    "link": "https://pulsnutrition.com/",
+    "alt": "PULS Nutrition",
+    "tags": ["Protein", "Bars", "Energy"]
   }
 ]

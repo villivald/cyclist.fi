@@ -11,7 +11,7 @@ const MENU_ITEMS = [
   "bikes",
   "books",
   "community",
-  "discounts",
+  "retailers",
   "events",
   "indoor",
   "magazines",

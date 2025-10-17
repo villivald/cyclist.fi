@@ -1,6 +1,6 @@
 {
   "name": "nextjs",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
+    "@chromatic-com/playwright": "^0.12.7",
     "@playwright/test": "^1.55.1",
     "@react-email/preview-server": "^4.3.0",
     "@testing-library/jest-dom": "^6.9.1",
@@ -43,6 +44,7 @@
     "@vitejs/plugin-react": "^5.0.4",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
+    "chromatic": "^13.3.0",
     "eslint": "^9.37.0",
     "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "^10.1.8",

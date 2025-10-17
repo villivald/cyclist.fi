@@ -2,48 +2,58 @@
   {
     "id": "zwift",
     "title": "Zwift",
-    "description": "Virtual cycling platform with structured workouts, group rides, and races across immersive worlds.",
-    "image": "/images/404_1.avif",
+    "description": "Virtual cycling platform with structured workouts, group rides and races in immersive worlds.",
     "link": "https://www.zwift.com/",
     "alt": "Zwift indoor cycling platform",
-    "tags": ["Virtual", "Workouts", "Racing"],
-    "new": true
+    "tags": ["Virtual", "Workouts", "Racing"]
   },
   {
-    "id": "trainerroad",
-    "title": "TrainerRoad",
-    "description": "Science-based indoor training with plan builder, adaptive training, and deep analytics.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.trainerroad.com/",
-    "alt": "TrainerRoad training platform",
-    "tags": ["Plans", "Adaptive", "Analytics"],
-    "new": true
+    "id": "rouvy",
+    "title": "Rouvy",
+    "description": "Augmented reality routes and structured training on real-world video courses.",
+    "image": "/images/indoor/rouvy.avif",
+    "link": "https://rouvy.com/",
+    "alt": "Rouvy indoor cycling",
+    "tags": ["AR Routes", "Training", "Video"]
   },
   {
-    "id": "rgt",
-    "title": "Wahoo RGT",
-    "description": "Realistic road simulations and events with physics-driven drafting and group dynamics.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.wahoofitness.com/devices/training-apps/wahoo-systm",
-    "alt": "Wahoo RGT platform",
-    "tags": ["Simulation", "Events", "Drafting"]
+    "id": "mywhoosh",
+    "title": "MyWhoosh",
+    "description": "Free-to-use virtual cycling app offering workouts, group rides and racing.",
+    "link": "https://www.mywhoosh.com/",
+    "alt": "MyWhoosh indoor cycling",
+    "tags": ["Virtual", "Free", "Racing"]
   },
   {
-    "id": "rollers",
-    "title": "Rollers & Trainers",
-    "description": "Hardware options from basic rollers to smart trainers; learn setups, calibration, and maintenance.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.dcrainmaker.com/",
-    "alt": "Indoor trainers and rollers",
-    "tags": ["Hardware", "Calibration", "Maintenance"]
+    "id": "fulgaz",
+    "title": "FulGaz",
+    "description": "High-quality real-road videos with terrain-matched resistance and structured sessions.",
+    "link": "https://fulgaz.com/",
+    "alt": "FulGaz indoor cycling",
+    "tags": ["Real-Road", "Video", "Workouts"]
   },
   {
-    "id": "fan-setup",
-    "title": "Pain Cave Setup",
-    "description": "Optimize airflow, ergonomics, sweat management, and entertainment for better indoor sessions.",
-    "image": "/images/404_1.avif",
-    "link": "https://www.slowtwitch.com/",
-    "alt": "Indoor cycling setup",
-    "tags": ["Setup", "Cooling", "Ergonomics"]
+    "id": "bkool",
+    "title": "Bkool",
+    "description": "Indoor cycling simulator with training plans, 3D routes and races.",
+    "link": "https://www.bkool.com/",
+    "alt": "Bkool indoor cycling",
+    "tags": ["Simulator", "Plans", "Races"]
+  },
+  {
+    "id": "wahoo-systm",
+    "title": "Wahoo SYSTM",
+    "description": "Structured training plans, workouts and sport science content integrated with Wahoo devices.",
+    "link": "https://eu.wahoofitness.com/wahoo-app-subscription",
+    "alt": "Wahoo SYSTM training app",
+    "tags": ["Plans", "Workouts", "Science"]
+  },
+  {
+    "id": "kinomap",
+    "title": "Kinomap",
+    "description": "User-generated geolocated videos for indoor rides with smart trainer control.",
+    "link": "https://www.kinomap.com/",
+    "alt": "Kinomap indoor cycling",
+    "tags": ["Video", "Geolocated", "Interactive"]
   }
 ]

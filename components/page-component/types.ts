@@ -2,7 +2,7 @@ export interface PageComponentData {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
   link: string;
   alt: string;
   tags?: string[];
@@ -23,4 +23,5 @@ export interface DataRowProps {
   layout?: "grid" | "list" | "masonry";
   showTags?: boolean;
   showNew?: boolean;
+  localImage?: string;
 }

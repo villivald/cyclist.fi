@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 // Basic smoke to ensure the homepage loads and key UI is present
 
