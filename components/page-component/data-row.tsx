@@ -88,6 +88,7 @@ export default function DataRow({
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
+          data-testid="content-link"
         >
           <span>{linkToDisplay}</span>
           <span aria-hidden="true">↗</span>
