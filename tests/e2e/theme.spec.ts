@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 test.describe("Theme switcher", () => {
   test("toggles html class between light and dark", async ({ page }) => {

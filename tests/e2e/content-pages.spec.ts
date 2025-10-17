@@ -1,4 +1,5 @@
-import { expect, type Page, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
+import { type Page } from "@playwright/test";
 
 import { routeFiles } from "../../utils/search-data";
 

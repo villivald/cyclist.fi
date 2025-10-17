@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "@chromatic-com/playwright";
 
 test.describe("Search modal", () => {
   test("opens via button click and shows guidance text", async ({ page }) => {
