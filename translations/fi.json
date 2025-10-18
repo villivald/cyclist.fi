@@ -14,7 +14,10 @@
     "skipLinks_label": "Linkit: pääsisältö ja yhteystiedot",
     "skipLinks_mainContent": "Siirry pääsisältöön",
     "skipLinks_contacts": "Siirry yhteystietoihin",
-    "new": "Uusi"
+    "new": "Uusi",
+    "pagination": "Sivutus",
+    "prev": "Edellinen",
+    "next": "Seuraava"
   },
   "Pages": {
     "apparel": "Vaatteet",
