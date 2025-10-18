@@ -72,6 +72,12 @@
   transform: scale(1.025);
 }
 
+.noDataMessage {
+  color: var(--color-text);
+  text-align: center;
+  padding: var(--space-xs);
+}
+
 /* New badge */
 .newBadge {
   position: absolute;

@@ -1,4 +1,4 @@
-import PageComponent from "@/components/page-component";
+import FilterablePageComponent from "@/components/page-component/filterable-page-component";
 import magazinesData from "@/data/routes/magazines.json" with { type: "json" };
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
@@ -19,7 +19,7 @@ export default function magazines() {
 
   return (
     <div className={styles.mainContainer}>
-      <PageComponent
+      <FilterablePageComponent
         data={data}
         routeStyles={routeStyles}
         layout="list"

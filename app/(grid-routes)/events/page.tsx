@@ -1,4 +1,4 @@
-import PageComponent from "@/components/page-component";
+import FilterablePageComponent from "@/components/page-component/filterable-page-component";
 import eventsData from "@/data/routes/events.json" with { type: "json" };
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
@@ -19,7 +19,7 @@ export default function events() {
 
   return (
     <div className={styles.mainContainer}>
-      <PageComponent
+      <FilterablePageComponent
         data={data}
         routeStyles={routeStyles}
         layout="grid"
