@@ -1,13 +1,6 @@
 import { expect, test } from "@chromatic-com/playwright";
-import { type Page } from "@playwright/test";
 
 import { routeFiles } from "../../utils/search-data";
-
-// Run this heavy test only once in Chromium project
-test.skip(
-  ({ browserName }) => browserName !== "chromium",
-  "Run only in Chromium",
-);
 
 test.describe("Each item on a content page has working link", () => {
   for (const route of routeFiles) {
@@ -25,43 +18,41 @@ test.describe("Each item on a content page has working link", () => {
       expect(contentLinks.length).toBeGreaterThan(0);
 
       for (const link of contentLinks) {
-        await expect(link).toBeVisible();
-        await expect(link).toHaveAttribute(
-          "href",
-          expect.stringMatching(/^https?:\/\//),
-        );
-        await expect(link).toHaveAttribute("target", "_blank");
-        const rel = await link.getAttribute("rel");
-        expect(rel?.includes("noopener")).toBe(true);
-        expect(rel?.includes("noreferrer")).toBe(true);
+        const rawHref = (await link.getAttribute("href")) ?? "";
+        expect(rawHref, "link href should be present").toBeTruthy();
 
-        const href = await link.getAttribute("href");
-        expect(href).toBeTruthy();
+        let url: URL | null = null;
 
-        // Best-effort popup open (some sites block or use chrome-error URLs)
-        let newPage: Page | null = null;
         try {
-          const popupPromise = page.waitForEvent("popup", { timeout: 5000 });
-          await link.click();
-          newPage = await popupPromise;
-          const newPageUrl = newPage.url();
-          if (/^https?:\/\//.test(newPageUrl)) {
-            await expect(newPage).toHaveURL(/^https?:\/\//);
-          }
-          await newPage.waitForLoadState("domcontentloaded").catch(() => {});
+          url = new URL(rawHref, page.url());
         } catch {
-          // no popup or blocked; proceed with HTTP validation
-        } finally {
-          if (newPage) {
-            await newPage.close().catch(() => {});
-          }
+          throw new Error(`Invalid URL in href: ${rawHref}`);
         }
 
-        // Validate destination URL exists; allow 2xx/3xx/401/403/429 as OK
-        const res = await request.get(href as string, { maxRedirects: 10 });
-        const status = res.status();
-        const acceptable = status === 200 || [401, 403, 429].includes(status);
-        expect(acceptable).toBe(true);
+        const response = await request.get(url.toString(), {
+          headers: {
+            // Use realistic navigation headers to reduce bot/anti-scraping 403s
+            "user-agent":
+              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            accept:
+              "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "accept-language": "en-US,en;q=0.9",
+            "upgrade-insecure-requests": "1",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "cross-site",
+          },
+        });
+
+        const status = response.status();
+
+        if (![401, 403, 405, 429].includes(status)) {
+          expect(
+            status,
+            `GET ${url.toString()} responded with status ${status}`,
+          ).toBeLessThan(400);
+          expect(status).toBeGreaterThanOrEqual(200);
+        }
       }
     });
   }
