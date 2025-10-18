@@ -21,10 +21,8 @@ function itemMatchesQuery(item: PageComponentData, query: string): boolean {
   return inTitle || inDescription || inTags || inLink;
 }
 
-export default function FilterablePageComponent(
-  props: PageComponentProps,
-) {
-  const { data } = props;
+export default function FilterablePageComponent(props: PageComponentProps) {
+  const { data, routeStyles } = props;
 
   const tSearch = useTranslations("Search");
 
@@ -38,7 +36,7 @@ export default function FilterablePageComponent(
   const resultsSummaryId = "page-filter-results-summary";
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={routeStyles}>
       <form
         role="search"
         aria-label={tSearch("search")}

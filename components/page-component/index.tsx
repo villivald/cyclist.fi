@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import styles from "@/styles/PageComponent.module.css";
 
 import DataRow from "./data-row";
@@ -10,10 +12,14 @@ export default function PageComponent({
   showTags = false,
   showNew = false,
 }: PageComponentProps) {
+  const t = useTranslations("Search");
+
   const containerClass = `${styles.mainContainer} ${styles[`layout-${layout}`]}`;
 
   return (
     <div className={containerClass}>
+      {!data.length && <p className={styles.noDataMessage}>{t("noResults")}</p>}
+
       {data.map((item, index) => (
         <DataRow
           key={item.id || index}
