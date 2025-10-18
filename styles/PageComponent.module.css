@@ -1,8 +1,26 @@
 .mainContainer {
+  --shadow-color: hsl(
+    from var(--routeColor) h s l / var(--route-color-opacity)
+  );
+
   display: grid;
   gap: var(--space-m);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 400;
+}
+
+.proposeLink {
+  --shadow-color: hsl(
+    from var(--routeColor) h s l / var(--route-color-opacity)
+  );
+
+  place-self: center;
+  padding: var(--space-s) var(--space-m);
+  width: fit-content;
+  text-decoration: none;
+  color: var(--color-text);
+  border: 0.125rem solid var(--shadow-color);
+  box-shadow: var(--space-4xs) var(--space-4xs) var(--shadow-color);
 }
 
 /* Layout variants */
@@ -27,10 +45,6 @@
 
 /* Data row styles */
 .dataRow {
-  --shadow-color: hsl(
-    from var(--routeColor) h s l / var(--route-color-opacity)
-  );
-
   display: grid;
   grid-template-columns: 300px auto; /* Default for list layout */
   gap: var(--space-s);
