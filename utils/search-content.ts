@@ -22,9 +22,9 @@ export interface RouteData {
 
 export interface NewsData {
   id: string;
-  text: string;
+  text_fi: string;
+  text_en: string;
   date: string;
-  image: string;
 }
 
 export function searchContent(
@@ -66,13 +66,14 @@ export function searchContent(
 
   // Search through news
   newsData.forEach((news) => {
-    const textMatch = news.text.toLowerCase().includes(searchTerm);
+    const fullText = news.text_fi + " " + news.text_en;
+    const textMatch = fullText.toLowerCase().includes(searchTerm);
 
     if (textMatch) {
       results.push({
         id: news.id,
         title: `News - ${news.date}`,
-        description: news.text,
+        description: fullText,
         type: "news",
         date: news.date,
       });

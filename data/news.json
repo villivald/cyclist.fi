@@ -1,44 +1,38 @@
 [
   {
-    "id": "7",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "07.03.2024",
-    "image": "bg_xs.avif"
-  },
-  {
     "id": "6",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "06.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "The initial phase is complete and everything is ready. We will keep refining the collections.",
+    "text_fi": "Ensimmäinen vaihe on valmis ja kaikki on käyttövalmista. Jatkamme kokoelmien kehittämistä.",
+    "date": "19.10.2025"
   },
   {
     "id": "5",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "05.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "Earlier this week we expanded the sections on nutrition, training and technology.",
+    "text_fi": "Laajensimme aiemmin viikolla ravitsemus-, harjoittelu- ja teknologiaosioita.",
+    "date": "16.10.2025"
   },
   {
     "id": "4",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "04.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "We added more items: maintenance, social media, bikes and events.",
+    "text_fi": "Lisäsimme lisää sisältöä: huolto, sosiaalinen media, pyörät ja tapahtumat.",
+    "date": "14.10.2025"
   },
   {
     "id": "3",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "03.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "Cyclist.fi now includes TV, indoor cycling, places, tour, books, community and more.",
+    "text_fi": "Mukana on nyt myös TV, sisäpyöräily, paikat, tour, kirjat, yhteisö ja muuta.",
+    "date": "12.10.2025"
   },
   {
     "id": "2",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "02.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "We published the first set of entries: apparel, YouTube, magazines, retailers, podcasts.",
+    "text_fi": "Julkaisimme ensimmäisen sisältöerän: vaatteet, YouTube, lehdet, kaupat, podcastit.",
+    "date": "11.10.2025"
   },
   {
     "id": "1",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "date": "01.03.2024",
-    "image": "bg_xs.avif"
+    "text_en": "Cyclist.fi is live. Browse the collections and suggest additions.",
+    "text_fi": "Cyclist.fi on julkaistu. Selaa kokoelmia ja ehdota lisäyksiä.",
+    "date": "10.10.2025"
   }
 ]

@@ -1,18 +1,12 @@
 import { useTranslations } from "next-intl";
 
 import NewsArchiveBlock from "@/components/news/news-archive-block";
+import { NewsItem } from "@/components/news/types";
 import newsData from "@/data/news.json";
 import styles from "@/styles/NewsArchiveBlock.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
 
 export const metadata = () => createTranslatedMetadata("Pages", "news");
-
-interface NewsItem {
-  id: string;
-  image: string;
-  text: string;
-  date: string;
-}
 
 export default function News() {
   const t = useTranslations("Pages");
@@ -23,8 +17,9 @@ export default function News() {
       {newsData.map((newsItem: NewsItem) => (
         <NewsArchiveBlock
           key={newsItem.id}
-          image={newsItem.image}
-          text={newsItem.text}
+          id={newsItem.id}
+          text_en={newsItem.text_en}
+          text_fi={newsItem.text_fi}
           date={newsItem.date}
         />
       ))}

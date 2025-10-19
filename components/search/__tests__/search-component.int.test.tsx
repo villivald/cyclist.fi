@@ -17,7 +17,12 @@ vi.mock("@/utils/search-data", () => ({
       ],
     },
     newsData: [
-      { id: "n1", text: "New bikes arrived in stock", date: "2024-01-01" },
+      {
+        id: "n1",
+        text_fi: "New bikes arrived in stock",
+        text_en: "New bikes arrived in stock",
+        date: "2024-01-01",
+      },
     ],
   }),
 }));

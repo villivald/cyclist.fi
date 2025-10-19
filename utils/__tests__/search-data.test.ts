@@ -35,9 +35,9 @@ describe("loadSearchData", () => {
       expect(newsData[0]).toEqual(
         expect.objectContaining({
           id: expect.any(String),
-          text: expect.any(String),
+          text_fi: expect.any(String),
+          text_en: expect.any(String),
           date: expect.any(String),
-          image: expect.any(String),
         }),
       );
     }

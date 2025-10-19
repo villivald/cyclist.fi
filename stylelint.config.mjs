@@ -8,7 +8,7 @@ const config = {
     "custom-property-pattern": "(.*?)",
     "keyframes-name-pattern": "(.*?)",
   },
-  ignoreFiles: ["**/coverage/**"],
+  ignoreFiles: ["**/coverage/**", "**/test-results/**"],
 };
 
 export default config;

@@ -21,8 +21,9 @@ export default function NewsList() {
         {firstNewsBlock.map((newsItem: NewsItem) => (
           <NewsBlock
             key={newsItem.id}
-            image={newsItem.image}
-            text={newsItem.text}
+            id={newsItem.id}
+            text_fi={newsItem.text_fi}
+            text_en={newsItem.text_en}
             date={newsItem.date}
           />
         ))}
@@ -31,8 +32,9 @@ export default function NewsList() {
         {secondNewsBlock.map((newsItem: NewsItem) => (
           <NewsBlock
             key={newsItem.id}
-            image={newsItem.image}
-            text={newsItem.text}
+            id={newsItem.id}
+            text_fi={newsItem.text_fi}
+            text_en={newsItem.text_en}
             date={newsItem.date}
           />
         ))}
