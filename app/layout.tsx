@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
@@ -75,6 +76,7 @@ export default async function RootLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="AW-17667621171" />
       <Analytics />
       <SpeedInsights />
     </html>
