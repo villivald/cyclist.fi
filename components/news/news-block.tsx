@@ -4,6 +4,7 @@ import { getLocale } from "next-intl/server";
 
 import styles from "@/styles/NewsBlock.module.css";
 
+import { Linkify } from "./linkify";
 import { NewsItem } from "./types";
 
 export default async function NewsBlock({
@@ -16,7 +17,7 @@ export default async function NewsBlock({
 
   const text = locale === "fi" ? text_fi : text_en;
 
-  const textToRender = text.length > 125 ? text.slice(0, 120) + "..." : text;
+  const textToRender = text.length > 125 ? text.slice(0, 120) + " ..." : text;
 
   return (
     <section className={styles.newsBlock}>
@@ -28,7 +29,7 @@ export default async function NewsBlock({
           sizes="(max-width: 900px) 25vw, (max-width: 1600px) 33vw, 20vw"
         />
       </div>
-      <p>{textToRender}</p>
+      <Linkify>{textToRender}</Linkify>
       <Link href="/news">{date}</Link>
     </section>
   );

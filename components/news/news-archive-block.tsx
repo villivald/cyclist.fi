@@ -3,6 +3,7 @@ import { getLocale } from "next-intl/server";
 
 import styles from "@/styles/NewsArchiveBlock.module.css";
 
+import { Linkify } from "./linkify";
 import { NewsItem } from "./types";
 
 export default async function NewsArchiveBlock({
@@ -26,7 +27,7 @@ export default async function NewsArchiveBlock({
         />
       </div>
       <article>
-        <p>{text}</p>
+        <Linkify>{text}</Linkify>
         <p>{date}</p>
       </article>
     </section>

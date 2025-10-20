@@ -37,6 +37,8 @@
     "technology": "Teknologia",
     "contact": "Ota yhteyttä",
     "design": "Design",
+    "facebook": "Facebook",
+    "newsletter": "Uutiskirje",
     "news": "Uutiset",
     "upperGrid": "Pääsisällön navigointi - osa 1",
     "lowerGrid": "Pääsisällön navigointi - osa 2"
@@ -89,6 +91,6 @@
     "closeSearch": "Sulje haku",
     "loading": "Ladataan...",
     "searchFor": "Hae brändejä, reittejä, uutisia ja muuta",
-    "proposeLink": "Idea, palaute tai yhteistyö mielessä? Kerro minulle!"
+    "proposeLink": "Idea, palaute tai yhteistyö mielessä? Kerro meille!"
   }
 }

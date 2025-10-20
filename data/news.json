@@ -1,8 +1,14 @@
 [
   {
+    "id": "7",
+    "text_en": "We added links to our accounts on www.buymeacoffee.com/cyclist/ (support us) and www.instagram.com/cyclist.fi/ (follow us).",
+    "text_fi": "Lisäsimme linkit meidän tileihin: www.buymeacoffee.com/cyclist/ (tue meitä) ja www.instagram.com/cyclist.fi/ (seuraa meitä).",
+    "date": "20.10.2025"
+  },
+  {
     "id": "6",
-    "text_en": "The initial phase is complete and everything is ready. We will keep refining the collections.",
-    "text_fi": "Ensimmäinen vaihe on valmis ja kaikki on käyttövalmista. Jatkamme kokoelmien kehittämistä.",
+    "text_en": "The initial development phase is complete and everything is (almost) ready. We will keep refining the collections, adding new materials and new features",
+    "text_fi": "Kehityksen ensimmäinen vaihe on valmis ja verkkosivu on suurin piirtein käyttövalmis. Jatkamme kokoelmien kehittämistä, lisäämme uutta sisältöä ja uusia ominaisuuksia.",
     "date": "19.10.2025"
   },
   {
@@ -14,7 +20,7 @@
   {
     "id": "4",
     "text_en": "We added more items: maintenance, social media, bikes and events.",
-    "text_fi": "Lisäsimme lisää sisältöä: huolto, sosiaalinen media, pyörät ja tapahtumat.",
+    "text_fi": "Tänään tuli lisää sisältöä: huolto, sosiaalinen media, pyörät ja tapahtumat.",
     "date": "14.10.2025"
   },
   {
@@ -26,13 +32,13 @@
   {
     "id": "2",
     "text_en": "We published the first set of entries: apparel, YouTube, magazines, retailers, podcasts.",
-    "text_fi": "Julkaisimme ensimmäisen sisältöerän: vaatteet, YouTube, lehdet, kaupat, podcastit.",
+    "text_fi": "Päivitimme ensimmäisen sisältöerän: vaatteet, YouTube, lehdet, kaupat, podcastit.",
     "date": "11.10.2025"
   },
   {
     "id": "1",
     "text_en": "Cyclist.fi is live. Browse the collections and suggest additions.",
-    "text_fi": "Cyclist.fi on julkaistu. Selaa kokoelmia ja ehdota lisäyksiä.",
+    "text_fi": "Cyclist.fi on julkaistu. Selaa kokoelmia ja ehdota uutta sisältöä.",
     "date": "10.10.2025"
   }
 ]

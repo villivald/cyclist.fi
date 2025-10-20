@@ -31,6 +31,10 @@
   grid-row: 1 / 3;
   padding-left: var(--offset-l);
   padding-block: var(--offset-s);
+
+  a {
+    color: inherit;
+  }
 }
 
 .newsBlock > :last-child {

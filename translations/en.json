@@ -37,6 +37,8 @@
     "technology": "Technology",
     "contact": "Contact",
     "design": "Design",
+    "facebook": "Facebook",
+    "newsletter": "Newsletter",
     "news": "News",
     "upperGrid": "Main content navigation - part 1",
     "lowerGrid": "Main content navigation - part 2"
@@ -89,6 +91,6 @@
     "closeSearch": "Close search",
     "loading": "Loading...",
     "searchFor": "Search for brands, routes, news and more",
-    "proposeLink": "Got an idea, feedback, or collaboration in mind? Let me know!"
+    "proposeLink": "Got an idea, feedback, or collaboration in mind? Let us know!"
   }
 }

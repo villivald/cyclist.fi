@@ -2,13 +2,7 @@ import { expect, test } from "@chromatic-com/playwright";
 
 import { routeFiles } from "../../utils/search-data";
 
-const pageNotFoundRoutes = [
-  "coffee",
-  "instagram",
-  "facebook",
-  "newsletter",
-  "randomRoute",
-];
+const pageNotFoundRoutes = ["coffee", "instagram", "randomRoute"];
 
 test.describe("Basic route navigation", () => {
   routeFiles.forEach((route) => {

@@ -6,18 +6,27 @@ import styles from "@/styles/Footer.module.css";
 interface LinkItem {
   title: string;
   link: string;
+  type: "internal" | "external";
 }
 
 export default function Footer() {
   const t = useTranslations("Footer");
 
   const links = [
-    { title: t("contact"), link: "/contact" },
-    { title: t("design"), link: "/design" },
-    { title: t("coffee"), link: "/coffee" },
-    { title: t("newsletter"), link: "/newsletter" },
-    { title: t("instagram"), link: "/instagram" },
-    { title: t("facebook"), link: "/facebook" },
+    { title: t("contact"), link: "/contact", type: "internal" },
+    { title: t("design"), link: "/design", type: "internal" },
+    {
+      title: t("coffee"),
+      link: "https://buymeacoffee.com/cyclist",
+      type: "external",
+    },
+    { title: t("newsletter"), link: "/newsletter", type: "internal" },
+    {
+      title: t("instagram"),
+      link: "https://www.instagram.com/cyclist.fi",
+      type: "external",
+    },
+    { title: t("facebook"), link: "/facebook", type: "internal" },
   ] as LinkItem[];
 
   const year = new Date().getFullYear();
@@ -32,7 +41,16 @@ export default function Footer() {
         <ul>
           {links.map((link: LinkItem) => (
             <li key={link.link}>
-              <Link href={link.link}>{link.title}</Link>
+              <Link
+                href={link.link}
+                target={link.type === "external" ? "_blank" : "_self"}
+                rel={
+                  link.type === "external" ? "noopener noreferrer" : undefined
+                }
+              >
+                {link.title}
+              </Link>
+              {link.type === "external" && <span aria-hidden="true">↗</span>}
             </li>
           ))}
         </ul>
