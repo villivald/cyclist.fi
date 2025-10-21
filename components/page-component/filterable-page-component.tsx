@@ -14,7 +14,9 @@ function itemMatchesQuery(item: PageComponentData, query: string): boolean {
   if (!q) return true;
 
   const inTitle = item.title?.toLowerCase().includes(q) ?? false;
-  const inDescription = item.description?.toLowerCase().includes(q) ?? false;
+  const descriptionText =
+    `${item.description_en} ${item.description_fi}`.toLowerCase();
+  const inDescription = descriptionText.includes(q);
   const inTags = (item.tags ?? []).some((tag) => tag.toLowerCase().includes(q));
   const inLink = item.link?.toLowerCase().includes(q) ?? false;
 
@@ -28,10 +30,17 @@ export default function FilterablePageComponent(props: PageComponentProps) {
 
   const [query, setQuery] = useState("");
 
-  const filteredData = useMemo(
-    () => data.filter((item) => itemMatchesQuery(item, query)),
-    [data, query],
-  );
+  const normalizedData: PageComponentData[] = useMemo(() => {
+    return data.map((item: PageComponentData & { description?: string }) => ({
+      ...item,
+      description_en: item.description_en ?? item.description ?? "",
+      description_fi: item.description_fi ?? item.description ?? "",
+    }));
+  }, [data]);
+
+  const filteredData = useMemo(() => {
+    return normalizedData.filter((item) => itemMatchesQuery(item, query));
+  }, [normalizedData, query]);
 
   const resultsSummaryId = "page-filter-results-summary";
 

@@ -2,7 +2,8 @@
   {
     "id": "helsinki-gran-fondo",
     "title": "Helsinki Gran Fondo",
-    "description": "Mass-participation road event around the capital region with multiple route options.",
+    "description_en": "Mass-participation road event around the capital region with multiple route options.",
+    "description_fi": "Pääkaupunkiseudulla järjestettävä maantiepyöräilyn massatapahtuma, useita reittivaihtoehtoja.",
     "image": "/images/events/gran_fondo.avif",
     "link": "https://helsinkigranfondo.fi/",
     "alt": "Helsinki Gran Fondo",
@@ -11,7 +12,8 @@
   {
     "id": "pyoraily-fi",
     "title": "Suomen Pyöräily (pyoraily.fi)",
-    "description": "Finnish Cycling Federation calendar and information for national events and licenses.",
+    "description_en": "Finnish Cycling Federation calendar and information for national events and licenses.",
+    "description_fi": "Suomen Pyöräilyn kalenteri sekä tiedot kotimaisista tapahtumista ja lisensseistä.",
     "link": "https://pyoraily.fi/",
     "alt": "Suomen Pyöräily events",
     "tags": ["Finland", "Calendar", "Federation"]
@@ -19,7 +21,8 @@
   {
     "id": "kilometrikisa",
     "title": "Kilometrikisa",
-    "description": "Kilometrikisa is a fun competition between companies, work communities, departments, associations, clubs or any other teams.",
+    "description_en": "Kilometrikisa is a fun competition between companies, work communities, departments, associations, clubs or any other teams.",
+    "description_fi": "Leikkimielinen kisa yritysten, työyhteisöjen, osastojen, yhdistysten, seurojen ja muiden joukkueiden välillä.",
     "link": "https://kilometrikisa.fi/",
     "alt": "Kilometrikisa",
     "tags": ["Finnish", "Competition", "Teams"]

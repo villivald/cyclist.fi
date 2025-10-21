@@ -30,7 +30,7 @@
 
 .menu[data-open="true"] {
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 
 .menu > li > a {

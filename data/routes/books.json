@@ -2,7 +2,8 @@
   {
     "id": "pyorailyn-lumo",
     "title": "Pyöräilyn lumo ja sen historia",
-    "description": "Finnish-language book celebrating the joy of cycling with tips and inspiration.",
+    "description_en": "Finnish-language book celebrating the joy of cycling, through the history and culture.",
+    "description_fi": "Suomenkielinen kirja, joka juhlistaa pyöräilyn iloa historian ja kulttuurin kautta.",
     "image": "/images/books/lumo.avif",
     "link": "https://aulakustannus.fi/kirjat/pyorailyn-lumo-ja-sen-historia",
     "alt": "Pyöräilyn lumo ja sen historia book",
@@ -11,7 +12,8 @@
   {
     "id": "the-road-book",
     "title": "The Road Book",
-    "description": "Annual almanack of professional road cycling packed with results, essays and data.",
+    "description_en": "Annual almanack of professional road cycling packed with results, essays and data.",
+    "description_fi": "Ammattilaispyöräilyn vuosialmanakka, joka sisältää tuloksia, esseitä ja dataa.",
     "image": "/images/books/road_book.avif",
     "link": "https://theroadbook.co.uk/",
     "alt": "The Road Book",
@@ -20,7 +22,8 @@
   {
     "id": "velosaurus",
     "title": "Velosaurus",
-    "description": "A whimsical lexicon of cycling terms and culture illustrated with humor.",
+    "description_en": "A whimsical lexicon of cycling terms and culture illustrated with humor.",
+    "description_fi": "Leikkimielinen sanasto pyöräilyn termeistä ja kulttuurista humoristisella kuvituksella.",
     "image": "/images/books/velosaurus.avif",
     "link": "https://road.cc/content/review/211603-boultings-velosaurus-ned-boulting",
     "alt": "Velosaurus book",
@@ -29,7 +32,8 @@
   {
     "id": "mystery-lot-212",
     "title": "1923: The Mystery of Lot 212",
-    "description": "Cycling-themed mystery set around a historic auction lot and hidden stories.",
+    "description_en": "Cycling-themed mystery set around a historic auction lot and hidden stories.",
+    "description_fi": "Pyöräilyaiheinen mysteeri historiallisen huutokauppakohteen ympärillä ja kätketyistä tarinoista.",
     "image": "/images/books/1923.avif",
     "link": "https://www.goodreads.com/book/show/62039181-1923",
     "alt": "1923 The Mystery of Lot 212 book",
@@ -38,7 +42,8 @@
   {
     "id": "cyclopedia",
     "title": "Cyclopedia",
-    "description": "A to Z compendium of cycling facts, figures and anecdotes perfect for fans.",
+    "description_en": "A to Z compendium of cycling facts, figures and anecdotes perfect for fans.",
+    "description_fi": "A–Ö‑hakuteos pyöräilyn faktoista, luvuista ja anekdooteista – faneille.",
     "image": "/images/books/cyclopedia.avif",
     "link": "https://www.goodreads.com/book/show/6989011-cyclopedia",
     "alt": "Cyclopedia book",
@@ -47,7 +52,8 @@
   {
     "id": "riding-with-the-rocketmen",
     "title": "Riding with the Rocketmen",
-    "description": "Behind-the-scenes stories and insights from grand tours and team buses.",
+    "description_en": "Behind-the-scenes stories and insights from grand tours and team buses.",
+    "description_fi": "Kulissien takaisia tarinoita ja oivalluksia grand tourien joukkuebusseista.",
     "image": "/images/books/rocketmen.avif",
     "link": "https://road.cc/content/review/riding-rocketmen-301771",
     "alt": "Riding with the Rocketmen book",
@@ -56,7 +62,8 @@
   {
     "id": "french-revolutions",
     "title": "French Revolutions",
-    "description": "Tim Moore's humorous account of attempting to ride the Tour de France route.",
+    "description_en": "Tim Moore's humorous account of attempting to ride the Tour de France route.",
+    "description_fi": "Tim Mooren humoristinen kertomus yrityksestä ajaa Tour de Francen reitti.",
     "image": "/images/books/french.avif",
     "link": "https://www.goodreads.com/book/show/72455.French_Revolutions",
     "alt": "French Revolutions book",
@@ -65,7 +72,8 @@
   {
     "id": "vuelta-skelter",
     "title": "Vuelta Skelter",
-    "description": "Sharp, funny dispatches from Spain's Grand Tour blending race and travel writing.",
+    "description_en": "Sharp, funny dispatches from Spain's Grand Tour blending race and travel writing.",
+    "description_fi": "Napakoita ja hauskoja raportteja Espanjan Grand Tourilta – kisajournalismia ja matkakertomusta.",
     "image": "/images/books/vuelta.avif",
     "link": "https://road.cc/content/review/vuelta-skelter-tim-moore-286399",
     "alt": "Vuelta Skelter book",
@@ -74,7 +82,8 @@
   {
     "id": "gironimo",
     "title": "Gironimo!",
-    "description": "Recreating the 1914 Giro on period equipment; equal parts history and adventure.",
+    "description_en": "Recreating the 1914 Giro on period equipment; equal parts history and adventure.",
+    "description_fi": "Vuoden 1914 Giron uudelleeneläminen aikakauden kalustolla – yhtä lailla historiaa ja seikkailua.",
     "image": "/images/books/gironimo.avif",
     "link": "https://www.goodreads.com/book/show/25069840-gironimo-riding-the-very-terrible-1914-tour-of-italy",
     "alt": "Gironimo book",
@@ -83,7 +92,8 @@
   {
     "id": "cyclists-training-bible",
     "title": "The Cyclist’s Training Bible",
-    "description": "Joe Friel’s foundational guide to periodization, workouts and performance metrics.",
+    "description_en": "Joe Friel’s foundational guide to periodization, workouts and performance metrics.",
+    "description_fi": "Joe Frielin perusteos jaksottamisesta, harjoituksista ja suorituskyvyn mittaamisesta.",
     "image": "/images/books/bible.avif",
     "link": "https://joefrieltraining.com/book/the-cyclists-training-bible-5th-ed/",
     "alt": "The Cyclist’s Training Bible",
@@ -92,7 +102,8 @@
   {
     "id": "midlife-cyclist",
     "title": "The Midlife Cyclist",
-    "description": "Evidence-based training, health and longevity guidance for riders over 40.",
+    "description_en": "Evidence-based training, health and longevity guidance for riders over 40.",
+    "description_fi": "Tutkittuun tietoon perustuva opas harjoitteluun, terveyteen ja pitkäikäisyyteen yli 40-vuotiaille pyöräilijöille.",
     "image": "/images/books/midlife.avif",
     "link": "https://www.goodreads.com/book/show/58441499-the-midlife-cyclist",
     "alt": "The Midlife Cyclist book",

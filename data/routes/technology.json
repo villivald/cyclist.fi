@@ -2,7 +2,8 @@
   {
     "id": "whoop",
     "title": "WHOOP",
-    "description": "Wearable that tracks strain, sleep and recovery to guide training readiness.",
+    "description_en": "Wearable that tracks strain, sleep and recovery to guide training readiness.",
+    "description_fi": "Ranneke, joka seuraa kuormitusta, unta ja palautumista harjoitusvalmiuden arvioimiseksi.",
     "link": "https://www.whoop.com/",
     "alt": "WHOOP wearable",
     "tags": ["Wearable", "Recovery", "Sleep"]
@@ -10,7 +11,8 @@
   {
     "id": "polar-h10",
     "title": "Polar H10",
-    "description": "Highly accurate chest-strap heart rate sensor favored for training and testing.",
+    "description_en": "Highly accurate chest-strap heart rate sensor favored for training and testing.",
+    "description_fi": "Erittäin tarkka sykevyö, joka sopii harjoitteluun ja testaukseen.",
     "link": "https://www.polar.com/",
     "alt": "Polar H10 heart rate sensor",
     "tags": ["Heart Rate", "Accuracy", "Sensor"]
@@ -18,7 +20,8 @@
   {
     "id": "oura-ring",
     "title": "Oura Ring",
-    "description": "Wearable tracking device measuring sleep, activity and stress levels for personalized insights.",
+    "description_en": "Wearable tracking device measuring sleep, activity and stress levels for personalized insights.",
+    "description_fi": "Sormus, joka mittaa unta, aktiivisuutta ja stressiä tarjoten henkilökohtaisia oivalluksia.",
     "link": "https://ouraring.com",
     "alt": "Oura Ring",
     "tags": ["Sleep", "Activity", "Stress"]
@@ -26,7 +29,8 @@
   {
     "id": "power-meters",
     "title": "Power Meters",
-    "description": "Crank, pedal or hub-based sensors measuring cycling power for structured training.",
+    "description_en": "Crank, pedal or hub-based sensors measuring cycling power for structured training.",
+    "description_fi": "Tehomittarit – kammen, polkimen tai navan malleina – mittaavat tehoa jäsenneltyä harjoittelua varten.",
     "link": "https://www.garmin.com/en-US/c/sports-fitness/cycling-bike-computers-bike-radar-power-meter-headlights/?series=20780#shopallcycling",
     "alt": "Cycling power meters",
     "tags": ["Power", "Training", "Data"]
@@ -34,7 +38,8 @@
   {
     "id": "knog",
     "title": "Knog",
-    "description": "Australian brand designing bike lights, locks and accessories with bold aesthetics.",
+    "description_en": "Australian brand designing bike lights, locks and accessories with bold aesthetics.",
+    "description_fi": "Australialainen merkki, joka suunnittelee pyörävaloja, lukkoja ja varusteita rohkealla muotoilulla.",
     "link": "https://knog.com/",
     "alt": "Knog lights and accessories",
     "tags": ["Lights", "Design", "Australian"]
@@ -42,7 +47,8 @@
   {
     "id": "inflatable-helmets",
     "title": "Inflatable Helmets",
-    "description": "Airbag-style head protection systems designed to deploy on impact for safety.",
+    "description_en": "Airbag-style head protection systems designed to deploy on impact for safety.",
+    "description_fi": "Airbag‑tyyliset päänsuojat, jotka laukeavat törmäyksessä turvallisuuden parantamiseksi.",
     "link": "https://ventete.com/",
     "alt": "Inflatable bicycle helmets",
     "tags": ["Safety", "Airbag", "Urban"]
@@ -50,7 +56,8 @@
   {
     "id": "wahoo",
     "title": "Wahoo",
-    "description": "Cycling trainers, computers and sensors including KICKR, ELEMNT and TICKR ranges.",
+    "description_en": "Cycling trainers, computers and sensors including KICKR, ELEMNT and TICKR ranges.",
+    "description_fi": "Harjoitusvastukset, pyörätietokoneet ja sensorit – mm. KICKR‑, ELEMNT‑ ja TICKR‑sarjat.",
     "link": "https://www.wahoofitness.com/",
     "alt": "Wahoo Fitness",
     "tags": ["Trainers", "Computers", "Sensors"]

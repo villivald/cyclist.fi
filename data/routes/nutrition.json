@@ -2,7 +2,8 @@
   {
     "id": "nosht",
     "title": "Nosht",
-    "description": "Finnish-made sports nutrition with natural flavors for gels, drinks and chews.",
+    "description_en": "Finnish-made sports nutrition with natural flavors for gels, drinks and chews.",
+    "description_fi": "Suomessa valmistettu urheiluravinto luonnollisilla mauilla – geelit, juomat ja pureskeltavat tuotteet.",
     "link": "https://nosht.com/",
     "alt": "Nosht sports nutrition",
     "tags": ["Finnish", "Gels", "Drinks", "Natural"]
@@ -10,7 +11,8 @@
   {
     "id": "maurten",
     "title": "Maurten",
-    "description": "Hydrogel-based fueling used by elite endurance athletes for high-carb intake with low GI distress.",
+    "description_en": "Hydrogel-based fueling used by elite endurance athletes for high-carb intake with low GI distress.",
+    "description_fi": "Hydrogeeliin perustuva energia, jota käyttävät huippukestävyysurheilijat – korkea hiilihydraattimäärä ilman vatsavaivoja.",
     "link": "https://www.maurten.com/",
     "alt": "Maurten hydrogel nutrition",
     "tags": ["Hydrogel", "Carbs", "Elite"]
@@ -18,7 +20,8 @@
   {
     "id": "sis",
     "title": "Science in Sport (SiS)",
-    "description": "Performance nutrition across gels, drinks and recovery products, backed by lab testing.",
+    "description_en": "Performance nutrition across gels, drinks and recovery products, backed by lab testing.",
+    "description_fi": "Suorituskykyravintoa – geelit, juomat ja palautustuotteet laboratoriotestien tukemana.",
     "link": "https://www.scienceinsport.com/",
     "alt": "Science in Sport",
     "tags": ["Gels", "Electrolytes", "Recovery"]
@@ -26,7 +29,8 @@
   {
     "id": "high5",
     "title": "HIGH5",
-    "description": "UK sports nutrition brand with drinks, gels and chews for training and racing.",
+    "description_en": "UK sports nutrition brand with drinks, gels and chews for training and racing.",
+    "description_fi": "Brittiläinen urheiluravinnevalmistaja – juomat, geelit ja pureskeltavat treeniin ja kisaan.",
     "link": "https://highfive.co.uk/",
     "alt": "HIGH5 nutrition",
     "tags": ["UK", "Drinks", "Gels"]
@@ -34,7 +38,8 @@
   {
     "id": "powerbar",
     "title": "PowerBar",
-    "description": "Pioneering endurance nutrition brand offering bars, gels and hydration.",
+    "description_en": "Pioneering endurance nutrition brand offering bars, gels and hydration.",
+    "description_fi": "Kestävyysravitsemuksen edelläkävijä – patukat, geelit ja nesteytysratkaisut.",
     "link": "https://www.powerbar.eu/",
     "alt": "PowerBar nutrition",
     "tags": ["Bars", "Gels", "Hydration"]
@@ -42,7 +47,8 @@
   {
     "id": "skratch",
     "title": "Skratch Labs",
-    "description": "Real-food approach to hydration mixes and fueling for endurance athletes.",
+    "description_en": "Real-food approach to hydration mixes and fueling for endurance athletes.",
+    "description_fi": "Aidosta ruoasta inspiroitunut lähestymistapa juomajauheisiin ja tankkaukseen kestävyysurheilijoille.",
     "link": "https://www.skratchlabs.com/",
     "alt": "Skratch Labs",
     "tags": ["Hydration", "Real Food", "Endurance"]
@@ -50,7 +56,8 @@
   {
     "id": "clif",
     "title": "CLIF",
-    "description": "Energy bars, chews and gels for training and adventure, made with organic ingredients.",
+    "description_en": "Energy bars, chews and gels for training and adventure, made with organic ingredients.",
+    "description_fi": "Energiapatukat, pureskeltavat ja geelit treeneihin ja seikkailuun – valmistettu luomuainesosista.",
     "link": "https://www.clifbar.com/",
     "alt": "CLIF Bar",
     "tags": ["Bars", "Chews", "Organic"]
@@ -58,7 +65,8 @@
   {
     "id": "hart-sport",
     "title": "HART Sport",
-    "description": "Finnish sports drinks and electrolytes formulated for endurance.",
+    "description_en": "Finnish sports drinks and electrolytes formulated for endurance.",
+    "description_fi": "Suomalaiset urheilujuomat ja elektrolyytit, kehitetty kestävyyssuorituksiin.",
     "link": "https://hartsport.fi/",
     "alt": "HART Sport",
     "tags": ["Finnish", "Drinks", "Electrolytes"]
@@ -66,7 +74,8 @@
   {
     "id": "maxim",
     "title": "Maxim",
-    "description": "Endurance nutrition range of drinks, gels and bars popular in the Nordics.",
+    "description_en": "Endurance nutrition range of drinks, gels and bars popular in the Nordics.",
+    "description_fi": "Kestävyysravinnon valikoima: juomat, geelit ja patukat – suosittu Pohjoismaissa.",
     "link": "https://maximsportsnutrition.eu/",
     "alt": "Maxim nutrition",
     "tags": ["Nordic", "Drinks", "Gels"]
@@ -74,7 +83,8 @@
   {
     "id": "dexal",
     "title": "Dexal",
-    "description": "Finnish hydration and energy products for sports and outdoor activities.",
+    "description_en": "Finnish hydration and energy products for sports and outdoor activities.",
+    "description_fi": "Suomalaiset nesteytys- ja energiatuotteet urheiluun ja ulkoiluun.",
     "link": "https://www.dexal.fi/",
     "alt": "Dexal sports nutrition",
     "tags": ["Finnish", "Hydration", "Energy"]
@@ -82,7 +92,8 @@
   {
     "id": "puls",
     "title": "PULS Nutrition",
-    "description": "Protein and energy products including bars and powders for active lifestyles.",
+    "description_en": "Protein and energy products including bars and powders for active lifestyles.",
+    "description_fi": "Proteiini- ja energiatuotteita – patukoita ja jauheita aktiiviseen elämäntapaan.",
     "link": "https://pulsnutrition.com/",
     "alt": "PULS Nutrition",
     "tags": ["Protein", "Bars", "Energy"]

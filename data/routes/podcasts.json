@@ -2,7 +2,8 @@
   {
     "id": "life-in-the-peloton",
     "title": "Life in the Peloton",
-    "description": "Podcast hosted by former pro Mitch Docker featuring conversations with riders and people around the sport. Focuses on life in the peloton, careers, and the culture of cycling.",
+    "description_en": "Podcast hosted by former pro Mitch Docker featuring conversations with riders and people around the sport. Focuses on life in the peloton, careers, and the culture of cycling.",
+    "description_fi": "Entisen ammattilaisen Mitch Dockerin juontama podcast, jossa keskustellaan ammattilaiskilpailuista ja pyöräilyarjesta. Teemoina elämä ajoryhmässä, urat ja pyöräilykulttuuri.",
     "link": "https://lifeinthepeloton.com/",
     "alt": "Life in the Peloton podcast",
     "tags": ["Pro Cycling", "Interviews", "Stories"]
@@ -10,7 +11,8 @@
   {
     "id": "the-move",
     "title": "THE MOVE",
-    "description": "Show from WEDŪ that analyzes major races and stages, hosted by Lance Armstrong with recurring co-hosts. Offers stage recaps, tactics, and commentary during Grand Tours and key events.",
+    "description_en": "Show from WEDŪ that analyzes major races and stages, hosted by Lance Armstrong with recurring co-hosts. Offers stage recaps, tactics, and commentary during Grand Tours and key events.",
+    "description_fi": "WEDŪn ohjelma, jossa Lance Armstrong 😈 ja vierailevat juontajat analysoivat suuria kilpailuja ja etappeja. Tiivistelmät, taktiikat ja kommentit Grand Tourien aikaan.",
     "link": "https://wedu.team/blogs/the-move",
     "alt": "THE MOVE podcast",
     "tags": ["Analysis", "Grand Tours", "Commentary"]
@@ -18,7 +20,8 @@
   {
     "id": "spin-cycle",
     "title": "Spin Cycle",
-    "description": "Weekly show from Escape Collective covering cycling news, racing, and culture. Mixes reporting, analysis, and discussion.",
+    "description_en": "Weekly show from Escape Collective covering cycling news, racing, and culture. Mixes reporting, analysis, and discussion.",
+    "description_fi": "Escape Collectiven viikoittainen ohjelma pyöräilyuutisista, kilpa-ajosta ja kulttuurista. Yhdistää uutisia, analyysiä ja keskustelua.",
     "link": "https://escapecollective.com/podcasts/",
     "alt": "Spin Cycle podcast",
     "tags": ["News", "Culture", "Weekly"]
@@ -26,7 +29,8 @@
   {
     "id": "cyclist-mag-podcast",
     "title": "Cyclist Magazine Podcast",
-    "description": "Interviews and features from Cyclist covering tech, travel, and the professional scene. Episodes include conversations with riders and industry figures.",
+    "description_en": "Interviews and features from Cyclist covering tech, travel, and the professional scene. Episodes include conversations with riders and industry figures.",
+    "description_fi": "Cyclistin haastatteluja ja juttuja tekniikasta, matkailusta ja ammattilaiskentästä. Jaksoissa keskusteluja ammattilaisten ja alan vaikuttajien kanssa.",
     "link": "https://www.cyclist.co.uk/cyclist-magazine-podcast",
     "alt": "Cyclist podcast",
     "tags": ["Interviews", "Tech", "Pro Cycling"]
@@ -34,7 +38,8 @@
   {
     "id": "rouleur-podcast",
     "title": "Rouleur Podcast",
-    "description": "Podcast from Rouleur featuring stories and interviews on racing and cycling culture. Often ties to features and contributors from the magazine.",
+    "description_en": "Podcast from Rouleur featuring stories and interviews on racing and cycling culture. Often ties to features and contributors from the magazine.",
+    "description_fi": "Rouleurin podcast, jossa tarinoita ja haastatteluja kilpa-ajosta ja pyöräilykulttuurista. Usein yhteyksiä lehden juttuihin ja tekijöihin.",
     "link": "https://pod.link/445620088",
     "alt": "Rouleur podcast",
     "tags": ["Stories", "Culture", "Pro Cycling"]
@@ -42,7 +47,8 @@
   {
     "id": "gcn-show",
     "title": "The GCN Show",
-    "description": "Weekly Global Cycling Network show covering racing, tech, and community topics. Available as video and audio on major platforms.",
+    "description_en": "Weekly Global Cycling Network show covering racing, tech, and community topics. Available as video and audio on major platforms.",
+    "description_fi": "Global Cycling Networkin viikoittainen ohjelma kilpa-ajosta, tekniikasta ja yhteisöstä. Saatavilla video- ja äänimuodossa eri alustoilla.",
     "link": "https://open.spotify.com/show/6e87Mp2unbuWbYY1ubfDpD",
     "alt": "The GCN Show",
     "tags": ["Weekly", "Racing", "Tech"]
@@ -50,7 +56,8 @@
   {
     "id": "beyond-the-peloton",
     "title": "Beyond the Peloton",
-    "description": "Spencer Martin breaks down pro races with strategy and performance analysis. Focus on Grand Tours, Monuments, and trends across the WorldTour.",
+    "description_en": "Spencer Martin breaks down pro races with strategy and performance analysis. Focus on Grand Tours, Monuments, and trends across the WorldTour.",
+    "description_fi": "Spencer Martin purkaa ammattilaiskilpailuja taktiikan ja suorituskyvyn näkökulmasta. Painotus Grand Toureihin, Monumentteihin ja WorldTourin trendeihin.",
     "link": "https://beyondthepeloton.substack.com/podcast",
     "alt": "Beyond the Peloton podcast",
     "tags": ["Analysis", "Strategy", "Pro Cycling"]

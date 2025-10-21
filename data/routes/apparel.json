@@ -2,7 +2,8 @@
   {
     "id": "pas-normal-studios",
     "title": "Pas Normal Studios",
-    "description": "Copenhagen-based brand creating technical cycling clothing with a contemporary aesthetic. Combining performance materials with refined design across road and gravel collections.",
+    "description_en": "Copenhagen-based brand creating technical cycling clothing with a contemporary aesthetic. Combining performance materials with refined design across road and gravel collections.",
+    "description_fi": "Kööpenhaminalainen brändi, joka tekee pyöräilyvaatteita modernilla ilmeellä. Yhdistää suorituskykyiset tekniset materiaalit huoliteltuun muotoiluun tie- ja gravel-mallistoissa.",
     "link": "https://pasnormalstudios.com/eu",
     "alt": "Pas Normal Studios cycling apparel",
     "tags": [
@@ -17,7 +18,8 @@
   {
     "id": "maap",
     "title": "MAAP",
-    "description": "Melbourne-born performance cycling brand pairing advanced fabrics with bold design. Products are developed with athletes and engineered for training and racing.",
+    "description_en": "Melbourne-born performance cycling brand pairing advanced fabrics with bold design. Products are developed with athletes and engineered for training and racing.",
+    "description_fi": "Melbournesta lähtöisin oleva brändi, joka yhdistää edistyneet materiaalit rohkeaan muotoiluun. Tuotteet kehitetään urheilijoiden kanssa harjoitteluun ja kilpakäyttöön.",
     "link": "https://maap.cc/",
     "alt": "MAAP cycling apparel",
     "tags": [
@@ -32,7 +34,8 @@
   {
     "id": "rapha",
     "title": "Rapha",
-    "description": "Global cycling brand making high-quality apparel and accessories for every ride. Builds community through stories, events and the Rapha Cycling Club (RCC).",
+    "description_en": "Global cycling brand making high-quality apparel and accessories for every ride. Builds community through stories, events and the Rapha Cycling Club (RCC).",
+    "description_fi": "Maailmanlaajuinen pyöräilybrändi, joka valmistaa laadukkaita vaatteita ja varusteita jokaiselle lenkille. Rakentaa yhteisöä tarinoiden, tapahtumien ja Rapha Cycling Clubin (RCC) kautta.",
     "link": "https://www.rapha.cc/",
     "alt": "Rapha cycling brand",
     "tags": ["British", "Premium", "Community", "RCC", "Performance"]
@@ -40,7 +43,8 @@
   {
     "id": "assos",
     "title": "Assos",
-    "description": "ASSOS of Switzerland has engineered cycling equipment since 1976. Known for pioneering textiles and performance-focused bib shorts, jerseys and outerwear.",
+    "description_en": "ASSOS of Switzerland has engineered cycling equipment since 1976. Known for pioneering textiles and performance-focused bib shorts, jerseys and outerwear.",
+    "description_fi": "Sveitsiläinen ASSOS on valmistanut pyöräilyvarusteita vuodesta 1976. Tunnettu tekstiili-innovaatioistaan sekä suorituskykyisistä housuista, paidoista ja ulkovaatteista.",
     "image": "/images/apparel/assos.avif",
     "link": "https://www.assos.com/",
     "alt": "Assos cycling apparel",
@@ -49,7 +53,8 @@
   {
     "id": "pedaled",
     "title": "Pedaled",
-    "description": "Japanese brand founded in Tokyo creating functional apparel for adventure and endurance riding. Designed for ultra-distance racing, bikepacking and everyday exploration.",
+    "description_en": "Japanese brand founded in Tokyo creating functional apparel for adventure and endurance riding. Designed for ultra-distance racing, bikepacking and everyday exploration.",
+    "description_fi": "Tokiossa perustettu japanilainen brändi tekee toiminnallisia vaatteita seikkailu- ja kestävyysajoon. Suunniteltu ultrakisoihin, retkeilyyn ja arkiseen ajoon.",
     "link": "https://pedaled.com/",
     "alt": "Pedaled cycling apparel",
     "tags": ["Japanese", "Tokyo", "Adventure", "Endurance", "Bikepacking"]
@@ -57,7 +62,8 @@
   {
     "id": "lecol",
     "title": "Le Col",
-    "description": "British performance brand producing race-bred road apparel with an emphasis on speed and comfort. Kits are developed and tested with professional riders.",
+    "description_en": "British performance brand producing race-bred road apparel with an emphasis on speed and comfort. Kits are developed and tested with professional riders.",
+    "description_fi": "Brittiläinen suorituskykybrändi, jonka pyöräilyvaatteet on kehitetty kilpataustan pohjalta – painotus nopeudessa ja mukavuudessa. Varusteet kehitetään ja testataan ammattilaisten kanssa.",
     "link": "https://www.lecol.cc/",
     "alt": "Le Col cycling apparel",
     "tags": ["British", "Performance", "Racing", "Aerodynamics", "Pro-tested"]
@@ -65,7 +71,8 @@
   {
     "id": "cafe-de-cycliste",
     "title": "Café de Cycliste",
-    "description": "French brand from Nice crafting technical apparel for road, gravel and adventure. Distinctive designs inspired by the Côte d’Azur, blending performance with refined style.",
+    "description_en": "French brand from Nice crafting technical apparel for road, gravel and adventure. Distinctive designs inspired by the Côte d’Azur, blending performance with refined style.",
+    "description_fi": "Nizzasta kotoisin oleva ranskalaisbrändi valmistaa pyöräilyvaatteita tie-, gravel- ja seikkailuajoon. Côte d’Azurin inspiroima, tunnistettava tyyli yhdistää suorituskyvyn ja viimeistellyn ilmeen.",
     "link": "https://www.cafeducycliste.com/",
     "alt": "Café de Cycliste cycling apparel",
     "tags": ["French", "Nice", "Road", "Gravel", "Technical", "Style"]
@@ -73,7 +80,8 @@
   {
     "id": "velocio",
     "title": "Velocio",
-    "description": "US brand focused on performance, fit and responsible manufacturing. Minimalist designs with technical fabrics and a commitment to sustainability.",
+    "description_en": "US brand focused on performance, fit and responsible manufacturing. Minimalist designs with technical fabrics and a commitment to sustainability.",
+    "description_fi": "Yhdysvaltalainen brändi, jonka ytimessä ovat suorituskyky, istuvuus ja vastuullinen valmistus. Pelkistetty muotoilu, tekniset materiaalit ja vahva panostus kestävyyteen.",
     "link": "https://intl.velocio.cc/",
     "alt": "Velocio cycling apparel",
     "tags": ["American", "Performance", "Fit", "Sustainable", "Minimal"]
@@ -81,7 +89,8 @@
   {
     "id": "attaquer",
     "title": "Attaquer",
-    "description": "Sydney-based brand known for bold graphics and race-ready performance. Limited drops and collaborations paired with high-spec kits for training and racing.",
+    "description_en": "Sydney-based brand known for bold graphics and race-ready performance. Limited drops and collaborations paired with high-spec kits for training and racing.",
+    "description_fi": "Sydneyläinen brändi, joka tunnetaan rohkeasta grafiikasta ja kisavalmiista suorituskyvystä. Rajoitettuja julkaisuja ja yhteistyömallistoja, huippuluokan varusteet treeniin ja kisaan.",
     "link": "https://www.attaquercycling.com/",
     "alt": "Attaquer cycling apparel",
     "tags": [
@@ -96,7 +105,8 @@
   {
     "id": "isadore",
     "title": "Isadore",
-    "description": "Slovakian brand founded by former pros creating merino-rich, responsibly made apparel. Designed for comfort on long rides across road and gravel.",
+    "description_en": "Slovakian brand founded by former pros creating merino-rich, responsibly made apparel. Designed for comfort on long rides across road and gravel.",
+    "description_fi": "Entisten ammattilaisten perustama slovakialainen brändi, jonka vaatteissa on runsaasti merinoa ja vastuullinen valmistus. Suunniteltu mukavuuteen pitkillä tie- ja gravel-lenkeillä.",
     "link": "https://www.isadore.com/",
     "alt": "Isadore cycling apparel",
     "tags": ["Slovakian", "Merino", "Sustainable", "Comfort", "Road", "Gravel"]
@@ -104,7 +114,8 @@
   {
     "id": "universal-colours",
     "title": "Universal Colours",
-    "description": "London-based brand producing progressive cycling apparel with responsible materials and transparent sourcing. Modern palettes and inclusive design approach.",
+    "description_en": "London-based brand producing progressive cycling apparel with responsible materials and transparent sourcing. Modern palettes and inclusive design approach.",
+    "description_fi": "Lontoolainen brändi, joka valmistaa edistyksellisiä pyöräilyvaatteita vastuullisista materiaaleista ja läpinäkyvällä hankintaketjulla. Modernit värit ja inklusiivinen suunnittelu.",
     "link": "https://www.universalcolours.com/",
     "alt": "Universal Colours cycling apparel",
     "tags": [
@@ -119,7 +130,8 @@
   {
     "id": "ostroy",
     "title": "Ostroy",
-    "description": "New York-based brand blending art, culture and cycling with distinctive graphic jerseys. Performance apparel with playful, design-led prints.",
+    "description_en": "New York-based brand blending art, culture and cycling with distinctive graphic jerseys. Performance apparel with playful, design-led prints.",
+    "description_fi": "Newyorkilainen brändi, joka yhdistää taiteen, kulttuurin ja pyöräilyn tunnistettuihin graafisiin ajopaitoihin. Suorituskykyiset vaatteet leikkisillä, design‑lähtöisillä printeillä.",
     "link": "https://www.ostroy.com/",
     "alt": "Ostroy cycling apparel",
     "tags": ["American", "New York", "Graphic", "Art", "Design"]
@@ -127,7 +139,8 @@
   {
     "id": "heavy-pedal",
     "title": "Heavy Pedal",
-    "description": "US brand born from fixed-gear culture, offering cycling kits and streetwear-inspired designs. Urban aesthetics meet practical pieces for riding and everyday wear.",
+    "description_en": "US brand born from fixed-gear culture, offering cycling kits and streetwear-inspired designs. Urban aesthetics meet practical pieces for riding and everyday wear.",
+    "description_fi": "Fixed-gear-kulttuurista syntynyt amerikkalainen brändi: pyöräilyvarusteita ja streetwear-vaikutteita. Kaupunkityyli yhdistyy käytännöllisiin vaatteisiin ajossa ja arjessa.",
     "link": "https://theheavypedal.com",
     "alt": "Heavy Pedals cycling apparel",
     "tags": ["American", "Fixed Gear", "Streetwear", "Urban", "Cycling"]
@@ -135,7 +148,8 @@
   {
     "id": "trikoterie",
     "title": "Trikoterie",
-    "description": "Vienna-based Austrian brand making colorful cycling apparel with responsible European production. Small-run designs that celebrate creativity on and off the bike.",
+    "description_en": "Vienna-based Austrian brand making colorful cycling apparel with responsible European production. Small-run designs that celebrate creativity on and off the bike.",
+    "description_fi": "Wieniläinen itävaltalaisbrändi, joka tekee värikkäitä ja vastuullisesti valmistettuja pyöräilyvaatteita. Pienet erät ja luovuutta juhlistava ote pyörän päällä ja sen ulkopuolella.",
     "link": "https://trikoterie.at/",
     "alt": "Trikoterie cycling apparel",
     "tags": ["Austrian", "Vienna", "Colorful", "European-made", "Responsible"]

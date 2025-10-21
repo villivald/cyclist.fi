@@ -2,7 +2,8 @@
   {
     "id": "icarus",
     "title": "Icarus (2017)",
-    "description": "A must-see Academy Award-winning documentary that uncovers a major sports doping scandal.",
+    "description_en": "A must-see Academy Award-winning documentary that uncovers a major sports doping scandal.",
+    "description_fi": "Oscar‑palkittu dokumentti, joka paljastaa suuren urheilun doping‑skandaalin – ehdoton katsottava.",
     "image": "/images/tv/icarus.avif",
     "link": "https://en.wikipedia.org/wiki/Icarus_(2017_film)",
     "alt": "Icarus documentary",
@@ -11,7 +12,8 @@
   {
     "id": "tdf-netflix",
     "title": "Tour de France: Unchained",
-    "description": "Netflix docuseries following teams through the Tour with behind-the-scenes drama.",
+    "description_en": "Netflix docuseries following teams through the Tour with behind-the-scenes drama.",
+    "description_fi": "Netflixin dokumenttisarja, joka seuraa joukkueita Tourilla kulissientakaisen draaman kera.",
     "image": "/images/tv/tour.avif",
     "link": "https://en.wikipedia.org/wiki/Tour_de_France:_Unchained",
     "alt": "Tour de France Unchained",
@@ -20,7 +22,8 @@
   {
     "id": "armstrong-lie",
     "title": "The Armstrong Lie",
-    "description": "Alex Gibney’s film tracing Lance Armstrong’s comeback and doping revelations.",
+    "description_en": "Alex Gibney’s film tracing Lance Armstrong’s comeback and doping revelations.",
+    "description_fi": "Alex Gibneyn elokuva, joka seuraa Lance Armstrongin paluuta ja doping‑paljastuksia.",
     "image": "/images/tv/lie.avif",
     "link": "https://en.wikipedia.org/wiki/The_Armstrong_Lie",
     "alt": "The Armstrong Lie film",
@@ -29,7 +32,8 @@
   {
     "id": "palzer-breaking-the-cycle",
     "title": "Anton Palzer: Breaking the Cycle",
-    "description": "Red Bull documentary about a ski mountaineer’s transition to pro cycling.",
+    "description_en": "Red Bull documentary about a ski mountaineer’s transition to pro cycling.",
+    "description_fi": "Red Bullin dokumentti hiihtäjävuorikiipeilijän siirtymisestä ammattilaispyöräilyyn.",
     "image": "/images/tv/palzer.avif",
     "link": "https://www.redbull.com/int-en/films/anton-palzer-breaking-the-cycle",
     "alt": "Anton Palzer documentary",
@@ -38,7 +42,8 @@
   {
     "id": "tour-de-pharmacy",
     "title": "Tour de Pharmacy",
-    "description": "Satirical mockumentary parodying cycling’s doping scandals with an all-star cast.",
+    "description_en": "Satirical mockumentary parodying cycling’s doping scandals with an all-star cast.",
+    "description_fi": "Satiirinen mokumentti, joka parodioi pyöräilyn doping‑skandaaleja tähtinäyttelijöiden voimin.",
     "image": "/images/tv/pharma.avif",
     "link": "https://www.hbo.com/movies/tour-de-pharmacy",
     "alt": "Tour de Pharmacy",
@@ -47,7 +52,8 @@
   {
     "id": "wonderful-losers",
     "title": "Wonderful Losers: A Different World",
-    "description": "A human look at domestiques—the unsung helpers—in professional cycling.",
+    "description_en": "A human look at domestiques—the unsung helpers—in professional cycling.",
+    "description_fi": "Inhimillinen katse domestiquihin – ammattilaispyöräilyn näkymättömiin apureihin.",
     "image": "/images/tv/wonderful.avif",
     "link": "https://www.imdb.com/title/tt6490398/",
     "alt": "Wonderful Losers documentary",
@@ -56,7 +62,8 @@
   {
     "id": "eurosport-on-hbo",
     "title": "Eurosport on HBO",
-    "description": "Watch Eurosport on HBO Max. Pro Cycling news, documentaries and more.",
+    "description_en": "Watch Eurosport on HBO Max. Pro Cycling news, documentaries and more.",
+    "description_fi": "Katso Eurosportia HBO Maxissa: maantiepyöräilyn uutisia, dokumentteja ja paljon muuta.",
     "image": "/images/tv/hbo.avif",
     "link": "https://www.hbomax.com/fi/en/sports",
     "alt": "Eurosport on HBO",

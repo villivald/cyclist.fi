@@ -1,7 +1,8 @@
 export interface PageComponentData {
   id: string;
   title: string;
-  description: string;
+  description_en: string;
+  description_fi: string;
   image?: string;
   link: string;
   alt: string;

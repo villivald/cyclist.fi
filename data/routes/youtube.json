@@ -2,7 +2,8 @@
   {
     "id": "gcn",
     "title": "GCN",
-    "description": "The main Global Cycling Network channel, where the weekly GCN show can be found. Daily videos on training, maintenance, tech and racing coverage.",
+    "description_en": "The main Global Cycling Network channel, where the weekly GCN show can be found. Daily videos on training, maintenance, tech and racing coverage.",
+    "description_fi": "Global Cycling Networkin pääkanava, josta löytyy viikoittainen GCN Show. Päivittäisiä videoita harjoittelusta, huollosta, tekniikasta ja kisakattauksesta.",
     "image": "/images/youtube/gcn.avif",
     "link": "https://www.youtube.com/@GCN",
     "alt": "GCN YouTube channel",
@@ -11,7 +12,8 @@
   {
     "id": "gcn-tech",
     "title": "GCN Tech",
-    "description": "Bike tech, reviews and how-tos from budget builds to pro-level machines. GCN Tech goes deeper into the details of cycling technology.",
+    "description_en": "Bike tech, reviews and how-tos from budget builds to pro-level machines. GCN Tech goes deeper into the details of cycling technology.",
+    "description_fi": "Pyöräteknologiaa, testejä ja ohjeita budjettirakennelmista pro‑tason kalustoon. GCN Tech pureutuu syvemmälle pyöräilyteknologiaan.",
     "image": "/images/youtube/tech.avif",
     "link": "https://www.youtube.com/@GCNTech",
     "alt": "GCN Tech YouTube channel",
@@ -20,7 +22,8 @@
   {
     "id": "gcn-racing",
     "title": "GCN Racing",
-    "description": "Highlights, analysis and commentary from the world of professional road cycling, biggest races and more.",
+    "description_en": "Highlights, analysis and commentary from the world of professional road cycling, biggest races and more.",
+    "description_fi": "Kohokohdat, analyysit ja kommentit ammattilaismaantiepyöräilystä – suurimmat kisat ja paljon muuta.",
     "image": "/images/youtube/racing.avif",
     "link": "https://www.youtube.com/@GCNRacing",
     "alt": "GCN Racing YouTube channel",
@@ -29,7 +32,8 @@
   {
     "id": "velogi",
     "title": "Velogi",
-    "description": "Finnish-language cycling channel, with a focus on bike maintenance, tech and tips. Also features bikepacking and touring content, as well as product reviews.",
+    "description_en": "Finnish-language cycling channel, with a focus on bike maintenance, tech and tips. Also features bikepacking and touring content, as well as product reviews.",
+    "description_fi": "Suomenkielinen pyöräilykanava, painopisteinä huolto, tekniikka ja vinkit. Mukana myös bikepacking‑ ja retkisisältöä sekä tuotearvioita.",
     "image": "/images/youtube/velogi.avif",
     "link": "https://www.youtube.com/@Velogi",
     "alt": "Velogi YouTube channel",
@@ -38,7 +42,8 @@
   {
     "id": "trainerroad",
     "title": "TrainerRoad",
-    "description": "Channel from the makers of AI-powered cycling training software TrainerRoad. Features training tips, workouts, and nutrition advice for cyclists of all levels.",
+    "description_en": "Channel from the makers of AI-powered cycling training software TrainerRoad. Features training tips, workouts, and nutrition advice for cyclists of all levels.",
+    "description_fi": "TrainerRoadin (tekoälyä hyödyntävä harjoitteluohjelmisto) tekijöiden kanava. Tarjoaa harjoitteluvinkkejä, treenejä ja ravitsemusohjeita kaikentasoisille pyöräilijöille.",
     "image": "/images/youtube/trainer.avif",
     "link": "https://www.youtube.com/@trainerroad",
     "alt": "TrainerRoad YouTube channel",
@@ -47,7 +52,8 @@
   {
     "id": "terryb-alleycat",
     "title": "TerryB (alleycat races)",
-    "description": "POV alleycat race videos and urban riding content. Very addictive viewing.",
+    "description_en": "POV alleycat race videos and urban riding content. Very addictive viewing.",
+    "description_fi": "POV‑kuvattuja alleycat‑kisavideoita ja kaupunkiajoa – koukuttavaa katsottavaa.",
     "image": "/images/youtube/terry.avif",
     "link": "https://www.youtube.com/@TerryB/videos",
     "alt": "TerryB YouTube channel",

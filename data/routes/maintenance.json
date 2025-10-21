@@ -2,7 +2,8 @@
   {
     "id": "chain-waxing",
     "title": "Chain Waxing",
-    "description": "Guide to hot-waxing a bicycle chain for cleaner operation and improved efficiency. Covers preparation, application, and ongoing maintenance.",
+    "description_en": "Guide to hot-waxing a bicycle chain for cleaner operation and improved efficiency. Covers preparation, application, and ongoing maintenance.",
+    "description_fi": "Ohje ketjun kuumavahaukseen – puhtaampi käyttö ja parempi hyötysuhde. Kattaa valmistelun, levityksen ja ylläpidon.",
     "image": "/images/maintenance/chain_waxing.avif",
     "link": "https://road.cc/content/feature/complete-guide-waxing-chain-save-watts-keep-clean-307625",
     "alt": "Chain waxing guide",
@@ -11,7 +12,8 @@
   {
     "id": "tubeless-guide",
     "title": "Tubeless Guide",
-    "description": "Road tubeless setup guidance covering rim and tire fit, sealant, pressures, and troubleshooting. Aimed at achieving reliable, safe performance.",
+    "description_en": "Road tubeless setup guidance covering rim and tire fit, sealant, pressures, and troubleshooting. Aimed at achieving reliable, safe performance.",
+    "description_fi": "Maantierenkaiden tubeless‑asennuksen ohjeet: vanteen ja renkaan istuvuus, tiivisteaine, paineet ja vianhaku. Tavoitteena luotettava ja turvallinen suorituskyky.",
     "image": "/images/maintenance/tubeless_guide.avif",
     "link": "https://velo.outsideonline.com/road/road-gear/tubeless-tire-setup-for-road-tips-and-tricks-you-might-not-know/",
     "alt": "Tubeless setup guide",
@@ -20,7 +22,8 @@
   {
     "id": "chain-wear-guide",
     "title": "Chain Wear Guide",
-    "description": "Explains how to measure bicycle chain wear and when to replace it for optimal shifting and drivetrain life. Uses common measurement tools and thresholds.",
+    "description_en": "Explains how to measure bicycle chain wear and when to replace it for optimal shifting and drivetrain life. Use common measurement tools and thresholds.",
+    "description_fi": "Näin mittaat ketjun kuluman ja tunnistat vaihtotarpeen – parempi vaihteensiirto ja pidempi voimansiirron kesto. Käytä yleisiä mittatyökaluja ja raja‑arvoja.",
     "image": "/images/maintenance/chain_wear_guide.avif",
     "link": "https://www.parktool.com/en-int/blog/repair-help/when-to-replace-a-chain-on-a-bicycle",
     "alt": "Chain wear guide",
@@ -29,7 +32,8 @@
   {
     "id": "tire-pressure-calculator",
     "title": "Tire Pressure Calculator",
-    "description": "SRAM AXS tire pressure guide and calculator to balance comfort, grip, and rolling speed. Recommends pressures based on rider, bike, and tire data.",
+    "description_en": "SRAM AXS tire pressure guide and calculator to balance comfort, grip, and rolling speed. Recommends pressures based on rider, bike, and tire data.",
+    "description_fi": "SRAM AXS -renkaanpaineopas ja -laskuri: tasapaino mukavuuden, pidon ja vierintävastuksen välillä. Suosittelee paineet ajajan, pyörän ja renkaan tietojen perusteella.",
     "image": "/images/maintenance/tire_pressure.avif",
     "link": "https://axs.sram.com/guides/tire/pressure",
     "alt": "Tire pressure calculator",

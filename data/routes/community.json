@@ -2,7 +2,8 @@
   {
     "id": "zwift-insider",
     "title": "Zwift Insider",
-    "description": "Independent site covering Zwift with news, route details, tips, and equipment testing. Includes community resources and platform updates.",
+    "description_en": "Independent site covering Zwift with news, route details, tips, and equipment testing. Includes community resources and platform updates.",
+    "description_fi": "Riippumaton sivusto Zwiftistä – uutiset, reitit, vinkit ja laitetestit. Mukana yhteisöresursseja ja alustan päivityksiä.",
     "link": "https://zwiftinsider.com/",
     "alt": "Zwift Insider",
     "tags": ["Zwift", "Routes", "Tips"]
@@ -10,7 +11,8 @@
   {
     "id": "escape-collective",
     "title": "Escape Collective",
-    "description": "Member-supported cycling journalism covering racing, tech, and culture with reader discussion. Publishes newsletters, podcasts, and features.",
+    "description_en": "Member-supported cycling journalism covering racing, tech, and culture with reader discussion. Publishes newsletters, podcasts, and features.",
+    "description_fi": "Jäsenrahoitteista pyöräilyjournalismia: kisat, tekniikka ja kulttuuri – lukijakeskustelulla. Julkaisee uutiskirjeitä, podcasteja ja feature-juttuja.",
     "link": "https://escapecollective.com/",
     "alt": "Escape Collective",
     "tags": ["Journalism", "Racing", "Tech"]
@@ -18,7 +20,8 @@
   {
     "id": "bikeland",
     "title": "Bikeland",
-    "description": "Finnish national cycling portal offering route information, services, and event listings. Maintained by Pyöräliitto and partners.",
+    "description_en": "Finnish national cycling portal offering route information, services, and event listings. Maintained by Pyöräliitto and partners.",
+    "description_fi": "Suomen kansallinen pyöräilyportaali: reitit, palvelut ja tapahtumat. Pyöräliiton ja kumppaneiden ylläpitämä.",
     "link": "https://www.bikeland.fi/",
     "alt": "Bikeland community",
     "tags": ["Finnish", "Routes", "Services"]
@@ -26,7 +29,8 @@
   {
     "id": "road-cc",
     "title": "road.cc",
-    "description": "UK site featuring everyday cycling news, reviews, and active reader comments. Covers commuting, sport, and advocacy topics.",
+    "description_en": "UK site featuring everyday cycling news, reviews, and active reader comments. Covers commuting, sport, and advocacy topics.",
+    "description_fi": "Brittiläinen sivusto arkipyöräilyn uutisista, arvioista ja vilkkaista lukijakommenteista. Aiheina työmatkat, urheilu ja vaikuttamistyö.",
     "link": "https://road.cc/",
     "alt": "road.cc community",
     "tags": ["UK", "News", "Reviews"]

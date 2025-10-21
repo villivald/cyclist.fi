@@ -12,7 +12,8 @@ export interface SearchResult {
 export interface RouteData {
   id: string;
   title: string;
-  description: string;
+  description_en: string;
+  description_fi: string;
   image: string;
   link: string;
   alt: string;
@@ -31,6 +32,7 @@ export function searchContent(
   query: string,
   routesData: Record<string, RouteData[]>,
   newsData: NewsData[],
+  locale: string,
 ): SearchResult[] {
   if (!query || query.trim().length < 2) {
     return [];
@@ -39,11 +41,13 @@ export function searchContent(
   const searchTerm = query.toLowerCase().trim();
   const results: SearchResult[] = [];
 
-  // Search through routes
+  // Search through routes (only current locale description)
   Object.entries(routesData).forEach(([routePath, routes]) => {
     routes.forEach((route) => {
       const titleMatch = route.title.toLowerCase().includes(searchTerm);
-      const descriptionMatch = route.description
+      const localizedDescription =
+        locale === "fi" ? route.description_fi : route.description_en;
+      const descriptionMatch = localizedDescription
         .toLowerCase()
         .includes(searchTerm);
       const tagsMatch = route.tags.some((tag) =>
@@ -54,7 +58,7 @@ export function searchContent(
         results.push({
           id: route.id,
           title: route.title,
-          description: route.description,
+          description: localizedDescription,
           type: "route",
           link: route.link,
           tags: route.tags,
@@ -64,16 +68,16 @@ export function searchContent(
     });
   });
 
-  // Search through news
+  // Search through news (only current locale)
   newsData.forEach((news) => {
-    const fullText = news.text_fi + " " + news.text_en;
-    const textMatch = fullText.toLowerCase().includes(searchTerm);
+    const localizedText = locale === "fi" ? news.text_fi : news.text_en;
+    const textMatch = localizedText.toLowerCase().includes(searchTerm);
 
     if (textMatch) {
       results.push({
         id: news.id,
         title: `News - ${news.date}`,
-        description: fullText,
+        description: localizedText,
         type: "news",
         date: news.date,
       });

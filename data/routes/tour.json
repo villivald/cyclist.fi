@@ -2,31 +2,35 @@
   {
     "id": "tour-de-france",
     "title": "Tour de France",
-    "description": "The sport’s biggest Grand Tour, three weeks in July across France and beyond.",
+    "description_en": "The sport’s biggest Grand Tour, three weeks in July across France and beyond.",
+    "description_fi": "Suurin ja tunnetuin Grand Tour: kolme viikkoa heinäkuussa ympäri Ranskaa ja sen ulkopuolella.",
     "link": "https://www.letour.fr/",
     "alt": "Tour de France",
     "tags": ["Grand Tour", "France", "July"]
   },
   {
-    "id": "giro-ditalia",
-    "title": "Giro d'Italia",
-    "description": "Italy’s Grand Tour held in May, famed for steep climbs and tifosi passion.",
-    "link": "https://www.giroditalia.it/en",
-    "alt": "Giro d'Italia",
-    "tags": ["Grand Tour", "Italy", "May"]
-  },
-  {
     "id": "vuelta-espana",
     "title": "Vuelta a España",
-    "description": "Late-season Grand Tour across Spain with brutal climbs and decisive stages.",
+    "description_en": "Late-season Grand Tour across Spain with brutal climbs and decisive stages.",
+    "description_fi": "Kauden loppupuolen Grand Tour Espanjassa – raastavia nousuja ja ratkaisevia etappeja.",
     "link": "https://www.lavuelta.es/",
     "alt": "Vuelta a España",
     "tags": ["Grand Tour", "Spain", "Aug–Sep"]
   },
   {
+    "id": "giro-ditalia",
+    "title": "Giro d'Italia",
+    "description_en": "Italy’s Grand Tour held in May, famed for steep climbs and tifosi passion.",
+    "description_fi": "Italian Grand Tour toukokuussa – tunnettu jyrkistä nousuista ja tifosien intohimosta.",
+    "link": "https://www.giroditalia.it/en",
+    "alt": "Giro d'Italia",
+    "tags": ["Grand Tour", "Italy", "May"]
+  },
+  {
     "id": "paris-roubaix",
     "title": "Paris–Roubaix",
-    "description": "Monument classic over infamous cobbles, finishing in the Roubaix Velodrome.",
+    "description_en": "Monument classic over infamous cobbles, finishing in the Roubaix Velodrome.",
+    "description_fi": "Monumenttiklassikko kuuluisilla mukulakivillä, maali Roubaix’n velodromilla.",
     "link": "https://www.paris-roubaix.fr/",
     "alt": "Paris–Roubaix",
     "tags": ["Monument", "Cobbles", "April"]
@@ -34,7 +38,8 @@
   {
     "id": "criterium-dauphine",
     "title": "Critérium du Dauphiné",
-    "description": "Week-long stage race in June, key Tour de France warm-up in the Alps.",
+    "description_en": "Week-long stage race in June, key Tour de France warm-up in the Alps.",
+    "description_fi": "Viikon mittainen etappikilpailu kesäkuussa – keskeinen Tourin lämmittely Alpeilla.",
     "link": "https://www.criterium-du-dauphine.fr/",
     "alt": "Critérium du Dauphiné",
     "tags": ["Stage Race", "June", "Alps"]
@@ -42,7 +47,8 @@
   {
     "id": "il-lombardia",
     "title": "Il Lombardia",
-    "description": "The ‘Race of the Falling Leaves’, autumn Monument with punchy climbs in Lombardy.",
+    "description_en": "The ‘Race of the Falling Leaves’, autumn Monument with punchy climbs in Lombardy.",
+    "description_fi": "“Lehtien putoamisen kisana” tunnettu syksyn Monument, terävine nousuineen Lombardiassa.",
     "link": "https://www.ilombardia.it/en",
     "alt": "Il Lombardia",
     "tags": ["Monument", "Autumn", "Climbs"]
@@ -50,7 +56,8 @@
   {
     "id": "fleche-wallonne",
     "title": "La Flèche Wallonne",
-    "description": "Ardennes Classic decided on repeated ascents of the Mur de Huy.",
+    "description_en": "Ardennes Classic decided on repeated ascents of the Mur de Huy.",
+    "description_fi": "Ardennien klassikko, jonka ratkaisevat toistuvat Mur de Huyn nousut.",
     "link": "https://www.la-fleche-wallonne.be/",
     "alt": "La Flèche Wallonne",
     "tags": ["Classic", "Ardennes", "April"]
@@ -58,7 +65,8 @@
   {
     "id": "liege-bastogne-liege",
     "title": "Liège–Bastogne–Liège",
-    "description": "Oldest Monument, challenging Ardennes course with relentless climbs.",
+    "description_en": "Oldest Monument, challenging Ardennes course with relentless climbs.",
+    "description_fi": "Vanhin Monument – vaativa Ardennien reitti ja loputtomat nousut.",
     "link": "https://www.liege-bastogne-liege.be/",
     "alt": "Liège–Bastogne–Liège",
     "tags": ["Monument", "Ardennes", "April"]
@@ -66,7 +74,8 @@
   {
     "id": "tour-of-flanders",
     "title": "Tour of Flanders",
-    "description": "Belgian Monument featuring cobbled bergs and passionate crowds.",
+    "description_en": "Belgian Monument featuring cobbled bergs and passionate crowds.",
+    "description_fi": "Belgialainen Monument – mukulakiviset bergit ja intohimoiset yleisöt.",
     "link": "https://www.rondevanvlaanderen.be/",
     "alt": "Tour of Flanders",
     "tags": ["Monument", "Cobbles", "Belgium"]
@@ -74,7 +83,8 @@
   {
     "id": "world-championships",
     "title": "UCI Road World Championships",
-    "description": "Annual worlds awarding the rainbow jersey in road race and time trial.",
+    "description_en": "Annual worlds awarding the rainbow jersey in road race and time trial.",
+    "description_fi": "Vuosittaiset MM-kisat, joissa jaetaan sateenkaaripaita maantie- ja aika-ajossa.",
     "link": "https://www.uci.org/",
     "alt": "UCI Road World Championships",
     "tags": ["Worlds", "Rainbow", "Annual"]
@@ -82,7 +92,8 @@
   {
     "id": "olympics",
     "title": "Olympic Games (Cycling)",
-    "description": "Quadrennial road, track, MTB and BMX competitions under the Olympic banner.",
+    "description_en": "Quadrennial road, track, MTB and BMX competitions under the Olympic banner.",
+    "description_fi": "Neljän vuoden välein järjestettävät maantie-, rata-, maasto- ja BMX-kilpailut olympialaisissa.",
     "link": "https://www.olympics.com/en/sports/cycling-road/",
     "alt": "Olympic Games Cycling",
     "tags": ["Olympics", "Road", "Track"]

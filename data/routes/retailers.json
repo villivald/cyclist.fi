@@ -2,7 +2,8 @@
   {
     "id": "bike24",
     "title": "BIKE24",
-    "description": "European online retailer for bikes, components, and accessories with wide brand coverage. Offers international shipping and detailed product filters.",
+    "description_en": "European online retailer for bikes, components, and accessories with wide brand coverage. Offers international shipping and detailed product filters.",
+    "description_fi": "Eurooppalainen verkkokauppa pyörille, osille ja varusteille – laaja merkkivalikoima. Kansainväliset toimitukset ja yksityiskohtaiset tuotesuodattimet.",
     "link": "https://www.bike24.com/",
     "alt": "BIKE24 retailer",
     "tags": ["Retailer", "Components", "Accessories"]
@@ -10,7 +11,8 @@
   {
     "id": "alltricks",
     "title": "Alltricks",
-    "description": "French retailer for bikes, components, and running/outdoor gear. Known for frequent stock of European brands and fast delivery in the EU.",
+    "description_en": "French retailer for bikes, components, and running/outdoor gear. Known for frequent stock of European brands and fast delivery in the EU.",
+    "description_fi": "Ranskalainen jälleenmyyjä pyörille, osille sekä juoksu- ja ulkoilutuotteille. Tunnettu eurooppalaisten merkkien hyvästä saatavuudesta ja nopeista EU-toimituksista.",
     "link": "https://www.alltricks.com/",
     "alt": "Alltricks retailer",
     "tags": ["Retailer", "Components", "EU"]
@@ -18,7 +20,8 @@
   {
     "id": "bike-discount",
     "title": "Bike-Discount",
-    "description": "German retailer known for competitive pricing on parts, tools, and accessories. Stocks major component and apparel brands.",
+    "description_en": "German retailer known for competitive pricing on parts, tools, and accessories. Stocks major component and apparel brands.",
+    "description_fi": "Saksalainen kauppa, tunnettu kilpailukykyisistä hinnoista osissa, työkaluissa ja varusteissa. Valikoimassa suuret komponentti- ja vaatebrändit.",
     "link": "https://www.bike-discount.de/en",
     "alt": "Bike-Discount retailer",
     "tags": ["Retailer", "Parts", "Tools"]
@@ -26,7 +29,8 @@
   {
     "id": "bikester",
     "title": "Bikester",
-    "description": "Online bike shop covering road, MTB, gravel, and urban with apparel and parts. Operates localized stores in multiple European markets.",
+    "description_en": "Online bike shop covering road, MTB, gravel, and urban with apparel and parts. Operates localized stores in multiple European markets.",
+    "description_fi": "Verkkokauppa, jonka valikoima kattaa tie-, maasto-, gravel- ja kaupunkipyörät sekä vaatteet ja osat. Toimii paikallisilla kaupoilla useilla Euroopan markkinoilla.",
     "link": "https://www.bikester.fi/",
     "alt": "Bikester retailer",
     "tags": ["Retailer", "Bikes", "Apparel"]
@@ -34,7 +38,8 @@
   {
     "id": "sigma-sports",
     "title": "Sigma Sports",
-    "description": "UK-based retailer with road, triathlon, and performance cycling focus. Offers bike fitting, workshops, and extensive online catalog.",
+    "description_en": "UK-based retailer with road, triathlon, and performance cycling focus. Offers bike fitting, workshops, and extensive online catalog.",
+    "description_fi": "Brittiläinen jälleenmyyjä, jonka painopiste on maantie-, triathlon- ja suorituskykyajossa. Tarjoaa pyöränsovituksen, huollot ja laajan verkkokatalogin.",
     "link": "https://www.sigmasports.com/",
     "alt": "Sigma Sports retailer",
     "tags": ["Retailer", "Road", "Triathlon"]
@@ -42,7 +47,8 @@
   {
     "id": "rose-bikes",
     "title": "ROSE Bikes",
-    "description": "German brand and retailer selling own bikes plus parts and gear. Known for direct-sales bikes and customization options.",
+    "description_en": "German brand and retailer selling own bikes plus parts and gear. Known for direct-sales bikes and customization options.",
+    "description_fi": "Saksalainen merkki ja jälleenmyyjä – omat pyörät, osat ja varusteet. Tunnettu suoramyynnistä ja laajoista räätälöintimahdollisuuksista.",
     "link": "https://www.rosebikes.com/",
     "alt": "ROSE Bikes retailer",
     "tags": ["Retailer", "Brand", "Bikes"]
@@ -50,7 +56,8 @@
   {
     "id": "bikeinn",
     "title": "Bikeinn",
-    "description": "Cycling-focused shop within the Tradeinn group offering broad gear selection. Ships internationally with multiple warehouse locations.",
+    "description_en": "Cycling-focused shop within the Tradeinn group offering broad gear selection. Ships internationally with multiple warehouse locations.",
+    "description_fi": "Tradeinn‑ryhmän pyöräilyyn keskittynyt kauppa, laaja varustevalikoima. Kansainväliset toimitukset useista varastoista.",
     "link": "https://www.bikeinn.com/",
     "alt": "Bikeinn retailer",
     "tags": ["Retailer", "Gear", "International"]

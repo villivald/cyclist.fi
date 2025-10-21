@@ -2,7 +2,8 @@
   {
     "id": "strava",
     "title": "Strava",
-    "description": "Platform for tracking rides, analyzing performance, and joining clubs. Features segments, routes, and social sharing for athletes.",
+    "description_en": "Platform for tracking rides and analyzing performance. Features segments, routes, and social sharing for athletes.",
+    "description_fi": "Alusta ajolenkkien seurantaan ja suorituskyvyn analysointiin. Segmentit, reitit ja sosiaalinen jakaminen urheilijoille.",
     "link": "https://www.strava.com/",
     "alt": "Strava social network for athletes",
     "tags": ["Tracking", "Clubs", "Segments"]
@@ -10,7 +11,8 @@
   {
     "id": "mitch-docker",
     "title": "Mitch Docker",
-    "description": "Retired pro cyclist sharing podcast updates and cycling life. Posts from Life in the Peloton and rides.",
+    "description_en": "Retired pro cyclist sharing podcast updates and cycling life. Posts from Life in the Peloton and rides.",
+    "description_fi": "Entinen ammattilaispyöräilijä jakaa podcast-kuulumisia ja pyöräilyarkea. Life in the Peloton -sisältöä ja ajokuvia.",
     "image": "/images/social/docker.avif",
     "link": "https://www.instagram.com/mitchdocker/",
     "alt": "Mitch Docker Instagram",
@@ -19,7 +21,8 @@
   {
     "id": "demi-vollering",
     "title": "Demi Vollering",
-    "description": "Dutch WorldTour rider sharing racing and training highlights. Includes posts from stage races and classics.",
+    "description_en": "Dutch WorldTour rider sharing racing and training highlights. Includes posts from stage races and classics.",
+    "description_fi": "Hollantilainen WorldTour-ajaja jakaa kilpa- ja harjoittelun kohokohtia – sisältää etappikisojen ja klassikoiden päivityksiä.",
     "image": "/images/social/demi.avif",
     "link": "https://www.instagram.com/demivollering/",
     "alt": "Demi Vollering Instagram",
@@ -28,7 +31,8 @@
   {
     "id": "tadej-pogacar",
     "title": "Tadej Pogačar",
-    "description": "Tour de France winner posting insights from training and races. Features behind-the-scenes race content and team updates.",
+    "description_en": "Tour de France winner posting insights from training and races. Features behind-the-scenes race content and team updates.",
+    "description_fi": "Tour de Francen voittaja, joka jakaa oivalluksia treeneistä ja kisoista. Kulissien takaista kisasisältöä ja joukkueen päivityksiä.",
     "image": "/images/social/tadej.avif",
     "link": "https://www.instagram.com/tadejpogacar/",
     "alt": "Tadej Pogačar Instagram",
@@ -37,7 +41,8 @@
   {
     "id": "juliet-elliott",
     "title": "Juliet Elliott",
-    "description": "UK creator covering gravel, fixed gear, and adventure cycling. Shares rides, gear, and event coverage across platforms.",
+    "description_en": "UK creator covering gravel, fixed gear, and adventure cycling. Shares rides, gear, and event coverage across platforms.",
+    "description_fi": "Brittiläinen sisällöntuottaja julkaisee gravelista, fikseistä ja seikkailupyöräilystä. Ajot, varusteet ja tapahtumakuvaukset eri alustoilla.",
     "image": "/images/social/elliott.avif",
     "link": "https://www.instagram.com/julietelliott/",
     "alt": "Juliet Elliott Instagram",
@@ -46,7 +51,8 @@
   {
     "id": "velovelovelo",
     "title": "velovelovelo_",
-    "description": "Instagram account focused on cycling culture and visuals, featuring bikes and scenes. Curates design-forward imagery from the community.",
+    "description_en": "Instagram account focused on cycling culture and visuals, featuring bikes and scenes. Curates design-forward imagery from the community.",
+    "description_fi": "Instagram-tili, joka keskittyy pyöräilykulttuuriin ja visuaalisuuteen. Kuraattoripainotteista, design‑lähtöistä kuvamateriaalia pyöräilyyhteisöstä.",
     "image": "/images/social/velo.avif",
     "link": "https://www.instagram.com/velovelovelo_/",
     "alt": "velovelovelo_ Instagram",
@@ -55,7 +61,8 @@
   {
     "id": "pervelo",
     "title": "pervelo.cc",
-    "description": "Instagram account by Johanna Reif featuring rides, travel, and cycling culture. Personal cycling visuals and stories.",
+    "description_en": "Instagram account by Johanna Reif featuring rides, travel, and cycling culture. Personal cycling visuals and stories.",
+    "description_fi": "Johanna Reifin Instagram-tili: ajot, matkat ja pyöräilykulttuuri. Henkilökohtaisia kuvia ja tarinoita pyöräilystä.",
     "image": "/images/social/pervelo.avif",
     "link": "https://www.instagram.com/pervelo.cc/",
     "alt": "pervelo.cc Instagram",
@@ -64,7 +71,8 @@
   {
     "id": "marion-rousse",
     "title": "Marion Rousse",
-    "description": "Director of the Tour de France Femmes sharing race updates and events. Posts include organizer perspectives and women’s cycling highlights.",
+    "description_en": "Director of the Tour de France Femmes sharing race updates and events. Posts include organizer perspectives and women’s cycling highlights.",
+    "description_fi": "Tour de France Femmesin johtaja jakaa kisapäivityksiä ja tapahtumia – järjestäjän näkökulmia ja naisten pyöräilyn nostoja.",
     "image": "/images/social/marion.avif",
     "link": "https://www.instagram.com/roussemarion/",
     "alt": "Marion Rousse Instagram",
@@ -73,7 +81,8 @@
   {
     "id": "maghroch",
     "title": "Maghalie Rochette",
-    "description": "Canadian cyclocross pro sharing training, racing, and cycling life. Includes behind-the-scenes race content and skills sessions.",
+    "description_en": "Canadian cyclocross pro sharing training, racing, and cycling life. Includes behind-the-scenes race content and skills sessions.",
+    "description_fi": "Kanadalainen cyclocross-ammattilainen jakaa treenejä, kisoja ja pyöräilyarkea – kulissientakaista kisasisältöä ja taitoharjoittelua.",
     "image": "/images/social/maghroch.avif",
     "link": "https://www.instagram.com/maghroch/",
     "alt": "maghroch Instagram",

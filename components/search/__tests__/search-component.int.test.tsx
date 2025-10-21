@@ -9,7 +9,8 @@ vi.mock("@/utils/search-data", () => ({
         {
           id: "r1",
           title: "Bikes",
-          description: "All about bikes",
+          description_en: "All about bikes",
+          description_fi: "Kaikki polkupyöristä",
           link: "/bikes",
           alt: "bikes",
           tags: ["road", "mtb"],

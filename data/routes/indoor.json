@@ -2,7 +2,8 @@
   {
     "id": "zwift",
     "title": "Zwift",
-    "description": "Virtual cycling platform with structured workouts, group rides and races in immersive worlds.",
+    "description_en": "Virtual cycling platform with structured workouts, group rides and races in immersive worlds.",
+    "description_fi": "Virtuaalinen pyöräilyalusta – jäsennellyt treenit, yhteislenkit ja kilpailut immersiivisissä maailmoissa.",
     "link": "https://www.zwift.com/",
     "alt": "Zwift indoor cycling platform",
     "tags": ["Virtual", "Workouts", "Racing"]
@@ -10,7 +11,8 @@
   {
     "id": "rouvy",
     "title": "Rouvy",
-    "description": "Augmented reality routes and structured training on real-world video courses.",
+    "description_en": "Augmented reality routes and structured training on real-world video courses.",
+    "description_fi": "Lisätyn todellisuuden reitit ja jäsennelty harjoittelu oikeiden teiden videotallenteilla.",
     "image": "/images/indoor/rouvy.avif",
     "link": "https://rouvy.com/",
     "alt": "Rouvy indoor cycling",
@@ -19,7 +21,8 @@
   {
     "id": "mywhoosh",
     "title": "MyWhoosh",
-    "description": "Free-to-use virtual cycling app offering workouts, group rides and racing.",
+    "description_en": "Free-to-use virtual cycling app offering workouts, group rides and racing.",
+    "description_fi": "Maksuton virtuaalipyöräilysovellus – treenejä, yhteisajoja ja kilpailuja.",
     "link": "https://www.mywhoosh.com/",
     "alt": "MyWhoosh indoor cycling",
     "tags": ["Virtual", "Free", "Racing"]
@@ -27,7 +30,8 @@
   {
     "id": "fulgaz",
     "title": "FulGaz",
-    "description": "High-quality real-road videos with terrain-matched resistance and structured sessions.",
+    "description_en": "High-quality real-road videos with terrain-matched resistance and structured sessions.",
+    "description_fi": "Laadukkaat real‑road‑treenivideot – maastoon mukautuva vastus ja jäsennellyt harjoitukset.",
     "link": "https://fulgaz.com/",
     "alt": "FulGaz indoor cycling",
     "tags": ["Real-Road", "Video", "Workouts"]
@@ -35,7 +39,8 @@
   {
     "id": "bkool",
     "title": "Bkool",
-    "description": "Indoor cycling simulator with training plans, 3D routes and races.",
+    "description_en": "Indoor cycling simulator with training plans, 3D routes and races.",
+    "description_fi": "Sisäpyöräilysimulaattori – harjoitusohjelmat, 3D‑reitit ja kilpailut.",
     "link": "https://www.bkool.com/",
     "alt": "Bkool indoor cycling",
     "tags": ["Simulator", "Plans", "Races"]
@@ -43,7 +48,8 @@
   {
     "id": "wahoo-systm",
     "title": "Wahoo SYSTM",
-    "description": "Structured training plans, workouts and sport science content integrated with Wahoo devices.",
+    "description_en": "Structured training plans, workouts and sport science content integrated with Wahoo devices.",
+    "description_fi": "Jäsennellyt harjoitusohjelmat, treenit ja urheilutiede – integroitu Wahoo‑laitteisiin.",
     "link": "https://eu.wahoofitness.com/wahoo-app-subscription",
     "alt": "Wahoo SYSTM training app",
     "tags": ["Plans", "Workouts", "Science"]
@@ -51,7 +57,8 @@
   {
     "id": "kinomap",
     "title": "Kinomap",
-    "description": "User-generated geolocated videos for indoor rides with smart trainer control.",
+    "description_en": "User-generated geolocated videos for indoor rides with smart trainer control.",
+    "description_fi": "Käyttäjien tuottamat sijaintitiedolla merkityt videot sisäajoihin – toimii älyvastusten kanssa.",
     "link": "https://www.kinomap.com/",
     "alt": "Kinomap indoor cycling",
     "tags": ["Video", "Geolocated", "Interactive"]

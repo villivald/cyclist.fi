@@ -10,7 +10,8 @@ describe("searchContent", () => {
       {
         id: "r1",
         title: "Bikes",
-        description: "All about bikes",
+        description_en: "All about bikes",
+        description_fi: "Kaikki polkupyöristä",
         link: "/bikes",
         alt: "bikes",
         tags: ["road", "mtb"],
@@ -19,7 +20,8 @@ describe("searchContent", () => {
       {
         id: "r2",
         title: "Helmets",
-        description: "Great bikes helmets and safety gear",
+        description_en: "Great bikes helmets and safety gear",
+        description_fi: "Parhaat pyöräkypärät ja turvallisuusvarusteet",
         link: "/bikes/helmets",
         alt: "helmets",
         tags: ["safety"],
@@ -28,7 +30,8 @@ describe("searchContent", () => {
       {
         id: "r3",
         title: "Bikes for beginners",
-        description: "Starter guide",
+        description_en: "Starter guide",
+        description_fi: "Aloittelijan opas",
         link: "/bikes/beginners",
         alt: "beginners",
         tags: [],
@@ -39,7 +42,8 @@ describe("searchContent", () => {
       {
         id: "r4",
         title: "Jerseys",
-        description: "Breathable jerseys",
+        description_en: "Breathable jerseys",
+        description_fi: "Breathable jerseys",
         link: "/apparel/jerseys",
         alt: "jerseys",
         tags: ["bikes", "summer"],
@@ -48,7 +52,8 @@ describe("searchContent", () => {
       {
         id: "r5",
         title: "No match",
-        description: "No match",
+        description_en: "No match",
+        description_fi: "No match",
         link: "/apparel/no-match",
         alt: "no match",
         tags: [],
@@ -67,13 +72,13 @@ describe("searchContent", () => {
   ];
 
   it("returns empty array when query is missing or too short", () => {
-    expect(searchContent("", baseRoutesData, baseNewsData)).toEqual([]);
-    expect(searchContent(" ", baseRoutesData, baseNewsData)).toEqual([]);
-    expect(searchContent("a", baseRoutesData, baseNewsData)).toEqual([]);
+    expect(searchContent("", baseRoutesData, baseNewsData, "en")).toEqual([]);
+    expect(searchContent(" ", baseRoutesData, baseNewsData, "en")).toEqual([]);
+    expect(searchContent("a", baseRoutesData, baseNewsData, "en")).toEqual([]);
   });
 
   it("matches across title, description and tags (case-insensitive)", () => {
-    const results = searchContent("bIkEs", baseRoutesData, baseNewsData);
+    const results = searchContent("bIkEs", baseRoutesData, baseNewsData, "en");
 
     // Should include route by exact title match
     expect(results.some((r) => r.type === "route" && r.id === "r1")).toBe(true);
@@ -105,7 +110,7 @@ describe("searchContent", () => {
   });
 
   it("sorts exact title matches first, then titles starting with the term", () => {
-    const results = searchContent("bikes", baseRoutesData, baseNewsData);
+    const results = searchContent("bikes", baseRoutesData, baseNewsData, "en");
 
     // First should be exact title match ("Bikes" -> r1)
     expect(results[0].id).toBe("r1");

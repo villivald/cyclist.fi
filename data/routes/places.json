@@ -2,7 +2,8 @@
   {
     "id": "peloton-helsinki",
     "title": "Peloton Helsinki",
-    "description": "Cycling-friendly cafe and community hub in Helsinki with group rides and events.",
+    "description_en": "Cycling-friendly cafe and community hub in Helsinki with group rides and events.",
+    "description_fi": "Pyöräilijäystävällinen kahvila ja yhteisön kohtaamispaikka Helsingissä – yhteislenkkejä ja tapahtumia.",
     "image": "/images/places/peloton.avif",
     "link": "https://www.pelotonhelsinki.fi/",
     "alt": "Peloton Helsinki",
@@ -11,7 +12,8 @@
   {
     "id": "velodromi",
     "title": "Helsinki Velodrome",
-    "description": "Historic outdoor velodrome hosting track sessions, races and cycling events.",
+    "description_en": "Historic outdoor velodrome hosting track sessions, races and cycling events.",
+    "description_fi": "Historiallinen ulkoratavelodromi, jossa järjestetään ratavuoroja, kilpailuja ja pyöräilytapahtumia.",
     "image": "/images/places/velodromi.avif",
     "link": "https://fi.wikipedia.org/wiki/Helsingin_velodromi",
     "alt": "Helsinki Velodrome",
@@ -20,7 +22,8 @@
   {
     "id": "pelago-bicycles",
     "title": "Pelago Bicycles",
-    "description": "Helsinki-based brand and store making durable city and touring bikes and accessories.",
+    "description_en": "Helsinki-based brand and store making durable city and touring bikes and accessories.",
+    "description_fi": "Helsinkiläinen brändi ja myymälä – kestävät kaupunki- ja retkipyörät sekä varusteet.",
     "image": "/images/places/pelago.avif",
     "link": "https://pelagobicycles.com/",
     "alt": "Pelago Bicycles",
@@ -29,7 +32,8 @@
   {
     "id": "nuuksio",
     "title": "Nuuksio National Park",
-    "description": "Forest trails, lakes and gravel roads just outside Helsinki for adventure rides.",
+    "description_en": "Forest trails, lakes and gravel roads just outside Helsinki for adventure rides.",
+    "description_fi": "Metsäpolkuja, järviä ja sorateitä aivan Helsingin kupeessa – retkiajoihin.",
     "image": "/images/places/nuuksio.avif",
     "link": "https://www.luontoon.fi/fi/kohteet/nuuksion-kansallispuisto",
     "alt": "Nuuksio National Park",

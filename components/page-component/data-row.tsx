@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import styles from "@/styles/PageComponent.module.css";
 
@@ -16,6 +16,7 @@ export default function DataRow({
   showNew = false,
   localImage,
 }: DataRowProps) {
+  const locale = useLocale();
   const t = useTranslations("Common");
 
   const rowClass = `${styles.dataRow} ${styles[`layout-${layout}`]}`;
@@ -73,7 +74,9 @@ export default function DataRow({
       <div className={styles.content}>
         <h2>{item.title}</h2>
 
-        <p className={styles.description}>{item.description}</p>
+        <p className={styles.description}>
+          {locale === "fi" ? item.description_fi : item.description_en}
+        </p>
 
         {showTags && item.tags && item.tags.length > 0 && (
           <div className={styles.tags}>

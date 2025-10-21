@@ -17,7 +17,8 @@ describe("loadSearchData", () => {
           expect.objectContaining({
             id: expect.any(String),
             title: expect.any(String),
-            description: expect.any(String),
+            description_en: expect.any(String),
+            description_fi: expect.any(String),
             image: expect.any(String),
             link: expect.any(String),
             alt: expect.any(String),

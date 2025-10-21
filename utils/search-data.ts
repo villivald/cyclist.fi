@@ -45,6 +45,8 @@ export async function loadSearchData(): Promise<{
           image: item.image ?? defaultImage,
           alt: item.alt ?? item.title,
           new: item.new ?? false,
+          description_en: item.description_en ?? "",
+          description_fi: item.description_fi ?? "",
         }));
         routesData[route] = normalized;
       } catch (error) {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/SearchComponent.module.css";
@@ -21,6 +21,7 @@ import { useSearchShortcut } from "./use-search-shortcut";
 export default function SearchComponent() {
   const router = useRouter();
   const t = useTranslations("Search");
+  const locale = useLocale();
 
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -106,13 +107,13 @@ export default function SearchComponent() {
 
     // Debounce search
     const timeoutId = setTimeout(() => {
-      const searchResults = searchContent(query, routesData, newsData);
+      const searchResults = searchContent(query, routesData, newsData, locale);
       setResults(searchResults);
       setIsLoading(false);
     }, 500);
 
     return () => clearTimeout(timeoutId);
-  }, [query, routesData, newsData]);
+  }, [query, routesData, newsData, locale]);
 
   // Don't render dialog until component is mounted (hydration)
   if (!isMounted) return null;

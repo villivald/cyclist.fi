@@ -2,7 +2,8 @@
   {
     "id": "canyon",
     "title": "Canyon",
-    "description": "German direct-to-consumer brand delivering performance road, gravel and MTB bikes online worldwide.",
+    "description_en": "German direct-to-consumer brand delivering performance road, gravel and MTB bikes online worldwide.",
+    "description_fi": "Saksalainen suoramyyntibrändi, joka toimittaa suorituskykyisiä maantie-, gravel- ja maastopyöriä verkon kautta ympäri maailmaa.",
     "link": "https://www.canyon.com/",
     "alt": "Canyon bicycles",
     "tags": ["German", "Direct", "Road", "Gravel", "MTB"]
@@ -10,7 +11,8 @@
   {
     "id": "specialized",
     "title": "Specialized",
-    "description": "US brand building road, mountain and e-bikes, known for race-winning performance and in-house R&D.",
+    "description_en": "US brand building road, mountain and e-bikes, known for race-winning performance and in-house R&D.",
+    "description_fi": "Yhdysvaltalainen merkki, joka valmistaa maantie-, maasto- ja sähköpyöriä – tunnettu kilpailuja voittavasta suorituskyvystä ja omasta tuotekehityksestä.",
     "link": "https://www.specialized.com/",
     "alt": "Specialized bicycles",
     "tags": ["American", "Road", "MTB", "Performance", "Innovation"]
@@ -18,7 +20,8 @@
   {
     "id": "trek",
     "title": "Trek",
-    "description": "American brand offering a full range from entry-level to WorldTour, with a focus on quality and innovation.",
+    "description_en": "American brand offering a full range from entry-level to WorldTour, with a focus on quality and innovation.",
+    "description_fi": "Amerikkalainen merkki, jonka valikoima ulottuu aloitustasosta WorldTouriin – painotus laadussa ja innovaatiossa.",
     "link": "https://www.trekbikes.com/",
     "alt": "Trek bicycles",
     "tags": ["American", "Road", "MTB", "E-Bike"]
@@ -26,7 +29,8 @@
   {
     "id": "bmc",
     "title": "BMC",
-    "description": "Swiss brand engineering high-performance road and time-trial bikes, backed by research from the Impec Lab.",
+    "description_en": "Swiss brand engineering high-performance road and time-trial bikes, backed by research from the Impec Lab.",
+    "description_fi": "Sveitsiläinen brändi, joka suunnittelee huippusuorituskykyisiä maantie- ja aika-ajopyöriä Impec Labin tutkimuksen tukemana.",
     "link": "https://www.bmc-switzerland.com/",
     "alt": "BMC bicycles",
     "tags": ["Swiss", "Racing", "Aero", "Carbon"]
@@ -34,7 +38,8 @@
   {
     "id": "pinarello",
     "title": "Pinarello",
-    "description": "Italian marque with Grand Tour pedigree, producing aerodynamic road frames like the Dogma.",
+    "description_en": "Italian marque with Grand Tour pedigree, producing aerodynamic road frames like the Dogma.",
+    "description_fi": "Italialainen merkki Grand Tour -perinnöllä – aerodynaamisia runkoja, kuten Dogma‑malli.",
     "link": "https://pinarello.com/",
     "alt": "Pinarello bicycles",
     "tags": ["Italian", "Heritage", "WorldTour", "Aero"]
@@ -42,7 +47,8 @@
   {
     "id": "giant",
     "title": "Giant",
-    "description": "Taiwanese company and the world's largest bicycle maker, known for value and innovation across categories.",
+    "description_en": "Taiwanese company and the world's largest bicycle maker, known for value and innovation across categories.",
+    "description_fi": "Taiwanilainen yhtiö ja maailman suurin pyöränvalmistaja – tunnettu hinta–laatusuhteesta ja innovaatioista eri luokissa.",
     "link": "https://www.giant-bicycles.com/",
     "alt": "Giant bicycles",
     "tags": ["Taiwanese", "Global", "Road", "MTB"]
@@ -50,7 +56,8 @@
   {
     "id": "cannondale",
     "title": "Cannondale",
-    "description": "American brand recognized for innovative aluminum and carbon designs across road, gravel and MTB.",
+    "description_en": "American brand recognized for innovative aluminum and carbon designs across road, gravel and MTB.",
+    "description_fi": "Yhdysvaltalainen merkki, tunnettu innovatiivisista alumiini- ja hiilikuituratkaisuista tie-, gravel- ja maastopyörissä.",
     "link": "https://www.cannondale.com/",
     "alt": "Cannondale bicycles",
     "tags": ["American", "Innovation", "Road", "MTB"]
@@ -58,7 +65,8 @@
   {
     "id": "rondo",
     "title": "Rondo",
-    "description": "Polish brand focused on gravel and all-road performance with distinctive design.",
+    "description_en": "Polish brand focused on gravel and all-road performance with distinctive design.",
+    "description_fi": "Puolalainen brändi, joka keskittyy gravel- ja all-road-suorituskykyyn erottuvalla muotoilulla.",
     "link": "https://rondo.cc/",
     "alt": "Rondo bicycles",
     "tags": ["Polish", "Gravel", "All-Road"]
@@ -66,7 +74,8 @@
   {
     "id": "focus",
     "title": "Focus",
-    "description": "German brand producing performance road and mountain bikes with a racing heritage.",
+    "description_en": "German brand producing performance road and mountain bikes with a racing heritage.",
+    "description_fi": "Saksalainen merkki, joka valmistaa suorituskykyisiä maantie- ja maastopyöriä kilpataustalla.",
     "link": "https://www.focus-bikes.com/",
     "alt": "Focus bicycles",
     "tags": ["German", "Road", "MTB", "Performance"]
@@ -74,7 +83,8 @@
   {
     "id": "lapierre",
     "title": "Lapierre",
-    "description": "French brand with decades of racing history across road and MTB disciplines.",
+    "description_en": "French brand with decades of racing history across road and MTB disciplines.",
+    "description_fi": "Ranskalainen merkki, jolla on vuosikymmenten kisahistoria tie- ja maastolajeissa.",
     "link": "https://www.lapierrebikes.com/",
     "alt": "Lapierre bicycles",
     "tags": ["French", "Road", "MTB", "Racing"]
@@ -82,7 +92,8 @@
   {
     "id": "bianchi",
     "title": "Bianchi",
-    "description": "Founded in 1885, the Italian icon known for its celeste color and heritage road bikes.",
+    "description_en": "Founded in 1885, the Italian icon known for its celeste color and heritage road bikes.",
+    "description_fi": "Vuonna 1885 perustettu italialaisikoni, tunnettu celeste-väristä ja perinteisistä maantiepyöristä.",
     "link": "https://www.bianchi.com/",
     "alt": "Bianchi bicycles",
     "tags": ["Italian", "Heritage", "Road"]
@@ -90,7 +101,8 @@
   {
     "id": "cervelo",
     "title": "Cervélo",
-    "description": "Canadian brand specializing in aerodynamic road, triathlon and time-trial bikes.",
+    "description_en": "Canadian brand specializing in aerodynamic road, triathlon and time-trial bikes.",
+    "description_fi": "Kanadalainen merkki, erikoistunut aerodynaamisiin maantie-, triathlon- ja aika-ajopyöriin.",
     "link": "https://www.cervelo.com/",
     "alt": "Cervélo bicycles",
     "tags": ["Canadian", "Aero", "TT", "Road"]
@@ -98,7 +110,8 @@
   {
     "id": "colnago",
     "title": "Colnago",
-    "description": "Italian legend with a storied racing legacy and premium road frames.",
+    "description_en": "Italian legend with a storied racing legacy and premium road frames.",
+    "description_fi": "Italialainen legenda – rikas kisaperintö ja laadukkaat maantierungot.",
     "link": "https://www.colnago.com/",
     "alt": "Colnago bicycles",
     "tags": ["Italian", "Heritage", "Racing", "Road"]
@@ -106,7 +119,8 @@
   {
     "id": "cube",
     "title": "CUBE",
-    "description": "German brand offering a broad range of road, MTB and e-bikes with strong value.",
+    "description_en": "German brand offering a broad range of road, MTB and e-bikes with strong value.",
+    "description_fi": "Saksalainen merkki, jonka valikoima kattaa laajasti tie-, maasto- ja sähköpyörät hyvällä hinta–laatu‑suhteella.",
     "link": "https://www.cube.eu/",
     "alt": "CUBE bicycles",
     "tags": ["German", "Road", "MTB", "E-Bike"]
@@ -114,7 +128,8 @@
   {
     "id": "enve",
     "title": "ENVE",
-    "description": "US company renowned for premium carbon wheels and components, plus performance road frames.",
+    "description_en": "US company renowned for premium carbon wheels and components, plus performance road frames.",
+    "description_fi": "Yhdysvaltalainen yritys, tunnettu huippuluokan hiilikuitukiekoista ja -komponenteista sekä suorituskykyisistä maantierungoista.",
     "link": "https://www.enve.com/",
     "alt": "ENVE Composites",
     "tags": ["American", "Carbon", "Wheels", "Components"]
@@ -122,7 +137,8 @@
   {
     "id": "factor",
     "title": "Factor",
-    "description": "High-end racing brand producing aerodynamic and lightweight road bikes ridden at WorldTour level.",
+    "description_en": "High-end racing brand producing aerodynamic and lightweight road bikes ridden at WorldTour level.",
+    "description_fi": "Huipputason kilpabrändi, joka valmistaa aerodynaamisia ja kevyitä maantiepyöriä WorldTour‑tasolle.",
     "link": "https://factorbikes.com/",
     "alt": "Factor bicycles",
     "tags": ["Performance", "Racing", "Aero", "Carbon"]
@@ -130,7 +146,8 @@
   {
     "id": "look",
     "title": "LOOK",
-    "description": "French pioneer of clipless pedals and carbon frames, producing road bikes and components.",
+    "description_en": "French pioneer of clipless pedals and carbon frames, producing road bikes and components.",
+    "description_fi": "Ranskalainen lukkopolkimien ja hiilikuiturunkojen edelläkävijä – valmistaa maantiepyöriä ja komponentteja.",
     "link": "https://www.lookcycle.com/",
     "alt": "LOOK Cycle",
     "tags": ["French", "Carbon", "Pedals", "Innovation"]
@@ -138,7 +155,8 @@
   {
     "id": "orbea",
     "title": "Orbea",
-    "description": "Spanish cooperative from the Basque Country building road, gravel and mountain bikes.",
+    "description_en": "Spanish brand from the Basque Country building road, gravel and mountain bikes.",
+    "description_fi": "Baskimaasta lähtöisin oleva espanjalainen brändi, joka valmistaa tie-, gravel- ja maastopyöriä.",
     "link": "https://www.orbea.com/",
     "alt": "Orbea bicycles",
     "tags": ["Spanish", "Basque", "Road", "MTB"]
@@ -146,7 +164,8 @@
   {
     "id": "wilier",
     "title": "Wilier",
-    "description": "Italian brand dating to 1906, known for elegant, race-focused road bikes.",
+    "description_en": "Italian brand dating to 1906, known for elegant, race-focused road bikes.",
+    "description_fi": "Vuodesta 1906 periytyvä italialainen brändi – elegantit, kilpakeskeiset maantiepyörät.",
     "link": "https://www.wilier.com/",
     "alt": "Wilier Triestina bicycles",
     "tags": ["Italian", "Heritage", "Road", "Racing"]

@@ -2,7 +2,8 @@
   {
     "id": "trainerroad",
     "title": "TrainerRoad",
-    "description": "Science-based training plans, Adaptive Training and analytics for performance gains.",
+    "description_en": "Science-based training plans, Adaptive Training and analytics for performance gains.",
+    "description_fi": "Tieteeseen pohjautuvat harjoitusohjelmat, adaptiiviset treenit ja analytiikka suorituskyvyn parantamiseen.",
     "link": "https://www.trainerroad.com/",
     "alt": "TrainerRoad",
     "tags": ["Plans", "Adaptive", "Analytics"]
@@ -10,7 +11,8 @@
   {
     "id": "dynamic-cyclist",
     "title": "Dynamic Cyclist",
-    "description": "Mobility, strength and injury-prevention programs built specifically for cyclists.",
+    "description_en": "Mobility, strength and injury-prevention programs built specifically for cyclists.",
+    "description_fi": "Liikkuvuus‑ ja voimaharjoittelua sekä loukkaantumisten ehkäisyä erityisesti pyöräilijöille.",
     "link": "https://dynamiccyclist.com/",
     "alt": "Dynamic Cyclist",
     "tags": ["Mobility", "Strength", "Injury Prevention"]
@@ -18,7 +20,8 @@
   {
     "id": "vekta",
     "title": "Vekta",
-    "description": "Training and coaching platform for cyclists and endurance athletes.",
+    "description_en": "Training and coaching platform for cyclists and endurance athletes.",
+    "description_fi": "Harjoittelu- ja valmennusalusta pyöräilijöille ja kestävyysurheilijoille.",
     "link": "https://joinvekta.com/",
     "alt": "Vekta training",
     "tags": ["Plans", "Coaching", "Personalized"]
@@ -26,7 +29,8 @@
   {
     "id": "trainingpeaks",
     "title": "TrainingPeaks",
-    "description": "Plan, track and analyze training with structured plans and powerful metrics.",
+    "description_en": "Plan, track and analyze training with structured plans and powerful metrics.",
+    "description_fi": "Suunnittele, seuraa ja analysoi harjoittelua jäsennellyillä ohjelmilla ja tehokkailla mittareilla.",
     "link": "https://www.trainingpeaks.com/",
     "alt": "TrainingPeaks",
     "tags": ["Plans", "Metrics", "Analysis"]
@@ -34,7 +38,8 @@
   {
     "id": "join",
     "title": "Join",
-    "description": "Join is a platform providing structured and smart training plans for cyclists.",
+    "description_en": "Join is a platform providing structured and smart training plans for cyclists.",
+    "description_fi": "Alusta, joka tarjoaa jäsenneltyjä ja älykkäitä harjoitusohjelmia pyöräilijöille.",
     "link": "https://join.cc/",
     "alt": "Join",
     "tags": ["Plans", "Structured", "Smart"]
