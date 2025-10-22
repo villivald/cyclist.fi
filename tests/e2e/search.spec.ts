@@ -1,6 +1,41 @@
 import { expect, test } from "@chromatic-com/playwright";
 
 test.describe("Search modal", () => {
+  test.beforeEach(async ({ page }) => {
+    // Mock the search data requests to avoid dependency on real data
+    await page.route("**/data/routes/*.json", (route) => {
+      const url = route.request().url();
+      if (url.includes("apparel.json")) {
+        return route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify([
+            {
+              id: "pas-normal-studios",
+              title: "Pas Normal Studios",
+              description_en: "Contemporary, technical cycling clothing.",
+              link: "https://pasnormalstudios.com",
+            },
+          ]),
+        });
+      }
+      // For other routes, return empty array to speed up tests
+      return route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify([]),
+      });
+    });
+
+    await page.route("**/data/news.json", (route) => {
+      route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify([]),
+      });
+    });
+  });
+
   test("opens via button click and shows guidance text", async ({ page }) => {
     await page.goto("/");
 
@@ -69,6 +104,10 @@ test.describe("Search modal", () => {
     const input = page.getByTestId("search-input");
     await expect(input).toBeVisible();
     await input.fill("Pas Normal");
+
+    // Wait for loading spinner to appear and disappear
+    await expect(page.getByTestId("search-loading-spinner")).toBeVisible();
+    await expect(page.getByTestId("search-loading-spinner")).toBeHidden();
 
     // results summary updates
     const summary = page.getByTestId("search-results-summary");

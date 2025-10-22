@@ -200,7 +200,12 @@ export default function SearchComponent() {
 
       <div className={styles.resultsArea} id="search-results">
         {isLoading && !results.length && (
-          <div className={styles.noResults} role="status" aria-live="polite">
+          <div
+            className={styles.noResults}
+            role="status"
+            aria-live="polite"
+            data-testid="search-loading-spinner"
+          >
             <div className={styles.spinner} aria-hidden="true"></div>
           </div>
         )}

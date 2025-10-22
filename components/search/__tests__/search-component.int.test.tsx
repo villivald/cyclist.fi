@@ -48,16 +48,12 @@ describe("SearchComponent integration", () => {
     // Type query (>=2 chars)
     fireEvent.change(input, { target: { value: "bik" } });
 
-    // Debounce for 600ms
-    vi.useFakeTimers();
-    await act(async () => vi.advanceTimersByTime(600));
-    vi.useRealTimers();
-
-    // Result summary shows 2 results (route + news containing term)
-    await screen.findByText(/2\s+resultsFound_plural/i);
+    // Wait for results to appear, asserting on the summary text.
+    // This avoids using fake timers and is more resilient to implementation changes.
+    await screen.findByText("2 resultsFound_plural");
 
     // Click the route result navigates to /bikes
-    const routeLink = await screen.findByTestId("search-result-link-route-r1");
+    const routeLink = screen.getByTestId("search-result-link-route-r1");
     fireEvent.click(routeLink);
     expect(push).toHaveBeenCalledWith("/bikes");
   });
