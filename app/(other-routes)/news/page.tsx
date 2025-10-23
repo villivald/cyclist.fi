@@ -6,7 +6,9 @@ import newsData from "@/data/news.json";
 import styles from "@/styles/NewsArchiveBlock.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
 
-export const metadata = () => createTranslatedMetadata("Pages", "news");
+export async function generateMetadata() {
+  return await createTranslatedMetadata("Pages", "news");
+}
 
 export default function News() {
   const t = useTranslations("Pages");

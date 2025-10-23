@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname),
+      i18n: path.resolve(__dirname, "i18n"),
       services: path.resolve(__dirname, "services"),
       components: path.resolve(__dirname, "components"),
       utils: path.resolve(__dirname, "utils"),

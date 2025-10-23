@@ -6,7 +6,9 @@ import { getRouteColor } from "@/utils/get-route-color";
 
 const ROUTE_NAME = "youtube";
 
-export const metadata = () => createTranslatedMetadata("Pages", ROUTE_NAME);
+export async function generateMetadata() {
+  return await createTranslatedMetadata("Pages", ROUTE_NAME);
+}
 
 export default function youtube() {
   const data = youtubeData;

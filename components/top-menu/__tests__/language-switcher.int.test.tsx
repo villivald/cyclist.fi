@@ -1,13 +1,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import LanguageSwitcher from "../language-switcher";
-
-// Mock locale service
 const setUserLocaleMock = vi.fn();
 vi.mock("services/locale", () => ({
   __esModule: true,
   setUserLocale: (...args: unknown[]) => setUserLocaleMock(...args),
 }));
+
+import LanguageSwitcher from "../language-switcher";
 
 describe("LanguageSwitcher integration", () => {
   it("toggles locale on click and updates aria-label text", () => {

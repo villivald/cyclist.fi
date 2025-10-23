@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   images: {
     formats: ["image/avif"],
     dangerouslyAllowSVG: true,
@@ -17,11 +15,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 const withNextIntl = createNextIntlPlugin();
 
-module.exports = withNextIntl(nextConfig);
+export default withNextIntl(nextConfig);
