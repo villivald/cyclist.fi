@@ -1,3 +1,5 @@
+import { ViewTransition } from "react";
+
 import RouteTitle from "@/components/route-title";
 import styles from "@/styles/Routes.module.css";
 
@@ -7,9 +9,11 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main id="main-content" className={styles.layout} tabIndex={-1}>
-      <RouteTitle />
-      {children}
-    </main>
+    <ViewTransition>
+      <main id="main-content" className={styles.layout} tabIndex={-1}>
+        <RouteTitle />
+        {children}
+      </main>
+    </ViewTransition>
   );
 }
