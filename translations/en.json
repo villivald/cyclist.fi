@@ -60,7 +60,7 @@
     "newsletter": "Newsletter",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "description": "Your essential Finnish cycling database — discover more at CYCLIST.FI"
+    "description": "Your essential Finnish cycling database - discover more at CYCLIST.FI"
   },
   "Menu": {
     "dropdown": "Menu",
@@ -68,8 +68,13 @@
     "themeToggle": "Toggle theme"
   },
   "ContactForm": {
-    "name_field_label": "Your name (required)",
+    "name_field_label": "Your name",
     "name_field_placeholder": "John Doe",
+    "subject_field_label": "Subject",
+    "subject_option_general": "General",
+    "subject_option_bug": "Bug",
+    "subject_option_content_suggestion": "Suggest new content",
+    "subject_option_collaboration": "Collaboration request",
     "email_field_label": "Your email (required)",
     "email_field_placeholder": "mail@example.com",
     "message_field_label": "Your message (required)",

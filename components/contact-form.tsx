@@ -12,6 +12,7 @@ export default function ContactForm() {
   const router = useRouter();
 
   const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("general");
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -25,7 +26,20 @@ export default function ContactForm() {
   const emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
   const emailRegex = new RegExp(`^${emailPattern}$`);
 
-  const submitButtonDisabled = !emailRegex.test(email) || !name || !message;
+  const subjectOptions: {
+    value: string;
+    label: string;
+  }[] = [
+    { value: "general", label: t("subject_option_general") },
+    { value: "bug", label: t("subject_option_bug") },
+    {
+      value: "content_suggestion",
+      label: t("subject_option_content_suggestion"),
+    },
+    { value: "collaboration", label: t("subject_option_collaboration") },
+  ];
+
+  const submitButtonDisabled = !emailRegex.test(email) || !message;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,7 +53,12 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message, fromEmail: email, name }),
+        body: JSON.stringify({
+          message,
+          fromEmail: email,
+          name,
+          subject: t(`subject_option_${subject}`),
+        }),
       });
 
       if (!res.ok) {
@@ -52,6 +71,7 @@ export default function ContactForm() {
 
       setEmail("");
       setName("");
+      setSubject("general");
       setMessage("");
     } catch (err) {
       console.error(err);
@@ -95,6 +115,20 @@ export default function ContactForm() {
           />
         </div>
         <div>
+          <label htmlFor={`subject-${id}`}>{t("subject_field_label")}</label>
+          <select
+            id={`subject-${id}`}
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          >
+            {subjectOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
           <label htmlFor={`name-${id}`}>{t("name_field_label")}</label>
           <input
             type="text"
@@ -103,7 +137,6 @@ export default function ContactForm() {
             placeholder={t("name_field_placeholder")}
             onChange={(e) => setName(e.target.value)}
             id={`name-${id}`}
-            required
           />
         </div>
         <div>

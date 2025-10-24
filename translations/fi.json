@@ -60,7 +60,7 @@
     "newsletter": "Uutiskirje",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "description": "Kaikki pyöräilystä yhdessä ajantasaisessa tietokannassa — CYCLIST.FI"
+    "description": "Kaikki pyöräilystä yhdessä ajantasaisessa tietokannassa - CYCLIST.FI"
   },
   "Menu": {
     "dropdown": "Valikko",
@@ -68,8 +68,13 @@
     "themeToggle": "Vaihda ulkoasu"
   },
   "ContactForm": {
-    "name_field_label": "Nimi (pakollinen)",
+    "name_field_label": "Nimi",
     "name_field_placeholder": "Matti Meikäläinen",
+    "subject_field_label": "Aihe",
+    "subject_option_general": "Yleinen",
+    "subject_option_bug": "Bugi",
+    "subject_option_content_suggestion": "Ehdota uutta sisältöä",
+    "subject_option_collaboration": "Yhteistyö",
     "email_field_label": "Sähköpostisi (pakollinen)",
     "email_field_placeholder": "matti.meikalainen@esimerkki.fi",
     "message_field_label": "Viesti (pakollinen)",

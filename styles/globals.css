@@ -21,6 +21,7 @@
   --color-text: var(--color-dark);
   --color-shadow: var(--color-dark);
   --route-color-opacity: 15%;
+  --color-form-background: white;
 
   /* Typography */
   --font-sans: "Satoshi-Variable", "Helvetica Neue", sans-serif;
@@ -100,6 +101,7 @@
   --color-background: var(--color-dark);
   --color-text: var(--color-almost-white);
   --color-shadow: var(--color-almost-white);
+  --color-form-background: var(--color-dark);
 
   /* warmer tones */
   --color-wheat: hsl(42deg 45% 72%);

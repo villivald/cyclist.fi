@@ -21,10 +21,11 @@ div:has(.form) {
   width: clamp(20rem, 50vw, 30rem);
 }
 
-.form > div > :is(input, textarea) {
+.form > div > :is(input, textarea, select) {
   padding: var(--offset-l);
   border: 1px solid var(--color-text);
   max-width: 100%;
+  background-color: var(--color-form-background);
 
   &:valid {
     border-color: var(--color-teal);

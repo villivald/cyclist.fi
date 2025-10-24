@@ -12,7 +12,7 @@ import {
 type EmailTemplateProps = {
   message: string;
   fromEmail: string;
-  name: string;
+  name?: string;
 };
 
 const EmailTemplate = ({ message, fromEmail, name }: EmailTemplateProps) => {
@@ -29,7 +29,7 @@ const EmailTemplate = ({ message, fromEmail, name }: EmailTemplateProps) => {
             <Hr />
             <Section>
               <Text className="text-sm text-gray-500">
-                Name: {name}
+                Name: {name ?? "N/A"}
                 <br />
                 Email: {fromEmail}
               </Text>

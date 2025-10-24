@@ -4,13 +4,14 @@ import ContactEmailTemplate from "@/components/emails/contact-email-template";
 
 export async function POST(request: Request) {
   try {
-    const { message, fromEmail, name } = (await request.json()) as {
+    const { message, fromEmail, name, subject } = (await request.json()) as {
       message?: string;
       fromEmail?: string;
       name?: string;
+      subject?: string;
     };
 
-    if (!message || !fromEmail || !name) {
+    if (!message || !fromEmail) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
         { status: 400, headers: { "Content-Type": "application/json" } },
@@ -44,7 +45,7 @@ export async function POST(request: Request) {
     const result = await resend.emails.send({
       from: fromAddress,
       to: "maxim@villivald.com",
-      subject: "Cyclist.fi - Contact Form Submission",
+      subject: `Cyclist.fi - ${subject}`,
       react: (
         <ContactEmailTemplate
           message={message}
