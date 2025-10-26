@@ -16,7 +16,8 @@
     "e2e:ui": "playwright test --ui",
     "e2e:debug": "PWDEBUG=1 playwright test",
     "e2e:report": "playwright show-report",
-    "email": "email dev --dir components/emails"
+    "email": "email dev --dir components/emails",
+    "chromatic": "chromatic --playwright --exit-zero-on-changes"
   },
   "dependencies": {
     "@next/third-parties": "^16.0.0",

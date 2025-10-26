@@ -3,20 +3,49 @@ name: "Chromatic"
 on: push
 
 jobs:
-    chromatic:
-        name: Run Chromatic
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 22.20.0
-            - name: Install dependencies
-              run: npm ci
-            - name: Run Chromatic
-              uses: chromaui/action@latest
-              with:
-                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  playwright:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.56.0-noble
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.20.0
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Playwright tests
+        run: npx playwright test
+        env:
+          HOME: /root
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: ./test-results
+          retention-days: 30
+  chromatic:
+    name: Run Chromatic
+    needs: playwright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.20.0
+      - name: Install dependencies
+        run: npm ci
+      - name: Download Playwright test results
+        uses: actions/download-artifact@v4
+        with:
+          name: test-results
+          path: ./test-results
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          playwright: true
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
