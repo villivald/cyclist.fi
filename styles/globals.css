@@ -196,41 +196,30 @@ h6 {
 }
 
 aside {
-  --banner-image: url("/images/bg_xl.avif");
-
   position: absolute;
   width: 100%;
   height: 65.85%;
   top: 16.5vh;
   z-index: -1;
-  background-image: var(--banner-image);
-  background-size: cover;
-  background-position: center;
+  isolation: isolate;
+
+  & img {
+    object-fit: cover;
+  }
 }
 
 aside::before {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   background-color: hsl(from var(--color-teal) h s l / 15%);
-}
-
-@media (width < 1400px) {
-  aside {
-    --banner-image: url("/images/bg_l.avif");
-  }
+  pointer-events: none;
+  z-index: 1;
 }
 
 @media (width < 1100px) {
   aside {
     height: 45.85%;
-  }
-}
-
-@media (width < 1000px) {
-  aside {
-    --banner-image: url("/images/bg_m.avif");
   }
 }
 
@@ -240,21 +229,9 @@ aside::before {
   }
 }
 
-@media (width < 800px) {
-  aside {
-    --banner-image: url("/images/bg_s.avif");
-  }
-}
-
 @media (width < 750px) {
   aside {
     height: 30.85%;
-  }
-}
-
-@media (width < 600px) {
-  aside {
-    --banner-image: url("/images/bg_xs.avif");
   }
 }
 
