@@ -169,7 +169,7 @@ export default function ContactForm() {
             {status.type === "success" && countdownSeconds != null ? (
               <span aria-live="polite">
                 {t("redirecting_in")}
-                {`(${countdownSeconds}s)`}
+                {` (${countdownSeconds}s)`}
               </span>
             ) : null}
           </p>

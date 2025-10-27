@@ -107,6 +107,9 @@ div:has(.newsArchiveBlock) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: var(--space-2xs);
+    box-shadow: var(--offset-xs) var(--offset-xs) var(--offset-s)
+      hsl(from var(--color-shadow) h s l / 10%);
+    padding-block-end: var(--offset-s);
   }
 
   .newsArchiveBlock > :first-child {
@@ -117,6 +120,7 @@ div:has(.newsArchiveBlock) {
   .newsArchiveBlock article {
     grid-column: 1 / 6;
     grid-row: 3 / 5;
+    grid-template-rows: unset;
   }
 
   .newsArchiveBlock article p:first-of-type {
