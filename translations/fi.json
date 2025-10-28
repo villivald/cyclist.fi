@@ -84,7 +84,8 @@
     "submit_success": "Viestisi on lähetetty onnistuneesti.",
     "submit_error": "Jotain meni pieleen. Yritä myöhemmin uudelleen.",
     "submitting_button": "Lähetetään...",
-    "redirecting_in": " Uudelleenohjataan"
+    "redirecting_in": " Uudelleenohjataan",
+    "suggest_content_fab": "Ehdota sisältöä"
   },
   "Search": {
     "search": "Hae",

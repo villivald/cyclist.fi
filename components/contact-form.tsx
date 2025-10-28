@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useId, useState } from "react";
 
@@ -10,6 +10,7 @@ import styles from "@/styles/ContactForm.module.css";
 export default function ContactForm() {
   const t = useTranslations("ContactForm");
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("general");
@@ -38,6 +39,22 @@ export default function ContactForm() {
     },
     { value: "collaboration", label: t("subject_option_collaboration") },
   ];
+
+  const allowedSubjects = [
+    "general",
+    "bug",
+    "content_suggestion",
+    "collaboration",
+  ];
+
+  useEffect(() => {
+    const initialSubject = searchParams.get("subject");
+    if (initialSubject && allowedSubjects.includes(initialSubject)) {
+      setSubject(initialSubject);
+    }
+    // Only run on mount and when searchParams change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   const submitButtonDisabled = !emailRegex.test(email) || !message;
 
