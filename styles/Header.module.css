@@ -22,7 +22,7 @@
   text-shadow: 0.55rem 0 0 hsl(from var(--color-teal) h s l / 75%);
 }
 
-.headerContainer > div:last-child {
+.headerContainer > nav {
   --top-buttons-column-start: 7;
   --top-buttons-column-end: 13;
   --top-buttons-row-start: 1;
@@ -39,7 +39,7 @@
 }
 
 /* Theme & Menu buttons */
-.headerContainer > div:last-child button {
+.headerContainer > nav button {
   display: flex;
   align-items: center;
   gap: var(--space-2xs);
@@ -52,30 +52,30 @@
   text-transform: uppercase;
 }
 
-.headerContainer > div:last-child button:focus-visible {
+.headerContainer > nav button:focus-visible {
   outline: var(--focus-visible-wine);
   outline-offset: var(--outline-offset);
 }
 
-.headerContainer > div:last-child > button img {
+.headerContainer > nav > button img {
   transition: transform 0.5s ease-in-out;
 }
 
-.headerContainer > div:last-child > button:hover > img,
-.headerContainer > div:last-child > button:focus-visible > img {
+.headerContainer > nav > button:hover > img,
+.headerContainer > nav > button:focus-visible > img {
   transform: rotate(15deg);
 }
 
-.headerContainer > div:last-child div button:focus-visible {
+.headerContainer > nav div button:focus-visible {
   outline-offset: calc(var(--outline-offset) * -1);
 }
 
 @media (width > 2000px) {
-  .headerContainer > div:last-child {
+  .headerContainer > nav {
     --top-buttons-column-start: 7;
   }
 
-  .headerContainer > div:last-child button {
+  .headerContainer > nav button {
     font-size: var(--step-5);
   }
 }
@@ -87,7 +87,7 @@
 }
 
 @media (width < 1700px) {
-  .headerContainer > div:last-child {
+  .headerContainer > nav {
     --top-buttons-column-start: 5;
   }
 }
@@ -99,17 +99,17 @@
 }
 
 @media (width < 1400px) {
-  .headerContainer > div:last-child > button img {
+  .headerContainer > nav > button img {
     height: 2.25rem;
   }
 }
 
 @media (width < 1200px) {
-  .headerContainer > div:last-child {
+  .headerContainer > nav {
     --top-buttons-column-start: 5;
   }
 
-  .headerContainer > div:last-child button {
+  .headerContainer > nav button {
     font-size: var(--step-3);
   }
 }
@@ -122,12 +122,12 @@
 }
 
 @media (width < 1000px) {
-  .headerContainer > div:last-child > button img {
+  .headerContainer > nav > button img {
     height: 2rem;
     max-width: unset;
   }
 
-  .headerContainer > div:last-child button p {
+  .headerContainer > nav button p {
     position: absolute;
     overflow: hidden;
     clip-path: rect(0 0 0 0);
@@ -138,13 +138,13 @@
     border: 0;
   }
 
-  .headerContainer > div:last-child {
+  .headerContainer > nav {
     --top-buttons-column-start: 9;
   }
 }
 
 @media (width < 750px) {
-  .headerContainer > div:last-child {
+  .headerContainer > nav {
     --top-buttons-column-start: 7;
 
     display: grid;
@@ -164,7 +164,7 @@
     text-shadow: 0.275rem 0 0 hsl(from var(--color-teal) h s l / 75%);
   }
 
-  .headerContainer > div:last-child button img {
+  .headerContainer > nav button img {
     height: 1.875rem;
   }
 }

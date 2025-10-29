@@ -65,7 +65,8 @@
   "Menu": {
     "dropdown": "Valikko",
     "theme": "Ulkoasu",
-    "themeToggle": "Vaihda ulkoasu"
+    "themeToggle": "Vaihda ulkoasu",
+    "label": "Päänavigointi"
   },
   "ContactForm": {
     "name_field_label": "Nimi",

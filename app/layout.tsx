@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 
@@ -13,6 +14,13 @@ import SkipLinks from "@/components/skip-links";
 import Header from "@/components/top-menu/header";
 
 import ThemeProvider from "./providers";
+
+const satoshi = localFont({
+  src: "../public/fonts/Satoshi-Variable.woff2",
+  variable: "--font-sans",
+  display: "swap",
+  fallback: ["Helvetica Neue", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cyclist.fi"),
@@ -65,7 +73,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body>
+      <body className={satoshi.variable}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <SkipLinks />

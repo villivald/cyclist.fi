@@ -65,7 +65,8 @@
   "Menu": {
     "dropdown": "Menu",
     "theme": "Theme",
-    "themeToggle": "Toggle theme"
+    "themeToggle": "Toggle theme",
+    "label": "Main navigation"
   },
   "ContactForm": {
     "name_field_label": "Your name",

@@ -7,7 +7,7 @@ export default function HeroBanner() {
         src="/images/banner.avif"
         alt=""
         fill
-        preload
+        priority
         fetchPriority="high"
         decoding="async"
         sizes="100vw"
