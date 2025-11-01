@@ -98,6 +98,8 @@
     "closeSearch": "Close search",
     "loading": "Loading...",
     "searchFor": "Search for brands, routes, news and more",
-    "proposeLink": "Got an idea, feedback, or collaboration in mind? Let us know!"
+    "proposeLink": "Got an idea, feedback, or collaboration in mind? Let us know!",
+    "viewAll": "View all",
+    "quickPreview": "Content page preview"
   }
 }

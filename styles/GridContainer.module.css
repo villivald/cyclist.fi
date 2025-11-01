@@ -50,37 +50,37 @@
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(1), :nth-child(6), :nth-child(7)) {
+  li:is(:nth-of-type(1), :nth-of-type(6), :nth-of-type(7)) {
   background-color: var(--color-wheat);
 }
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+  li:is(:nth-of-type(3), :nth-of-type(5), :nth-of-type(9)) {
   background-color: var(--color-wine);
 }
 
 .gridContainer
   nav:first-of-type
-  li:is(:nth-child(2), :nth-child(4), :nth-child(8)) {
+  li:is(:nth-of-type(2), :nth-of-type(4), :nth-of-type(8)) {
   background-color: var(--color-teal);
 }
 
 .gridContainer
   nav:last-of-type
-  li:is(:nth-child(2), :nth-child(4), :nth-child(8)) {
+  li:is(:nth-of-type(2), :nth-of-type(4), :nth-of-type(8)) {
   background-color: var(--color-wheat);
 }
 
 .gridContainer
   nav:last-of-type
-  li:is(:nth-child(1), :nth-child(6), :nth-child(7)) {
+  li:is(:nth-of-type(1), :nth-of-type(6), :nth-of-type(7)) {
   background-color: var(--color-wine);
 }
 
 .gridContainer
   nav:last-of-type
-  li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+  li:is(:nth-of-type(3), :nth-of-type(5), :nth-of-type(9)) {
   background-color: var(--color-teal);
 }
 
@@ -102,12 +102,12 @@
 .gridContainer
   nav:first-of-type
   li:is(
-    :nth-child(2),
-    :nth-child(3),
-    :nth-child(4),
-    :nth-child(5),
-    :nth-child(8),
-    :nth-child(9)
+    :nth-of-type(2),
+    :nth-of-type(3),
+    :nth-of-type(4),
+    :nth-of-type(5),
+    :nth-of-type(8),
+    :nth-of-type(9)
   )
   a {
   color: var(--color-almost-white);
@@ -116,12 +116,12 @@
 .gridContainer
   nav:last-of-type
   li:is(
-    :nth-child(1),
-    :nth-child(3),
-    :nth-child(5),
-    :nth-child(6),
-    :nth-child(7),
-    :nth-child(9)
+    :nth-of-type(1),
+    :nth-of-type(3),
+    :nth-of-type(5),
+    :nth-of-type(6),
+    :nth-of-type(7),
+    :nth-of-type(9)
   )
   a {
   color: var(--color-almost-white);
@@ -146,7 +146,7 @@
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    li:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3)) {
     outline: calc(var(--outline-offset) * 2) solid var(--color-background);
   }
 }
@@ -186,57 +186,57 @@
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+    li:is(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3)) {
     outline: unset;
   }
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(2), :nth-child(4), :nth-child(7)) {
+    li:is(:nth-of-type(2), :nth-of-type(4), :nth-of-type(7)) {
     background-color: var(--color-wheat);
   }
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(2), :nth-child(4), :nth-child(7))
+    li:is(:nth-of-type(2), :nth-of-type(4), :nth-of-type(7))
     a {
     color: var(--color-black);
   }
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(1), :nth-child(6), :nth-child(8)) {
+    li:is(:nth-of-type(1), :nth-of-type(6), :nth-of-type(8)) {
     background-color: var(--color-wine);
   }
 
   .gridContainer
     nav:first-of-type
-    li:is(:nth-child(3), :nth-child(5), :nth-child(9)) {
+    li:is(:nth-of-type(3), :nth-of-type(5), :nth-of-type(9)) {
     background-color: var(--color-teal);
   }
 
   .gridContainer
     nav:last-of-type
-    li:is(:nth-child(1), :nth-child(4), :nth-child(8)) {
+    li:is(:nth-of-type(1), :nth-of-type(4), :nth-of-type(8)) {
     background-color: var(--color-wheat);
   }
 
   .gridContainer
     nav:last-of-type
-    li:is(:nth-child(1), :nth-child(4), :nth-child(8))
+    li:is(:nth-of-type(1), :nth-of-type(4), :nth-of-type(8))
     a {
     color: var(--color-black);
   }
 
   .gridContainer
     nav:last-of-type
-    li:is(:nth-child(2), :nth-child(5), :nth-child(7)) {
+    li:is(:nth-of-type(2), :nth-of-type(5), :nth-of-type(7)) {
     background-color: var(--color-wine);
   }
 
   .gridContainer
     nav:last-of-type
-    li:is(:nth-child(3), :nth-child(6), :nth-child(9)) {
+    li:is(:nth-of-type(3), :nth-of-type(6), :nth-of-type(9)) {
     background-color: var(--color-teal);
   }
 }

@@ -3,11 +3,12 @@ import { useTranslations } from "next-intl";
 import styles from "@/styles/GridContainer.module.css";
 
 import GridBlock from "./grid-block";
+import type { LinkItem } from "./types";
 
 export default function GridContainer() {
   const t = useTranslations("Pages");
 
-  const upperLinks = [
+  const upperLinks: LinkItem[] = [
     { title: t("apparel"), link: "/apparel" },
     { title: t("youtube"), link: "/youtube" },
     { title: t("magazines"), link: "/magazines" },
@@ -19,7 +20,7 @@ export default function GridContainer() {
     { title: t("tour"), link: "/tour" },
   ];
 
-  const lowerLinks = [
+  const lowerLinks: LinkItem[] = [
     { title: t("books"), link: "/books" },
     { title: t("community"), link: "/community" },
     { title: t("maintenance"), link: "/maintenance" },

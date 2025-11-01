@@ -98,6 +98,8 @@
     "closeSearch": "Sulje haku",
     "loading": "Ladataan...",
     "searchFor": "Hae brändejä, reittejä, uutisia ja muuta",
-    "proposeLink": "Idea, palaute tai yhteistyö mielessä? Kerro meille!"
+    "proposeLink": "Idea, palaute tai yhteistyö mielessä? Kerro meille!",
+    "viewAll": "Näytä kaikki",
+    "quickPreview": "Sivun esikatselu"
   }
 }

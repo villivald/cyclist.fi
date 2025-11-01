@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 
 import styles from "@/styles/PageComponent.module.css";
+import { createBrandfetchLoader } from "@/utils/brandfetch-loader";
+import { linkToDisplay } from "@/utils/link-to-display";
 
 import { DataRowProps } from "./types";
 
@@ -27,32 +29,9 @@ export default function DataRow({
         ? "(max-width: 875px) 100vw, (max-width: 1050px) 50vw, 33vw"
         : "100vw";
 
-  const linkToDisplay = item.link
-    .replace(/^https?:\/\//, "")
-    .replace(/^www\./, "")
-    .split("/")[0];
-
-  // Use a custom loader so Next.js <Image> generates Brandfetch URLs directly
-  // and bypasses the Next Image Optimization route (avoids 400s).
-  const brandfetchLoader = ({
-    src,
-    width,
-    quality,
-  }: {
-    src: string;
-    width: number;
-    quality?: number;
-  }) => {
-    // Special cases where the image is not found on Brandfetch.
-    if (localImage) return localImage;
-
-    const clientId = process.env.NEXT_PUBLIC_LOGO_API_KEY ?? "";
-    const base = "https://cdn.brandfetch.io";
-    const q = typeof quality === "number" ? quality : 75;
-    const tokenParam = clientId ? `?c=${clientId}&q=${q}` : `?q=${q}`;
-
-    return `${base}/${src}/w/${width}${tokenParam}`;
-  };
+  const brandfetchLoader = createBrandfetchLoader({
+    overrideSrc: localImage ?? undefined,
+  });
 
   return (
     <div className={rowClass} style={routeStyles}>
@@ -61,7 +40,7 @@ export default function DataRow({
           loader={brandfetchLoader}
           width={300}
           height={200}
-          src={linkToDisplay}
+          src={linkToDisplay(item.link)}
           alt={item.alt}
           className={styles.image}
           sizes={imageSizes}
@@ -93,7 +72,7 @@ export default function DataRow({
           className={styles.link}
           data-testid="content-link"
         >
-          <span>{linkToDisplay}</span>
+          <span>{linkToDisplay(item.link)}</span>
           <span aria-hidden="true">↗</span>
         </Link>
       </div>
