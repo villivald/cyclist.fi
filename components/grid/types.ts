@@ -17,4 +17,5 @@ export interface QuickViewModalProps {
   onClose: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  routeColorStyle?: React.CSSProperties;
 }

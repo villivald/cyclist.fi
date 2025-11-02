@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Activity, useEffect, useRef, useState } from "react";
 
 import type { PageComponentData } from "@/components/page-component/types";
+import { getRouteColor } from "@/utils/get-route-color";
 import { loadRouteData } from "@/utils/load-route-data";
 
 import QuickViewModal from "./quick-view-modal";
@@ -23,6 +24,11 @@ export default function GridItem({ link }: { link: LinkItem }) {
   const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const routeColor = getRouteColor(link.link.substring(1));
+  const routeColorStyle = {
+    "--routeColor": `var(--color-${routeColor})`,
+  } as React.CSSProperties;
 
   useEffect(() => {
     setViewWidth(window.innerWidth);
@@ -128,6 +134,7 @@ export default function GridItem({ link }: { link: LinkItem }) {
           }}
           onMouseEnter={handleModalMouseEnter}
           onMouseLeave={handleModalMouseLeave}
+          routeColorStyle={routeColorStyle}
         />
       </Activity>
     </>

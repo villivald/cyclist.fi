@@ -18,6 +18,7 @@ export default function QuickViewModal({
   linkElement,
   onMouseEnter,
   onMouseLeave,
+  routeColorStyle,
 }: QuickViewModalProps) {
   const locale = useLocale();
   const t = useTranslations("Search");
@@ -174,6 +175,12 @@ export default function QuickViewModal({
 
   const previewItems = items.slice(0, 4);
 
+  const positionStyle = {
+    top: `${position?.top}px`,
+    left: `${position?.left}px`,
+    visibility: position ? ("visible" as const) : ("hidden" as const),
+  };
+
   return (
     <div
       ref={modalRef}
@@ -185,15 +192,10 @@ export default function QuickViewModal({
       onMouseLeave={onMouseLeave}
       onFocus={onMouseEnter}
       onBlur={onMouseLeave}
-      style={
-        position
-          ? {
-              top: `${position.top}px`,
-              left: `${position.left}px`,
-              visibility: "visible",
-            }
-          : { visibility: "hidden" }
-      }
+      style={{
+        ...routeColorStyle,
+        ...positionStyle,
+      }}
     >
       <section className={styles.content}>
         {previewItems.map((item) => {
