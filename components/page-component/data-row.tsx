@@ -8,6 +8,7 @@ import styles from "@/styles/PageComponent.module.css";
 import { createBrandfetchLoader } from "@/utils/brandfetch-loader";
 import { linkToDisplay } from "@/utils/link-to-display";
 
+import ShareButton from "./share-button";
 import { DataRowProps } from "./types";
 
 export default function DataRow({
@@ -34,7 +35,7 @@ export default function DataRow({
   });
 
   return (
-    <div className={rowClass} style={routeStyles}>
+    <div className={rowClass} style={routeStyles} id={item.id}>
       <div className={styles.imageContainer}>
         <Image
           loader={brandfetchLoader}
@@ -76,6 +77,8 @@ export default function DataRow({
           <span aria-hidden="true">↗</span>
         </Link>
       </div>
+
+      <ShareButton title={item.title} />
     </div>
   );
 }

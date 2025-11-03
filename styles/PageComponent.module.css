@@ -45,6 +45,7 @@
 
 /* Data row styles */
 .dataRow {
+  position: relative;
   display: grid;
   grid-template-columns: 300px auto; /* Default for list layout */
   gap: var(--space-s);
@@ -171,6 +172,80 @@
 
   & > span:last-of-type {
     font-size: var(--step--05);
+  }
+}
+
+/* Share button */
+.shareContainer {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+}
+
+.shareButton {
+  width: 2rem;
+  height: 2rem;
+  background: hsl(from var(--color-background) h s l / 90%);
+  backdrop-filter: blur(4px);
+  border: 0.125rem solid var(--shadow-color);
+  cursor: pointer;
+  transition: all 0.2s var(--easing-normal);
+  border-radius: 50%;
+  box-shadow: var(--space-4xs) var(--space-4xs) var(--shadow-color);
+}
+
+.shareButton:hover {
+  color: var(--color-teal);
+  background: hsl(from var(--color-teal) h s l / 10%);
+  border-color: var(--color-teal);
+  transform: scale(1.05);
+}
+
+.shareButton:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+  opacity: 1;
+}
+
+.shareMenu {
+  position: fixed;
+  background: var(--color-background);
+  border: 0.125rem solid var(--shadow-color);
+  box-shadow: var(--space-4xs) var(--space-4xs) var(--shadow-color);
+  border-radius: var(--space-2xs);
+  z-index: 10;
+  overflow: hidden;
+
+  & > button {
+    display: flex;
+    width: 100%;
+    padding: var(--space-xs) var(--space-s);
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: var(--step--1);
+    transition: background-color 0.2s var(--easing-normal);
+  }
+
+  & > button:hover {
+    background: hsl(from var(--color-teal) h s l / 10%);
+    color: var(--color-teal);
+  }
+
+  & > button:focus-visible {
+    outline: var(--focus-visible-teal);
+    outline-offset: calc(-1 * var(--outline-offset));
+  }
+
+  & > button:first-child {
+    border-top-left-radius: var(--space-2xs);
+    border-top-right-radius: var(--space-2xs);
+  }
+
+  & > button:last-child {
+    border-bottom-left-radius: var(--space-2xs);
+    border-bottom-right-radius: var(--space-2xs);
   }
 }
 

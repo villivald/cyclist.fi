@@ -14,7 +14,14 @@
     "skipLinks_label": "Linkit: pääsisältö ja yhteystiedot",
     "skipLinks_mainContent": "Siirry pääsisältöön",
     "skipLinks_contacts": "Siirry yhteystietoihin",
-    "new": "Uusi"
+    "new": "Uusi",
+    "share": "Jaa",
+    "shareOptions": "Jakovaihtoehdot",
+    "copyLink": "Kopioi linkki",
+    "copied": "Kopioitu!",
+    "shareOnTwitter": "Jaa Twitterissa",
+    "shareOnFacebook": "Jaa Facebookissa",
+    "shareOnLinkedIn": "Jaa LinkedInissä"
   },
   "Pages": {
     "apparel": "Vaatteet",

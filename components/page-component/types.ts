@@ -26,3 +26,8 @@ export interface DataRowProps {
   showNew?: boolean;
   localImage?: string;
 }
+
+export interface MenuPosition {
+  top: number;
+  left: number;
+}
