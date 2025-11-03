@@ -185,26 +185,28 @@
 .shareButton {
   width: 2rem;
   height: 2rem;
-  background: hsl(from var(--color-background) h s l / 90%);
+  background: var(--color-almost-white);
   backdrop-filter: blur(4px);
-  border: 0.125rem solid var(--shadow-color);
+  border: 0.125rem solid hsl(from var(--shadow-color) h s l / 30%);
   cursor: pointer;
   transition: all 0.2s var(--easing-normal);
   border-radius: 50%;
-  box-shadow: var(--space-4xs) var(--space-4xs) var(--shadow-color);
+  box-shadow: 0.125rem 0.125rem hsl(from var(--shadow-color) h s l / 30%);
 }
 
 .shareButton:hover {
-  color: var(--color-teal);
-  background: hsl(from var(--color-teal) h s l / 10%);
-  border-color: var(--color-teal);
+  background: color-mix(
+    in hsl,
+    var(--color-almost-white) 85%,
+    var(--routeColor) 15%
+  );
+  border-color: var(--routeColor);
   transform: scale(1.05);
 }
 
 .shareButton:focus-visible {
   outline: var(--focus-visible-wine);
   outline-offset: var(--outline-offset);
-  opacity: 1;
 }
 
 .shareMenu {

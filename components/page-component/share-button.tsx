@@ -1,19 +1,61 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
-import {
-  useCallback,
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import type { Dispatch, RefObject, SetStateAction } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 import styles from "@/styles/PageComponent.module.css";
 
 import type { MenuPosition } from "./types";
+
+function computeMenuPosition(
+  buttonRect: DOMRect,
+  menuWidth: number,
+  menuHeight: number,
+  viewportWidth: number,
+): MenuPosition {
+  const gap = 8;
+  const viewportPadding = 8;
+
+  const topAbove = buttonRect.top - menuHeight - gap;
+  const topBelow = buttonRect.bottom + gap;
+  const canPlaceAbove = topAbove >= viewportPadding;
+  const top = canPlaceAbove ? topAbove : topBelow;
+
+  const desiredLeft = buttonRect.right - menuWidth;
+  const minLeft = viewportPadding;
+  const maxLeft = viewportWidth - menuWidth - viewportPadding;
+  const left = Math.min(Math.max(desiredLeft, minLeft), maxLeft);
+
+  return { top, left };
+}
+
+function recomputePositionFromRefs(
+  buttonRef: RefObject<HTMLButtonElement | null>,
+  menuRef: RefObject<HTMLDivElement | null>,
+  setMenuPosition: Dispatch<SetStateAction<MenuPosition | null>>,
+): void {
+  if (!menuRef.current || !buttonRef.current) return;
+  const buttonRect = buttonRef.current.getBoundingClientRect();
+  const menuElement = menuRef.current;
+
+  const menuWidth = menuElement.offsetWidth;
+  const menuHeight = menuElement.offsetHeight;
+
+  const { top, left } = computeMenuPosition(
+    buttonRect,
+    menuWidth,
+    menuHeight,
+    window.innerWidth,
+  );
+
+  setMenuPosition((prev) => {
+    if (prev && prev.top === top && prev.left === left) return prev;
+    return { top, left };
+  });
+}
 
 export default function ShareButton({ title }: { title: string }) {
   const [copied, setCopied] = useState(false);
@@ -32,12 +74,12 @@ export default function ShareButton({ title }: { title: string }) {
   // Construct share URL pointing to cyclist.fi page with item anchor
   const shareUrl = `https://cyclist.fi${pathname}#:~:text=${title}`;
 
-  const closeMenu = useCallback(() => {
+  const closeMenu = () => {
     setIsOpen(false);
     setMenuPosition(null);
-  }, []);
+  };
 
-  const handleCopyLink = useCallback(async () => {
+  const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
@@ -48,74 +90,47 @@ export default function ShareButton({ title }: { title: string }) {
     } catch (err) {
       console.error(err);
     }
-  }, [shareUrl, closeMenu]);
+  };
 
-  const handleShare = useCallback(
-    (platform: "twitter" | "facebook" | "linkedin") => {
-      let shareUrlPlatform = "";
+  const handleShare = (platform: "twitter" | "facebook" | "linkedin") => {
+    let shareUrlPlatform = "";
 
-      switch (platform) {
-        case "twitter":
-          shareUrlPlatform = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`;
-          break;
-        case "facebook":
-          shareUrlPlatform = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
-          break;
-        case "linkedin":
-          shareUrlPlatform = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
-          break;
-      }
+    switch (platform) {
+      case "twitter":
+        shareUrlPlatform = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`;
+        break;
+      case "facebook":
+        shareUrlPlatform = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+        break;
+      case "linkedin":
+        shareUrlPlatform = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+        break;
+    }
 
-      window.open(shareUrlPlatform, "_blank", "noopener,noreferrer");
-      closeMenu();
-    },
-    [shareUrl, title, closeMenu],
-  );
+    window.open(shareUrlPlatform, "_blank", "noopener,noreferrer");
+    closeMenu();
+  };
 
-  const computeAndSetMenuPosition = useCallback(() => {
-    if (!menuRef.current || !buttonRef.current) return;
-    const buttonRect = buttonRef.current.getBoundingClientRect();
-    const menuElement = menuRef.current;
-
-    const menuWidth = menuElement.offsetWidth;
-    const menuHeight = menuElement.offsetHeight;
-
-    // Prefer above the button, otherwise place below
-    const gap = 8;
-    const topAbove = buttonRect.top - menuHeight - gap;
-    const topBelow = buttonRect.bottom + gap;
-    const viewportPadding = 8;
-    const canPlaceAbove = topAbove >= viewportPadding;
-    const top = canPlaceAbove ? topAbove : topBelow;
-
-    // Align menu's right edge with button's right edge, clamped to viewport
-    const desiredLeft = buttonRect.right - menuWidth;
-    const minLeft = viewportPadding;
-    const maxLeft = window.innerWidth - menuWidth - viewportPadding;
-    const left = Math.min(Math.max(desiredLeft, minLeft), maxLeft);
-
-    setMenuPosition((prev) => {
-      if (prev && prev.top === top && prev.left === left) return prev;
-      return { top, left };
-    });
-  }, []);
-
-  const handleButtonClick = useCallback(() => {
+  const handleButtonClick = () => {
     setIsOpen((prev) => !prev);
-  }, []);
+  };
 
   // Position the menu when opened and on resize/scroll
   useLayoutEffect(() => {
     if (!isOpen) return;
-    computeAndSetMenuPosition();
+    recomputePositionFromRefs(buttonRef, menuRef, setMenuPosition);
     // Reposition on next frame in case fonts/styles change size
-    const raf = requestAnimationFrame(computeAndSetMenuPosition);
+    const raf = requestAnimationFrame(() =>
+      recomputePositionFromRefs(buttonRef, menuRef, setMenuPosition),
+    );
     return () => cancelAnimationFrame(raf);
-  }, [isOpen, computeAndSetMenuPosition]);
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
-    const handleWindowEvents = () => computeAndSetMenuPosition();
+
+    const handleWindowEvents = () =>
+      recomputePositionFromRefs(buttonRef, menuRef, setMenuPosition);
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.stopPropagation();
@@ -145,7 +160,13 @@ export default function ShareButton({ title }: { title: string }) {
       window.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handlePointerDown);
     };
-  }, [isOpen, computeAndSetMenuPosition, closeMenu]);
+  }, [isOpen]);
+
+  const positionStyle = {
+    top: `${menuPosition?.top}px`,
+    left: `${menuPosition?.left}px`,
+    visibility: menuPosition ? ("visible" as const) : ("hidden" as const),
+  };
 
   return (
     <div className={styles.shareContainer}>
@@ -160,7 +181,13 @@ export default function ShareButton({ title }: { title: string }) {
         aria-expanded={isOpen}
         aria-controls={popoverId}
       >
-        <span aria-hidden="true">↗</span>
+        <Image
+          src="/icons/share.svg"
+          alt=""
+          aria-hidden="true"
+          width={20}
+          height={20}
+        />
       </button>
 
       {isOpen && (
@@ -170,11 +197,7 @@ export default function ShareButton({ title }: { title: string }) {
           className={styles.shareMenu}
           role="menu"
           aria-label={t("shareOptions")}
-          style={
-            menuPosition
-              ? { top: `${menuPosition.top}px`, left: `${menuPosition.left}px` }
-              : { visibility: "hidden" }
-          }
+          style={{ ...positionStyle }}
         >
           <button type="button" role="menuitem" onClick={handleCopyLink}>
             {copied ? t("copied") : t("copyLink")}
