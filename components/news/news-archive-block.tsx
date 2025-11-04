@@ -24,6 +24,9 @@ export default async function NewsArchiveBlock({
           src={`/images/news/${id}.avif`}
           alt=""
           sizes="(max-width: 500px) 100vw, 25vw"
+          placeholder="blur"
+          // blur data generated from https://png-pixel.com/
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkaGioBwADCQGBFoVLOAAAAABJRU5ErkJggg=="
         />
       </div>
       <article>

@@ -27,6 +27,9 @@ export default async function NewsBlock({
           src={`/images/news/${id}.avif`}
           alt=""
           sizes="(max-width: 900px) 25vw, (max-width: 1600px) 33vw, 20vw"
+          placeholder="blur"
+          // blur data generated from https://png-pixel.com/
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkaGioBwADCQGBFoVLOAAAAABJRU5ErkJggg=="
         />
       </div>
       <Linkify>{textToRender}</Linkify>

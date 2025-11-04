@@ -45,6 +45,9 @@ export default function DataRow({
           alt={item.alt}
           className={styles.image}
           sizes={imageSizes}
+          placeholder="blur"
+          // blur data generated from https://png-pixel.com/
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkaGioBwADCQGBFoVLOAAAAABJRU5ErkJggg=="
         />
         {showNew && item.new && (
           <span className={styles.newBadge}>{t("new")}</span>
