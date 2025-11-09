@@ -22,6 +22,8 @@ export default function ContactForm() {
     message: string;
   } | null>(null);
   const [countdownSeconds, setCountdownSeconds] = useState<number | null>(null);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [messageError, setMessageError] = useState<string | null>(null);
 
   const id = useId();
   const emailPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}";
@@ -56,23 +58,49 @@ export default function ContactForm() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
-  const submitButtonDisabled = !emailRegex.test(email) || !message;
+  const validateEmail = (value: string) => {
+    const normalizedValue = value.trim();
+    if (!normalizedValue) return t("email_error_required");
+    if (!emailRegex.test(normalizedValue)) return t("email_error_invalid");
+    return null;
+  };
+
+  const validateMessage = (value: string) => {
+    if (!value.trim()) return t("message_error_required");
+    return null;
+  };
+
+  const emailErrorId = `email-error-${id}`;
+  const messageErrorId = `message-error-${id}`;
+
+  const trimmedMessage = message.trim();
+  const submitButtonDisabled =
+    !emailRegex.test(email.trim()) || trimmedMessage.length === 0;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (submitButtonDisabled || isSubmitting) return;
 
+    const nextEmailError = validateEmail(email);
+    const nextMessageError = validateMessage(message);
+
+    setEmailError(nextEmailError);
+    setMessageError(nextMessageError);
+
+    if (nextEmailError || nextMessageError) return;
+
     setIsSubmitting(true);
     setStatus(null);
 
     try {
+      const normalizedEmail = email.trim();
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          message,
-          fromEmail: email,
+          message: trimmedMessage,
+          fromEmail: normalizedEmail,
           name,
           subject: t(`subject_option_${subject}`),
         }),
@@ -90,12 +118,25 @@ export default function ContactForm() {
       setName("");
       setSubject("general");
       setMessage("");
+      setEmailError(null);
+      setMessageError(null);
     } catch (err) {
       console.error(err);
       setStatus({ type: "error", message: t("submit_error") });
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleChangeValidatableField = (
+    value: string,
+    error: string | null,
+    setValue: (value: string) => void,
+    setError: (error: string | null) => void,
+    validate: (value: string) => string | null,
+  ) => {
+    setValue(value);
+    if (error) setError(validate(value));
   };
 
   useEffect(() => {
@@ -125,11 +166,27 @@ export default function ContactForm() {
             autoComplete="email"
             value={email}
             placeholder={t("email_field_placeholder")}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) =>
+              handleChangeValidatableField(
+                e.target.value,
+                emailError,
+                setEmail,
+                setEmailError,
+                validateEmail,
+              )
+            }
+            onBlur={(e) => setEmailError(validateEmail(e.target.value))}
             id={`email-${id}`}
             required
-            aria-invalid={email.length > 0 && !emailRegex.test(email)}
+            aria-invalid={emailError != null}
+            aria-describedby={emailError ? emailErrorId : undefined}
           />
+          {emailError ? (
+            <p id={emailErrorId} className={styles.errorMessage} role="alert">
+              <Image src={"/icons/warning.svg"} alt="" width={24} height={24} />
+              {emailError}
+            </p>
+          ) : null}
         </div>
         <div>
           <label htmlFor={`subject-${id}`}>{t("subject_field_label")}</label>
@@ -161,11 +218,28 @@ export default function ContactForm() {
           <textarea
             value={message}
             placeholder={t("message_field_placeholder")}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) =>
+              handleChangeValidatableField(
+                e.target.value,
+                messageError,
+                setMessage,
+                setMessageError,
+                validateMessage,
+              )
+            }
+            onBlur={(e) => setMessageError(validateMessage(e.target.value))}
             rows={5}
             id={`message-${id}`}
             required
+            aria-invalid={messageError != null}
+            aria-describedby={messageError ? messageErrorId : undefined}
           />
+          {messageError ? (
+            <p id={messageErrorId} className={styles.errorMessage} role="alert">
+              <Image src={"/icons/warning.svg"} alt="" width={24} height={24} />
+              {messageError}
+            </p>
+          ) : null}
         </div>
         {status?.message ? (
           <p role={status.type === "error" ? "alert" : undefined}>
