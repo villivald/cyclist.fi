@@ -23,6 +23,7 @@
       "@/utils/*": ["utils/*"],
       "@/styles/*": ["styles/*"],
       "@/data/*": ["data/*"],
+      "@/services/*": ["services/*"],
       "i18n/*": ["i18n/*"]
     },
     "target": "ES2017",

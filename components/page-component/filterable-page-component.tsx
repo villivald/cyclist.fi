@@ -24,7 +24,7 @@ function itemMatchesQuery(item: PageComponentData, query: string): boolean {
 }
 
 export default function FilterablePageComponent(props: PageComponentProps) {
-  const { data, routeStyles } = props;
+  const { data, routeStyles, commentNamespace } = props;
 
   const tSearch = useTranslations("Search");
 
@@ -78,7 +78,11 @@ export default function FilterablePageComponent(props: PageComponentProps) {
         </p>
       </form>
 
-      <PageComponent {...props} data={filteredData} />
+      <PageComponent
+        {...props}
+        data={filteredData}
+        commentNamespace={commentNamespace}
+      />
     </div>
   );
 }

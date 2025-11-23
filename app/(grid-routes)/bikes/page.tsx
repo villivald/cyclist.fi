@@ -27,6 +27,7 @@ export default function bikes() {
         layout="grid"
         showTags={true}
         showNew={true}
+        commentNamespace={ROUTE_NAME}
       />
     </div>
   );

@@ -12,6 +12,7 @@ export default function PageComponent({
   layout = "list",
   showTags = false,
   showNew = false,
+  commentNamespace,
 }: PageComponentProps) {
   const t = useTranslations("Search");
 
@@ -32,6 +33,7 @@ export default function PageComponent({
             localImage={item.image}
             showTags={showTags}
             showNew={showNew}
+            commentNamespace={commentNamespace}
           />
         ))}
       </div>

@@ -27,6 +27,7 @@ export default function podcasts() {
         layout="list"
         showTags={true}
         showNew={true}
+        commentNamespace={ROUTE_NAME}
       />
     </div>
   );

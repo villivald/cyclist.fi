@@ -3,7 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 
+import { CommentThread } from "@/components/comments/comment-thread";
+import { useCommentDeviceId } from "@/components/comments/use-comment-device-id";
 import styles from "@/styles/PageComponent.module.css";
 import { createBrandfetchLoader } from "@/utils/brandfetch-loader";
 import { linkToDisplay } from "@/utils/link-to-display";
@@ -18,9 +21,21 @@ export default function DataRow({
   showTags = false,
   showNew = false,
   localImage,
+  commentNamespace,
 }: DataRowProps) {
   const locale = useLocale();
   const t = useTranslations("Common");
+  const tComments = useTranslations("Comments");
+  const deviceId = useCommentDeviceId();
+
+  const [commentsOpen, setCommentsOpen] = useState(false);
+  const [hasLoadedComments, setHasLoadedComments] = useState(false);
+
+  useEffect(() => {
+    if (commentsOpen) {
+      setHasLoadedComments(true);
+    }
+  }, [commentsOpen]);
 
   const rowClass = `${styles.dataRow} ${styles[`layout-${layout}`]}`;
   const imageSizes =
@@ -79,7 +94,34 @@ export default function DataRow({
           <span>{linkToDisplay(item.link)}</span>
           <span aria-hidden="true">↗</span>
         </Link>
+
+        <button
+          type="button"
+          className={styles.commentToggle}
+          aria-expanded={commentsOpen}
+          onClick={() => setCommentsOpen((prev) => !prev)}
+        >
+          {commentsOpen ? tComments("hide") : tComments("show")}
+        </button>
       </div>
+
+      <section aria-label={tComments("title")} className={styles.comments}>
+        <div
+          className={styles.threadWrapper}
+          data-open={commentsOpen}
+          aria-hidden={!commentsOpen}
+        >
+          <div className={styles.threadInner}>
+            {(commentsOpen || hasLoadedComments) && (
+              <CommentThread
+                slug={`${commentNamespace ?? "content"}/${item.id}`}
+                enabled={commentsOpen}
+                deviceId={deviceId}
+              />
+            )}
+          </div>
+        </div>
+      </section>
 
       <ShareButton title={item.title} />
     </div>

@@ -31,6 +31,7 @@
 .layout-grid {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--space-l);
+  align-items: start;
 }
 
 .layout-masonry {
@@ -58,11 +59,6 @@
 
 .dataRow:hover {
   box-shadow: var(--space-3xs) var(--space-3xs) var(--shadow-color);
-}
-
-.dataRow.layout-grid {
-  grid-template-columns: 1fr;
-  text-align: center;
 }
 
 .dataRow.layout-masonry {
@@ -129,6 +125,66 @@
   font-size: var(--step-0);
   line-height: 1.6;
   color: var(--color-text);
+}
+
+.dataRow.layout-grid {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  align-content: stretch;
+  height: 100%;
+}
+
+.dataRow.layout-grid .imageContainer {
+  width: 100%;
+}
+
+.dataRow.layout-grid .content {
+  width: 100%;
+  flex: 1;
+}
+
+.comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.commentToggle {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: var(--space-2xs) var(--space-s);
+  border-radius: 999px;
+  border: 1px solid var(--shadow-color);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s var(--easing-normal);
+}
+
+.commentToggle:hover,
+.commentToggle:focus-visible {
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+  box-shadow: var(--space-4xs) var(--space-4xs)
+    color-mix(in hsl, var(--color-teal) 20%, black);
+}
+
+.threadWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--easing-normal);
+
+  &[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+}
+
+.threadInner {
+  overflow: hidden;
 }
 
 /* Tags */

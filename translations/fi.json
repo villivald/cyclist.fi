@@ -111,5 +111,23 @@
     "proposeLink": "Idea, palaute tai yhteistyö mielessä? Kerro meille!",
     "viewAll": "Näytä kaikki",
     "quickPreview": "Sivun esikatselu"
+  },
+  "Comments": {
+    "title": "Kommentit",
+    "show": "Näytä kommentit",
+    "hide": "Piilota kommentit",
+    "empty": "Ei kommentteja vielä. Ole ensimmäinen ja kerro mielipiteesi.",
+    "placeholder": "Mitä mieltä olet?",
+    "nameLabel": "Nimimerkki (valinnainen)",
+    "urlLabel": "Verkkosivu tai profiili (valinnainen)",
+    "submit": "Lähetä kommentti",
+    "submitting": "Lähetetään...",
+    "error": "Jotain meni pieleen. Yritä uudelleen.",
+    "rateLimited": "Kommentoit liian nopeasti. Yritä uudelleen {seconds} sekunnin kuluttua.",
+    "posted": "Kommentti lähetetty",
+    "refresh": "Päivitä ketju",
+    "loading": "Ladataan kommentteja…",
+    "loadError": "Kommenttien lataaminen epäonnistui. Yritä uudelleen.",
+    "missingDevice": "Laitetunnistetta ei voitu luoda. Lataa sivu uudelleen."
   }
 }

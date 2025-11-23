@@ -27,6 +27,7 @@ export default function training() {
         layout="grid"
         showTags={true}
         showNew={true}
+        commentNamespace={ROUTE_NAME}
       />
     </div>
   );

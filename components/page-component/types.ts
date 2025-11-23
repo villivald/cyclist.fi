@@ -16,6 +16,7 @@ export interface PageComponentProps {
   layout?: "grid" | "list" | "masonry";
   showTags?: boolean;
   showNew?: boolean;
+  commentNamespace?: string;
 }
 
 export interface DataRowProps {
@@ -25,6 +26,7 @@ export interface DataRowProps {
   showTags?: boolean;
   showNew?: boolean;
   localImage?: string;
+  commentNamespace?: string;
 }
 
 export interface MenuPosition {

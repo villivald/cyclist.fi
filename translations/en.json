@@ -111,5 +111,23 @@
     "proposeLink": "Got an idea, feedback, or collaboration in mind? Let us know!",
     "viewAll": "View all",
     "quickPreview": "Content page preview"
+  },
+  "Comments": {
+    "title": "Comments",
+    "show": "Show comments",
+    "hide": "Hide comments",
+    "empty": "No comments yet. Be the first to share your thoughts.",
+    "placeholder": "What do you think?",
+    "nameLabel": "Display name (optional)",
+    "urlLabel": "Website or profile URL (optional)",
+    "submit": "Post comment",
+    "submitting": "Posting...",
+    "error": "Something went wrong. Please try again.",
+    "rateLimited": "You are commenting too quickly. Try again in {seconds} seconds.",
+    "posted": "Comment posted",
+    "refresh": "Refresh thread",
+    "loading": "Loading comments…",
+    "loadError": "We couldn't load comments. Please try again.",
+    "missingDevice": "We couldn’t initialise your device. Reload the page and try again."
   }
 }
