@@ -12,10 +12,11 @@ const paramsSchema = z.object({
 
 export async function GET(
   _request: Request,
-  context: { params: Record<string, string> },
+  context: { params: Promise<{ slug: string }> },
 ) {
   try {
-    const { slug } = paramsSchema.parse(await context.params);
+    const params = await context.params;
+    const { slug } = paramsSchema.parse(params);
     const thread = await commentService.fetchThread(slug);
 
     return NextResponse.json(
