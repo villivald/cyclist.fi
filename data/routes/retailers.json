@@ -1,5 +1,15 @@
 [
   {
+    "id": "bikable",
+    "title": "Bikable",
+    "description_en": "Provides extensive cycling gear: clothing, parts, tools, and accessories for all seasons. Offerings include popular brands and budget-friendly options. ",
+    "description_fi": "Tarjoaa laajan valikoiman pyöräilyvarusteita: vaatteita, osia, työkaluja ja tarvikkeita kaikkiin vuodenaikoihin. Valikoimassa suosittuja merkkejä ja edullisia vaihtoehtoja.",
+    "link": "https://bikable.com/",
+    "alt": "Bikable retailer",
+    "tags": ["Retailer", "Cycling", "Danish"],
+    "new": true
+  },
+  {
     "id": "bike24",
     "title": "BIKE24",
     "description_en": "European online retailer for bikes, components, and accessories with wide brand coverage. Offers international shipping and detailed product filters.",

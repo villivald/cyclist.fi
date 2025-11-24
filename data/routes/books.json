@@ -1,5 +1,16 @@
 [
   {
+    "id": "cycling-atlas-europe",
+    "title": "Cycling Atlas Europe",
+    "description_en": "The guide features 350 of the most beautiful and scenic cycling routes all over Europe, carefully curated for cyclists of every level and ability.",
+    "description_fi": "Opas esittelee 350 Euroopan kauneinta ja maisemallisesti vaikuttavinta pyöräilyreittiä, jotka on huolellisesti valittu eri tasoisille pyöräilijöille.",
+    "image": "/images/books/atlas.avif",
+    "link": "https://www.amazon.com/Cycling-Atlas-Europe-Beautiful-Routes/dp/0789339536",
+    "alt": "Cycling Atlas Europe book",
+    "tags": ["Routes", "Europe", "Travel"],
+    "new": true
+  },
+  {
     "id": "pyorailyn-lumo",
     "title": "Pyöräilyn lumo ja sen historia",
     "description_en": "Finnish-language book celebrating the joy of cycling, through the history and culture.",
@@ -7,7 +18,7 @@
     "image": "/images/books/lumo.avif",
     "link": "https://aulakustannus.fi/kirjat/pyorailyn-lumo-ja-sen-historia",
     "alt": "Pyöräilyn lumo ja sen historia book",
-    "tags": ["Finnish", "Inspiration", "Guide"]
+    "tags": ["Finnish", "Inspiration", "History"]
   },
   {
     "id": "the-road-book",

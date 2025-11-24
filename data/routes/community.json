@@ -1,5 +1,15 @@
 [
   {
+    "id": "pyoraliitto",
+    "title": "Pyöräliitto",
+    "description_en": "The Finnish Cycling Union is an advocacy organization promoting cycling as a sustainable and safe mode of transportation.",
+    "description_fi": "Pyöräliitto on pyöräliikenteen etujärjestö, joka edistää pyöräilyä kestävänä ja turvallisena liikkumismuotona.",
+    "link": "https://pyoraliitto.fi/",
+    "alt": "Pyöräliitto",
+    "tags": ["Finnish", "Advocacy", "Unit"],
+    "new": true
+  },
+  {
     "id": "zwift-insider",
     "title": "Zwift Insider",
     "description_en": "Independent site covering Zwift with news, route details, tips, and equipment testing. Includes community resources and platform updates.",
