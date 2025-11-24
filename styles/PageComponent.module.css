@@ -185,6 +185,7 @@
 
 .threadInner {
   overflow: hidden;
+  container: card / inline-size;
 }
 
 /* Tags */
