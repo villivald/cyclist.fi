@@ -1,5 +1,15 @@
 [
   {
+    "id": "tour-de-france-femmes",
+    "title": "Tour de France Femmes",
+    "description_en": "The women's version of the annual Grand Tour stage race in France.",
+    "description_fi": "Naisten versio vuosittaisesta Grand Tour -etappikilpailusta Ranskassa.",
+    "link": "https://www.letourfemmes.fr/",
+    "alt": "Tour de France Femmes",
+    "tags": ["Grand Tour", "France", "Women"],
+    "new": true
+  },
+  {
     "id": "tour-de-france",
     "title": "Tour de France",
     "description_en": "The sport’s biggest Grand Tour, three weeks in July across France and beyond.",

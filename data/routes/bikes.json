@@ -1,5 +1,26 @@
 [
   {
+    "id": "merida",
+    "title": "Merida",
+    "description_en": "Taiwanese brand offering a wide range of road, mountain and e-bikes known for quality and value.",
+    "description_fi": "Taiwanilainen merkki, joka tarjoaa laajan valikoiman tie-, maasto- ja sähköpyöriä – tunnettu laadusta ja hinta–laatusuhteesta.",
+    "link": "https://www.merida-bikes.com/",
+    "alt": "Merida bicycles",
+    "tags": ["Taiwanese", "Road", "MTB"],
+    "new": true
+  },
+  {
+    "id": "ridley",
+    "title": "Ridley",
+    "description_en": "Belgian brand renowned for its racing heritage and high-performance road bikes.",
+    "description_fi": "Belgialainen merkki, joka on tunnettu kilpataustastaan ja suorituskykyisistä maantiepyöristään.",
+    "image": "/images/bikes/ridley.avif",
+    "link": "https://www.ridley-bikes.com/",
+    "alt": "Ridley bicycles",
+    "tags": ["Belgian", "Road", "Racing"],
+    "new": true
+  },
+  {
     "id": "canyon",
     "title": "Canyon",
     "description_en": "German direct-to-consumer brand delivering performance road, gravel and MTB bikes online worldwide.",
