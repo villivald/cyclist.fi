@@ -17,8 +17,6 @@ export default async function NewsBlock({
 
   const text = locale === "fi" ? text_fi : text_en;
 
-  const textToRender = text.length > 125 ? text.slice(0, 120) + " ..." : text;
-
   return (
     <section className={styles.newsBlock}>
       <div aria-hidden="true">
@@ -32,7 +30,7 @@ export default async function NewsBlock({
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkaGioBwADCQGBFoVLOAAAAABJRU5ErkJggg=="
         />
       </div>
-      <Linkify>{textToRender}</Linkify>
+      <Linkify className={styles.newsText}>{text}</Linkify>
       <Link href="/news">{date}</Link>
     </section>
   );

@@ -1,5 +1,11 @@
 [
   {
+    "id": "9",
+    "text_en": "Some new content has been added to several sections: {{books}}, {{community}}, {{retailers}}, {{bikes}}, {{tour}}. Stay tuned for more updates, as we will try to add more content to the site continuously.",
+    "text_fi": "Uutta sisältöä on lisätty useisiin osiin: {{kirjat/books}}, {{yhteisö/community}}, {{kaupat/retailers}}, {{pyörät/bikes}} ja {{tour/tour}}. Pysy kuulolla saadaksesi lisätietoja, sillä yritämme tuoda lisää sisältöä sivustoon jatkuvasti.",
+    "date": "03.12.2025"
+  },
+  {
     "id": "8",
     "text_en": "A few additional features have been added recently: the ability to share content on social media, a page content preview on hover (main page), and a brand-new comments section below each entry.",
     "text_fi": "Muutamia lisäominaisuuksia on lisätty viime aikoina: sisällön jakaminen sosiaalisessa mediassa, sivun esikatselu hiiren osoittimella (etusivu) ja täysin uusi kommenttiosio jokaisen kohteen alle.",
@@ -7,8 +13,8 @@
   },
   {
     "id": "7",
-    "text_en": "We added links to our accounts on www.buymeacoffee.com/cyclist/ (support us) and www.instagram.com/cyclist.fi/ (follow us).",
-    "text_fi": "Lisäsimme linkit meidän tileihin: www.buymeacoffee.com/cyclist/ (tue meitä) ja www.instagram.com/cyclist.fi/ (seuraa meitä).",
+    "text_en": "We added links to our accounts on {{buymeacoffee|www.buymeacoffee.com/cyclist/}} (support us) and {{instagram|www.instagram.com/cyclist.fi/}} (follow us).",
+    "text_fi": "Lisäsimme linkit meidän tileihin: {{buymeacoffee|www.buymeacoffee.com/cyclist/}} (tue meitä) ja {{instagram|www.instagram.com/cyclist.fi/}} (seuraa meitä).",
     "date": "20.10.2025"
   },
   {
