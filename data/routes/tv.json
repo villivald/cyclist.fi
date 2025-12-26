@@ -1,5 +1,16 @@
 [
   {
+    "id": "breakaway",
+    "title": "Breakaway Femmes",
+    "description_en": "The untold story of the halcyon era of women's professional cycling. A documentary highlighting the challenges and triumph of female cyclists.",
+    "description_fi": "Naispyöräilyn kultakauden kertomaton tarina. Dokumentti, joka korostaa naispyöräilijöiden haasteita ja voittoja.",
+    "image": "/images/tv/breakaway.avif",
+    "link": "https://www.imdb.com/title/tt36470291/",
+    "alt": "Breakaway Femmes documentary",
+    "tags": ["Documentary", "Female Cyclists", "Inspiration"],
+    "new": true
+  },
+  {
     "id": "icarus",
     "title": "Icarus (2017)",
     "description_en": "A must-see Academy Award-winning documentary that uncovers a major sports doping scandal.",
