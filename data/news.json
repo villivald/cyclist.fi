@@ -1,5 +1,11 @@
 [
   {
+    "id": "10",
+    "text_en": "The new content was added to the {{tv}} and {{technology}} sections. Check them out!",
+    "text_fi": "Uutta sisältöä on lisätty {{tv}}- ja {{teknologia/technology}}-osioihin. Käy tutustumassa!",
+    "date": "03.01.2026"
+  },
+  {
     "id": "9",
     "text_en": "Some new content has been added to several sections: {{books}}, {{community}}, {{retailers}}, {{bikes}}, {{tour}}. Stay tuned for more updates, as we will try to add more content to the site continuously.",
     "text_fi": "Uutta sisältöä on lisätty useisiin osiin: {{kirjat/books}}, {{yhteisö/community}}, {{kaupat/retailers}}, {{pyörät/bikes}} ja {{tour/tour}}. Pysy kuulolla saadaksesi lisätietoja, sillä yritämme tuoda lisää sisältöä sivustoon jatkuvasti.",
