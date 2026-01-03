@@ -1,5 +1,15 @@
 [
   {
+    "id": "cycplus-fan",
+    "title": "Smart Fitness Fan",
+    "description_en": "High-powered smart fan designed for intense workout environments.",
+    "description_fi": "Voimakas älykäs tuuletin, joka on suunniteltu voimakkaan treeniympäristön käyttöön.",
+    "link": "https://www.cycplus.com/products/cycplus-high-power-smart-fitness-fan",
+    "alt": "Cycplus high power smart fitness fan",
+    "tags": ["Fan", "Trainer", "Smart"],
+    "new": true
+  },
+  {
     "id": "whoop",
     "title": "WHOOP",
     "description_en": "Wearable that tracks strain, sleep and recovery to guide training readiness.",
