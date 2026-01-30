@@ -5,8 +5,8 @@ import type { PublishedComment } from "./types";
 
 const buildKey = (bucket: string, slug: string) => `${bucket}:${slug}`;
 
-const url = process.env.UPSTASH_REDIS_REST_KV_REST_API_URL;
-const token = process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN;
+const url = process.env.KV_REST_API_URL;
+const token = process.env.KV_REST_API_TOKEN;
 
 const hasCredentials = Boolean(url && token);
 

@@ -1,10 +1,7 @@
 type EnvGroup = "kv" | "postgres";
 
 const REQUIRED_ENV: Record<EnvGroup, readonly string[]> = {
-  kv: [
-    "UPSTASH_REDIS_REST_KV_REST_API_URL",
-    "UPSTASH_REDIS_REST_KV_REST_API_TOKEN",
-  ],
+  kv: ["KV_REST_API_URL", "KV_REST_API_TOKEN"],
   postgres: ["POSTGRES_URL"],
 };
 
