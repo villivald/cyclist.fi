@@ -3,6 +3,8 @@
 import { ThemeProvider as BaseThemeProvider } from "next-themes";
 import { useEffect } from "react";
 
+import { SavedProvider } from "@/components/saved/saved-context";
+
 type ThemeProviderProps = {
   children: React.ReactNode;
 };
@@ -52,7 +54,7 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
       defaultTheme="system"
       enableSystem={true}
     >
-      {children}
+      <SavedProvider>{children}</SavedProvider>
     </BaseThemeProvider>
   );
 };

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
@@ -11,6 +12,7 @@ import styles from "@/styles/PageComponent.module.css";
 import { createBrandfetchLoader } from "@/utils/brandfetch-loader";
 import { linkToDisplay } from "@/utils/link-to-display";
 
+import SaveButton from "./save-button";
 import ShareButton from "./share-button";
 import { DataRowProps } from "./types";
 
@@ -27,6 +29,7 @@ export default function DataRow({
   const t = useTranslations("Common");
   const tComments = useTranslations("Comments");
   const deviceId = useCommentDeviceId();
+  const pathname = usePathname();
 
   const [commentsOpen, setCommentsOpen] = useState(false);
   const [hasLoadedComments, setHasLoadedComments] = useState(false);
@@ -48,6 +51,12 @@ export default function DataRow({
   const brandfetchLoader = createBrandfetchLoader({
     overrideSrc: localImage ?? undefined,
   });
+
+  const resolvedRoute =
+    commentNamespace ??
+    item.route ??
+    (pathname ? pathname.replace(/^\//, "") : "content");
+  const commentSlugPrefix = commentNamespace ?? item.route ?? "content";
 
   return (
     <div className={rowClass} style={routeStyles} id={item.id}>
@@ -114,7 +123,7 @@ export default function DataRow({
           <div className={styles.threadInner}>
             {(commentsOpen || hasLoadedComments) && (
               <CommentThread
-                slug={`${commentNamespace ?? "content"}/${item.id}`}
+                slug={`${commentSlugPrefix}/${item.id}`}
                 enabled={commentsOpen}
                 deviceId={deviceId}
               />
@@ -123,6 +132,7 @@ export default function DataRow({
         </div>
       </section>
 
+      <SaveButton item={item} route={resolvedRoute} />
       <ShareButton title={item.title} />
     </div>
   );

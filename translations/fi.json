@@ -21,9 +21,14 @@
     "copied": "Kopioitu!",
     "shareOnTwitter": "Jaa Twitterissa",
     "shareOnFacebook": "Jaa Facebookissa",
-    "shareOnLinkedIn": "Jaa LinkedInissä"
+    "shareOnLinkedIn": "Jaa LinkedInissä",
+    "save": "Tallenna",
+    "saved": "Tallennettu",
+    "removeSaved": "Poista tallennetuista",
+    "savedEmpty": "Ei tallennettuja kohteita vielä."
   },
   "Pages": {
+    "saved": "Suosikit",
     "apparel": "Vaatteet",
     "youtube": "YouTube",
     "magazines": "Lehdet",

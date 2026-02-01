@@ -39,7 +39,8 @@
 }
 
 /* Theme & Menu buttons */
-.headerContainer > nav button {
+.headerContainer > nav button,
+.headerContainer > nav > a {
   display: flex;
   align-items: center;
   gap: var(--space-2xs);
@@ -48,21 +49,25 @@
   background: transparent;
   font-family: var(--font-sans);
   font-variation-settings: "wght" 500;
-  font-size: var(--step-4);
+  font-size: var(--step-3);
   text-transform: uppercase;
 }
 
-.headerContainer > nav button:focus-visible {
+.headerContainer > nav button:focus-visible,
+.headerContainer > nav a:focus-visible {
   outline: var(--focus-visible-wine);
   outline-offset: var(--outline-offset);
 }
 
-.headerContainer > nav > button img {
+.headerContainer > nav > button img,
+.headerContainer > nav > a img {
   transition: transform 0.5s ease-in-out;
 }
 
 .headerContainer > nav > button:hover > img,
-.headerContainer > nav > button:focus-visible > img {
+.headerContainer > nav > button:focus-visible > img,
+.headerContainer > nav > a:hover > img,
+.headerContainer > nav > a:focus-visible > img {
   transform: rotate(15deg);
 }
 
@@ -75,7 +80,8 @@
     --top-buttons-column-start: 7;
   }
 
-  .headerContainer > nav button {
+  .headerContainer > nav button,
+  .headerContainer > nav > a {
     font-size: var(--step-5);
   }
 }
@@ -99,18 +105,25 @@
 }
 
 @media (width < 1400px) {
-  .headerContainer > nav > button img {
+  .headerContainer > nav > button img,
+  .headerContainer > nav > a img {
     height: 2.25rem;
+  }
+
+  .headerContainer > nav button,
+  .headerContainer > nav a {
+    gap: var(--space-4xs);
   }
 }
 
-@media (width < 1200px) {
+@media (width < 1300px) {
   .headerContainer > nav {
     --top-buttons-column-start: 5;
   }
 
-  .headerContainer > nav button {
-    font-size: var(--step-3);
+  .headerContainer > nav button,
+  .headerContainer > nav > a {
+    font-size: var(--step-2);
   }
 }
 
@@ -119,15 +132,15 @@
     --title-row-start: 3;
     --title-row-end: 5;
   }
-}
 
-@media (width < 1000px) {
-  .headerContainer > nav > button img {
+  .headerContainer > nav > button img,
+  .headerContainer > nav > a img {
     height: 2rem;
     max-width: unset;
   }
 
-  .headerContainer > nav button p {
+  .headerContainer > nav button p,
+  .headerContainer > nav a p {
     position: absolute;
     overflow: hidden;
     clip-path: rect(0 0 0 0);
@@ -139,7 +152,7 @@
   }
 
   .headerContainer > nav {
-    --top-buttons-column-start: 9;
+    --top-buttons-column-start: 8;
   }
 }
 
@@ -148,8 +161,8 @@
     --top-buttons-column-start: 7;
 
     display: grid;
-    grid-template-columns: repeat(4, 3rem);
-    justify-items: end;
+    grid-template-columns: repeat(5, 2.5rem);
+    justify-items: center;
     margin-inline: unset;
   }
 }
@@ -164,7 +177,8 @@
     text-shadow: 0.275rem 0 0 hsl(from var(--color-teal) h s l / 75%);
   }
 
-  .headerContainer > nav button img {
+  .headerContainer > nav button img,
+  .headerContainer > nav a img {
     height: 1.875rem;
   }
 }

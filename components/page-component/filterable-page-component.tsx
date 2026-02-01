@@ -24,7 +24,7 @@ function itemMatchesQuery(item: PageComponentData, query: string): boolean {
 }
 
 export default function FilterablePageComponent(props: PageComponentProps) {
-  const { data, routeStyles, commentNamespace } = props;
+  const { data, routeStyles, commentNamespace, emptyMessage } = props;
 
   const tSearch = useTranslations("Search");
 
@@ -82,6 +82,7 @@ export default function FilterablePageComponent(props: PageComponentProps) {
         {...props}
         data={filteredData}
         commentNamespace={commentNamespace}
+        emptyMessage={query.trim() ? undefined : emptyMessage}
       />
     </div>
   );

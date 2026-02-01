@@ -21,9 +21,14 @@
     "copied": "Copied!",
     "shareOnTwitter": "Share on Twitter",
     "shareOnFacebook": "Share on Facebook",
-    "shareOnLinkedIn": "Share on LinkedIn"
+    "shareOnLinkedIn": "Share on LinkedIn",
+    "save": "Save",
+    "saved": "Saved",
+    "removeSaved": "Remove from saved",
+    "savedEmpty": "No saved items yet."
   },
   "Pages": {
+    "saved": "Saved",
     "apparel": "Apparel",
     "youtube": "YouTube",
     "magazines": "Magazines",

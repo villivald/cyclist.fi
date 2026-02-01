@@ -239,6 +239,49 @@
   right: var(--space-xs);
 }
 
+.saveContainer {
+  position: absolute;
+  top: var(--space-xs);
+  right: calc(var(--space-xs) + 2.5rem);
+}
+
+.saveButton {
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-almost-white);
+  backdrop-filter: blur(4px);
+  border: 0.125rem solid hsl(from var(--shadow-color) h s l / 30%);
+  cursor: pointer;
+  transition: all 0.2s var(--easing-normal);
+  border-radius: 50%;
+  box-shadow: 0.125rem 0.125rem hsl(from var(--shadow-color) h s l / 30%);
+}
+
+.saveButton[data-saved="true"] {
+  background: color-mix(
+    in hsl,
+    var(--routeColor) 20%,
+    var(--color-almost-white)
+  );
+  border-color: var(--routeColor);
+}
+
+.saveButton:hover,
+.saveButton:focus-visible {
+  background: color-mix(
+    in hsl,
+    var(--color-almost-white) 85%,
+    var(--routeColor) 15%
+  );
+  border-color: var(--routeColor);
+  transform: scale(1.05);
+}
+
+.saveButton:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+}
+
 .shareButton {
   width: 2rem;
   height: 2rem;

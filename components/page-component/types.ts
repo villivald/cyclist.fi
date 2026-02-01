@@ -8,6 +8,7 @@ export interface PageComponentData {
   alt: string;
   tags?: string[];
   new?: boolean;
+  route?: string;
 }
 
 export interface PageComponentProps {
@@ -17,6 +18,7 @@ export interface PageComponentProps {
   showTags?: boolean;
   showNew?: boolean;
   commentNamespace?: string;
+  emptyMessage?: string;
 }
 
 export interface DataRowProps {

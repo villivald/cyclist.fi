@@ -13,6 +13,7 @@ export default function PageComponent({
   showTags = false,
   showNew = false,
   commentNamespace,
+  emptyMessage,
 }: PageComponentProps) {
   const t = useTranslations("Search");
 
@@ -22,7 +23,9 @@ export default function PageComponent({
     <>
       <div className={containerClass}>
         {!data.length && (
-          <p className={styles.noDataMessage}>{t("noResults")}</p>
+          <p className={styles.noDataMessage}>
+            {emptyMessage ?? t("noResults")}
+          </p>
         )}
         {data.map((item, index) => (
           <DataRow
