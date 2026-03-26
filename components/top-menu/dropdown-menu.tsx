@@ -5,27 +5,7 @@ import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/Menu.module.css";
-
-const MENU_ITEMS = [
-  "apparel",
-  "bikes",
-  "books",
-  "community",
-  "retailers",
-  "events",
-  "indoor",
-  "magazines",
-  "maintenance",
-  "nutrition",
-  "places",
-  "podcasts",
-  "social",
-  "technology",
-  "tour",
-  "training",
-  "tv",
-  "youtube",
-];
+import { ROUTE_SLUGS } from "@/utils/route-manifest";
 
 export default function DropdownMenu() {
   const t = useTranslations("Pages");
@@ -142,7 +122,7 @@ export default function DropdownMenu() {
             id="main-menu"
             role="menu"
           >
-            {[...MENU_ITEMS]
+            {[...ROUTE_SLUGS]
               .map((item: string) => ({
                 item,
                 translatedItem: t(item).toLowerCase(),

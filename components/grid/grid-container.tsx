@@ -1,36 +1,25 @@
 import { useTranslations } from "next-intl";
 
 import styles from "@/styles/GridContainer.module.css";
+import { getRoutesByGroup } from "@/utils/route-manifest";
 
 import GridBlock from "./grid-block";
-import type { LinkItem } from "./types";
+
+const upperRoutes = getRoutesByGroup("upper");
+const lowerRoutes = getRoutesByGroup("lower");
 
 export default function GridContainer() {
   const t = useTranslations("Pages");
 
-  const upperLinks: LinkItem[] = [
-    { title: t("apparel"), link: "/apparel" },
-    { title: t("youtube"), link: "/youtube" },
-    { title: t("magazines"), link: "/magazines" },
-    { title: t("retailers"), link: "/retailers" },
-    { title: t("podcasts"), link: "/podcasts" },
-    { title: t("tv"), link: "/tv" },
-    { title: t("indoor"), link: "/indoor" },
-    { title: t("places"), link: "/places" },
-    { title: t("tour"), link: "/tour" },
-  ];
+  const upperLinks = upperRoutes.map((r) => ({
+    title: t(r.slug),
+    link: `/${r.slug}`,
+  }));
 
-  const lowerLinks: LinkItem[] = [
-    { title: t("books"), link: "/books" },
-    { title: t("community"), link: "/community" },
-    { title: t("maintenance"), link: "/maintenance" },
-    { title: t("social"), link: "/social" },
-    { title: t("bikes"), link: "/bikes" },
-    { title: t("events"), link: "/events" },
-    { title: t("nutrition"), link: "/nutrition" },
-    { title: t("training"), link: "/training" },
-    { title: t("technology"), link: "/technology" },
-  ];
+  const lowerLinks = lowerRoutes.map((r) => ({
+    title: t(r.slug),
+    link: `/${r.slug}`,
+  }));
 
   return (
     <section className={styles.gridContainer}>

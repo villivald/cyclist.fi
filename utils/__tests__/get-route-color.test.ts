@@ -1,21 +1,14 @@
-import { colors, getRouteColor } from "../get-route-color";
+import { getRouteColor } from "../get-route-color";
+import { ROUTES } from "../route-manifest";
 
 describe("getRouteColor", () => {
-  it("returns the correct color for each route", () => {
-    colors.forEach((color) => {
-      (Object.keys(color) as Array<keyof typeof color>).forEach((colorName) => {
-        const routes = color[colorName];
-
-        if (Array.isArray(routes)) {
-          routes.forEach((route: string) => {
-            expect(getRouteColor(route)).toBe(colorName);
-          });
-        }
-      });
+  it("returns the correct color for each route in the manifest", () => {
+    ROUTES.forEach((route) => {
+      expect(getRouteColor(route.slug)).toBe(route.color);
     });
   });
 
   it("defaults to teal when route not found", () => {
-    expect(getRouteColor("unknown-route" as string)).toBe("teal");
+    expect(getRouteColor("unknown-route")).toBe("teal");
   });
 });

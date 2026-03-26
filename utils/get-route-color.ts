@@ -1,24 +1,6 @@
-export const colors = [
-  { green: ["apparel", "tv", "indoor", "community", "social", "training"] },
-  {
-    teal: [
-      "youtube",
-      "retailers",
-      "places",
-      "maintenance",
-      "bikes",
-      "technology",
-    ],
-  },
-  { wine: ["magazines", "podcasts", "tour", "books", "events", "nutrition"] },
-];
+import { RouteColor, ROUTES } from "./route-manifest";
 
-export const getRouteColor = (route: string): string => {
-  const colorMatch = colors.find((color) =>
-    Object.values(color)[0].includes(route),
-  );
+const colorBySlug = new Map(ROUTES.map((r) => [r.slug, r.color]));
 
-  if (!colorMatch) return "teal";
-
-  return Object.keys(colorMatch)[0];
-};
+export const getRouteColor = (route: string): RouteColor =>
+  colorBySlug.get(route) ?? "teal";
