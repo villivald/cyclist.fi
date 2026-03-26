@@ -198,7 +198,7 @@ export default function SearchComponent() {
         </p>
       </div>
 
-      <div className={styles.resultsArea} id="search-results">
+      <div className={styles.resultsArea} id="search-results-container">
         {isLoading && !results.length && (
           <div
             className={styles.noResults}
