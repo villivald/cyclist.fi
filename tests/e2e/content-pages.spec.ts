@@ -1,9 +1,9 @@
 import { expect, test } from "@chromatic-com/playwright";
 
-import { routeFiles } from "../../utils/search-data";
+import { ROUTE_SLUGS } from "../../utils/route-manifest";
 
 test.describe("Each item on a content page has working link", () => {
-  for (const route of routeFiles) {
+  for (const route of ROUTE_SLUGS) {
     test(`items on /${route} link to external sites`, async ({
       page,
       request,

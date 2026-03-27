@@ -1,7 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@chromatic-com/playwright";
 
-import { routeFiles } from "../../utils/search-data";
+import { ROUTE_SLUGS } from "../../utils/route-manifest";
 
 test.describe("Home page", () => {
   test("home page has no critical a11y violations", async ({ page }) => {
@@ -16,7 +16,7 @@ test.describe("Home page", () => {
 });
 
 test.describe("Route pages", () => {
-  [...routeFiles, "contact", "news", "design", "coffee"].forEach((route) => {
+  [...ROUTE_SLUGS, "contact", "news", "design", "coffee"].forEach((route) => {
     test(`${route} page has no critical a11y violations`, async ({ page }) => {
       await page.goto(`/${route}`);
 

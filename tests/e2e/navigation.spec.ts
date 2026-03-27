@@ -1,11 +1,11 @@
 import { expect, test } from "@chromatic-com/playwright";
 
-import { routeFiles } from "../../utils/search-data";
+import { ROUTE_SLUGS } from "../../utils/route-manifest";
 
 const pageNotFoundRoutes = ["coffee", "instagram", "randomRoute"];
 
 test.describe("Basic route navigation", () => {
-  routeFiles.forEach((route) => {
+  ROUTE_SLUGS.forEach((route: string) => {
     test(`navigates to ${route}`, async ({ page }) => {
       await page.goto(`/${route}`);
       await expect(page).toHaveURL(`/${route}`);

@@ -1,30 +1,10 @@
+import { ROUTE_SLUGS } from "./route-manifest";
 import { NewsData, RouteData } from "./search-content";
 
 let cachedData: {
   routesData: Record<string, RouteData[]>;
   newsData: NewsData[];
 } | null = null;
-
-export const routeFiles = [
-  "apparel",
-  "bikes",
-  "books",
-  "community",
-  "retailers",
-  "events",
-  "indoor",
-  "magazines",
-  "maintenance",
-  "nutrition",
-  "places",
-  "podcasts",
-  "social",
-  "technology",
-  "tour",
-  "training",
-  "tv",
-  "youtube",
-];
 
 export async function loadSearchData(): Promise<{
   routesData: Record<string, RouteData[]>;
@@ -36,7 +16,7 @@ export async function loadSearchData(): Promise<{
     // Import all route data
     const routesData: Record<string, RouteData[]> = {};
 
-    const routeImports = routeFiles.map(async (route) => {
+    const routeImports = ROUTE_SLUGS.map(async (route) => {
       try {
         const data = await import(`../data/routes/${route}.json`);
         const defaultImage = "/images/coming_soon.avif";

@@ -4,14 +4,17 @@ describe("loadSearchData", () => {
   });
 
   it("loads routes and news data successfully", async () => {
-    const { loadSearchData, routeFiles } = await import("../search-data");
+    const { loadSearchData } = await import("../search-data");
+    const { ROUTE_SLUGS } = await import("../route-manifest");
 
     const { routesData, newsData } = await loadSearchData();
 
     // routes keys are present
-    expect(Object.keys(routesData)).toEqual(expect.arrayContaining(routeFiles));
+    expect(Object.keys(routesData)).toEqual(
+      expect.arrayContaining(ROUTE_SLUGS),
+    );
 
-    routeFiles.forEach((route) => {
+    ROUTE_SLUGS.forEach((route: string) => {
       expect(routesData[route]).toEqual(
         expect.arrayContaining([
           expect.objectContaining({
