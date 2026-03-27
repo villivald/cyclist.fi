@@ -31,13 +31,16 @@ export default function GridItem({ link }: { link: LinkItem }) {
   } as React.CSSProperties;
 
   useEffect(() => {
-    setViewWidth(window.innerWidth);
-    window.addEventListener("resize", () => setViewWidth(window.innerWidth));
+    const handleResize = () => {
+      setViewWidth(window.innerWidth);
+    };
 
-    return () =>
-      window.removeEventListener("resize", () =>
-        setViewWidth(window.innerWidth),
-      );
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const modalIsVisible = Boolean(
