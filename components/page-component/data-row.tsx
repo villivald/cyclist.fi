@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
 import { CommentThread } from "@/components/comments/comment-thread";
 import { useCommentDeviceId } from "@/components/comments/use-comment-device-id";
@@ -30,6 +30,7 @@ export default function DataRow({
   const tComments = useTranslations("Comments");
   const deviceId = useCommentDeviceId();
   const pathname = usePathname();
+  const commentsPanelId = useId();
 
   const [commentsOpen, setCommentsOpen] = useState(false);
   const [hasLoadedComments, setHasLoadedComments] = useState(false);
@@ -108,6 +109,7 @@ export default function DataRow({
           type="button"
           className={styles.commentToggle}
           aria-expanded={commentsOpen}
+          aria-controls={commentsPanelId}
           onClick={() => setCommentsOpen((prev) => !prev)}
         >
           {commentsOpen ? tComments("hide") : tComments("show")}
@@ -116,9 +118,13 @@ export default function DataRow({
 
       <section aria-label={tComments("title")} className={styles.comments}>
         <div
+          id={commentsPanelId}
+          role="region"
+          aria-label={tComments("title")}
           className={styles.threadWrapper}
           data-open={commentsOpen}
           aria-hidden={!commentsOpen}
+          inert={!commentsOpen}
         >
           <div className={styles.threadInner}>
             {(commentsOpen || hasLoadedComments) && (
