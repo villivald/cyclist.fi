@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadataElement = ({ title }: { title: string }): Metadata => {
+export const metadataElement = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}): Metadata => {
   return {
     title: `Cyclist.fi | ${title}`,
-    description:
-      "The cycling resource you always needed but never had a link to CYCLIST.FI",
+    description,
+    openGraph: {
+      title: `Cyclist.fi | ${title}`,
+      description,
+    },
+    twitter: {
+      title: `Cyclist.fi | ${title}`,
+      description,
+    },
     icons: [
       {
         rel: "icon",

@@ -27,6 +27,10 @@
     "removeSaved": "Poista tallennetuista",
     "savedEmpty": "Ei tallennettuja kohteita vielä."
   },
+  "Metadata": {
+    "defaultDescription": "Pyöräilyn tietopankki, josta löydät kaiken olennaisen yhdessä paikassa - CYCLIST.FI",
+    "routeDescription": "Tutustu {title}-aiheen kuratoituihin pyöräilyresursseihin Cyclist.fi:ssä."
+  },
   "Pages": {
     "saved": "Suosikit",
     "apparel": "Vaatteet",

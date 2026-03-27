@@ -14,9 +14,9 @@ describe("createTranslatedMetadata", () => {
     )) as Metadata;
 
     expect(meta.title).toBe("Cyclist.fi | TR_home.title");
-    expect(meta.description).toBe(
-      "The cycling resource you always needed but never had a link to CYCLIST.FI",
-    );
+    expect(meta.description).toBe("TR_defaultDescription");
+    expect(meta.openGraph?.description).toBe("TR_defaultDescription");
+    expect(meta.twitter?.description).toBe("TR_defaultDescription");
     expect(Array.isArray(meta.icons)).toBe(true);
     expect((meta.icons as object[])?.length).toBeGreaterThanOrEqual(1);
   });

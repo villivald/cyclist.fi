@@ -27,6 +27,10 @@
     "removeSaved": "Remove from saved",
     "savedEmpty": "No saved items yet."
   },
+  "Metadata": {
+    "defaultDescription": "The cycling resource you always needed but never had a link to CYCLIST.FI",
+    "routeDescription": "Explore curated cycling resources for {title} on Cyclist.fi."
+  },
   "Pages": {
     "saved": "Saved",
     "apparel": "Apparel",
