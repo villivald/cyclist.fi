@@ -23,7 +23,7 @@
 }
 
 .headerContainer > nav {
-  --top-buttons-column-start: 7;
+  --top-buttons-column-start: 5;
   --top-buttons-column-end: 13;
   --top-buttons-row-start: 1;
   --top-buttons-row-end: 2;
@@ -76,10 +76,6 @@
 }
 
 @media (width > 2000px) {
-  .headerContainer > nav {
-    --top-buttons-column-start: 7;
-  }
-
   .headerContainer > nav button,
   .headerContainer > nav > a {
     font-size: var(--step-5);
@@ -89,12 +85,6 @@
 @media (width > 1800px) {
   .headerContainer > h1 {
     --title-column-start: 3;
-  }
-}
-
-@media (width < 1700px) {
-  .headerContainer > nav {
-    --top-buttons-column-start: 5;
   }
 }
 
@@ -117,10 +107,6 @@
 }
 
 @media (width < 1300px) {
-  .headerContainer > nav {
-    --top-buttons-column-start: 5;
-  }
-
   .headerContainer > nav button,
   .headerContainer > nav > a {
     font-size: var(--step-2);
