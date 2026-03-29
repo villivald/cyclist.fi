@@ -9,10 +9,8 @@ describe("loadSearchData", () => {
 
     const { routesData, newsData } = await loadSearchData();
 
-    // routes keys are present
-    expect(Object.keys(routesData)).toEqual(
-      expect.arrayContaining(ROUTE_SLUGS),
-    );
+    // routes keys are exactly the manifest slugs
+    expect(Object.keys(routesData).sort()).toEqual([...ROUTE_SLUGS].sort());
 
     ROUTE_SLUGS.forEach((route: string) => {
       expect(routesData[route]).toEqual(
