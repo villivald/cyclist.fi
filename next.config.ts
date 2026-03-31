@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
+  logging: {
+    browserToTerminal: "error",
+  },
   reactCompiler: true,
   images: {
     formats: ["image/avif"],
