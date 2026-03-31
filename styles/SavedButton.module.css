@@ -1,4 +1,8 @@
 .savedLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
   color: var(--color-text);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -11,4 +15,30 @@
 
 .savedLink[data-theme="dark"] img {
   filter: invert(1) hue-rotate(180deg);
+}
+
+.savedCountSuperscript {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(55%, -45%);
+  color: var(--color-teal);
+  font-size: var(--step--1);
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (width < 1100px) {
+  .savedCountSuperscript {
+    position: absolute;
+    overflow: hidden;
+    clip-path: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
 }

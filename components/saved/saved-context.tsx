@@ -32,9 +32,7 @@ type SavedContextValue = {
 const SavedContext = createContext<SavedContextValue | null>(null);
 
 export const SavedProvider = ({ children }: { children: React.ReactNode }) => {
-  const [state, setState] = useState<SavedState>(() =>
-    typeof window === "undefined" ? createEmptyState() : readSavedState(),
-  );
+  const [state, setState] = useState<SavedState>(() => createEmptyState());
 
   useEffect(() => {
     setState(readSavedState());
@@ -90,4 +88,10 @@ export const useSaved = (): SavedContextValue => {
     throw new Error("useSaved must be used within SavedProvider");
   }
   return context;
+};
+
+export const useSavedCount = (): number => {
+  const { savedItems } = useSaved();
+
+  return savedItems.length;
 };
