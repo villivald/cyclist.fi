@@ -12,19 +12,19 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"],
-      "@/styles/*": ["styles/*"],
-      "@/data/*": ["data/*"],
-      "@/services/*": ["services/*"],
-      "i18n/*": ["i18n/*"]
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/data/*": ["./data/*"],
+      "@/services/*": ["./services/*"],
+      "services/*": ["./services/*"],
+      "i18n/*": ["./i18n/*"]
     },
     "target": "ES2017",
     "types": ["vitest/globals"]
