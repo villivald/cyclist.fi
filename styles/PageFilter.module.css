@@ -8,9 +8,12 @@
 
 .filterRow {
   display: grid;
-  grid-template-columns: 1fr auto;
   gap: var(--offset-l);
   align-items: stretch;
+}
+
+.filterRow:has(.filterActionContainer) {
+  grid-template-columns: 1fr auto;
 }
 
 .filterBar {
@@ -84,7 +87,7 @@
 }
 
 @media (width < 700px) {
-  .filterRow {
+  .filterRow:has(.filterActionContainer) {
     grid-template-columns: 1fr;
   }
 
