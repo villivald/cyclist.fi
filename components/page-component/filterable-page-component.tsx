@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useEffect, useMemo, useState } from "react";
 
 import styles from "@/styles/PageFilter.module.css";
+import { getRandomSearchPlaceholder } from "@/utils/get-random-search-placeholder";
 
 import PageComponent from ".";
 import type { PageComponentData, PageComponentProps } from "./types";
@@ -28,6 +29,7 @@ export default function FilterablePageComponent(props: PageComponentProps) {
     props;
 
   const tSearch = useTranslations("Search");
+  const locale = useLocale();
 
   const [query, setQuery] = useState("");
 
@@ -42,6 +44,15 @@ export default function FilterablePageComponent(props: PageComponentProps) {
   const filteredData = useMemo(() => {
     return normalizedData.filter((item) => itemMatchesQuery(item, query));
   }, [normalizedData, query]);
+  const [searchPlaceholder, setSearchPlaceholder] = useState<string>(() =>
+    tSearch("searchPlaceholder"),
+  );
+
+  useEffect(() => {
+    setSearchPlaceholder(
+      getRandomSearchPlaceholder(locale, tSearch("searchPlaceholder")),
+    );
+  }, [locale, tSearch]);
 
   const resultsSummaryId = "page-filter-results-summary";
 
@@ -67,7 +78,7 @@ export default function FilterablePageComponent(props: PageComponentProps) {
               id="page-filter-input"
               type="search"
               className={styles.input}
-              placeholder={tSearch("searchPlaceholder")}
+              placeholder={searchPlaceholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               aria-describedby={resultsSummaryId}

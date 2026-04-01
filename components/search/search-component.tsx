@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/SearchComponent.module.css";
+import { getRandomSearchPlaceholder } from "@/utils/get-random-search-placeholder";
 import { loadSearchData } from "@/utils/search-data";
 
 import { highlightSearchTerm } from "../../utils/highlight-search-term";
@@ -37,6 +38,9 @@ export default function SearchComponent() {
     routesData: Record<string, RouteData[]>;
     newsData: NewsData[];
   }>({ routesData: {}, newsData: [] });
+  const [searchPlaceholder, setSearchPlaceholder] = useState<string>(() =>
+    t("searchPlaceholder"),
+  );
 
   const { routesData, newsData } = searchData;
 
@@ -44,6 +48,12 @@ export default function SearchComponent() {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    setSearchPlaceholder(
+      getRandomSearchPlaceholder(locale, t("searchPlaceholder")),
+    );
+  }, [locale, t]);
 
   useEffect(() => {
     const loadData = async () => {
@@ -176,7 +186,7 @@ export default function SearchComponent() {
                   resetModalState();
                 }
               }}
-              placeholder={t("searchPlaceholder")}
+              placeholder={searchPlaceholder}
               className={styles.searchInput}
               autoComplete="off"
               aria-controls="search-results"
