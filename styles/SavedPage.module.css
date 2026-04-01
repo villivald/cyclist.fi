@@ -1,0 +1,37 @@
+.clearAllButton {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: var(--offset-m) var(--offset-l);
+  border: none;
+  background: var(--color-almost-white);
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-variation-settings: "wght" 540;
+  font-size: var(--step--1);
+  transition:
+    background-color 0.2s var(--easing-normal),
+    color 0.2s var(--easing-normal);
+}
+
+.clearAllButton:hover {
+  background: hsl(from var(--color-wine) h s l / 60%);
+  color: var(--color-almost-white);
+}
+
+.clearAllButton:focus-visible {
+  outline: var(--focus-visible-wine);
+  outline-offset: var(--outline-offset);
+}
+
+.clearAllButton[data-theme="dark"] {
+  background: var(--color-dark);
+}
+
+.clearAllButton[data-theme="dark"]:hover {
+  background: hsl(from var(--color-wine) h s l / 60%);
+}

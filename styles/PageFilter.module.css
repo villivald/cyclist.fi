@@ -6,6 +6,13 @@
   font-size: var(--step-0);
 }
 
+.filterRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--offset-l);
+  align-items: stretch;
+}
+
 .filterBar {
   --shadow-color: hsl(
     from var(--routeColor) h s l / var(--route-color-opacity)
@@ -60,4 +67,32 @@
 
 .resultsSummary {
   color: hsl(from var(--color-text) h s l / 60%);
+}
+
+.filterActionContainer {
+  --shadow-color: hsl(
+    from var(--routeColor) h s l / var(--route-color-opacity)
+  );
+
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  background: var(--color-background);
+  border: 0.125rem solid var(--shadow-color);
+  box-shadow: var(--space-4xs) var(--space-4xs) var(--shadow-color);
+}
+
+@media (width < 700px) {
+  .filterRow {
+    grid-template-columns: 1fr;
+  }
+
+  .filterBar {
+    flex-wrap: wrap;
+  }
+
+  .filterActionContainer {
+    justify-content: stretch;
+  }
 }

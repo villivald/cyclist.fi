@@ -24,7 +24,8 @@ function itemMatchesQuery(item: PageComponentData, query: string): boolean {
 }
 
 export default function FilterablePageComponent(props: PageComponentProps) {
-  const { data, routeStyles, commentNamespace, emptyMessage } = props;
+  const { data, routeStyles, commentNamespace, emptyMessage, filterBarAction } =
+    props;
 
   const tSearch = useTranslations("Search");
 
@@ -46,37 +47,42 @@ export default function FilterablePageComponent(props: PageComponentProps) {
 
   return (
     <div className={styles.wrapper} style={routeStyles}>
-      <form
-        role="search"
-        aria-label={tSearch("search")}
-        className={styles.filterBar}
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <div className={styles.field}>
-          <Image
-            src="/icons/search.svg"
-            alt=""
-            aria-hidden="true"
-            width={20}
-            height={20}
-            className={styles.icon}
-          />
-          <input
-            id="page-filter-input"
-            type="search"
-            className={styles.input}
-            placeholder={tSearch("searchPlaceholder")}
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            aria-describedby={resultsSummaryId}
-            aria-label={tSearch("search")}
-            autoComplete="off"
-          />
-        </div>
-        <p id={resultsSummaryId} className={styles.resultsSummary}>
-          {filteredData.length} / {data.length}
-        </p>
-      </form>
+      <div className={styles.filterRow}>
+        <form
+          role="search"
+          aria-label={tSearch("search")}
+          className={styles.filterBar}
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <div className={styles.field}>
+            <Image
+              src="/icons/search.svg"
+              alt=""
+              aria-hidden="true"
+              width={20}
+              height={20}
+              className={styles.icon}
+            />
+            <input
+              id="page-filter-input"
+              type="search"
+              className={styles.input}
+              placeholder={tSearch("searchPlaceholder")}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              aria-describedby={resultsSummaryId}
+              aria-label={tSearch("search")}
+              autoComplete="off"
+            />
+          </div>
+          <p id={resultsSummaryId} className={styles.resultsSummary}>
+            {filteredData.length} / {data.length}
+          </p>
+        </form>
+        {filterBarAction && (
+          <div className={styles.filterActionContainer}>{filterBarAction}</div>
+        )}
+      </div>
 
       <PageComponent
         {...props}

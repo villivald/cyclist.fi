@@ -1,5 +1,6 @@
 import {
   buildSavedKey,
+  clearSavedState,
   createEmptyState,
   normalizeSavedState,
   toggleSavedState,
@@ -53,5 +54,17 @@ describe("saved storage", () => {
 
     const normalized = normalizeSavedState(state);
     expect(normalized.items[key]?.route).toBe("apparel");
+  });
+
+  it("clears all saved items", () => {
+    const withSaved = toggleSavedState(
+      createEmptyState(),
+      "apparel",
+      sampleItem,
+    );
+    const cleared = clearSavedState();
+
+    expect(Object.keys(withSaved.items)).toHaveLength(1);
+    expect(Object.keys(cleared.items)).toHaveLength(0);
   });
 });

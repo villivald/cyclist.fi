@@ -25,7 +25,9 @@
     "save": "Save",
     "saved": "Saved",
     "removeSaved": "Remove from saved",
-    "savedEmpty": "No saved items yet."
+    "savedEmpty": "No saved items yet.",
+    "savedClearAll": "Clear all saved",
+    "savedClearConfirm": "Clear all saved items ({count})? This cannot be undone."
   },
   "Metadata": {
     "defaultDescription": "The cycling resource you always needed but never had a link to CYCLIST.FI",

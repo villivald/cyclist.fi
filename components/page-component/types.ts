@@ -19,6 +19,7 @@ export interface PageComponentProps {
   showNew?: boolean;
   commentNamespace?: string;
   emptyMessage?: string;
+  filterBarAction?: React.ReactNode;
 }
 
 export interface DataRowProps {

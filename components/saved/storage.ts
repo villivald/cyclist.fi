@@ -135,6 +135,8 @@ export const toggleSavedState = (
 export const listSavedItems = (state: SavedState): SavedItem[] =>
   Object.values(state.items).sort((a, b) => b.savedAt.localeCompare(a.savedAt));
 
+export const clearSavedState = (): SavedState => createEmptyState();
+
 export const readSavedState = (): SavedState => {
   if (typeof window === "undefined") {
     return createEmptyState();

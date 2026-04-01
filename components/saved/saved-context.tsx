@@ -13,6 +13,7 @@ import type { PageComponentData } from "@/components/page-component/types";
 
 import {
   buildSavedKey,
+  clearSavedState,
   createEmptyState,
   listSavedItems,
   readSavedState,
@@ -27,6 +28,7 @@ type SavedContextValue = {
   savedCount: number;
   isSaved: (route: string, itemId: string) => boolean;
   toggleSaved: (route: string, item: PageComponentData) => void;
+  clearAllSaved: () => void;
 };
 
 const SavedContext = createContext<SavedContextValue | null>(null);
@@ -57,6 +59,14 @@ export const SavedProvider = ({ children }: { children: React.ReactNode }) => {
     });
   }, []);
 
+  const clearAllSaved = useCallback(() => {
+    setState(() => {
+      const next = clearSavedState();
+      writeSavedState(next);
+      return next;
+    });
+  }, []);
+
   const isSaved = useCallback(
     (route: string, itemId: string) => {
       const key = buildSavedKey(route, itemId);
@@ -73,8 +83,9 @@ export const SavedProvider = ({ children }: { children: React.ReactNode }) => {
       savedCount: savedItems.length,
       isSaved,
       toggleSaved,
+      clearAllSaved,
     }),
-    [isSaved, savedItems, toggleSaved],
+    [clearAllSaved, isSaved, savedItems, toggleSaved],
   );
 
   return (

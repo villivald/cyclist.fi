@@ -25,7 +25,9 @@
     "save": "Tallenna",
     "saved": "Tallennettu",
     "removeSaved": "Poista tallennetuista",
-    "savedEmpty": "Ei tallennettuja kohteita vielä."
+    "savedEmpty": "Ei tallennettuja kohteita vielä.",
+    "savedClearAll": "Poista kaikki tallennetut",
+    "savedClearConfirm": "Poistetaanko kaikki tallennetut kohteet ({count})? Tätä ei voi kumota."
   },
   "Metadata": {
     "defaultDescription": "Pyöräilyn tietopankki, josta löydät kaiken olennaisen yhdessä paikassa - CYCLIST.FI",
