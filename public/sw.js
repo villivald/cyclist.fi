@@ -1,4 +1,4 @@
-const CACHE_NAME = "cyclist-cache-v1";
+const CACHE_NAME = "cyclist-cache-v2";
 
 const PRECACHE_URLS = [
   "/", // shell
@@ -44,6 +44,17 @@ function isNavigationRequest(request) {
   );
 }
 
+function isApiRequest(request) {
+  try {
+    const url = new URL(request.url);
+    return (
+      url.origin === self.location.origin && url.pathname.startsWith("/api/")
+    );
+  } catch {
+    return false;
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   const request = event.request;
 
@@ -63,6 +74,12 @@ self.addEventListener("fetch", (event) => {
           return cached ?? (await caches.match("/"));
         }),
     );
+    return;
+  }
+
+  // Never cache API responses (e.g. comments) to avoid stale data.
+  if (isApiRequest(request)) {
+    event.respondWith(fetch(request));
     return;
   }
 
