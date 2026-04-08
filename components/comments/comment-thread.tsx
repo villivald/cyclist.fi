@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl";
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import styles from "@/styles/Comments.module.css";
 
 import { CommentForm } from "./comment-form";
 import { CommentList } from "./comment-list";
 import type {
+  ClientComment,
   CommentFormValues,
   CommentSubmitOutcome,
   CommentThreadProps,
@@ -15,12 +16,45 @@ import { useComments } from "./use-comments";
 export function CommentThread({ slug, enabled, deviceId }: CommentThreadProps) {
   const t = useTranslations("Comments");
   const [rateLimitMessage, setRateLimitMessage] = useState<string | null>(null);
+  const [moderatorKey, setModeratorKey] = useState<string | null>(null);
+  const [moderationMessage, setModerationMessage] = useState<string | null>(
+    null,
+  );
+  const [moderationMessageTone, setModerationMessageTone] = useState<
+    "status" | "error"
+  >("status");
+  const moderationTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  const { comments, isLoading, isSubmitting, error, submit, refresh } =
-    useComments(slug, {
-      enabled,
-      deviceId,
-    });
+  const showModerationMessage = useCallback(
+    (message: string, tone: "status" | "error" = "status") => {
+      clearTimeout(moderationTimerRef.current);
+      setModerationMessage(message);
+      setModerationMessageTone(tone);
+      moderationTimerRef.current = setTimeout(
+        () => setModerationMessage(null),
+        4000,
+      );
+    },
+    [],
+  );
+
+  useEffect(() => () => clearTimeout(moderationTimerRef.current), []);
+
+  const {
+    comments,
+    isLoading,
+    isSubmitting,
+    isValidatingModerator,
+    deletingCommentId,
+    error,
+    submit,
+    validateModeratorKey,
+    deleteComment,
+    refresh,
+  } = useComments(slug, {
+    enabled,
+    deviceId,
+  });
 
   const translatedError = useMemo(() => {
     if (!error) return null;
@@ -56,6 +90,70 @@ export function CommentThread({ slug, enabled, deviceId }: CommentThreadProps) {
     return { status: "error", message: t("error") };
   };
 
+  const translateDeleteError = useCallback(
+    (errorCode: string) => {
+      switch (errorCode) {
+        case "unauthorized":
+          return t("moderationUnauthorized");
+        case "not_found":
+          return t("deleteNotFound");
+        case "moderation_unavailable":
+          return t("moderationUnavailable");
+        default:
+          return t("error");
+      }
+    },
+    [t],
+  );
+
+  const handleModeratorModeToggle = async () => {
+    if (moderatorKey) {
+      setModeratorKey(null);
+      showModerationMessage(t("moderationDisabled"));
+      return;
+    }
+
+    const keyInput = window.prompt(t("moderationPrompt"))?.trim();
+    if (!keyInput) return;
+
+    const validation = await validateModeratorKey(keyInput);
+    if (!validation.success) {
+      showModerationMessage(
+        translateDeleteError(validation.error ?? "error"),
+        "error",
+      );
+      return;
+    }
+
+    setModeratorKey(keyInput);
+    showModerationMessage(t("moderationEnabled"));
+  };
+
+  const handleDelete = async (comment: ClientComment) => {
+    if (!moderatorKey) return;
+
+    const shouldDelete = window.confirm(
+      t("deleteConfirm", { author: comment.author.name ?? t("anonymous") }),
+    );
+    if (!shouldDelete) return;
+
+    setModerationMessage(null);
+    const result = await deleteComment(comment.id, moderatorKey);
+
+    if (!result.success) {
+      if (result.error === "unauthorized") {
+        setModeratorKey(null);
+      }
+      showModerationMessage(
+        translateDeleteError(result.error ?? "error"),
+        "error",
+      );
+      return;
+    }
+
+    showModerationMessage(t("deleteSuccess"));
+  };
+
   const publishedCount = comments.length;
 
   const showEmptyState = !isLoading && comments.length === 0;
@@ -76,13 +174,27 @@ export function CommentThread({ slug, enabled, deviceId }: CommentThreadProps) {
             )}
           </span>
         </div>
-        <button
-          type="button"
-          onClick={refresh}
-          className={styles.refreshButton}
-        >
-          {t("refresh")}
-        </button>
+        <div className={styles.threadActions}>
+          <button
+            type="button"
+            onClick={refresh}
+            className={styles.refreshButton}
+          >
+            {t("refresh")}
+          </button>
+          <button
+            type="button"
+            onClick={handleModeratorModeToggle}
+            className={styles.refreshButton}
+            disabled={isValidatingModerator}
+          >
+            {isValidatingModerator
+              ? t("moderationVerifying")
+              : moderatorKey
+                ? t("moderationDisable")
+                : t("moderationEnable")}
+          </button>
+        </div>
       </header>
 
       <div className={styles.threadBody}>
@@ -102,7 +214,26 @@ export function CommentThread({ slug, enabled, deviceId }: CommentThreadProps) {
           <p className={styles.errorMessage}>{rateLimitMessage}</p>
         )}
 
-        <CommentList comments={comments} />
+        {moderationMessage && (
+          <p
+            className={
+              moderationMessageTone === "error"
+                ? styles.errorMessage
+                : styles.statusMessage
+            }
+          >
+            {moderationMessage}
+          </p>
+        )}
+
+        <CommentList
+          comments={comments}
+          canModerate={Boolean(moderatorKey)}
+          deletingCommentId={deletingCommentId}
+          onDelete={handleDelete}
+          deleteLabel={t("delete")}
+          deletingLabel={t("deleting")}
+        />
 
         <CommentForm isSubmitting={isSubmitting} onSubmit={handleSubmit} />
       </div>

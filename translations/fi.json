@@ -129,6 +129,7 @@
     "hide": "Piilota kommentit",
     "empty": "Ei kommentteja vielä. Ole ensimmäinen ja kerro mielipiteesi.",
     "placeholder": "Mitä mieltä olet?",
+    "anonymous": "Anonyymi",
     "nameLabel": "Nimimerkki (valinnainen)",
     "urlLabel": "Verkkosivu tai profiili (valinnainen)",
     "submit": "Lähetä kommentti",
@@ -139,6 +140,19 @@
     "refresh": "Päivitä ketju",
     "loading": "Ladataan kommentteja…",
     "loadError": "Kommenttien lataaminen epäonnistui. Yritä uudelleen.",
-    "missingDevice": "Laitetunnistetta ei voitu luoda. Lataa sivu uudelleen."
+    "missingDevice": "Laitetunnistetta ei voitu luoda. Lataa sivu uudelleen.",
+    "moderationEnable": "Moderaattoritila",
+    "moderationDisable": "Poistu moderaattoritilasta",
+    "moderationVerifying": "Tarkistetaan...",
+    "moderationPrompt": "Syötä moderaattoriavain",
+    "moderationEnabled": "Moderaattoritila käytössä.",
+    "moderationDisabled": "Moderaattoritila poistettu käytöstä.",
+    "moderationUnauthorized": "Moderaattoriavain on virheellinen.",
+    "moderationUnavailable": "Moderointia ei ole määritetty tähän ympäristöön.",
+    "delete": "Poista",
+    "deleting": "Poistetaan...",
+    "deleteConfirm": "Poistetaanko käyttäjän {author} kommentti? Tätä ei voi perua.",
+    "deleteSuccess": "Kommentti poistettu.",
+    "deleteNotFound": "Kommentti oli jo poistettu."
   }
 }

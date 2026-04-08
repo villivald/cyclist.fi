@@ -76,4 +76,22 @@ export const edgeCommentStore = {
       return [];
     }
   },
+
+  async deletePublished(slug: string, commentId: string): Promise<boolean> {
+    if (!redis) {
+      console.warn("[Redis] Cannot delete comment: Redis not configured");
+      return false;
+    }
+
+    try {
+      const deletedCount = await redis.hdel(
+        buildKey(COMMENTS_PUBLISHED_BUCKET, slug),
+        commentId,
+      );
+      return Number(deletedCount) > 0;
+    } catch (error) {
+      console.error("[Redis] Failed to delete published comment", error);
+      return false;
+    }
+  },
 };

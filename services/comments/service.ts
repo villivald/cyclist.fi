@@ -143,4 +143,48 @@ export const commentService = {
       comments,
     };
   },
+
+  async delete(slug: string, commentId: string): Promise<boolean> {
+    env.ensure("kv");
+
+    const canUsePostgres = env.missing("postgres").length === 0;
+    const postgresDeletePromise = canUsePostgres
+      ? (async () => {
+          try {
+            await commentRepository.ensureTable();
+            return await withTimeout(
+              commentRepository.deleteById(slug, commentId),
+              5000,
+              "Postgres delete timeout",
+            );
+          } catch (error) {
+            console.warn(
+              "[Postgres] Failed to delete comment:",
+              error instanceof Error ? error.message : String(error),
+            );
+            return false;
+          }
+        })()
+      : Promise.resolve(false);
+
+    const [redisDeleted, postgresDeleted] = await Promise.all([
+      edgeCommentStore.deletePublished(slug, commentId),
+      postgresDeletePromise,
+    ]);
+
+    const deleted = redisDeleted || postgresDeleted;
+
+    if (deleted) {
+      try {
+        revalidateTag(getCommentsCacheTag(slug), "max");
+      } catch (error) {
+        console.warn(
+          "[Comments] Failed to revalidate cache after delete:",
+          error,
+        );
+      }
+    }
+
+    return deleted;
+  },
 };

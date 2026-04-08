@@ -1,12 +1,20 @@
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import styles from "@/styles/Comments.module.css";
 
 import type { CommentListProps } from "./types";
 
-export function CommentList({ comments }: CommentListProps) {
+export function CommentList({
+  comments,
+  canModerate = false,
+  deletingCommentId = null,
+  onDelete,
+  deleteLabel = "Delete",
+  deletingLabel = "Deleting...",
+}: CommentListProps) {
   const locale = useLocale();
+  const t = useTranslations("Comments");
 
   if (comments.length === 0) {
     return null;
@@ -35,7 +43,7 @@ export function CommentList({ comments }: CommentListProps) {
           <div className={styles.commentHeader}>
             <div className={styles.authorGroup}>
               <span className={styles.author}>
-                {comment.author.name ?? "Anonymous"}
+                {comment.author.name ?? t("anonymous")}
               </span>
               {comment.author.url && (
                 <Link
@@ -53,6 +61,18 @@ export function CommentList({ comments }: CommentListProps) {
             </time>
           </div>
           <p className={styles.commentContent}>{comment.content}</p>
+          {canModerate && onDelete && (
+            <div className={styles.commentActions}>
+              <button
+                type="button"
+                className={styles.deleteButton}
+                disabled={deletingCommentId === comment.id}
+                onClick={() => onDelete(comment)}
+              >
+                {deletingCommentId === comment.id ? deletingLabel : deleteLabel}
+              </button>
+            </div>
+          )}
         </li>
       ))}
     </ol>

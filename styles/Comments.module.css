@@ -25,15 +25,26 @@
 
 .threadHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-s);
+  flex-wrap: wrap;
+}
+
+.threadActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .threadHeading {
   display: flex;
   align-items: baseline;
   gap: var(--space-2xs);
+  min-width: 0;
 }
 
 .threadTitle {
@@ -168,6 +179,36 @@
   line-height: 1.6;
 }
 
+.commentActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton {
+  background: transparent;
+  color: var(--color-wine);
+  border: 1px solid color-mix(in hsl, var(--color-wine) 28%, transparent);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: var(--step--1);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: color-mix(in hsl, var(--color-wine) 12%, transparent);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -294,6 +335,7 @@
   cursor: pointer;
   font-size: var(--step--1);
   font-weight: 500;
+  white-space: nowrap;
   transition:
     color 0.2s ease,
     background-color 0.2s ease,
@@ -308,5 +350,13 @@
 
   &:active {
     transform: translateY(0);
+  }
+}
+
+@container card (width < 430px) {
+  .threadActions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
   }
 }

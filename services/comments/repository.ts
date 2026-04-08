@@ -121,4 +121,16 @@ export const commentRepository = {
           : String(row.updatedAt),
     })) as PublishedComment[];
   },
+
+  async deleteById(slug: string, id: string): Promise<boolean> {
+    const client = getPostgresClient();
+    const result = await client`
+      DELETE FROM comments
+      WHERE slug = ${slug}
+      AND id = ${id}
+      RETURNING id;
+    `;
+
+    return result.length > 0;
+  },
 };

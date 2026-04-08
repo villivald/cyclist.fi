@@ -16,6 +16,11 @@ export interface ClientComment {
 
 export interface CommentListProps {
   comments: ClientComment[];
+  canModerate?: boolean;
+  deletingCommentId?: string | null;
+  onDelete?: (comment: ClientComment) => Promise<void>;
+  deleteLabel?: string;
+  deletingLabel?: string;
 }
 
 export interface CommentThreadState {
@@ -84,4 +89,9 @@ export interface SubmitResult {
   error?: string;
   rateLimited?: boolean;
   retryAfterSeconds?: number;
+}
+
+export interface DeleteResult {
+  success: boolean;
+  error?: string;
 }

@@ -6,6 +6,7 @@ import type {
   ClientComment,
   CommentFormValues,
   CommentThreadState,
+  DeleteResult,
   ServerCommentDTO,
   SubmitResult,
   UseCommentsOptions,
@@ -35,6 +36,10 @@ export const useComments = (slug: string, options: UseCommentsOptions = {}) => {
   const [thread, setThread] = useState<CommentThreadState | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isValidatingModerator, setIsValidatingModerator] = useState(false);
+  const [deletingCommentId, setDeletingCommentId] = useState<string | null>(
+    null,
+  );
   const [error, setError] = useState<string | null>(null);
   const abortController = useRef<AbortController | null>(null);
 
@@ -220,13 +225,112 @@ export const useComments = (slug: string, options: UseCommentsOptions = {}) => {
     void fetchThread(controller.signal);
   }, [enabled, fetchThread]);
 
+  const deleteComment = useCallback(
+    async (commentId: string, moderatorKey: string): Promise<DeleteResult> => {
+      if (!moderatorKey.trim()) {
+        return { success: false, error: "missing_moderator_key" };
+      }
+
+      setDeletingCommentId(commentId);
+
+      try {
+        const response = await fetch(
+          `/api/comments/${encodeURIComponent(slug)}/${encodeURIComponent(commentId)}`,
+          {
+            method: "DELETE",
+            headers: {
+              "x-cyclist-moderator-key": moderatorKey,
+            },
+          },
+        );
+
+        const json = (await response.json()) as {
+          ok: boolean;
+          error?: string;
+        };
+
+        if (!response.ok || !json.ok) {
+          return {
+            success: false,
+            error: json.error ?? "delete_failed",
+          };
+        }
+
+        setThread((current) => {
+          if (!current) return current;
+          return {
+            ...current,
+            comments: current.comments.filter((item) => item.id !== commentId),
+          };
+        });
+
+        return { success: true };
+      } catch (err) {
+        console.error("Failed to delete comment", err);
+        return {
+          success: false,
+          error: err instanceof Error ? err.message : "delete_failed",
+        };
+      } finally {
+        setDeletingCommentId(null);
+      }
+    },
+    [slug],
+  );
+
+  const validateModeratorKey = useCallback(
+    async (moderatorKey: string): Promise<DeleteResult> => {
+      if (!moderatorKey.trim()) {
+        return { success: false, error: "unauthorized" };
+      }
+
+      setIsValidatingModerator(true);
+
+      try {
+        const response = await fetch("/api/comments/moderation/verify", {
+          method: "POST",
+          headers: {
+            "x-cyclist-moderator-key": moderatorKey,
+          },
+        });
+
+        const json = (await response.json()) as {
+          ok: boolean;
+          error?: string;
+        };
+
+        if (!response.ok || !json.ok) {
+          return {
+            success: false,
+            error: json.error ?? "unauthorized",
+          };
+        }
+
+        return { success: true };
+      } catch (err) {
+        console.error("Failed to validate moderator key", err);
+        return {
+          success: false,
+          error: err instanceof Error ? err.message : "internal_error",
+        };
+      } finally {
+        setIsValidatingModerator(false);
+      }
+    },
+    [],
+  );
+
   return {
     comments: thread?.comments ?? [],
     thread,
     isLoading,
     isSubmitting,
+    isValidatingModerator,
+    deletingCommentId,
     error,
     submit,
+    validateModeratorKey,
+    deleteComment,
     refresh,
   };
 };
