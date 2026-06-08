@@ -70,6 +70,7 @@
     "title": "Giant",
     "description_en": "Taiwanese company and the world's largest bicycle maker, known for value and innovation across categories.",
     "description_fi": "Taiwanilainen yhtiö ja maailman suurin pyöränvalmistaja – tunnettu hinta–laatusuhteesta ja innovaatioista eri luokissa.",
+    "image": "/images/bikes/giant.avif",
     "link": "https://www.giant-bicycles.com/",
     "alt": "Giant bicycles",
     "tags": ["Taiwanese", "Global", "Road", "MTB"]

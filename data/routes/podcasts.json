@@ -40,6 +40,7 @@
     "title": "Rouleur Podcast",
     "description_en": "Podcast from Rouleur featuring stories and interviews on racing and cycling culture. Often ties to features and contributors from the magazine.",
     "description_fi": "Rouleurin podcast, jossa tarinoita ja haastatteluja kilpa-ajosta ja pyöräilykulttuurista. Usein yhteyksiä lehden juttuihin ja tekijöihin.",
+    "image": "/images/podcasts/rouleur.avif",
     "link": "https://pod.link/445620088",
     "alt": "Rouleur podcast",
     "tags": ["Stories", "Culture", "Pro Cycling"]
@@ -49,7 +50,8 @@
     "title": "The GCN Show",
     "description_en": "Weekly Global Cycling Network show covering racing, tech, and community topics. Available as video and audio on major platforms.",
     "description_fi": "Global Cycling Networkin viikoittainen ohjelma kilpa-ajosta, tekniikasta ja yhteisöstä. Saatavilla video- ja äänimuodossa eri alustoilla.",
-    "link": "https://open.spotify.com/show/6e87Mp2unbuWbYY1ubfDpD",
+    "image": "/images/podcasts/gcn.avif",
+    "link": "https://pod.link/1727165422",
     "alt": "The GCN Show",
     "tags": ["Weekly", "Racing", "Tech"]
   },
@@ -58,6 +60,7 @@
     "title": "Beyond the Peloton",
     "description_en": "Spencer Martin breaks down pro races with strategy and performance analysis. Focus on Grand Tours, Monuments, and trends across the WorldTour.",
     "description_fi": "Spencer Martin purkaa ammattilaiskilpailuja taktiikan ja suorituskyvyn näkökulmasta. Painotus Grand Toureihin, Monumentteihin ja WorldTourin trendeihin.",
+    "image": "/images/podcasts/beyond.avif",
     "link": "https://beyondthepeloton.substack.com/podcast",
     "alt": "Beyond the Peloton podcast",
     "tags": ["Analysis", "Strategy", "Pro Cycling"]

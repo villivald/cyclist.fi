@@ -37,13 +37,13 @@
     "tags": ["Real-Road", "Video", "Workouts"]
   },
   {
-    "id": "bkool",
-    "title": "Bkool",
-    "description_en": "Indoor cycling simulator with training plans, 3D routes and races.",
-    "description_fi": "Sisäpyöräilysimulaattori – harjoitusohjelmat, 3D‑reitit ja kilpailut.",
-    "link": "https://www.bkool.com/",
-    "alt": "Bkool indoor cycling",
-    "tags": ["Simulator", "Plans", "Races"]
+    "id": "ictrainer",
+    "title": "icTrainer",
+    "description_en": "Indoor cycling simulator with countless training options for a very affordable price.",
+    "description_fi": "Sisäpyöräilysimulaattori – laaja valikoima harjoitusvaihtoehtoja edullisella hinnalla.",
+    "link": "https://www.ictrainer.de/en",
+    "alt": "icTrainer indoor cycling",
+    "tags": ["Simulator", "Affordable", "Training"]
   },
   {
     "id": "wahoo-systm",

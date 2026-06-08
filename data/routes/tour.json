@@ -14,7 +14,8 @@
     "title": "Tour de France",
     "description_en": "The sport’s biggest Grand Tour, three weeks in July across France and beyond.",
     "description_fi": "Suurin ja tunnetuin Grand Tour: kolme viikkoa heinäkuussa ympäri Ranskaa ja sen ulkopuolella.",
-    "link": "https://www.letour.fr/",
+    "image": "/images/tour/tour.avif",
+    "link": "https://www.letour.fr/en/",
     "alt": "Tour de France",
     "tags": ["Grand Tour", "France", "July"]
   },
