@@ -155,7 +155,7 @@ export default function ContactForm() {
   }, [status?.type, countdownSeconds, router]);
 
   return (
-    <main>
+    <>
       <h1 data-testid="route-title">{t("title")}</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div>
@@ -273,6 +273,6 @@ export default function ContactForm() {
           {isSubmitting ? t("submitting_button") : t("submit_button")}
         </button>
       </form>
-    </main>
+    </>
   );
 }

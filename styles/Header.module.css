@@ -6,7 +6,7 @@
   height: calc(100 / 12 * 5dvh);
 }
 
-.headerContainer > h1 {
+.brandTitle {
   --title-column-start: 4;
   --title-column-end: 10;
   --title-row-start: 4;
@@ -83,7 +83,7 @@
 }
 
 @media (width > 1800px) {
-  .headerContainer > h1 {
+  .brandTitle {
     --title-column-start: 3;
   }
 }
@@ -108,7 +108,7 @@
 }
 
 @media (width < 1100px) {
-  .headerContainer > h1 {
+  .brandTitle {
     --title-row-start: 3;
     --title-row-end: 5;
   }
@@ -152,7 +152,7 @@
     height: calc(100 / 12 * 5lvh);
   }
 
-  .headerContainer > h1 {
+  .brandTitle {
     font-size: 5rem;
     text-shadow: 0.275rem 0 0 hsl(from var(--color-teal) h s l / 75%);
   }

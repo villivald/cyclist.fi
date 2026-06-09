@@ -47,6 +47,7 @@ jobs:
       - name: Build archive Storybook
         run: npm exec build-archive-storybook -- --output-dir=storybook-archive
         env:
+          CI: "false"
           CHROMATIC_ARCHIVE_LOCATION: ./test-results
       - name: Run Chromatic
         uses: chromaui/action@latest
