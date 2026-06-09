@@ -9,6 +9,7 @@
 # testing
 /coverage
 /test-results
+/storybook-archive
 
 # next.js
 /.next/

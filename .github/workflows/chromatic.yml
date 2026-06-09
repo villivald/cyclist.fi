@@ -14,8 +14,6 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24.15.0
-      - name: Pin npm 10 for Chromatic compatibility
-        run: npm i -g npm@10
       - name: Install dependencies
         run: npm ci
       - name: Run Playwright tests
@@ -39,8 +37,6 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24.15.0
-      - name: Pin npm 10 for Chromatic compatibility
-        run: npm i -g npm@10
       - name: Install dependencies
         run: npm ci
       - name: Download Playwright test results
@@ -48,10 +44,15 @@ jobs:
         with:
           name: test-results
           path: ./test-results
+      - name: Build archive Storybook
+        run: npm exec build-archive-storybook -- --output-dir=storybook-archive
+        env:
+          CHROMATIC_ARCHIVE_LOCATION: ./test-results
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
           playwright: true
+          storybookBuildDir: storybook-archive
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         env:
           CHROMATIC_ARCHIVE_LOCATION: ./test-results
