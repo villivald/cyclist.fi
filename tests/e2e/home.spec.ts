@@ -9,9 +9,7 @@ test.describe("Homepage smoke", () => {
     await page.goto("/");
 
     // Header with site title
-    await expect(
-      page.getByRole("heading", { level: 1, name: /cyclist/i }),
-    ).toBeVisible();
+    await expect(page.getByTestId("brand-title")).toBeVisible();
 
     // Skip links nav exists with appropriate label
     const skipNav = page.getByTestId("skip-links");

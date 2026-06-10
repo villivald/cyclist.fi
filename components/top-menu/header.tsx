@@ -8,7 +8,11 @@ export default function Header() {
   return (
     <header className={styles.headerContainer}>
       <Logo />
-      <p className={styles.brandTitle} aria-hidden="true">
+      <p
+        className={styles.brandTitle}
+        data-testid="brand-title"
+        aria-hidden="true"
+      >
         CYCLIST
       </p>
       <SearchComponent />
