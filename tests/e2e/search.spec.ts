@@ -44,6 +44,11 @@ test.describe("Search modal", () => {
     await expect(searchButton).toBeVisible();
     await searchButton.click();
 
+    // Wait for dialog to be attached to DOM before checking visibility
+    await page.waitForSelector('[data-testid="search-dialog"]', {
+      state: "attached",
+    });
+
     // Dialog should open
     const dialog = page.getByTestId("search-dialog");
     await expect(dialog).toBeVisible();
@@ -99,6 +104,11 @@ test.describe("Search modal", () => {
     const searchButton = page.getByTestId("search-button");
     await expect(searchButton).toBeVisible();
     await searchButton.click();
+
+    // Wait for dialog to be attached to DOM before checking visibility
+    await page.waitForSelector('[data-testid="search-dialog"]', {
+      state: "attached",
+    });
 
     // Wait for dialog to be visible before interacting with input
     const dialog = page.getByTestId("search-dialog");

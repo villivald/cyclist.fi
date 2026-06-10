@@ -52,8 +52,5 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          playwright: true
           storybookBuildDir: storybook-archive
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        env:
-          CHROMATIC_ARCHIVE_LOCATION: ./test-results
