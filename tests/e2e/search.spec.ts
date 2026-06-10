@@ -100,6 +100,10 @@ test.describe("Search modal", () => {
     await expect(searchButton).toBeVisible();
     await searchButton.click();
 
+    // Wait for dialog to be visible before interacting with input
+    const dialog = page.getByTestId("search-dialog");
+    await expect(dialog).toBeVisible();
+
     // type query
     const input = page.getByTestId("search-input");
     await expect(input).toBeVisible();
