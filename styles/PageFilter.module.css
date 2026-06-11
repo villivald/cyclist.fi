@@ -69,7 +69,7 @@
 }
 
 .resultsSummary {
-  color: hsl(from var(--color-text) h s l / 60%);
+  color: hsl(from var(--color-text) h s l / 75%);
 }
 
 .filterActionContainer {
