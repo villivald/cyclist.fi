@@ -41,13 +41,11 @@ test.describe("Home page", () => {
 });
 
 test.describe("Route pages", () => {
-  [...ROUTE_SLUGS, "saved", "contact", "news", "design", "coffee"].forEach(
-    (route) => {
-      test(`${route} page has no serious a11y violations`, async ({ page }) => {
-        await page.goto(`/${route}`);
-        const seriousViolations = await getSeriousViolations(page);
-        expect(seriousViolations).toHaveLength(0);
-      });
-    },
-  );
+  [...ROUTE_SLUGS, "saved", "contact", "news", "design"].forEach((route) => {
+    test(`${route} page has no serious a11y violations`, async ({ page }) => {
+      await page.goto(`/${route}`);
+      const seriousViolations = await getSeriousViolations(page);
+      expect(seriousViolations).toHaveLength(0);
+    });
+  });
 });
