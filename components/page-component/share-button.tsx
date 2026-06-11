@@ -72,7 +72,9 @@ export default function ShareButton({ title }: { title: string }) {
   const buttonId = `share-button-${popoverId}`;
 
   // Construct share URL pointing to cyclist.fi page with item anchor
-  const shareUrl = `https://cyclist.fi${pathname}#:~:text=${title}`;
+  const encodedTitle = encodeURIComponent(title);
+  const shareUrl = `https://cyclist.fi${pathname}#:~:text=${encodedTitle}`;
+  const encodedShareUrl = encodeURIComponent(shareUrl);
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -97,13 +99,13 @@ export default function ShareButton({ title }: { title: string }) {
 
     switch (platform) {
       case "twitter":
-        shareUrlPlatform = `https://twitter.com/intent/tweet?url=${shareUrl}&text=${title}`;
+        shareUrlPlatform = `https://twitter.com/intent/tweet?url=${encodedShareUrl}&text=${encodedTitle}`;
         break;
       case "facebook":
-        shareUrlPlatform = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+        shareUrlPlatform = `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`;
         break;
       case "linkedin":
-        shareUrlPlatform = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+        shareUrlPlatform = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`;
         break;
     }
 
