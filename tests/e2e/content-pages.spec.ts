@@ -30,6 +30,7 @@ test.describe("Each item on a content page has working link", () => {
         }
 
         const response = await request.get(url.toString(), {
+          timeout: 8000,
           headers: {
             // Use realistic navigation headers to reduce bot/anti-scraping 403s
             "user-agent":
