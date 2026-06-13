@@ -88,8 +88,9 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY;
     const fromAddress = process.env.RESEND_FROM_EMAIL;
+    const recipientAddress = process.env.RESEND_TO_EMAIL;
 
-    if (!apiKey || !fromAddress) {
+    if (!apiKey || !fromAddress || !recipientAddress) {
       console.error("Contact endpoint is missing Resend configuration");
       return NextResponse.json(
         { ok: false, error: "internal_error" },
@@ -101,7 +102,7 @@ export async function POST(request: Request) {
 
     const result = await resend.emails.send({
       from: fromAddress,
-      to: "maxim@villivald.com",
+      to: recipientAddress,
       subject: `Cyclist.fi - ${subject}`,
       react: createContactEmailTemplate({ message, fromEmail, name }),
       replyTo: fromEmail,

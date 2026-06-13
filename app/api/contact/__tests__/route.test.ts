@@ -53,6 +53,7 @@ describe("POST /api/contact", () => {
 
     process.env.RESEND_API_KEY = "test-api-key";
     process.env.RESEND_FROM_EMAIL = "noreply@cyclist.fi";
+    process.env.RESEND_TO_EMAIL = "team@cyclist.fi";
     process.env.KV_REST_API_URL = "https://example.upstash.io";
     process.env.KV_REST_API_TOKEN = "test-token";
 
