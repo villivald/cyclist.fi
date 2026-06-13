@@ -1,4 +1,4 @@
-const CACHE_NAME = "cyclist-cache-v2";
+const CACHE_NAME = "cyclist-cache-v3";
 
 const PRECACHE_URLS = [
   "/", // shell
@@ -60,19 +60,9 @@ self.addEventListener("fetch", (event) => {
 
   if (isNavigationRequest(request)) {
     event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const copy = response.clone();
-          caches
-            .open(CACHE_NAME)
-            .then((cache) => cache.put(request, copy))
-            .catch(() => {});
-          return response;
-        })
-        .catch(async () => {
-          const cached = await caches.match(request);
-          return cached ?? (await caches.match("/"));
-        }),
+      fetch(request).catch(async () => {
+        return (await caches.match("/")) ?? Response.error();
+      }),
     );
     return;
   }
