@@ -4,17 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
+import type { ReactNode } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import styles from "@/styles/SearchComponent.module.css";
 import { getRandomSearchPlaceholder } from "@/utils/get-random-search-placeholder";
-import { loadSearchData } from "@/utils/search-data";
 
-import { highlightSearchTerm } from "../../utils/highlight-search-term";
-import {
+import type {
   NewsData,
   RouteData,
-  searchContent,
   SearchResult,
 } from "../../utils/search-content";
 import { useSearchShortcut } from "./use-search-shortcut";
@@ -33,11 +31,24 @@ export default function SearchComponent() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const openerRef = useRef<HTMLElement | null>(null);
+  const searchContentRef = useRef<
+    | ((
+        query: string,
+        routesData: Record<string, RouteData[]>,
+        newsData: NewsData[],
+        locale: string,
+      ) => SearchResult[])
+    | null
+  >(null);
+  const [highlightText, setHighlightText] = useState<
+    (text: string, term: string) => ReactNode
+  >(() => (text: string) => text);
 
   const [searchData, setSearchData] = useState<{
     routesData: Record<string, RouteData[]>;
     newsData: NewsData[];
   }>({ routesData: {}, newsData: [] });
+  const [isSearchRuntimeReady, setIsSearchRuntimeReady] = useState(false);
   const [searchPlaceholder, setSearchPlaceholder] = useState<string>(() =>
     t("searchPlaceholder"),
   );
@@ -56,16 +67,40 @@ export default function SearchComponent() {
   }, [locale, t]);
 
   useEffect(() => {
-    const loadData = async () => {
-      const data = await loadSearchData();
+    let isCancelled = false;
+
+    const loadSearchRuntime = async () => {
+      const [searchDataModule, searchContentModule, highlightModule] =
+        await Promise.all([
+          import("@/utils/search-data"),
+          import("../../utils/search-content"),
+          import("../../utils/highlight-search-term"),
+        ]);
+
+      if (isCancelled) return;
+      searchContentRef.current = searchContentModule.searchContent;
+      setHighlightText(() => highlightModule.highlightSearchTerm);
+      setIsSearchRuntimeReady(true);
+
+      const data = await searchDataModule.loadSearchData();
+      if (isCancelled) return;
       setSearchData(data);
     };
 
     if (isOpen) {
-      loadData();
+      loadSearchRuntime().catch((error) => {
+        console.error("Failed to load search runtime modules:", error);
+        setSearchData({ routesData: {}, newsData: [] });
+      });
     } else {
+      setIsSearchRuntimeReady(false);
       setSearchData({ routesData: {}, newsData: [] });
+      setHighlightText(() => (text: string) => text);
     }
+
+    return () => {
+      isCancelled = true;
+    };
   }, [isOpen]);
 
   // Keyboard shortcut hook
@@ -107,7 +142,9 @@ export default function SearchComponent() {
 
   // Search functionality
   useEffect(() => {
-    if (query.length < 2) {
+    const searchContent = searchContentRef.current;
+
+    if (query.length < 2 || !isSearchRuntimeReady || !searchContent) {
       setResults([]);
       setIsLoading(false);
       return;
@@ -123,7 +160,7 @@ export default function SearchComponent() {
     }, 500);
 
     return () => clearTimeout(timeoutId);
-  }, [query, routesData, newsData, locale]);
+  }, [query, routesData, newsData, locale, isSearchRuntimeReady]);
 
   // Don't render dialog until component is mounted (hydration)
   if (!isMounted) return null;
@@ -259,7 +296,7 @@ export default function SearchComponent() {
                     <div className={styles.resultContent}>
                       <div className={styles.resultHeader}>
                         <h3 className={styles.resultTitle}>
-                          {highlightSearchTerm(result.title, query)}
+                          {highlightText(result.title, query)}
                         </h3>
 
                         <span aria-hidden="true">
@@ -278,7 +315,7 @@ export default function SearchComponent() {
                       </div>
 
                       <p className={styles.resultDescription}>
-                        {highlightSearchTerm(
+                        {highlightText(
                           result.description.length > 150
                             ? result.description.substring(0, 150) + "..."
                             : result.description,
