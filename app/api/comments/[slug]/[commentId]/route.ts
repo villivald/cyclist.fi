@@ -5,9 +5,18 @@ import {
   isValidModeratorKey,
   MODERATION_UNAVAILABLE_ERROR,
 } from "@/services/comments/moderation";
+import {
+  getClientIp,
+  getModerationRetryAfterSeconds,
+  moderationThrottle,
+} from "@/services/comments/moderation-throttle";
 import { commentService } from "@/services/comments/service";
 
 export const runtime = "nodejs";
+
+const noStoreHeaders = {
+  "Cache-Control": "no-store",
+};
 
 const paramsSchema = z.object({
   slug: z.string().min(1).max(160),
@@ -23,6 +32,28 @@ export async function DELETE(
   context: { params: Promise<{ slug: string; commentId: string }> },
 ) {
   try {
+    const ip = getClientIp(request);
+    const throttle = await moderationThrottle.check(ip, "delete");
+
+    if (!throttle.allowed) {
+      const retryAfterSeconds = getModerationRetryAfterSeconds(throttle.reset);
+
+      return NextResponse.json(
+        {
+          ok: false,
+          error: throttle.reason,
+          retryAfter: throttle.reset,
+        },
+        {
+          status: 429,
+          headers: {
+            ...noStoreHeaders,
+            "Retry-After": retryAfterSeconds.toString(),
+          },
+        },
+      );
+    }
+
     const params = await context.params;
     const { slug, commentId } = paramsSchema.parse(params);
 
@@ -30,16 +61,18 @@ export async function DELETE(
     const authorized = isValidModeratorKey(moderatorKey);
 
     if (!authorized) {
+      await moderationThrottle.recordFailure(ip);
+
       return NextResponse.json(
         { ok: false, error: "unauthorized" },
         {
           status: 401,
-          headers: {
-            "Cache-Control": "no-store",
-          },
+          headers: noStoreHeaders,
         },
       );
     }
+
+    await moderationThrottle.clearFailures(ip);
 
     const deleted = await commentService.delete(slug, commentId);
 
@@ -48,9 +81,7 @@ export async function DELETE(
         { ok: false, error: "not_found" },
         {
           status: 404,
-          headers: {
-            "Cache-Control": "no-store",
-          },
+          headers: noStoreHeaders,
         },
       );
     }
@@ -61,9 +92,7 @@ export async function DELETE(
       },
       {
         status: 200,
-        headers: {
-          "Cache-Control": "no-store",
-        },
+        headers: noStoreHeaders,
       },
     );
   } catch (error) {
@@ -72,9 +101,7 @@ export async function DELETE(
         { ok: false, error: "invalid_params" },
         {
           status: 400,
-          headers: {
-            "Cache-Control": "no-store",
-          },
+          headers: noStoreHeaders,
         },
       );
     }
@@ -87,9 +114,7 @@ export async function DELETE(
         { ok: false, error: "moderation_unavailable" },
         {
           status: 503,
-          headers: {
-            "Cache-Control": "no-store",
-          },
+          headers: noStoreHeaders,
         },
       );
     }
@@ -99,9 +124,7 @@ export async function DELETE(
       { ok: false, error: "internal_error" },
       {
         status: 500,
-        headers: {
-          "Cache-Control": "no-store",
-        },
+        headers: noStoreHeaders,
       },
     );
   }

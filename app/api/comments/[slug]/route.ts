@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 import { getCommentsCacheTag } from "@/services/comments/constants";
+import { toPublicThread } from "@/services/comments/serialization";
 import { commentService } from "@/services/comments/service";
 
 export const runtime = "nodejs";
@@ -20,7 +21,7 @@ export async function GET(
     const thread = await commentService.fetchThread(slug);
 
     return NextResponse.json(
-      { ok: true, thread },
+      { ok: true, thread: toPublicThread(thread) },
       {
         headers: {
           "Cache-Control": "s-maxage=30",

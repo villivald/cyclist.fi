@@ -16,9 +16,16 @@ export type CommentPayload = Pick<
   "slug" | "content" | "authorName" | "authorUrl"
 >;
 
+export type PublicComment = Omit<CommentRecord, "deviceId">;
+
 export interface CommentThread {
   slug: string;
   comments: CommentRecord[];
+}
+
+export interface PublicCommentThread {
+  slug: string;
+  comments: PublicComment[];
 }
 
 export interface RatelimitResult {

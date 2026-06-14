@@ -10,7 +10,6 @@ export interface ClientComment {
   createdAt: string;
   updatedAt?: string;
   author: CommentAuthor;
-  deviceId: string;
   shouldAnimate?: boolean;
 }
 
@@ -40,7 +39,6 @@ export interface ServerCommentDTO {
   content: string;
   authorName?: string | null;
   authorUrl?: string | null;
-  deviceId: string;
   createdAt: string;
   updatedAt?: string | null;
 }

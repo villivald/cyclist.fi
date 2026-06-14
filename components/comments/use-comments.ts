@@ -21,7 +21,6 @@ const mapToClientComment = (
   content: data.content,
   createdAt: data.createdAt,
   updatedAt: data.updatedAt ?? undefined,
-  deviceId: data.deviceId,
   author: {
     name: data.authorName ?? undefined,
     url: data.authorUrl ?? undefined,
@@ -117,7 +116,6 @@ export const useComments = (slug: string, options: UseCommentsOptions = {}) => {
         slug,
         content: values.content,
         createdAt: new Date().toISOString(),
-        deviceId: options.deviceId,
         author: {
           name: values.authorName,
           url: values.authorUrl,

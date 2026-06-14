@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+import { toPublicComment } from "@/services/comments/serialization";
 import { commentService } from "@/services/comments/service";
 import { commentPayloadSchema } from "@/services/comments/validation";
 
@@ -74,10 +75,22 @@ export async function POST(request: Request) {
       );
     }
 
+    if (!result.comment) {
+      return NextResponse.json(
+        { ok: false, error: "internal_error" },
+        {
+          status: 500,
+          headers: {
+            "Cache-Control": "no-store",
+          },
+        },
+      );
+    }
+
     return NextResponse.json(
       {
         ok: true,
-        comment: result.comment,
+        comment: toPublicComment(result.comment),
       },
       {
         status: 201,
