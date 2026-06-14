@@ -5,14 +5,27 @@ import { useTranslations } from "next-intl";
 
 import styles from "@/styles/Routes.module.css";
 import { getRouteColor } from "@/utils/get-route-color";
+import { getRoute } from "@/utils/route-manifest";
+
+const ROUTE_TITLE_SLUGS_WITHOUT_MANIFEST = ["saved"] as const;
+
+const shouldShowRouteTitle = (slug: string) =>
+  Boolean(getRoute(slug)) ||
+  ROUTE_TITLE_SLUGS_WITHOUT_MANIFEST.includes(
+    slug as (typeof ROUTE_TITLE_SLUGS_WITHOUT_MANIFEST)[number],
+  );
 
 export default function RouteTitle() {
+  const pathname = usePathname();
+  const slug = pathname.substring(1);
   const t = useTranslations("Pages");
 
-  const title = usePathname().substring(1);
-  const translatedTitle = t(usePathname().substring(1)).toUpperCase();
+  if (!shouldShowRouteTitle(slug)) {
+    return null;
+  }
 
-  const pageColor = getRouteColor(title);
+  const translatedTitle = t(slug).toUpperCase();
+  const pageColor = getRouteColor(slug);
 
   const titleStyles = {
     "--stringLength": translatedTitle.length,

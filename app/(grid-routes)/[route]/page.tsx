@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import FilterablePageComponent from "@/components/page-component/filterable-page-component";
 import styles from "@/styles/Routes.module.css";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
@@ -19,7 +21,12 @@ export async function generateMetadata({
   params: Promise<Params>;
 }) {
   const { route } = await params;
-  return await createTranslatedMetadata("Pages", route);
+
+  if (!getRoute(route)) {
+    return createTranslatedMetadata("Common", "pageNotFound");
+  }
+
+  return createTranslatedMetadata("Pages", route);
 }
 
 export default async function RoutePage({
@@ -28,7 +35,11 @@ export default async function RoutePage({
   params: Promise<Params>;
 }) {
   const { route } = await params;
-  const entry = getRoute(route)!;
+  const entry = getRoute(route);
+
+  if (!entry) {
+    notFound();
+  }
 
   const data = await loadRouteData(route);
   const routeColor = getRouteColor(route);
