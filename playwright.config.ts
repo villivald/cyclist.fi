@@ -1,6 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const PORT = process.env.PORT ?? "4321";
+const isCi = !!process.env.CI;
+const webServerCommand = isCi
+  ? `PORT=${PORT} npm run start`
+  : `PORT=${PORT} npm run dev`;
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -15,15 +19,16 @@ export default defineConfig({
   },
   use: {
     baseURL: `http://localhost:${PORT}`,
+    serviceWorkers: "block",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
     locale: "en-US",
   },
   webServer: {
-    command: `PORT=${PORT} npm run dev`,
+    command: webServerCommand,
     url: `http://localhost:${PORT}`,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: !isCi,
     stdout: "pipe",
     stderr: "pipe",
     timeout: 120_000,

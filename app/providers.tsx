@@ -18,7 +18,14 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
     )
       return;
 
+    let hadController = Boolean(navigator.serviceWorker.controller);
+
     const onControllerChange = () => {
+      if (!hadController) {
+        hadController = true;
+        return;
+      }
+
       window.location.reload();
     };
     navigator.serviceWorker.addEventListener(
