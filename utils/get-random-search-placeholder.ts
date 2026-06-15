@@ -30,10 +30,22 @@ type PlaceholderLocale = keyof typeof SEARCH_PLACEHOLDERS;
 const isPlaceholderLocale = (value: string): value is PlaceholderLocale =>
   value === "en" || value === "fi";
 
+const shouldUseDeterministicPlaceholder = (): boolean => {
+  if (process.env.NEXT_PUBLIC_DETERMINISTIC_PLACEHOLDERS === "true") {
+    return true;
+  }
+
+  return typeof navigator !== "undefined" && navigator.webdriver;
+};
+
 export const getRandomSearchPlaceholder = (
   locale: string,
   fallback: string,
 ): string => {
+  if (shouldUseDeterministicPlaceholder()) {
+    return fallback;
+  }
+
   const resolvedLocale: PlaceholderLocale = isPlaceholderLocale(locale)
     ? locale
     : "en";

@@ -1,6 +1,29 @@
 import { getRandomSearchPlaceholder } from "../get-random-search-placeholder";
 
 describe("getRandomSearchPlaceholder", () => {
+  const originalWebdriver = navigator.webdriver;
+
+  afterEach(() => {
+    Object.defineProperty(navigator, "webdriver", {
+      value: originalWebdriver,
+      configurable: true,
+    });
+  });
+
+  it("returns fallback in automated browsers", () => {
+    const randomSpy = vi.spyOn(Math, "random");
+
+    Object.defineProperty(navigator, "webdriver", {
+      value: true,
+      configurable: true,
+    });
+
+    expect(getRandomSearchPlaceholder("en", "Fallback...")).toBe("Fallback...");
+    expect(randomSpy).not.toHaveBeenCalled();
+
+    randomSpy.mockRestore();
+  });
+
   it("returns a locale-specific placeholder", () => {
     const randomSpy = vi.spyOn(Math, "random").mockReturnValue(0);
 

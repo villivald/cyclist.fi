@@ -61,11 +61,6 @@ export default function SearchComponent() {
   }, []);
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "test" || process.env.CI) {
-      setSearchPlaceholder(t("searchPlaceholder"));
-      return;
-    }
-
     setSearchPlaceholder(
       getRandomSearchPlaceholder(locale, t("searchPlaceholder")),
     );
