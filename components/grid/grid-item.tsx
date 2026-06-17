@@ -3,25 +3,19 @@
 import Link from "next/link";
 import { Activity, useEffect, useRef, useState } from "react";
 
-import type { PageComponentData } from "@/components/page-component/types";
 import { getRouteColor } from "@/utils/get-route-color";
-import { loadRouteData } from "@/utils/load-route-data";
 
 import QuickViewModal from "./quick-view-modal";
 import type { LinkItem } from "./types";
 
 export default function GridItem({ link }: { link: LinkItem }) {
-  const [loadingRoutes, setLoadingRoutes] = useState<Set<string>>(new Set());
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
   const [viewWidth, setViewWidth] = useState<number>(0);
-  const [previewData, setPreviewData] = useState<
-    Record<string, PageComponentData[]>
-  >({});
   const [linkElement, setLinkElement] = useState<HTMLAnchorElement | null>(
     null,
   );
 
-  const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -29,6 +23,10 @@ export default function GridItem({ link }: { link: LinkItem }) {
   const routeColorStyle = {
     "--routeColor": `var(--color-${routeColor})`,
   } as React.CSSProperties;
+
+  const modalIsVisible = Boolean(
+    isHovered && link.preview.length > 0 && viewWidth > 1100,
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,10 +40,6 @@ export default function GridItem({ link }: { link: LinkItem }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const modalIsVisible = Boolean(
-    hoveredLink && previewData[hoveredLink]?.length > 0 && viewWidth > 1100,
-  );
 
   const handleModalMouseEnter = () => {
     if (hoverTimeoutRef.current) {
@@ -64,12 +58,12 @@ export default function GridItem({ link }: { link: LinkItem }) {
       closeTimeoutRef.current = null;
     }
     closeTimeoutRef.current = setTimeout(() => {
-      setHoveredLink(null);
+      setIsHovered(false);
       setLinkElement(null);
     }, 100);
   };
 
-  const handleMouseEnter = (link: string) => {
+  const handleMouseEnter = () => {
     if (viewWidth <= 1100) return;
 
     if (closeTimeoutRef.current) {
@@ -78,20 +72,9 @@ export default function GridItem({ link }: { link: LinkItem }) {
     }
 
     hoverTimeoutRef.current = setTimeout(() => {
-      setHoveredLink(link);
-      const element = linkRefs.current[link];
-      if (element) setLinkElement(element);
-      if (!previewData[link] && !loadingRoutes.has(link)) {
-        setLoadingRoutes((prev) => new Set(prev).add(link));
-        loadRouteData(link)
-          .then((data) => setPreviewData((prev) => ({ ...prev, [link]: data })))
-          .finally(() => {
-            setLoadingRoutes((prev) => {
-              const next = new Set(prev);
-              next.delete(link);
-              return next;
-            });
-          });
+      setIsHovered(true);
+      if (linkRef.current) {
+        setLinkElement(linkRef.current);
       }
     }, 200);
   };
@@ -102,7 +85,7 @@ export default function GridItem({ link }: { link: LinkItem }) {
       hoverTimeoutRef.current = null;
     }
     closeTimeoutRef.current = setTimeout(() => {
-      setHoveredLink(null);
+      setIsHovered(false);
       setLinkElement(null);
     }, 120);
   };
@@ -112,12 +95,10 @@ export default function GridItem({ link }: { link: LinkItem }) {
       <li>
         <Link
           href={link.link}
-          ref={(el) => {
-            linkRefs.current[link.link] = el;
-          }}
-          onMouseEnter={() => handleMouseEnter(link.link)}
+          ref={linkRef}
+          onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          onFocus={() => handleMouseEnter(link.link)}
+          onFocus={handleMouseEnter}
           onBlur={handleMouseLeave}
           aria-haspopup="dialog"
           aria-expanded={modalIsVisible ? "true" : "false"}
@@ -128,11 +109,11 @@ export default function GridItem({ link }: { link: LinkItem }) {
 
       <Activity mode={modalIsVisible ? "visible" : "hidden"}>
         <QuickViewModal
-          items={hoveredLink ? (previewData[hoveredLink] ?? []) : []}
+          items={link.preview}
           isVisible={modalIsVisible}
           linkElement={linkElement}
           onClose={() => {
-            setHoveredLink(null);
+            setIsHovered(false);
             setLinkElement(null);
           }}
           onMouseEnter={handleModalMouseEnter}

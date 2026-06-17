@@ -3,6 +3,7 @@ import type { PageComponentData } from "@/components/page-component/types";
 export interface LinkItem {
   title: string;
   link: string;
+  preview: PageComponentData[];
 }
 
 export interface GridBlockProps {
