@@ -1,5 +1,11 @@
 [
   {
+    "id": "12",
+    "text_en": "The new feature is now available: you can save items to your favorites. Check it out on the {{saved}} page.",
+    "text_fi": "Uusi ominaisuus on nyt julkaistu: voit tallentaa kohteita suosikkeihin. Käy tutustumassa {{suosikit/saved}}-sivulla.",
+    "date": "20.05.2026"
+  },
+  {
     "id": "10",
     "text_en": "The new content was added to the {{tv}} and {{technology}} sections. Check them out!",
     "text_fi": "Uutta sisältöä on lisätty {{tv}}- ja {{teknologia/technology}}-osioihin. Käy tutustumassa!",
