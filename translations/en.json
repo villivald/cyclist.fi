@@ -86,6 +86,20 @@
     "themeToggle": "Toggle theme",
     "label": "Main navigation"
   },
+  "NewsletterForm": {
+    "title": "Newsletter",
+    "description": "We're still working on the newsletter - nothing going out yet. If you'd like a heads-up when it launches, leave your email below.",
+    "email_field_label": "Your email (required)",
+    "email_field_placeholder": "mail@example.com",
+    "email_error_required": "Email is required",
+    "email_error_invalid": "Enter a valid email address",
+    "submit_button": "Subscribe",
+    "submit_success": "You are subscribed. Welcome aboard!",
+    "submit_already_subscribed": "This email is already subscribed.",
+    "submit_error": "Something went wrong. Please try again later.",
+    "submitting_button": "Subscribing...",
+    "redirecting_in": " Redirecting in "
+  },
   "ContactForm": {
     "name_field_label": "Your name",
     "name_field_placeholder": "John Doe",

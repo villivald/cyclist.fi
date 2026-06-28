@@ -1,4 +1,4 @@
-import Design from "@/components/design-elements";
+import NewsletterForm from "@/components/newsletter-form";
 import { createTranslatedMetadata } from "@/utils/generate-metadata";
 
 export async function generateMetadata() {
@@ -8,7 +8,7 @@ export async function generateMetadata() {
 export default function newsletter() {
   return (
     <div>
-      <Design />
+      <NewsletterForm />
     </div>
   );
 }

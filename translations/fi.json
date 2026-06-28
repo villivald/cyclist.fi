@@ -86,6 +86,20 @@
     "themeToggle": "Vaihda ulkoasu",
     "label": "Päänavigointi"
   },
+  "NewsletterForm": {
+    "title": "Uutiskirje",
+    "description": "Uutiskirjettä rakennetaan vielä - emme lähetä mitään toistaiseksi. Jos haluat kuulla, kun se käynnistyy, jätä sähköpostisi alle.",
+    "email_field_label": "Sähköpostisi (pakollinen)",
+    "email_field_placeholder": "matti.meikalainen@esimerkki.fi",
+    "email_error_required": "Sähköpostiosoite on pakollinen",
+    "email_error_invalid": "Anna kelvollinen sähköpostiosoite",
+    "submit_button": "Tilaa",
+    "submit_success": "Tilaus onnistui. Tervetuloa mukaan!",
+    "submit_already_subscribed": "Tämä sähköpostiosoite on jo tilattu.",
+    "submit_error": "Jotain meni pieleen. Yritä myöhemmin uudelleen.",
+    "submitting_button": "Tilataan...",
+    "redirecting_in": " Uudelleenohjataan"
+  },
   "ContactForm": {
     "name_field_label": "Nimi",
     "name_field_placeholder": "Matti Meikäläinen",

@@ -1,6 +1,12 @@
 [
   {
     "id": "12",
+    "text_en": "We are getting the {{newsletter}} ready. You can now leave your email, and we will let you know when the first updates start going out.",
+    "text_fi": "Valmistelemme {{uutiskirje/newsletter}}-toimintoa. Voit nyt jättää sähköpostisi, niin ilmoitamme kun ensimmäiset päivitykset alkavat lähteä.",
+    "date": "28.06.2026"
+  },
+  {
+    "id": "11",
     "text_en": "The new feature is now available: you can save items to your favorites. Check it out on the {{saved}} page.",
     "text_fi": "Uusi ominaisuus on nyt julkaistu: voit tallentaa kohteita suosikkeihin. Käy tutustumassa {{suosikit/saved}}-sivulla.",
     "date": "20.05.2026"
