@@ -59,7 +59,8 @@
     "newsletter": "Newsletter",
     "news": "News",
     "upperGrid": "Main content navigation - part 1",
-    "lowerGrid": "Main content navigation - part 2"
+    "lowerGrid": "Main content navigation - part 2",
+    "mainGrid": "Main content navigation"
   },
   "LanguageSwitcher": {
     "en": "English",
@@ -84,7 +85,10 @@
     "dropdown": "Menu",
     "theme": "Theme",
     "themeToggle": "Toggle theme",
-    "label": "Main navigation"
+    "label": "Main navigation",
+    "floatingActions": "Search and theme",
+    "close": "Close menu",
+    "navigate": "Browse"
   },
   "NewsletterForm": {
     "title": "Newsletter",

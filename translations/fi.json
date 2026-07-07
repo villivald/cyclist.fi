@@ -59,7 +59,8 @@
     "newsletter": "Uutiskirje",
     "news": "Uutiset",
     "upperGrid": "Pääsisällön navigointi - osa 1",
-    "lowerGrid": "Pääsisällön navigointi - osa 2"
+    "lowerGrid": "Pääsisällön navigointi - osa 2",
+    "mainGrid": "Pääsisällön navigointi"
   },
   "LanguageSwitcher": {
     "en": "englanniksi",
@@ -84,7 +85,10 @@
     "dropdown": "Valikko",
     "theme": "Ulkoasu",
     "themeToggle": "Vaihda ulkoasu",
-    "label": "Päänavigointi"
+    "label": "Päänavigointi",
+    "floatingActions": "Haku ja ulkoasu",
+    "close": "Sulje valikko",
+    "navigate": "Selaa"
   },
   "NewsletterForm": {
     "title": "Uutiskirje",

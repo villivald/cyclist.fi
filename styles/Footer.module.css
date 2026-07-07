@@ -106,3 +106,9 @@
     gap: var(--space-l);
   }
 }
+
+@media (width < 600px) {
+  .footerContainer {
+    padding-block-end: calc(var(--space-l) + var(--floating-actions-reserve));
+  }
+}

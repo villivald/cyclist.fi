@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
+import { S_MOBILE_MEDIA_QUERY, useMediaQuery } from "@/hooks/use-media-query";
 import styles from "@/styles/Menu.module.css";
-import { ROUTE_SLUGS } from "@/utils/route-manifest";
+import { getGridRouteColor, GRID_ROUTE_SLUGS } from "@/utils/route-manifest";
 
 export default function DropdownMenu() {
   const t = useTranslations("Pages");
@@ -13,6 +15,8 @@ export default function DropdownMenu() {
 
   const [mounted, setMounted] = useState<boolean>(false);
   useEffect(() => setMounted(true), []);
+
+  const isMobile = useMediaQuery(S_MOBILE_MEDIA_QUERY);
 
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -79,6 +83,18 @@ export default function DropdownMenu() {
     };
   }, [menuOpen]);
 
+  // Lock background scrolling while the full-screen sheet is open on phones.
+  useEffect(() => {
+    if (!menuOpen || !isMobile) return;
+
+    const { overflow } = document.documentElement.style;
+    document.documentElement.style.overflow = "hidden";
+
+    return () => {
+      document.documentElement.style.overflow = overflow;
+    };
+  }, [menuOpen, isMobile]);
+
   if (!mounted) {
     return (
       <div className={styles.dropdownMenu}>
@@ -114,34 +130,67 @@ export default function DropdownMenu() {
         <p>{tMenu("dropdown")}</p>
       </button>
 
-      {menuOpen && (
-        <div ref={menuRef}>
-          <ul
-            className={styles.menu}
-            data-open={menuOpen}
-            id="main-menu"
-            role="menu"
-          >
-            {[...ROUTE_SLUGS]
-              .map((item: string) => ({
-                item,
-                translatedItem: t(item).toLowerCase(),
-              }))
-              .sort((a, b) => a.translatedItem.localeCompare(b.translatedItem))
-              .map(({ item, translatedItem }) => (
-                <li key={item} role="none">
-                  <Link
-                    href={`/${item}`}
-                    role="menuitem"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {translatedItem}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-      )}
+      {menuOpen &&
+        isMobile &&
+        createPortal(
+          <div className={styles.backdrop} aria-hidden="true" />,
+          document.body,
+        )}
+
+      {menuOpen &&
+        (() => {
+          const menuList = (
+            <div ref={menuRef} className={styles.sheet} data-open={menuOpen}>
+              <div className={styles.sheetHeader}>
+                <p className={styles.sheetTitle}>{tMenu("navigate")}</p>
+                <button
+                  type="button"
+                  className={styles.sheetClose}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    menuButtonRef.current?.focus();
+                  }}
+                  aria-label={tMenu("close")}
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <ul
+                className={styles.menu}
+                data-open={menuOpen}
+                id="main-menu"
+                role="menu"
+              >
+                {[...GRID_ROUTE_SLUGS]
+                  .map((item: string) => ({
+                    item,
+                    translatedItem: t(item).toLowerCase(),
+                  }))
+                  .map(({ item, translatedItem }) => (
+                    <li
+                      key={item}
+                      role="none"
+                      style={
+                        {
+                          "--routeColor": `var(--color-${getGridRouteColor(item)})`,
+                        } as React.CSSProperties
+                      }
+                    >
+                      <Link
+                        href={`/${item}`}
+                        role="menuitem"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {translatedItem}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          );
+
+          return isMobile ? createPortal(menuList, document.body) : menuList;
+        })()}
     </div>
   );
 }

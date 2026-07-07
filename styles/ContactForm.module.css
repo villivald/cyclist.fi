@@ -124,6 +124,6 @@ div:has(.form):not(.formContent) {
 
 @media (width < 1100px) {
   div:has(.form):not(.formContent) {
-    min-height: unset;
+    min-height: 50dvh;
   }
 }

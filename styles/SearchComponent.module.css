@@ -239,7 +239,7 @@
 
 @media (width <= 640px) {
   .searchModal {
-    width: 80vw;
-    max-height: 70vh;
+    width: 92vw;
+    max-height: 80vh;
   }
 }

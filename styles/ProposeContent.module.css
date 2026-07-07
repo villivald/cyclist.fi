@@ -56,14 +56,14 @@
 @media (width < 1000px) {
   .fab {
     left: auto;
-    right: 1.75rem;
-    bottom: 1.25rem;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
     padding: var(--space-2xs) var(--space-xs);
     font-size: var(--step--2);
   }
 
   .fab.raised {
-    bottom: 1.25rem;
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   }
 
   .fabIcon {

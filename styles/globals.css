@@ -233,6 +233,20 @@ aside::before {
   }
 }
 
+@media (width < 600px) {
+  :root {
+    --floating-actions-size: 3rem;
+    --floating-actions-offset: 1.25rem;
+    --floating-actions-width: calc(
+      2 * var(--floating-actions-size) + var(--space-xs)
+    );
+    --floating-actions-reserve: calc(
+      var(--floating-actions-size) + var(--floating-actions-offset) +
+        env(safe-area-inset-bottom, 0px) + var(--space-s)
+    );
+  }
+}
+
 /* Lock scrolling when any dialog is open (native open attr or data-visible) */
 html:has(dialog[open]),
 html:has(dialog[data-visible="true"]) {

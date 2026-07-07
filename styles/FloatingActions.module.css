@@ -1,0 +1,74 @@
+.floatingActions {
+  position: fixed;
+  left: calc(
+    var(--floating-actions-offset, 1.25rem) + env(safe-area-inset-left, 0px)
+  );
+  bottom: calc(
+    var(--floating-actions-offset, 1.25rem) + env(safe-area-inset-bottom, 0px)
+  );
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.floatingActions button {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.125rem solid hsl(from var(--color-background) h s l / 80%);
+  background-color: var(--color-teal);
+  box-shadow:
+    0 0 0 0.25rem hsl(from var(--color-background) h s l / 40%),
+    0 0.25rem 0.5rem hsl(from var(--color-shadow) h s l / 20%),
+    0 0.125rem 0.25rem hsl(from var(--color-shadow) h s l / 15%);
+  transition:
+    transform 0.3s var(--easing-normal),
+    box-shadow 0.3s var(--easing-normal),
+    bottom 0.3s var(--easing-normal);
+}
+
+.floatingActions button img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.floatingActions p {
+  position: absolute;
+  overflow: hidden;
+  clip-path: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.floatingActions button:hover {
+  transform: translateY(-0.25rem);
+  box-shadow:
+    0 0 0 0.25rem hsl(from var(--color-background) h s l / 40%),
+    0 0.5rem 1rem hsl(from var(--color-shadow) h s l / 25%),
+    0 0.25rem 0.5rem hsl(from var(--color-shadow) h s l / 20%);
+}
+
+.floatingActions button:focus-visible {
+  outline: var(--focus-visible-teal);
+  outline-offset: var(--outline-offset);
+}
+
+.floatingActions button:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floatingActions a,
+  .floatingActions button {
+    transition: none;
+  }
+}

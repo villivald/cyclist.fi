@@ -1,4 +1,4 @@
-export type RouteColor = "green" | "teal" | "wine";
+export type RouteColor = "green" | "teal" | "wine" | "wheat";
 export type GridGroup = "upper" | "lower";
 export type RouteLayout = "grid" | "list";
 
@@ -7,6 +7,11 @@ export interface RouteEntry {
   group: GridGroup;
   color: RouteColor;
   layout: RouteLayout;
+}
+
+export interface GridRouteEntry {
+  slug: string;
+  color: RouteColor;
 }
 
 export const ROUTES: readonly RouteEntry[] = [
@@ -30,7 +35,30 @@ export const ROUTES: readonly RouteEntry[] = [
   { slug: "technology", group: "lower", color: "teal", layout: "grid" },
 ] as const;
 
+export const GRID_ROUTES: readonly GridRouteEntry[] = [
+  { slug: "apparel", color: "wheat" },
+  { slug: "youtube", color: "teal" },
+  { slug: "magazines", color: "wine" },
+  { slug: "retailers", color: "wheat" },
+  { slug: "podcasts", color: "teal" },
+  { slug: "tv", color: "wine" },
+  { slug: "indoor", color: "wheat" },
+  { slug: "places", color: "teal" },
+  { slug: "tour", color: "wine" },
+  { slug: "books", color: "wheat" },
+  { slug: "community", color: "teal" },
+  { slug: "maintenance", color: "wine" },
+  { slug: "social", color: "wheat" },
+  { slug: "bikes", color: "teal" },
+  { slug: "events", color: "wine" },
+  { slug: "nutrition", color: "wheat" },
+  { slug: "training", color: "teal" },
+  { slug: "technology", color: "wine" },
+];
+
 export const ROUTE_SLUGS = ROUTES.map((r) => r.slug);
+
+export const GRID_ROUTE_SLUGS = GRID_ROUTES.map((r) => r.slug);
 
 const routeBySlug = new Map(ROUTES.map((r) => [r.slug, r]));
 
@@ -39,3 +67,8 @@ export const getRoute = (slug: string): RouteEntry | undefined =>
 
 export const getRoutesByGroup = (group: GridGroup): readonly RouteEntry[] =>
   ROUTES.filter((r) => r.group === group);
+
+const gridColorBySlug = new Map(GRID_ROUTES.map((r) => [r.slug, r.color]));
+
+export const getGridRouteColor = (slug: string): RouteColor =>
+  gridColorBySlug.get(slug) ?? "teal";

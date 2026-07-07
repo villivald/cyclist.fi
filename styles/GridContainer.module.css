@@ -37,17 +37,21 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.gridContainer nav ul li {
+.gridContainer nav ul li,
+.phoneGridContainer nav ul li {
   display: grid;
   place-content: center;
   height: 100%;
   width: 100%;
-  border: 0.5rem solid var(--color-background);
   font-size: var(--grid-link-font-size);
   font-family: var(--font-sans);
   font-variation-settings: "wght" 800;
 }
 
+.gridContainer nav ul li {
+  border: 0.5rem solid var(--color-background);
+}
+
 .gridContainer
   nav:first-of-type
   li:is(:nth-of-type(1), :nth-of-type(6), :nth-of-type(7)) {
@@ -82,19 +86,26 @@
   nav:last-of-type
   li:is(:nth-of-type(3), :nth-of-type(5), :nth-of-type(9)) {
   background-color: var(--color-teal);
+}
+
+.gridContainer nav li a,
+.phoneGridContainer nav li a {
+  text-decoration: none;
 }
 
 .gridContainer nav li a {
-  text-decoration: none;
   color: var(--color-dark);
 }
 
 .gridContainer nav li a:hover,
-.gridContainer nav li a:focus-visible {
+.gridContainer nav li a:focus-visible,
+.phoneGridContainer nav li a:hover,
+.phoneGridContainer nav li a:focus-visible {
   text-decoration: underline;
 }
 
-.gridContainer nav li a:focus-visible {
+.gridContainer nav li a:focus-visible,
+.phoneGridContainer nav li a:focus-visible {
   outline: 0.25rem solid currentcolor;
   outline-offset: calc(var(--outline-offset) * 2);
 }
@@ -241,8 +252,33 @@
   }
 }
 
-@media (height < 500px) {
-  .gridContainer {
-    height: calc(100 / 12 * 30dvh);
-  }
+/* stylelint-disable no-descending-specificity -- separate phone layout variant */
+.phoneGridContainer {
+  height: calc(100 / 12 * 9.5lvh);
+}
+
+.phoneGridContainer nav {
+  height: 100%;
+}
+
+.phoneGridContainer nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 0;
+  height: 100%;
+  border-block-start: 0.125rem solid var(--color-background);
+}
+
+.phoneGridContainer nav ul li {
+  border: 0.125rem solid var(--color-background);
+  background-color: var(--gridColor);
+}
+
+.phoneGridContainer nav li a {
+  color: var(--color-almost-white);
+}
+
+.phoneGridContainer nav li[data-grid-color="wheat"] a {
+  color: var(--color-black);
 }

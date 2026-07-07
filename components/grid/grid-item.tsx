@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Activity, useEffect, useRef, useState } from "react";
 
 import { getRouteColor } from "@/utils/get-route-color";
+import { getGridRouteColor } from "@/utils/route-manifest";
 
 import QuickViewModal from "./quick-view-modal";
 import type { LinkItem } from "./types";
@@ -19,9 +20,14 @@ export default function GridItem({ link }: { link: LinkItem }) {
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const routeColor = getRouteColor(link.link.substring(1));
+  const slug = link.link.substring(1);
+  const routeColor = getRouteColor(slug);
+  const gridColor = getGridRouteColor(slug);
   const routeColorStyle = {
     "--routeColor": `var(--color-${routeColor})`,
+  } as React.CSSProperties;
+  const gridColorStyle = {
+    "--gridColor": `var(--color-${gridColor})`,
   } as React.CSSProperties;
 
   const modalIsVisible = Boolean(
@@ -92,7 +98,7 @@ export default function GridItem({ link }: { link: LinkItem }) {
 
   return (
     <>
-      <li>
+      <li data-grid-color={gridColor} style={gridColorStyle}>
         <Link
           href={link.link}
           ref={linkRef}

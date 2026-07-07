@@ -145,6 +145,32 @@
     justify-items: center;
     margin-inline: unset;
   }
+
+  /* Home keeps the editorial masthead; tidy up the action cluster */
+  .headerContainer.home > nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-3xs);
+    padding-inline: var(--offset-s);
+    border-radius: 0.5rem;
+    grid-template-columns: none;
+    margin-inline: unset;
+  }
+
+  /* Thumb-friendly tap targets for every header action, both variants */
+  .headerContainer > nav button,
+  .headerContainer > nav > a {
+    justify-content: center;
+    align-items: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+  }
+
+  .headerContainer > nav button img,
+  .headerContainer > nav a img {
+    height: 1.75rem;
+  }
 }
 
 @media (width < 550px) {
@@ -166,5 +192,55 @@
 @media (height < 500px) {
   .headerContainer {
     height: calc(100 / 12 * 8dvh);
+  }
+}
+
+/* ---------- Phone header ---------- */
+@media (width < 600px) {
+  /* Interior pages become a compact, sticky app bar */
+  .headerContainer.compact {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    height: auto;
+    min-height: 3.5rem;
+    padding-block: calc(var(--offset-m) + env(safe-area-inset-top, 0px))
+      var(--offset-m);
+    padding-inline: var(--offset-l);
+    background-color: hsl(from var(--color-background) h s l / 88%);
+    backdrop-filter: blur(12px);
+    border-block-end: 0.0625rem solid hsl(from var(--color-text) h s l / 12%);
+  }
+
+  .headerContainer.compact .brandTitle {
+    grid-column: unset;
+    grid-row: unset;
+    justify-self: start;
+    margin: 0;
+    margin-inline-end: auto;
+    font-size: var(--step-3);
+    color: hsl(from var(--color-wine) h s l / 90%);
+    text-shadow: 0.15rem 0 0 hsl(from var(--color-teal) h s l / 80%);
+    white-space: nowrap;
+  }
+
+  .headerContainer.compact > nav {
+    grid-column: unset;
+    grid-row: unset;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-3xs);
+    height: auto;
+    margin-inline: 0;
+    background: transparent;
+    grid-template-columns: none;
+  }
+
+  .headerContainer.home > nav {
+    gap: var(--space-4xs);
   }
 }
